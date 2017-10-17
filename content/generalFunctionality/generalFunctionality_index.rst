@@ -14,6 +14,7 @@ All of the these functions can be accessed through the menus at the top after se
 - :ref:`mb`
 - :ref:`esrc`
 - :ref:`util`
+- :ref:`surv`
 
 
 .. _project:
@@ -268,5 +269,15 @@ Fortran utility programs
        Edit options <utilityCodes/editOptions>
        Run <utilityCodes/run>
        Load results <utilityCodes/loadResults>
+
+.. _surv:
+
+Survey
+------
+
+    .. toctree::
+        :maxdepth: 1
+        
+        Create a simple ground or airborne survey <survey/simpleSurvey>
 
 
