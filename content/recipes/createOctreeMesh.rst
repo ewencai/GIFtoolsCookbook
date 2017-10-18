@@ -1,4 +1,4 @@
-.. _createOctreeMesh:
+.. _createoctreemesh:
 
 .. include:: <isonum.txt>
 
@@ -36,7 +36,7 @@ The first step is then to import the magnetic airborne survey locations and the 
         :figwidth: 75%
         :align: center
 
-For the magnetic data, we also need to :ref:`set the inclination, declination, and field strength <assignUncert>`. This can be done through the data manipulation menu. 
+For the magnetic data, we also need to :ref:`set the inclination, declination, and field strength <editFieldParam>`. This can be done through the data manipulation menu. 
 
 Once the data are loaded, GIFtools will have the two items shown in the project tree on the left:
 

@@ -18,6 +18,7 @@ Welcome to the GIFtools cookbook! Below you will find the quick-start guide to h
     content/fileFormats/format_index
     System requirements <content/systemReq>
     content/videoTutorials
+    content/activities/activities_index
     Site map <sitemap>
 
 
