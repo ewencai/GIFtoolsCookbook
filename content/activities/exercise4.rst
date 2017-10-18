@@ -7,7 +7,7 @@ Create a model
 
 In this activity, you are given a mesh, a topography file, and a geologic image (with world file). There is also a file that explains the units shown in the geologic map and expected physical property values. The goal is to create a physical property model (GIFmodel) using modelBuilder in GIFtools.
 
-- **Task: forward model a survey**
+- **Task: create a survey**
         - `Download the activity <https://www.eoas.ubc.ca/~sdevries/ActivitiesForLearning/Exercise4.zip>`__
 - **Discussion questions**
 	- With one physical property model, can you create a second using the same geologic model?
