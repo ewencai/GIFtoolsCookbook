@@ -65,10 +65,12 @@ While the demo is simple, it opens up a whole range of possibilities to **test h
 	- Survey and model
 		- Does the survey need to be adjusted to better image the anomalous response?
 		- Are we using the right geophysical method to detect the desired target?
+		- ...
 	- Forward model
 		- Is the anomalous response large enough compared to expected noise and instrument sensitivity?
 		- How does the data change if the model has greater or less physical property contrast?
 		- How deep can the deposit be before we cannot detect it anymore?
+		- ...
 	- Inversion
 		- Does the recovered model match expectations?
 		- What can be done to improve the recovered model?
@@ -76,6 +78,7 @@ While the demo is simple, it opens up a whole range of possibilities to **test h
 		- What happens when the uncertainties are increased or decreased?
 		- Can we include reference models? Impose bounds? Include cell and face weighting?
 		- What other information do we have to constrain the inversion?
+		- ...
 
 
 
