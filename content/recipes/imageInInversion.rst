@@ -35,6 +35,9 @@ Each colour identified in the image has an index and an RGB triplet. If we click
 
 Using the mesh, :ref:`create <createModelBuilder>` or use an already existing modelBuilder module (make sure it is on the mesh you want to use in an inversion or forward modelling). Because in our example, we did not already have a modelBuilder object, we created one with the 3D mesh and the topography. Then, we started the modelBuilder module.
 
+
+.. _createGeoModelImage:
+
 Click on the modelBuilder item in the project tree and use the following menus to create a geology model from an image:
 
    **Create model** |rarr| **Geology model from** |rarr| **Map image**
