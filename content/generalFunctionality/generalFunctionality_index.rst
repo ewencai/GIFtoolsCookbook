@@ -238,6 +238,8 @@ Fortran utility programs
         Gravity (PDE) <utilityCodes/gravoctreeMesh>
         Magnetics (PDE) <utilityCodes/magoctreeMesh>
 
+.. _utilInterpolateModels:
+
     **Interpolate models**   
 
     .. toctree::
