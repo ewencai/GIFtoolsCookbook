@@ -9,10 +9,12 @@ This demo was created for the Fall 2017 consortium meeting. It is called "A to Z
 
 This demo shows how to import a few basic files, design a survey, create a mesh, make a physical property model, forward model data, use that data and invert it.
 
+While the demo is simple, it opens up a whole range of possibilities to **test hypotheses**, **explore the model space**, and **quantify the inversion quality**. See the :ref:`discussion questions <discuss>` to get started.
+
 - **A to Z demo**
 	- `Download the demo <https://www.eoas.ubc.ca/~sdevries/ActivitiesForLearning/AtoZ_demo.zip>`__
 	- NOTE: Steps (without links) are also included with the download
-	- NOTE: Requires at least GIFtools version 2.1.3
+	- NOTE: Requires at least GIFtools version 2.1.3 (Oct 2017)
 - **Steps**
 	- Start a new GIFtools project
 		- :ref:`Set the working directory <utilSetWorkDir>`
@@ -56,6 +58,24 @@ This demo shows how to import a few basic files, design a survey, create a mesh,
 		- :ref:`Run all the files <invStep5>`
 		- :ref:`Import the inversion results <invStep6>`
 		- :ref:`View the convergence curves <invStep7>`
+
+.. _discuss:
+
+- Discussion questions
+	- Survey and model
+		- Does the survey need to be adjusted to better image the anomalous response?
+		- Are we using the right geophysical method to detect the desired target?
+	- Forward model
+		- Is the anomalous response large enough compared to expected noise and instrument sensitivity?
+		- How does the data change if the model has greater or less physical property contrast?
+		- How deep can the deposit be before we cannot detect it anymore?
+	- Inversion
+		- Does the recovered model match expectations?
+		- What can be done to improve the recovered model?
+		- What happens when we start to use non-default parameters?
+		- What happens when the uncertainties are increased or decreased?
+		- Can we include reference models? Impose bounds? Include cell and face weighting?
+		- What other information do we have to constrain the inversion?
 
 
 
