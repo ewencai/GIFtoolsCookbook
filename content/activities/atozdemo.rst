@@ -51,7 +51,7 @@ While the demo is simple, it opens up a whole range of possibilities to **test h
 	- Work with the predicted data
 		- :ref:`View the predicted data <viewData>`
 		- :ref:`Add Gaussian noise <addNoise>` (3% and 0 minimum value) and create a new data item
-		- :ref:`Assign uncertainties <assignUncert>` using 3% plus a floor of 5 nT
+		- :ref:`Assign uncertainties <assignUncert>` using 3% plus a floor of 2 nT
 	- :ref:`Create inversion item <invertData>`
 		- :ref:`Edit the options <invStep2>`: set the mesh, data, and topography. Everything else can be left as default.
 		- :ref:`Write all the files <invStep4>`
