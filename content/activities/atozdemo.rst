@@ -12,7 +12,7 @@ This demo shows how to import a few basic files, design a survey, create a mesh,
 While the demo is simple, it opens up a whole range of possibilities to **test hypotheses**, **explore the model space**, and **quantify the inversion quality**. See the :ref:`discussion questions <discuss>` to get started.
 
 - **A to Z demo**
-	- `Download the demo <https://www.eoas.ubc.ca/~sdevries/ActivitiesForLearning/AtoZ_demo.zip>`__
+	- `Download the demo <https://owncloud.eoas.ubc.ca/s/TlLAdkA2a3IpwLf>`__
 	- NOTE: Steps (without links) are also included with the download
 	- NOTE: Requires at least GIFtools version 2.1.3 (Oct 2017)
 - **Steps**
