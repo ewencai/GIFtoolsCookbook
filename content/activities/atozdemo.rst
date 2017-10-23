@@ -5,7 +5,7 @@
 "A to Z" demo
 ======================
 
-This demo was created for the Fall 2017 consortium meeting. It is called "A to Z" because it shows how to start from a simple geology image all the way to an inversion, with **everything being done in GIFtools**.
+This demo was created for the Fall 2017 consortium meeting. It is called "A to Z" because it shows how to start from a simple geology image all the way to an inversion, with **everything being done in GIFtools**!
 
 This demo shows how to import a few basic files, design a survey, create a mesh, make a physical property model, forward model data, use that data and invert it.
 
