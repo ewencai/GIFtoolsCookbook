@@ -128,7 +128,7 @@ GIFtools is **menu** driven. To perform any action, the user can select from the
 
 #. **Edit**: This menu will let you rename, copy, or delete the object that is currently selected.
 
-#. **Import**: This is the main menu structure for importing items (data, meshes, etc) into GIFtools (see :ref:`Importation <import_index>` for a list of items to import).
+#. **Import**: This is the main menu structure for importing items (data, meshes, etc) into GIFtools (see :ref:`Importing Files <import>` for a list of items to import).
 
 #. **Create**: This menu allows the user to create items such as Folders (to keep the tree organized; see below), Workflows, Inversions, and other items that may call Fortran executables created by UBC-GIF
 

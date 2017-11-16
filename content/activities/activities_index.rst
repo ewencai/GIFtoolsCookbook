@@ -26,8 +26,6 @@ These activities include files and parameters necessary to complete a certain ta
 
 - Use the search bar to find what you are looking for
 - Check out the :ref:`recipes <recipe_index>`
-- Browse through the :ref:`general functionality <generalFunctionality_index>`
-- Brose through the :ref:`importation <import_index>` sections.
 
 
 ..   Project DC/IP 3D data onto a 2D lines for DCIP2D inversion <dcip3Dto2D>
