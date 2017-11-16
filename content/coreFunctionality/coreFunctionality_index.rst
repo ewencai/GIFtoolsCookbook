@@ -8,8 +8,6 @@ The core/basic GIFtools functionality is always accessible through several drop-
 - :ref:`project`: Loading, saving and managing GIF projects
 - :ref:`import`: Importing data, mesh, model and other files to GIFtools
 - :ref:`create`: Create various GIF objects
-- :ref:`util`: Create GIF objects through the use of Fortran utility programs
-- :ref:`surv`: Create a survey object
 
 .. figure:: ../../images/coreFunctionality.png
     :align: center
@@ -56,20 +54,23 @@ Create
 ------
 
     .. toctree::
-        :maxdepth: 2
+        :maxdepth: 1
 
-        Workflow <create/workflow>
-        Forward Modeling <create/fwd>
-        Inversion <create/inv>
-        Model Builder <create/ModelBuilder>
-        Equivalent source processing <create/esProcessing>
+        Workflow <create/workflow/workflow_index>
+        Forward Modeling <create/fwd/fwd_index>
+        Inversion <create/inv/inv_index>
+        Processing <create/processing/esProcessing>
+        Fortran utility program <create/fortran/fortran_index>
+        Survey <create/survey/survey_index>
+        Model Builder <create/ModelBuilder/ModelBuilder_index>
+        
 
 
 
 .. _fwd:
 
-Create >> Inversion
--------------------
+Create >> Forward
+-----------------
 
 
     **General functionality:**
@@ -130,43 +131,6 @@ Create >> Equivalent-Source Processing
 Fortran utility program
 -----------------------
 
-    **Creating octree mesh:**
-
-    .. toctree::
-        :maxdepth: 1
-
-        E3D <utilityCodes/e3doctreeMesh>
-        E3DMT (and ZTEM) <utilityCodes/e3dmtoctreeMesh>
-        TD (1 mesh) <utilityCodes/tdoctreeMesh>
-        TD (tiled) <utilityCodes/tdoctreeMeshTiled>
-        DC (and IP) <utilityCodes/dcoctreeMesh>
-        Gravity (PDE) <utilityCodes/gravoctreeMesh>
-        Magnetics (PDE) <utilityCodes/magoctreeMesh>
-
-.. _utilInterpolateModels:
-
-    **Interpolate models**   
-
-    .. toctree::
-        :maxdepth: 1
-
-        3D mesh to 3D mesh <utilityCodes/interpolateModel>    
-        3D mesh to octree <utilityCodes/mesh3DToOctree>
-        Octree to mesh3D <utilityCodes/octreeToMesh3D>
-        Octree to octree <utilityCodes/octreeToOctree>
-
-    **Octree utilities**
-
-    .. toctree::
-        :maxdepth: 1
-
-        Regularize octree mesh <utilityCodes/regularizeOctreeMesh>
-        Refine octree mesh <utilityCodes/refineOctreeMesh>
-        Create surface weights <utilityCodes/createSurfaceWeights>
-        Create interface weights <utilityCodes/createInterfaceWeights>
-        Export cell centre locations <utilityCodes/exportCellCentres>
-        Create surface electrodes (DC/IP) <utilityCodes/createElectrodes>
-
     **General functionality:**
 
     .. toctree::
@@ -177,14 +141,7 @@ Fortran utility program
        Run <utilityCodes/run>
        Load results <utilityCodes/loadResults>
 
-.. _surv:
 
-Create >> Survey
-----------------
 
-    .. toctree::
-        :maxdepth: 1
-        
-        Create a simple ground or airborne survey <survey/simpleSurvey>
 
 

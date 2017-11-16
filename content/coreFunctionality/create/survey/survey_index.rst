@@ -11,7 +11,7 @@ To create a simple ground or airborne survey for potential field data, use the m
 
 The following dialog will pop up:
 
-.. figure:: ../../../images/createSimpleSurvey.png
+.. figure:: ../../../../images/createSimpleSurvey.png
     :align: center
     :figwidth: 50%
 
@@ -41,13 +41,13 @@ Click OK to create the new data item. It will have the easting, northing, and el
 
 Below, we have filled in the dialog to create a magnetic survey.
 
-.. figure:: ../../../images/createSimpleSurvey_filled.png
+.. figure:: ../../../../images/createSimpleSurvey_filled.png
     :align: center
     :figwidth: 50%
 
 Once we click OK, we'll see the MAGdata item in the GIFtools project tree as "NewSurvey (MAGdata)". The survey can be viewed using VTK. The diagram below also explains what most parameters mean.
 
-.. figure:: ../../../images/createSimpleSurvey_diagram.png
+.. figure:: ../../../../images/createSimpleSurvey_diagram.png
     :align: center
     :figwidth: 100%
 

@@ -5,7 +5,7 @@
 Create an inversion
 ===================
 
-.. figure:: ../../../images/createInv.png
+.. figure:: ../../../../images/createInv.png
     :align: center
     :width: 400
 
@@ -67,7 +67,7 @@ Create a DC/IP inversion
 
 DC/IP data can be inverted using a 2D mesh, 3D mesh, and an octree mesh. All of these can be accessed through the menu for DC/IP:
 
-.. figure:: ../../../images/createInv.png
+.. figure:: ../../../../images/createInv.png
     :align: center
     :width: 400
 

@@ -12,7 +12,7 @@ The modelBuilder module allows the user to create reference models, weights, and
 **Model Builder** |rarr| **Start modelBuilder module**
 
 
-.. figure:: ../../../images/createModelBuilder.png
+.. figure:: ../../../../images/createModelBuilder.png
     :align: center
     :width: 400
 

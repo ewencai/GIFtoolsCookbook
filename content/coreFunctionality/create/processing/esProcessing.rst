@@ -5,7 +5,7 @@
 Create equivalent source processing
 ===================================
 
-.. figure:: ../../../images/createEsrcMenu.png
+.. figure:: ../../../../images/createEsrcMenu.png
     :align: center
     :width: 400
 
