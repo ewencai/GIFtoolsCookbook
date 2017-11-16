@@ -19,7 +19,7 @@ In this activity, you are given a magnetic airborne survey location file and a t
         - Can you view the mesh and overlay the survey locations on it?
 - **Helpful links**
         - :ref:`Recipe for creating an octree mesh <createoctreemesh>` 
-        - :ref:`Import a magnetic survey <magData>` 
+        - :ref:`Import a magnetic survey <importMagData>` 
         - :ref:`Import a topography file <importTopo>` 
         - :ref:`Edit field parameters for a magnetic survey <editFieldParam>` 
         - :ref:`View data in 3D <viewData>`
