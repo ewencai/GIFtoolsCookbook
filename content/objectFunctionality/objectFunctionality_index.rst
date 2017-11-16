@@ -10,7 +10,7 @@ All of the these functions can be accessed through the menus at the top after se
 - :ref:`model`
 
 
-.. _data:
+.. _objectFunctionalityData:
 
 Data
 ----
@@ -92,5 +92,79 @@ Model
         Assign values to air cells <model/assignAirValues>        
         View in 3D, table format, or view statistics <model/viewModel>
         Export <model/export>
+
+
+
+
+.. _fwd:
+
+Create >> Forward
+-----------------
+
+    .. toctree::
+       :maxdepth: 1
+
+       Set the working directory <forward/setWorkDir>
+       Edit options <forward/editOptions>
+       Write files <forward/writeAll>
+       Run <forward/run>
+       Load results <forward/loadResults>
+       Copy the item <forward/copyOptions>
+
+
+.. _inv:
+
+Create >> Inversion
+-------------------
+
+
+    **General functionality:**
+
+    .. toctree::
+       :maxdepth: 1
+
+       Set the working directory <inversion/setWorkDir>
+       Edit options <inversion/editOptions>
+       Write files <inversion/writeAll>
+       Run <inversion/run>
+       Load results <inversion/loadResults>
+       View results <inversion/viewInversion>
+       Copy the item <inversion/copyOptions>
+
+
+
+       
+.. _esrc:
+
+Create >> Equivalent-Source Processing
+--------------------------------------
+
+    **General functionality:**
+
+    .. toctree::
+       :maxdepth: 1
+
+       Set the working directory <esProcessing/setWorkDir>
+       Edit options <esProcessing/editOptions>
+       Write files <esProcessing/writeAll>
+       Run <esProcessing/run>
+       Load results <esProcessing/loadResults>
+       View results <esProcessing/viewInversion>
+       Copy the item <esProcessing/copyOptions>
+
+.. _util:
+
+Fortran utility program
+-----------------------
+
+    **General functionality:**
+
+    .. toctree::
+       :maxdepth: 1
+
+       Set the working directory <fortran/setWorkDir>
+       Edit options <fortran/editOptions>
+       Run <fortran/run>
+       Load results <fortran/loadResults>
 
 

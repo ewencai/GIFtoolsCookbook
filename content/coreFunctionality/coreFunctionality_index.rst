@@ -3,7 +3,7 @@
 Core/Basic Functionality
 ========================
 
-The core/basic GIFtools functionality is always accessible through several drop-down menus. This functionality allows the user to manage GIF projects, import data files and create various GIF objects.
+The core/basic GIFtools functionality is always accessible through several drop-down menus (:ref:`Project <project>`, Edit, :ref:`Import <import>` and :ref:`Create <create>` ). This functionality allows the user to manage GIF projects, delete/copy/rename objects, import data files and create various GIF objects. Once created, a specific set of actions (or methods) can be carried out on each of these objects. Object-specific methods are described in the :ref:`object-dependent functionality <objectFunctionality_index>` section.
 
 - :ref:`project`: Loading, saving and managing GIF projects
 - :ref:`import`: Importing data, mesh, model and other files to GIFtools
@@ -18,7 +18,7 @@ The core/basic GIFtools functionality is always accessible through several drop-
 Project
 -------
 
-These functions will assist in saving, opening and managing GIFtools projects.
+The contents of this drop-down menu will assist in saving, opening and managing GIF projects.
 
     .. toctree::
         :maxdepth: 2
@@ -36,7 +36,7 @@ These functions will assist in saving, opening and managing GIFtools projects.
 Import
 ------
 
-GIFtools is capable of importing data, meshes, physical property models, cells weights, geological maps and other raster-based images, as well as shape files (RGIS vector). For data files, a multitude of data formats are supported, including: GIF format, XYZ format and CSV format. 
+GIFtools is capable of importing data, meshes, physical property models, cell weights, geological maps and other raster-based images, as well as shape files (RGIS vector). Data can be imported for a variety of formats, including: GIF format, XYZ format and CSV format. Once imported, the data will be represented in GIFtools as a "data object". To see what you can do with a data object, visit the :ref:`object-dependent functionality <objectFunctionalityData>` section for data.
 
     .. toctree::
         :maxdepth: 2
@@ -67,79 +67,7 @@ Create
 
 
 
-.. _fwd:
 
-Create >> Forward
------------------
-
-
-    **General functionality:**
-
-    .. toctree::
-       :maxdepth: 1
-
-       Set the working directory <forward/setWorkDir>
-       Edit options <forward/editOptions>
-       Write files <forward/writeAll>
-       Run <forward/run>
-       Load results <forward/loadResults>
-       Copy the item <forward/copyOptions>
-
-
-.. _inv:
-
-Create >> Inversion
--------------------
-
-
-    **General functionality:**
-
-    .. toctree::
-       :maxdepth: 1
-
-       Set the working directory <inversion/setWorkDir>
-       Edit options <inversion/editOptions>
-       Write files <inversion/writeAll>
-       Run <inversion/run>
-       Load results <inversion/loadResults>
-       View results <inversion/viewInversion>
-       Copy the item <inversion/copyOptions>
-
-
-
-       
-.. _esrc:
-
-Create >> Equivalent-Source Processing
---------------------------------------
-
-    **General functionality:**
-
-    .. toctree::
-       :maxdepth: 1
-
-       Set the working directory <esProcessing/setWorkDir>
-       Edit options <esProcessing/editOptions>
-       Write files <esProcessing/writeAll>
-       Run <esProcessing/run>
-       Load results <esProcessing/loadResults>
-       View results <esProcessing/viewInversion>
-       Copy the item <esProcessing/copyOptions>
-
-.. _util:
-
-Fortran utility program
------------------------
-
-    **General functionality:**
-
-    .. toctree::
-       :maxdepth: 1
-
-       Set the working directory <utilityCodes/setWorkDir>
-       Edit options <utilityCodes/editOptions>
-       Run <utilityCodes/run>
-       Load results <utilityCodes/loadResults>
 
 
 
