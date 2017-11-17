@@ -5,6 +5,21 @@
 Import Data
 ===========
 
+Under **Import** |rarr| **Data**, the user can import various types of geophysical, geological and geographical data from a multitude of file formats. In GIFtools, this results in the creation of a 'data object'. Once created, GIFtools will allow the user to carry out a set of object-dependent actions (or methods) involving the data object. The methods applicable to each data object are presented on the :ref:`object-dependent functionality <objectFunctionalityData>` page. The following data types can be imported into GIFtools:
+
+    - :ref:`Magnetics Data <importMagData>`
+    - :ref:`Gravity Data <importGravData>`
+    - :ref:`Gravity Gradiometry Data <importGGData>`
+    - :ref:`Topography <importTopo>`
+    - :ref:`Surface <importSurface>`
+    - :ref:`Borehole Data <importBoreholeData>`
+    - :ref:`Miscellaneous Property data <importDCIP2Ddata>`
+    - :ref:`2D DCIP Data <importDCIP2Ddata>`
+    - :ref:`3D DCIP Data <importDCIP3Ddata>`
+    - :ref:`Frequency-Domain EM Data <importFemData>`
+    - :ref:`Time-Domain EM Data <importTemData>`
+    - :ref:`Natural Source EM Data (MT and ZTEM) <importNSEMData>`
+
 .. _importMagData:
 
 Import magnetic data
@@ -279,7 +294,7 @@ DC/IP 3D data can be imported via:
     - :ref:`CSV file <CSVfile>`
 
 
-.. _femData:
+.. _importFemData:
 
 Import FEM data
 ---------------

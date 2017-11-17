@@ -2,8 +2,15 @@
 
 .. include:: <isonum.txt>
 
+Import Images
+=============
+
+**TODO:** Introduction and image
+
+
+
 Import geologic images
-======================
+----------------------
 
 GIFtools allows one to import geologic maps in order to populate models and ultimately constrain inversions. Plan-view images can be imported in current versions. In the near future, cross-section images will be accessed through the same menu pipeline.
 
@@ -25,7 +32,7 @@ Along with the image file, a :ref:`world file <worldFile>` is required to georec
 
 
 World file format
------------------
+^^^^^^^^^^^^^^^^^
 .. _worldFile:
 
 The world file has been specified by Esri (.tfw file). It is a plain text file with the following lines. GIFtools will recognize rotations given in this file.
@@ -45,7 +52,7 @@ Below is an example:
 
 
 Legend file format
-------------------
+^^^^^^^^^^^^^^^^^^
 .. _legendFile:
 
 The legend file will be an :ref:`XYZ <XYZfile>` or :ref:`CSV <CSVfile>` with a header. The important headers are the **geology unit** (integer), **Red**, **Green**, and **Blue** values (0-255) contained within image. Comments are denoted by "!" or "//". Below is an example of 8 units (0 being background white) for the image above.

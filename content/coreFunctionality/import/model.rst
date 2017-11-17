@@ -5,6 +5,16 @@
 Importing a model
 =================
 
+Under **Import** |rarr| **Model**, the user can import physical property models and active cell models. In order to import a model, the user must first have a *mesh* within their GIFtools project; see :ref:`import mesh <importMesh>` or *generate mesh*. In GIFtools, importing a model results in the creation of a 'model object'. Once created, GIFtools will allow the user to carry out a set of object-dependent actions (or methods) involving the model object. The methods applicable to each model object are presented on the :ref:`object-dependent functionality <objectFunctionalityModel>` page. The following model types can be imported into GIFtools:
+
+    - :ref:`Import a Cell-Centered Model <importModelCellCentered>`
+    - :ref:`Import a Vector Model <importVectorModel>`
+    - :ref:`Import an Active Model <importActiveModel>`
+
+**Prerequisites:** 
+
+	- A mesh object (link)
+
 .. _importModelCellCentered:
 
 Import a cell centered model

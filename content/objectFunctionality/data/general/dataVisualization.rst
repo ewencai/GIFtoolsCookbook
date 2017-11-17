@@ -2,12 +2,12 @@
 
 .. include:: <isonum.txt>
 
-View data
-=========
+Visualization Menu
+==================
 
 GIFtools allows the user three different ways to view data. The methods are grouped under **Visualization** menu when clicking on a data item.
 
-.. figure:: ../../../images/dataViewerMenu.png
+.. figure:: ../../../../images/dataViewerMenu.png
     :align: center
     :width: 400
 
@@ -15,7 +15,7 @@ GIFtools allows the user three different ways to view data. The methods are grou
 VTK data viewer
 ^^^^^^^^^^^^^^^
 
-3D visualization is performed through the VTK (Visualization ToolKit) data viewer. To get to this viewer, the spatial :ref:`i/o headers <setioHeaders>` must be set. Then click on the data item and use the menu:
+3D visualization is performed through the VTK (Visualization ToolKit) data viewer. To get to this viewer, the spatial :ref:`i/o headers <objectSetioHeaders>` must be set. Then click on the data item and use the menu:
 
 **Visualization** |rarr| **VTK view**
 

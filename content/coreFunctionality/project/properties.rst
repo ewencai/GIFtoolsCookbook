@@ -2,8 +2,19 @@
 
 .. include:: <isonum.txt>
 
-Set Properties
-==============
+Properties
+==========
+
+Properties allows the user to manage certain aspects of the GIFtools program and how it interacts with your computer. Under properties, the user may:
+
+  - :ref:`Set the project's working directory <projSetWorkdir>`
+  - :ref:`Set the start-up directory for GIFtools <projsetStartDir>`
+  - :ref:`Set the number of threads to run an inversion <setOMPthreads>`
+  - :ref:`Project auto-save functionality <projAutoSave>`
+
+**NOTE:** Setting the working directory at the start of a new project is strongly advised, as it will make files relevant to the project easy to find. Although the auto-save time is set to a default value (5 min), you may wish to change it when starting a new project
+
+
 
 .. _projSetWorkDir:
 
@@ -41,7 +52,7 @@ By default, GIFtools starts with the working directory where the executable is l
 Set the number of threads to run an inversion
 ---------------------------------------------
 
-GIF inversion programs use OpenMP to parallelize matrix-vector multiplicatoin and sensitivity calculations in linear inversions. GIFtools allows the user to change the number of OpenMP threads so the inversions do not slow down the CPU. Use the menu structure:
+GIF inversion programs use OpenMP to parallelize matrix-vector multiplication and sensitivity calculations in linear inversions. GIFtools allows the user to change the number of OpenMP threads so the inversions do not slow down the CPU. Use the menu structure:
 
 **Project** |rarr| **Set properties** |rarr| **Set openMP threads for Fortran codes**
 

@@ -1,6 +1,7 @@
-.. _addNoise:
+.. _objectAddNoise:
 
 .. include:: <isonum.txt>
+
 
 Add Gaussian noise to data
 ==========================
@@ -15,4 +16,6 @@ On occasion, one may want to add noise to a forward modelled dataset in order to
 
 **NOTE 1:** Spatial (X,Y) :ref:`i/o Headers <setioHeaders>` are not shown within the calculator.
 
+
+ 
 

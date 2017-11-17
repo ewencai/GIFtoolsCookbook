@@ -21,7 +21,7 @@ Project
 The contents of this drop-down menu will assist in saving, opening and managing GIF projects.
 
     .. toctree::
-        :maxdepth: 2
+        :maxdepth: 1
         
         Properties <project/properties>
         Save <project/save>
@@ -36,10 +36,10 @@ The contents of this drop-down menu will assist in saving, opening and managing 
 Import
 ------
 
-GIFtools is capable of importing data, meshes, physical property models, cell weights, geological maps and other raster-based images, as well as shape files (RGIS vector). Data can be imported for a variety of formats, including: GIF format, XYZ format and CSV format. Once imported, the data will be represented in GIFtools as a "data object". To see what you can do with a data object, visit the :ref:`object-dependent functionality <objectFunctionalityData>` section for data.
+GIFtools is capable of importing data, meshes, physical property models, cell weights, geological maps and other raster-based images, as well as shape files (RGIS vector). This information can be imported from a variety of file formats, including: GIF format, XYZ format and CSV format. Once imported, the information/data will be represented in GIFtools as an "object". To see what you can do with each object, visit the :ref:`object-dependent functionality <objectFunctionality_index>` page. The types of information which may be imported to GIFtools is organized as follows:
 
     .. toctree::
-        :maxdepth: 2
+        :maxdepth: 1
 
         Import Data <import/data>
         Import Mesh <import/mesh>
@@ -53,6 +53,8 @@ GIFtools is capable of importing data, meshes, physical property models, cell we
 Create
 ------
 
+Create allows the user to generate objects which are used to carry out a wide variety of tasks. These tasks include: forward modeling various types of geophysical data, inverting geophysical data, interpolating models onto different meshes and performing equivalent source processing for potential fields. By defining the desired task as an object, we can make sure the user only fills in fields and carries out actions which are relevant to the specified task. The actions (or methods) which can be applied to each object are found on the :ref:`object-dependent functionality <objectFunctionality_index>` page. Objects which can be generate through create are as follows:
+
     .. toctree::
         :maxdepth: 1
 
@@ -61,7 +63,7 @@ Create
         Inversion <create/inv/inv_index>
         Processing <create/processing/esProcessing>
         Fortran utility program <create/fortran/fortran_index>
-        Survey <create/survey/survey_index>
+        Create Survey <create/survey/survey_index>
         Model Builder <create/ModelBuilder/ModelBuilder_index>
         
 
