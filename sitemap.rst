@@ -8,7 +8,7 @@ GIFtools Site map
     :maxdepth: 3
 
     Quick-start guide <content/quickStartGuide>
-    content/coreFunctionality/coreFunctionality_index    
+    content/basicFunctionality/basicFunctionality_index    
     content/objectFunctionality/objectFunctionality_index  
     content/recipes/recipe_index
     content/AtoZ/AtoZ_index

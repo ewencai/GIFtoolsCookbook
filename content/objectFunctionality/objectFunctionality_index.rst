@@ -1,5 +1,7 @@
 .. _objectFunctionality_index:
 
+.. include:: <isonum.txt>
+
 Object-Dependent Functionality
 ==============================
 
@@ -11,60 +13,30 @@ In GIFtools, data, meshes, models and other things are defined as 'objects'. By 
 Here, we describe the specific set of actions (or methods) which can be applied to each type of object. 
 
 
+  - :ref:`Data: <objectFunctionalityData>` functions that may be applied to data
+  - :ref:`Mesh: <objectFunctionalityMesh>` functions that may be applied to meshes
+  - :ref:`Model: <objectFunctionalityModel>` functions that may be applied to models
+  - :ref:`Workflow: <objectFunctionalityWorkflow>` functions that may be applied to objects generated through **Create** |rarr| **Workflow**
+  - :ref:`Forward Model: <objectFunctionalityFwd>` functions that may be applied to objects generated through **Create** |rarr| **Forward Model**
+  - :ref:`Inversions: <objectFunctionalityInv>` functions that may be applied to objects generated through **Create** |rarr| **Inversion**
+  - :ref:`Equivalent Source Processing: <objectFunctionalityProcessing>` functions that may be applied to objects generated through **Create** |rarr| **Processing** |rarr| **Equivalent Source Processing**
+  - :ref:`Fortran Utility Programs: <objectFunctionalityFortran>` functions that may be applied to objects generated through **Create** |rarr| **Fortran Utility Program**
+  - :ref:`Survey: <objectFunctionalitySurvey>` functions that may be applied to objects generated through **Create** |rarr| **Survey**
 
+  .. toctree::
+    :hidden:
 
-- Data
-- Mesh
-- Model
+    data/index
+    mesh/index
+    model/index
+    workflow/index
+    forward/index
+    inversion/index
+    esProcessing/index
+    fortran/index
+    survey/index
 
-
-.. _objectFunctionalityData:
-
-Data
-----
-
-General Functionality
-^^^^^^^^^^^^^^^^^^^^^
-
-    .. toctree::
-        :maxdepth: 2
-
-        data/general/dataType
-        data/general/dataManipulation
-        data/general/dataVisualization
-
-Magnetics
-^^^^^^^^^
-
-    .. toctree::
-        :maxdepth: 1
-
-        Assign / Edit inducing field <data/editFieldParams>
-        Remove IGRF <data/removeIGRF>
-        Add Gaussian noise <data/addGaussianNoise>
-        Calculate a polynomal trend <data/polyTrend>
-
-
-DC/IP
-^^^^^
-    
-    .. toctree::
-        :maxdepth: 1
-
-        Add topography to locations <data/applyTopo>
-        Apparent resitivity to/from normalized voltage <data/dcipGeoFactor>
-        Project DC/IP 3D data onto a 2D lines for DCIP2D inversion <data/dcip3Dto2D>
-
-Electromagnetics (EM)
-^^^^^^^^^^^^^^^^^^^^^
-
-    .. toctree::
-        :maxdepth: 1
-
-        Extract time / frequency data <data/emTimeExtract>
-        View / edit times or frequencies <data/emViewTime>
-
-.. _objectFunctionalityMesh:
+.. _objectFunctionalityMesh2:
 
 Mesh
 ----
@@ -78,7 +50,7 @@ Mesh
         View in 3D <mesh/viewMesh>        
         Export <mesh/export>
 
-.. _objectFunctionalityModel:
+.. _objectFunctionalityModel2:
 
 Model
 -----
@@ -97,7 +69,7 @@ Model
 
 
 
-.. _objectFunctionalityFwd:
+.. _objectFunctionalityFwd2:
 
 Create >> Forward
 -----------------
@@ -113,7 +85,7 @@ Create >> Forward
        Copy the item <forward/copyOptions>
 
 
-.. _objectFunctionalityInv:
+.. _objectFunctionalityInv2:
 
 Create >> Inversion
 -------------------
@@ -135,7 +107,7 @@ Create >> Inversion
 
 
        
-.. _objectFunctionalityEsrc:
+.. _objectFunctionalityEsrc2:
 
 Create >> Equivalent-Source Processing
 --------------------------------------
@@ -153,7 +125,7 @@ Create >> Equivalent-Source Processing
        View results <esProcessing/viewInversion>
        Copy the item <esProcessing/copyOptions>
 
-.. _objectFunctionalityFortran:
+.. _objectFunctionalityFortran2:
 
 Fortran utility program
 -----------------------
