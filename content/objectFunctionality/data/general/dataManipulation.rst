@@ -127,7 +127,7 @@ Any data column may have a polynomial trend calculated. For access to this featu
     :align: center
     :width: 400
 
-**NOTE 1:** For removal of the trend, see the :ref:`Column calculator <columnCalculator>` for how to subtract one column from another within a data object. 
+**NOTE 1:** For removal of the trend, see the :ref:`Column calculator <objectColumnCalculator>` for how to subtract one column from another within a data object. 
 
 **NOTE 2:** The calculation of a polynomial trend can be accessed in the :ref:`data viewer <viewData>`. Data first need to be selected via the **View** |rarr| **Edit** |rarr| **Data selection** tab of the viwer control dialog. Then select its neighbouring tab: **View** |rarr| **Edit** |rarr| **Regional fit**. A new data column name is manditory as well as the degree of polynomial. 
 
@@ -191,7 +191,7 @@ On occasion, one may want to add noise to a forward modelled dataset in order to
     :align: center
     :width: 400
 
-**NOTE 1:** Spatial (X,Y) :ref:`i/o Headers <setioHeaders>` are not shown within the calculator.
+**NOTE 1:** Spatial (X,Y) :ref:`i/o Headers <objectSetioHeaders>` are not shown within the calculator.
 
 
  

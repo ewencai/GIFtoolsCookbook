@@ -7,8 +7,7 @@ PLACEHOLDER
 
 
 
-
-	.. toctree::
+    .. toctree::
         :maxdepth: 2
 
         dataType
