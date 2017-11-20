@@ -128,7 +128,7 @@ GIFtools is **menu** driven. To perform any action, the user can select from the
 
 #. **Edit**: This menu will let you rename, copy, or delete the object that is currently selected.
 
-#. **Import**: This is the main menu structure for importing items (data, meshes, etc) into GIFtools (see :ref:`Importation <import_index>` for a list of items to import).
+#. **Import**: This is the main menu structure for importing items (data, meshes, etc) into GIFtools (see :ref:`Importing Files <import>` for a list of items to import).
 
 #. **Create**: This menu allows the user to create items such as Folders (to keep the tree organized; see below), Workflows, Inversions, and other items that may call Fortran executables created by UBC-GIF
 
@@ -144,7 +144,7 @@ All of the items in GIFtools fall under a **GIFproject**. Beyond that, each is p
 Information panel
 ^^^^^^^^^^^^^^^^^
 
-Every item selected has a panel that shows up on the right-side of the main GIFtools window. This panel gives the user a brief over-view of the item, such as the number of cells for a mesh, or the number of frequencies in an FEMdata (Frequency-ElectroMagnetics Data) item. For data items, certain columns must be denoted in order to export them for inversion. These are known as :ref:`input/output headers <setioHeaders>` (often referred to as ``i/o headers``). 
+Every item selected has a panel that shows up on the right-side of the main GIFtools window. This panel gives the user a brief over-view of the item, such as the number of cells for a mesh, or the number of frequencies in an FEMdata (Frequency-ElectroMagnetics Data) item. For data items, certain columns must be denoted in order to export them for inversion. These are known as :ref:`input/output headers <objectSetioHeaders>` (often referred to as ``i/o headers``). 
 
 Notes section
 ^^^^^^^^^^^^^
