@@ -10,17 +10,17 @@ In this activity, you are given a magnetic airborne survey location file, a topo
 - **Task: forward model a magnetic data**
         - `Download the activity <https://www.eoas.ubc.ca/~sdevries/ActivitiesForLearning/Exercise2.zip>`__
 - **Discussion questions**
-	- What does the data look like?
-	- What, if anything, can be adjusted to the survey to minimize cost or improve the coverage of the anomalous response?
-	- Can you assign uncertainties to the data?
+    - What does the data look like?
+    - What, if anything, can be adjusted to the survey to minimize cost or improve the coverage of the anomalous response?
+    - Can you assign uncertainties to the data?
 - **Take it a bit further**
-	- Sometimes we use a topo active cell model instead of a topo file in the GIF codes; can you create a topo active cell model?
-	- Suppose you also have a second physical property model and imported it. Can you convert the current survey to a different data type?
+    - Sometimes we use a topo active cell model instead of a topo file in the GIF codes; can you create a topo active cell model?
+    - Suppose you also have a second physical property model and imported it. Can you convert the current survey to a different data type?
 - **Helpful links**
-	- :ref:`Recipe for creating a forward model <createForward>`
-	- :ref:`View model in 3D <viewModel>`
-	- :ref:`Create active cells model <createActiveCellsModel>`
-	- **Assign uncertainties (page needed)**
+    - :ref:`Recipe for creating a forward model <createForward>`
+    - :ref:`View model in 3D <viewModel>`
+    - :ref:`Create active cells model <createActiveCellsModel>`
+    - **Assign uncertainties (page needed)**
 
 
 
