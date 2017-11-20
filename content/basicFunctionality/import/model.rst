@@ -13,7 +13,7 @@ Under **Import** |rarr| **Model**, the user can import physical property models 
 
 **Prerequisites:** 
 
-	- A mesh object (link)
+    - A mesh object (link)
 
 .. _importModelCellCentered:
 
@@ -34,11 +34,8 @@ Use the main project menu: **Import** |rarr| **Model** |rarr| **Cell centred**
 Import a mesh:
 
 - :ref:`1D mesh <importMesh1D>`
-
 - :ref:`2D mesh <importMesh2D>`
-
 - :ref:`3D mesh <importMesh3D>`
-
 - :ref:`OcTree mesh <importMeshOctree>`
 
 

@@ -48,8 +48,6 @@ In rare occasions when topography is not given (or in the event of forward model
 
 .. _objectDataCreateMesh:
 
-.. include:: <isonum.txt>
-
 Create a 3D mesh from data
 --------------------------
 
