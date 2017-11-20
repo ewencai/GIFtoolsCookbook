@@ -1,4 +1,4 @@
-.. _activities_index:
+.. _AtoZ_index:
 
 A to Z Examples
 ===============
@@ -10,9 +10,10 @@ These activities include files and parameters necessary to complete a certain ta
     :figwidth: 50%
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
 
-    A-to-Z demo <AtoZMag3D>
+    Gravity <gravity/index>
+    Magnetics <magnetic/index>
     Create an octree mesh <exercise1>
     Forward model a survey <exercise2>
     Invert for a model <exercise3>

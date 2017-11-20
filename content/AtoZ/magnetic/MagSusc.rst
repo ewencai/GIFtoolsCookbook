@@ -1,4 +1,4 @@
-.. _AtoZMag3D:
+.. _AtoZMag_Susc:
 
 .. include:: <isonum.txt>
 
