@@ -11,13 +11,14 @@ The basic GIFtools functionality is always accessible through 4 drop-down menus 
     - :ref:`2.2. Import: <import>` import data, meshes, models and other files into GIFtools
     - :ref:`2.3. Create: <create>` create various GIF objects, including surveys, forward modelings and inversions
 
-.. toctree::
-   :hidden:
 
-   Project <project/project_index>
-   Edit <edit/edit_index>
-   Import <import/import_index>
-   Create <create/create_index>
+.. toctree::
+    :hidden:
+
+    Project <project/project_index>
+    Edit <edit/edit_index>
+    Import <import/import_index>
+    Create <create/create_index>
 
 
 .. figure:: ../../images/coreFunctionality.png
@@ -25,8 +26,6 @@ The basic GIFtools functionality is always accessible through 4 drop-down menus 
     :width: 700
 
 
-
-        
 
 
 
