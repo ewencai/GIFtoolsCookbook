@@ -17,7 +17,7 @@ class Doc_Test(unittest.TestCase):
             "%s"%(doctrees_path) ,
             "%s"%(self.path_to_docs),
             "%s"%(html_path)])
-        # assert check == 0
+        assert check == 0
 
 
         def test_images(self):
@@ -34,7 +34,7 @@ class Doc_Test(unittest.TestCase):
             "%s"%(doctrees_path),
             "%s"%(self.path_to_docs),
             "%s"%(latex_path)])
-        # assert check == 0
+        assert check == 0
 
     def test_linkcheck(self):
         doctrees_path = os.path.sep.join(self.path_to_docs.split(os.path.sep) + ['_build']+['doctrees'])
@@ -44,7 +44,7 @@ class Doc_Test(unittest.TestCase):
             "%s"%(doctrees_path),
             "%s"%(self.path_to_docs),
             "%s"%(link_path)])
-        # assert check == 0
+        assert check == 0
 
 
 if __name__ == '__main__':
