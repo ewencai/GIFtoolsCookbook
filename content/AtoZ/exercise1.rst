@@ -21,7 +21,7 @@ In this activity, you are given a magnetic airborne survey location file and a t
         - :ref:`Recipe for creating an octree mesh <createOctreeMesh>` 
         - :ref:`Import a magnetic survey <importMagData>` 
         - :ref:`Import a topography file <importTopo>` 
-        - :ref:`Edit field parameters for a magnetic survey <editFieldParam>` 
+        - :ref:`Edit field parameters for a magnetic survey <objectEditFieldParam>` 
         - :ref:`View data in 3D <viewData>`
         - :reF:`View mesh in 3D <viewMesh>`
 

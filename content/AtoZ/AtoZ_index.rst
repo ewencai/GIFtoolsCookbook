@@ -12,11 +12,12 @@ These activities include files and parameters necessary to complete a certain ta
 .. toctree::
    :maxdepth: 1
 
+    A-to-Z demo <AtoZMag3D>
     Create an octree mesh <exercise1>
     Forward model a survey <exercise2>
     Invert for a model <exercise3>
     Create a model <exercise4>
-    A-to-Z demo <atozdemo>
+    
 
 **All activities are focused on a single exploration area**: the Tli Kwi Cho (TKC) kimberlite complex. Synthetic models were used in conjunction with the real survey locations and/or parameters to create a suite of problems and examples to use when demoing GIFtools and for creating documentation.
 

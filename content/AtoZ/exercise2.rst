@@ -17,10 +17,10 @@ In this activity, you are given a magnetic airborne survey location file, a topo
 	- Sometimes we use a topo active cell model instead of a topo file in the GIF codes; can you create a topo active cell model?
 	- Suppose you also have a second physical property model and imported it. Can you convert the current survey to a different data type?
 - **Helpful links**
-	- :ref:`Recipe for creating a forward model <fwdModData>`
+	- :ref:`Recipe for creating a forward model <createForward>`
 	- :ref:`View model in 3D <viewModel>`
-	- :ref:`Create active cells model <createActiveCells>`
-	- :ref:`Assign uncertainty <assignUncert>`
+	- :ref:`Create active cells model <createActiveCellsModel>`
+	- **Assign uncertainties (page needed)**
 
 
 

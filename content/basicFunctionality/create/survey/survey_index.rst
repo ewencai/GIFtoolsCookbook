@@ -1,4 +1,4 @@
-.. _surveySimple:
+.. _createSurveySimple:
 
 .. include:: <isonum.txt>
 

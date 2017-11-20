@@ -18,7 +18,7 @@ In this activity, you are given a xyz file of gravity data over the TKC area, a 
 	- Can you copy the inversion and use a different initial model?
 - **Helpful links**
 	- :ref:`Recipe to invert data <invertData>`
-	- :ref:`Assign uncertainties <assignUncert>`
+	- **Assign uncertainties (page needed)**
 	- :ref:`View the convergence curve <invView>`
 	- :ref:`Edit inversion parameters <invEditOptions>`
 	- :ref:`Copy inversion options <invCopyOptions>`
