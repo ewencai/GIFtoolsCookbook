@@ -7,7 +7,7 @@ Import Images
 
 **TODO:** Introduction and image
 
-
+.. _importGeoImage:
 
 Import geologic images
 ----------------------
@@ -21,7 +21,7 @@ Use the main project menu: **Import** |rarr|  **Image** |rarr| **Plan-view**
     :width: 200
 
 
-Along with the image file, a :ref:`world file <worldFile>` is required to georectify the image. A :ref:`legend file <legendFile>` to specify the RGB values for each geology unit can be imported when importing the image or either imported or created after image importation.
+Along with the image file, a :ref:`world file <importWorldFile>` is required to georectify the image. A :ref:`legend file <importLegendFile>` to specify the RGB values for each geology unit can be imported when importing the image or either imported or created after image importation.
 
 
 **NOTE:** Images with distinct colour combinations and no text will perform much better when discretizing models. Below is an example:

@@ -33,7 +33,7 @@ To remove the IGRF value from a magnetic data set, the i/o header for the data m
     :align: center
     :width: 400
 
-**NOTE 1:** A separate way of removing the IGRF would be through the :ref:`Constant calculator <constantCalculator>`. 
+**NOTE 1:** A separate way of removing the IGRF would be through the :ref:`Constant calculator <objectConstantCalculator>`. 
 
 
 
