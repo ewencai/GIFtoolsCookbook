@@ -25,7 +25,7 @@ To extract all the data associated with a certain time(s) or frequency(ies), cli
 **NOTE:** This will create a new data item.
 
 
-.. _objectTimeFreqExtract:
+.. _objectTimeFreqEdit:
 
 View and/or edit the times or frequencies of a data set
 -------------------------------------------------------
