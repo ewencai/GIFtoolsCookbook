@@ -3,11 +3,7 @@
 A to Z Examples for Gravity
 ===========================
 
-**Purpose:**
-
-
-
-**Introduction to TKC:**
+Here, A to Z examples relevant to gravity data are presented. 
 
 
 
