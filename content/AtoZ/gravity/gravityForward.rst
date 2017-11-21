@@ -29,7 +29,7 @@ Having surveyed the region, you may have access to topographical information and
 
     - :ref:`Import the topography data <importTopo>` (3D GIF format)
     - :ref:`Import the geology image and link to topography <importImage>` (Image is plane view)
-    - :ref:`Create a legend for the geology image <importLegendFile>`
+    - :ref:`Create a legend for the geological units in the image <objectGeneralImageCreateLegend>`
 
 
 
