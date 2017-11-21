@@ -3,6 +3,7 @@
 .. figure:: ../images/GIFtoolsLogo.png
    :align: left
    :scale: 75%
+
 |
 |
 |
