@@ -3,6 +3,23 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
+.. figure:: /images/Cookbook_Landing.png
+   :align: left
+   :scale: 100%
+
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+
 GIFtools Cookbook
 =================
 

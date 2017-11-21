@@ -1,8 +1,20 @@
 .. _quickStartGuide:
 
 .. figure:: ../images/GIFtoolsLogo.png
-   :align: center
+   :align: left
    :scale: 75%
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
 
 GIFtools quick-start guide
 ==========================
