@@ -2,8 +2,29 @@
 
 .. include:: <isonum.txt>
 
-A to Z Demo for Mag3D
-=====================
+Magnetic Susceptibility: Forward Modeling and Inversion
+=======================================================
+
+Purpose
+^^^^^^^
+
+
+
+
+Required Files and Downloads
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+
+
+Forward Modeling
+^^^^^^^^^^^^^^^^
+
+**Step 1: Start a GIFtools project**
+
+
+
+
 
 This demo was created for the Fall 2017 consortium meeting. It is called "A to Z" because it shows how to start from a simple geology image all the way to an inversion, with **everything being done in GIFtools**!
 

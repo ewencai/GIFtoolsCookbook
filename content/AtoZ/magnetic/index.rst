@@ -3,13 +3,11 @@
 A to Z Examples for Magnetics
 =============================
 
-These activities include files and parameters necessary to complete a certain task within GIFtools. They utilize some of the key capabilities within GIFtools and if you can do these, you're pretty much a GIFtools expert!
-
 .. figure:: ../../../images/TKC_7Steps.png
     :align: right
     :figwidth: 50%
 
-
+Here, A to Z examples relevant to the processing, interpretation forward modeling and inversion of magnetic data are presented. These tutorials are:
 
 .. toctree::
  	:maxdepth: 1
@@ -18,3 +16,4 @@ These activities include files and parameters necessary to complete a certain ta
    	Equivalent Source Processing with Total Magnetic Intensity (TMI) Data <TMI_EQS>
    	Magnetic Vector Inversion (MVI) <MVI>
 
+For each A to Z example, a brief overview of the tutorial is provided along with its relevance to practical problems.
