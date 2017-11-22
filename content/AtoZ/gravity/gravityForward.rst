@@ -91,13 +91,10 @@ Create Mesh from Gravity Survey
 To predict field data, we must define the domain by creating a mesh. GIFtools can create meshes based on the data locations and the local topography.
 
     - :ref:`Create mesh from gravity data <objectDataCreateMesh>`
-    - Do not forget to apply topography when creating the mesh!
-
-**For this exercise, use the following parameters:**
-
-    - Core cell widths = 25 m
-    - Depth of investigation = 400 m
-    - Padding = 500 m on each side, 1000 m in depth
+        - Do not forget to apply topography when creating the mesh!
+        - Core cell widths = 25 m
+        - Depth of investigation = 400 m
+        - Padding = 500 m on each side, 1000 m in depth
 
 
 .. figure:: images/MeshFromSurvey.png
@@ -113,22 +110,23 @@ Here, we show one way to create a mesh based on the data locations for your surv
 Create Models
 -------------
 
-In this step, we design a density model for the geological structure we think will explain the data. At TKC, we know:
+In this step, we design a density model for the geological structure we think will explain the data. We will show that test models can be made quickly using a priori geological information, as opposed to creating a model comprised of uniform blocks. At TKC, we know:
 
-    1. The gravity anomaly is likely caused by the presence of kimberlite pipes
-    2. The surface locations of geological units obtained from geological mapping
-    3. The approximate density of kimberlites relative to the host
+    1. The surface topography
+    2. The gravity anomaly is likely caused by the presence of kimberlite pipes
+    3. The surface distribution of geological units obtained from geological mapping
+    4. The approximate density of kimberlites relative to the host
 
 However, we don't know:
 
-    1. How far down the kimberlite extends
-    2. The thickness any kimberlite pipes as a function of depth
-    3. the thickness of the overlying till
+    1. How far down the kimberlites extend
+    2. The thickness of any of the kimberlite pipes as a function of depth
+    3. The thickness of the overlying till
 
 Create Active Cells Model from Topography
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Regions above the topography have an effective density of 0 and do not contribute towards the gravitational pull experienced at observation locations. For potential field problems, we MUST ensure that data location lie outside the region of active cells (e.g. within the air cells). Here, we will use the topography data to create an active cells model.
+Regions above the topography have an effective density of 0 and do not contribute towards the gravitational pull experienced at observation locations. For potential field problems, we MUST ensure that data locations lie outside the region of active cells (e.g. within the air cells). Here, we will use the topography data to create an active cells model.
 
     - :ref:`Creating active cell model from topography <createActiveCellsModel>`
         - Choose 'from tops of cells'
@@ -137,13 +135,14 @@ Regions above the topography have an effective density of 0 and do not contribut
 Create Density Model through Model Builder
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Now that we have topography, a mesh, and an active cells model, we can create a density model using available geological information. To approximate pipe-like structures, we will use the horizontal locations of each geological unit (obtained from the plan-view image), and project these units down to a desired depth. We will then assign a constant density value to all kimberlite units. To accomplish this, apply the following steps:
+Now that we have topography, a mesh, and an active cells model, we can create a density model using all available geological information. To approximate pipe-like structures, we will use the horizontal distributions of each geological unit (obtained from the plan-view image), and project these units down to a desired depth. We will then assign density values to all kimberlite units. Once the geological model has been created, we will output a physical property model which can be used in the forward model. To accomplish this, apply the following steps:
 
+    - :ref:`Start modelBuilder <createModelBuilder>`
     - :ref:`Create geology model from plan-view image <createGeoModelImage>`
         - Use a thickness of 200 m.
-    - :ref:`Set physical property model <propModelFromGeoModel>` from the newly created GEOmodel
+    - :ref:`Set physical properties model <propModelFromGeoModel>` for the newly created GEOmodel
         - The approximate difference in density for the kimberlites and till relative to the host is found :ref:`here <AtoZ_TKCbackground>`
-        - To view your model, you must first set I/O headers through **Geology Model** |rarr| **Set I/O Headers**
+    - Set I/O headers to define which information in the geological model is the physical property
     
 
 

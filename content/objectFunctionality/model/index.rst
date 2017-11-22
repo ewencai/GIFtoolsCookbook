@@ -1,19 +1,19 @@
 .. _objectFunctionalityModel:
 
+.. include:: <isonum.txt>
+
 Model
 =====
 
 
-    .. toctree::
-        :maxdepth: 2
+	.. toctree::
+		:maxdepth: 2
+		
+		general
+		activeModel
+		geoModel
+		gifModel
 
-        createActiveCells
-        Set unit name <setUnit>
-        Perform a simple mathematical operation <modelCalculator>
-        Add polyhedra from property data <addPolyBlock>
-        Assign values to air cells <assignAirValues>        
-        View in 3D, table format, or view statistics <viewModel>
-        Export <export>
 
 
 
