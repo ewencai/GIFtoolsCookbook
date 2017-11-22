@@ -24,7 +24,7 @@ In this activity, you are given a mesh, a topography file, and a geologic image 
     - :ref:`Recipe to create a geology model from an image <imageInInversion>`
     - :ref:`Recipe to create a physical property model from a geology model <propModelFromGeoModel>`
     - :ref:`Recipe to create a geology model from an isosurface <IsoSurfaceToGeoModel>`
-    - :ref:`View a model in 3D <viewModel>`
+    - :ref:`View a model in 3D <objectModelView>`
     - :ref:`Interpolate a model onto a different mesh <createInterpolateModels>`
     - :ref:`Recipe to create weights from a geology model <weightsFromGeoModel>`
 

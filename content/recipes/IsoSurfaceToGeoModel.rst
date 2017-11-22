@@ -11,7 +11,7 @@ Open GIFtools and if desired, :ref:`set the working directory <projSetWorkDir>`.
 
 In this recipe, the example uses a 3D mesh and a susceptibility model. :ref:`Import the 3D mesh <importMesh3D>` and then :ref:`import the corresponding model <importModel>`.
 
-:ref:`View the model <viewModel>` and decide what the physical property values are for the isosurfaces(s). The figure below shows the example model used in this recipe.
+:ref:`View the model <objectModelView>` and decide what the physical property values are for the isosurfaces(s). The figure below shows the example model used in this recipe.
 
 .. figure:: ../../images/IsoToGeoMod/model.png
     :align: center
@@ -34,7 +34,7 @@ GIFtools will ask for the value of the air cells in the selected model, which he
     :align: center
     :figwidth: 75%
 
-An active model can be generated in other ways too. For more information about creating an active model, see :ref:`this page <createActiveCells>`.
+An active model can be generated in other ways too. To create active cells models from a mesh, see :ref:`this page <createActiveCellsModel>`.
 
 The figure below shows the active model, with values of 1 for active cells (below topography) and 0 for inactive cells (above topography).
 
