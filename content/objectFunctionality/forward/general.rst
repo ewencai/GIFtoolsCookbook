@@ -2,8 +2,8 @@
 
 .. include:: <isonum.txt>
 
-General Functionality for Forward Modeling Objects
-==================================================
+General Functionality
+=====================
 
 .. _objectFwdWorkingDirectory:
 
@@ -29,7 +29,7 @@ Edit Options
 
 Here, the user sets the properties, mesh, model, etc... associated with the forward model. Depending on the forward modeling that is being done (gravity, magnetics, FEM, etc...), the set of properties and associate objects may change. Under each forward modeling type, there is a section which describes the contents of *Edit Options*. For any forward modeling type, this functionality can be access through:
 
-	- **_________ forward modeling** |rarr| **Edit options**
+**[Forward class]** |rarr| **Edit options**
 
 .. figure:: ../../../images/simpleFwdMenu.png
     :align: center
@@ -42,7 +42,7 @@ Select Version
 
 For any forward modeling type, this functionality can be access through:
 
-	- **_________ forward modeling** |rarr| **Select version**
+**[Forward class]** |rarr| **Select version**
 
 .. figure:: ../../../images/simpleFwdMenu.png
     :align: center
@@ -55,7 +55,7 @@ Copy a Forward Modeling Item
 
 Once the forward model has run and the results have been loaded, GIFtools does not allow the straight copying of the forward model item (it has been "archived" and becomes a folder). It does, however, allow you to copy the options that were chosen for the forward modeling to a new one. Click on the forward model item, select the menu showing its class (e.g., ``MAGforward`` or ``GRAVforward``):
 
-	- **_________ forward modeling** |rarr| **Copy options**
+**[Forward class]** |rarr| **Copy options**
 
 .. figure:: ../../../images/simpleFwdMenu.png
     :align: center

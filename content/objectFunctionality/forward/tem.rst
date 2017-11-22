@@ -2,8 +2,8 @@
 
 .. include:: <isonum.txt>
 
-Functionality for TEM Forward Modeling Objects
-==============================================
+Time-Domaine EM
+===============
 
 
 

@@ -2,16 +2,17 @@
 
 .. include:: <isonum.txt>
 
-Functionality for Forward Modeling Objects
-==========================================
+Forward Modeling
+================
 
 
     .. toctree::
        :maxdepth: 2
 
        general
-       gravity
        magnetics
+       gravity
+       gravGrad
        dcip
        fem
        tem
