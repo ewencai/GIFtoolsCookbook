@@ -22,7 +22,7 @@ In this activity, you are given a magnetic airborne survey location file, a topo
     - Suppose you also have a second physical property model and imported it. Can you convert the current survey to a different data type?
 - **Helpful links**
     - :ref:`Recipe for creating a forward model <createForward>`
-    - :ref:`View model in 3D <viewModel>`
+    - :ref:`View model in 3D <objectModelView>`
     - :ref:`Create active cells model <createActiveCellsModel>`
     - **Assign uncertainties (page needed)**
 
