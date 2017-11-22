@@ -22,14 +22,52 @@ To complete this exercise, you must first download the necessary files and set u
     - :ref:`Set the working directory <projSetWorkDir>`
 
 
-Import geological information
------------------------------
+Import files
+------------
 
-Having surveyed the region, you may have access to topographical information and/or geological surface maps/cross-sections. If this information is available to you, it can be imported to GIFtools. Here, we have surface topography and files which define several geological units through surface mapping.
+In addition to geophysical data, you may have access to topographical information and/or geological surface maps/cross-sections. If this information is available to you, it can be imported to GIFtools. Here, we have surface topography and files which define several geological units through surface mapping.
 
     - :ref:`Import the topography data <importTopo>` (3D GIF format)
     - :ref:`Import the geology image and link to topography <importImage>` (Image is plane view)
     - :ref:`Create a legend for the geological units in the image <objectGeneralImageCreateLegend>`
+    - :ref:`Import field observed gravity anomaly data <importGravData>` (GIF format)
+
+**Note:** observed data were generated synthetically using the best-available density model for TKC.
+
+.. figure:: images/TopoGeologyImage.png
+    :align: center
+    :figwidth: 100%
+
+    Topography imaged in VTK (left). Plan-view image for surface geological mapping (middle). Gravity anomaly data in gal (right).
+
+
+Create a Survey
+---------------
+
+Ultimately, we would like to predict gravity data for a model of our choosing and compare it against a set of field observations. To accomplish this, we must first create a survey; which has the same properties as the actual survey that was performed. To create the survey:
+
+    - :ref:`Create simple survey <createSurveySimple>`
+
+**For this exercise, remember to:**
+
+    - Set the survey type as 'Gravity'
+    - Link the survey to the known topography at TKC
+    - Set the height above topography to 10 m
+    - Set the following parameters:
+        - Easting origin: 556,600
+        - Northing origin: 7,133,200
+        - Bearing: 0
+        - Line length: 1,500
+        - Number of survey lines: 15
+        - Data spacing: 20
+        - Line spacing: 100
+
+.. figure:: images/SurveyCompare.png
+    :align: center
+    :figwidth: 100%
+
+    Data location from observed data file (left). Data locations for synthetic survey (right).
+
 
 
 

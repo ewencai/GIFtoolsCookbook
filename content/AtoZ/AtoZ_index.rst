@@ -3,8 +3,7 @@
 A to Z Examples
 ===============
 
-What is this?
--------------
+**What is this?**
 
 A to Z examples is a collection of step by step tutorials for completing projects using GIFtools. Tutorials include: forward modeling and inverting geophysical data, equivalent source processing and demonstrating the extended functionality provided within GIFtools. Each tutorial is broken down into a set of linear steps and makes use of items from the :ref:`recipes <recipe_index>` section. Any files required to complete the tutorials will be provided as needed through download links. By completing the tutorials from A to Z examples, you will be proficient in using GIFtools to complete other projects.
 
@@ -32,8 +31,7 @@ For consistency, A to Z examples for each geophysical method consider the same g
 
 .. _AtoZ_TKCbackground:
 
-Tli Kwi Cho (TKC) Background
-----------------------------
+**Tli Kwi Cho (TKC) Background:**
 
 The TKC kimberlite complex is being used for A to Z examples because the area has been surveyed with a variety of systems (`see here <https://em.geosci.xyz/content/case_histories/do27do18tkc/survey.html>`_) and drilled extensively. As a result, we have a very good understanding of the geological units which make up the deposit, their margins and their physicals properties. The average density, susceptibility and electrical conductivity for geological units at TKC is shown in the table below.
 
