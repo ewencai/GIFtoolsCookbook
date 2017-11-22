@@ -1,6 +1,9 @@
-.. _exercise1:
+.. _AtoZDCIP_index:
 
 .. include:: <isonum.txt>
+
+.. raw:: html
+    :file: ../../../underconstruction.html
 
 Create an octree mesh
 =====================
@@ -18,10 +21,10 @@ In this activity, you are given a magnetic airborne survey location file and a t
         - Can you create an active cells model?
         - Can you view the mesh and overlay the survey locations on it?
 - **Helpful links**
-        - :ref:`Recipe for creating an octree mesh <createOctreeMesh>` 
-        - :ref:`Import a magnetic survey <importMagData>` 
-        - :ref:`Import a topography file <importTopo>` 
-        - :ref:`Edit field parameters for a magnetic survey <objectEditFieldParam>` 
+        - :ref:`Recipe for creating an octree mesh <createOctreeMesh>`
+        - :ref:`Import a magnetic survey <importMagData>`
+        - :ref:`Import a topography file <importTopo>`
+        - :ref:`Edit field parameters for a magnetic survey <objectEditFieldParam>`
         - :ref:`View data in 3D <viewData>`
         - :reF:`View mesh in 3D <viewMesh>`
 
