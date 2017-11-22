@@ -7,9 +7,7 @@
 A to Z Examples
 ===============
 
-
-What is this?
--------------
+**What is this?**
 
 A to Z examples is a collection of step by step tutorials for completing
 projects using GIFtools - from forward modeling to inversion, and everything
@@ -19,7 +17,7 @@ relevant files are available for download. By completing the tutorials from A
 to Z, you will rapidly become proficient users of GIFtools and the
 large library of UBC-GIF codes.
 
-Tutorials are organized by geophysical methods:
+Tutorials are organized by geophysical method:
 
     .. toctree::
        :maxdepth: 1
@@ -38,7 +36,7 @@ multiple methods (e.g. adding geological constraints to inversions).
          mesh), search the :ref:`recipes <recipe_index>` section or try the search bar.
 
 
-.. _AtoZ_TKCbackground:
+
 
 .. figure:: ../../images/TKC_7Steps.png
     :align: right
@@ -46,8 +44,10 @@ multiple methods (e.g. adding geological constraints to inversions).
 
     7-step process applied to TKC kimberlite complex
 
-A to Z: Synthetic TKC
----------------------
+
+.. _AtoZ_TKCbackground:
+
+**A to Z: Synthetic TKC**
 
 For consistency, A to Z examples for each geophysical method consider the same
 geological model; the Tli Kwi Cho (TKC) kimberlite complex in NWT, Canada.
@@ -59,44 +59,48 @@ For background about the deposits, the geophysical surveys, and the outcome
 The TKC kimberlite complex has been surveyed with a variety of systems (`see here
 <https://em.geosci.xyz/content/case_histories/do27do18tkc/survey.html>`_) and
 drilled extensively. As a result, we have a very good understanding of the
-geological units which make up the deposit, their margins and their physicals
+geological units which make up the deposit, their margins and their physical
 properties. The average density, susceptibility and electrical conductivity
 for geological units at TKC is shown in the table below.
+
+.. tabularcolumns:: |L|C|C|C|C|
+
++-------------+--------------------+---------------------+-------------+-----------------------+-------------------+
+|**Unit**     |:math:`\rho` [g/cc] | :math:`\kappa` [SI] | Remanence   | :math:`\sigma` [mS/m] | :math:`\eta` [ms] |
++=============+====================+=====================+=============+=======================+===================+
+|Granitic Host|      0             |         0           |     x       |             x         |           x       |
++-------------+--------------------+---------------------+-------------+-----------------------+-------------------+
+|XVK/DO-18    |   -0.24            |     0.002           |      x      |            X          |           x       |
++-------------+--------------------+---------------------+-------------+-----------------------+-------------------+
+|Kimberlite/HK|   -0.24            |         0           |       x     |            x          |           x       |
++-------------+--------------------+---------------------+-------------+-----------------------+-------------------+
+|HK/DO-27     |   -0.24            |     0.006           |    X        |            x          |          x        |
++-------------+--------------------+---------------------+-------------+-----------------------+-------------------+
+|VK/DO-27     |   -0.24            |     0.003           |       x     |            x          |          X        |
++-------------+--------------------+---------------------+-------------+-----------------------+-------------------+
+|PK/DO-27     |   -0.24            |     0.003           |       x     |            x          |          x        |
++-------------+--------------------+---------------------+-------------+-----------------------+-------------------+
+| Till        |   -0.24            |         0           |      x      |            x          |            x      |
++-------------+--------------------+---------------------+-------------+-----------------------+-------------------+
+
 
 .. figure:: ../../images/TKC_surfs.png
    :align: left
    :scale: 50%
 
-+-------------+--------------+-------------------+---------+-------------------+------------------+
-|**Unit**     |Density [g/cc]|Susceptibility [SI]|Remanence|Conductivity [mS/m]|Chargeability [ms]|
-+=============+==============+===================+=========+===================+==================+
-| Host        |      0       |         0         |         |                   |                  |
-+-------------+--------------+-------------------+---------+-------------------+------------------+
-|XVK/DO-18    |   -0.24      |     0.002         |         |                   |                  |
-+-------------+--------------+-------------------+---------+-------------------+------------------+
-|Kimberlite/HK|   -0.24      |         0         |         |                   |                  |
-+-------------+--------------+-------------------+---------+-------------------+------------------+
-|HK/DO-27     |   -0.24      |     0.006         |    X    |                   |                  |
-+-------------+--------------+-------------------+---------+-------------------+------------------+
-|VK/DO-27     |   -0.24      |     0.003         |         |                   |                  |
-+-------------+--------------+-------------------+---------+-------------------+------------------+
-|PK/DO-27     |   -0.24      |     0.003         |         |                   |                  |
-+-------------+--------------+-------------------+---------+-------------------+------------------+
-| Till        |   -0.24      |         0         |         |                   |                  |
-+-------------+--------------+-------------------+---------+-------------------+------------------+
+- PK: pyroclastic kimberlite
+- HK: hypabyssal kimberlite
+- VK: volcaniclastic kimberlite
+- XVK: xenocryst-rich volcaniclastic kimberlite
 
-
-    - PK: pyroclastic kimberlite
-    - HK: hypabyssal kimberlite
-    - VK: volcaniclastic kimberlite
-    - XVK: xenocryst-rich volcaniclastic kimberlite
-
-
-
-
-
-
-
-
-
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
 
