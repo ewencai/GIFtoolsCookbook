@@ -10,7 +10,7 @@ Prelude
 
 Here, we show how GIFtools can be used to forward model gravity data for an arbitrary density model. We consider the case where we have a set of field observations and some a priori knowledge of the local geology; for this example, we know the anomaly is produced by the :ref:`TKC kimberlites <AtoZ_TKCbackground>`. The goal of this exercise is to forward model the survey data for a plausible density model, and see if the predicted gravity anomaly sufficiently matches the anomaly observed in the field data. A reasonable match ensures that our current geological understanding is able to explain the cause of the anomaly.
 
-**NOTE: The same workflow can be used to predict magnetic data for an arbitrary susceptibility or magnetic vector models.**
+.. tip:: The same workflow can be used to predict magnetic data for an arbitrary susceptibility or magnetic vector models.**
 
 
 Download files and start new project
@@ -19,10 +19,10 @@ Download files and start new project
 To complete this exercise, you must first download the necessary files and set up the working directory for your project.
 
     - Download the demo `Download the demo <https://owncloud.eoas.ubc.ca/s/lDVLwPD2LKI2QKK>`__
-    - NOTE: Steps (without links) are also included with the download
-    - NOTE: Requires at least GIFtools version 2.1.3 (Oct 2017)
     - :ref:`Set the working directory <projSetWorkDir>`
 
+.. tip:: - Steps (without links) are also included with the download
+         - Requires at least GIFtools version 2.1.3 (Oct 2017)
 
 Import files
 ------------
@@ -34,7 +34,7 @@ In addition to geophysical data, you may have access to topographical informatio
     - :ref:`Create a legend for the geological units in the image <objectGeneralImageCreateLegend>`
     - :ref:`Import field observed gravity anomaly data <importGravData>` (GIF format)
 
-**Note:** observed data were generated synthetically using the best-available density model for TKC.
+.. tip:: Observed data were generated synthetically using the best-available density model for TKC.
 
 .. figure:: images/TopoGeologyImage.png
     :align: center
@@ -53,9 +53,9 @@ Approach 1: Survey at exact locations
 
 Using this approach, we will be able to predict gravity data at the EXACT same locations as the field observations. Later on, this will allow us to compute the different between the predicted and observed data. Steps are as follows:
 
-    - Make a :ref:`copy <editcopy>` of the gravity data 
+    - Make a :ref:`copy <editcopy>` of the gravity data
     - Through :ref:`Set I/O headers <objectSetioHeaders>`, remove the I/O header for gravity anomaly data column by setting it to blank
-    - :ref:`Delete data column <objectDataDeleteDataColumns>` for pre-existing gravity data (data cannot be deleted if it has an assigned I/O header) 
+    - :ref:`Delete data column <objectDataDeleteDataColumns>` for pre-existing gravity data (data cannot be deleted if it has an assigned I/O header)
 
 Approach 2: Custom locations
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -73,11 +73,11 @@ Approach 2: Custom locations
             - Data spacing = 20
             - Line spacing = 100
 
-**NOTE:** Since the survey parameters are exactly known, approach 1 and approach 2 produce the same thing.
 
-**NOTE:** Both the observed gravity and survey are 'gravity data' objects. Thus they have the same properties and undergo identical actions.
+.. tip:: - Since the survey parameters are exactly known, approach 1 and approach 2 produce the same thing.
+         - Both the observed gravity and survey are 'gravity data' objects. Thus they have the same properties and undergo identical actions.
+         - On the plot below, we see that the colorbar titles are different because the data headers are different. In GIFtools, we can :ref:`edit data headers <objectDataHeaders>`.
 
-**NOTE:** On the plot below, we see that the colorbar titles are different because the data headers are different. In GIFtools, we can :ref:`edit data headers <objectDataHeaders>`.
 
 .. figure:: images/SurveyCompare.png
     :align: center
@@ -144,7 +144,7 @@ Now that we have topography, a mesh, and an active cells model, we can create a 
     - :ref:`Set physical property model <propModelFromGeoModel>` from the newly created GEOmodel
         - The approximate difference in density for the kimberlites and till relative to the host is found :ref:`here <AtoZ_TKCbackground>`
         - To view your model, you must first set I/O headers through **Geology Model** |rarr| **Set I/O Headers**
-    
+
 
 
 
