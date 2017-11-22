@@ -18,8 +18,8 @@ Download files and start new project
 
 To complete this exercise, you must first download the necessary files and set up the working directory for your project.
 
-    - Download the demo `Download the demo <https://owncloud.eoas.ubc.ca/s/lDVLwPD2LKI2QKK>`__
-    - :ref:`Set the working directory <projSetWorkDir>`
+.. example:: - `Download the demo <https://owncloud.eoas.ubc.ca/s/lDVLwPD2LKI2QKK>`__
+             - :ref:`Set the working directory <projSetWorkDir>`
 
 .. tip:: - Steps (without links) are also included with the download
          - Requires at least GIFtools version 2.1.3 (Oct 2017)
@@ -156,7 +156,7 @@ We now have all the objects we need to create the files for the forward model. T
 
 
     - Create Grav3D forward model through :ref:`create forward modeling <createForward>`.
-    - 
+    -
 
 
 
