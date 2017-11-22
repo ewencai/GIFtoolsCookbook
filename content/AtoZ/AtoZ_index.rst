@@ -86,8 +86,6 @@ for geological units at TKC is shown in the table below.
 +-------------+--------------+-------------------+---------+-------------------+------------------+
 
 
-**Abbreviations:**
-
     - PK: pyroclastic kimberlite
     - HK: hypabyssal kimberlite
     - VK: volcaniclastic kimberlite
