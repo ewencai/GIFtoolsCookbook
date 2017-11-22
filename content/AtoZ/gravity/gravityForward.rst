@@ -10,7 +10,7 @@ Prelude
 
 Here, we show how GIFtools can be used to forward model gravity data for an arbitrary density model. We consider the case where we have a set of field observations and some a priori knowledge of the local geology; for this example, we know the anomaly is produced by the :ref:`TKC kimberlites <AtoZ_TKCbackground>`. The goal of this exercise is to forward model the survey data for a plausible density model, and see if the predicted gravity anomaly sufficiently matches the anomaly observed in the field data. A reasonable match ensures that our current geological understanding is able to explain the cause of the anomaly.
 
-.. tip:: The same workflow can be used to predict magnetic data for an arbitrary susceptibility or magnetic vector models.**
+.. tip:: The same workflow can be used to predict magnetic data for an arbitrary susceptibility or magnetic vector models.
 
 
 Download files and start new project
@@ -34,13 +34,15 @@ In addition to geophysical data, you may have access to topographical informatio
     - :ref:`Create a legend for the geological units in the image <objectGeneralImageCreateLegend>`
     - :ref:`Import field observed gravity anomaly data <importGravData>` (GIF format)
 
-.. tip:: Observed data were generated synthetically using the best-available density model for TKC.
+.. tip:: - Use **Edit** |rarr| **Rename** to change what objects in GIFtools are called
+         - For any data object, :ref:`edit the data headers <objectDataHeaders>`. We set the observed gravity data to "Gravity (mGal)"
+         - Observed data were generated synthetically using the best-available density model for TKC.
 
 .. figure:: images/TopoGeologyImage.png
     :align: center
     :figwidth: 100%
 
-    Topography imaged in VTK (left). Plan-view image for surface geological mapping (middle). Gravity anomaly data in gal (right).
+    Topography imaged in VTK (left). Plan-view image for surface geological mapping (middle). Gravity anomaly data in mGal (right).
 
 
 Create a Survey
@@ -91,7 +93,7 @@ Create Mesh from Gravity Survey
 To predict field data, we must define the domain by creating a mesh. GIFtools can create meshes based on the data locations and the local topography.
 
     - :ref:`Create mesh from gravity data <objectDataCreateMesh>`
-        - Do not forget to apply topography when creating the mesh!
+        - Don't forget to apply topography when creating the mesh!
         - Core cell widths = 25 m
         - Depth of investigation = 400 m
         - Padding = 500 m on each side, 1000 m in depth
@@ -99,13 +101,11 @@ To predict field data, we must define the domain by creating a mesh. GIFtools ca
 
 .. figure:: images/MeshFromSurvey.png
     :align: center
-    :figwidth: 70%
+    :figwidth: 80%
 
     Mesh created from survey and viewed in VTK. Data locations from the survey have been imported.
 
-**Other ways to make meshes:**
-
-Here, we show one way to create a mesh based on the data locations for your survey. If available, you could also :ref:`import <importMesh>` a pre-existing mesh.
+.. tip:: There are other ways to make meshes. If available, you could :ref:`import <importMesh>` a pre-existing mesh or :ref:`create and OcTree mesh <createOctreeMesh>`.
 
 Create Models
 -------------
@@ -135,16 +135,28 @@ Regions above the topography have an effective density of 0 and do not contribut
 Create Density Model through Model Builder
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Now that we have topography, a mesh, and an active cells model, we can create a density model using all available geological information. To approximate pipe-like structures, we will use the horizontal distributions of each geological unit (obtained from the plan-view image), and project these units down to a desired depth. We will then assign density values to all kimberlite units. Once the geological model has been created, we will output a physical property model which can be used in the forward model. To accomplish this, apply the following steps:
+Now that we have topography, a mesh, and an active cells model, we can create a geological model. To approximate pipe-like structures, we will use the horizontal distributions of each geological unit (obtained from the plan-view image), and project these units down to a desired depth. We will then assign density values to all kimberlite units. Once the geological model has been created, we will output a physical property model which can be used in the forward model. To accomplish this, apply the following steps:
 
     - :ref:`Start modelBuilder <createModelBuilder>`
-    - :ref:`Create geology model from plan-view image <createGeoModelImage>`
-        - Use a thickness of 200 m.
-    - :ref:`Set physical properties model <propModelFromGeoModel>` for the newly created GEOmodel
-        - The approximate difference in density for the kimberlites and till relative to the host is found :ref:`here <AtoZ_TKCbackground>`
+    - :ref:`Create geology model from plan-view image <createGeoModelImage>` (Use a thickness of 200 m)
+    - :ref:`Set physical properties model <propModelFromGeoModel>` for the newly created GEOmodel (The approximate difference in density for the kimberlites and till relative to the host is found :ref:`here <AtoZ_TKCbackground>`)
     - Set I/O headers to define which information in the geological model is the physical property
 
+.. figure:: images/GeologyModel.png
+    :align: center
+    :figwidth: 100%
 
+    Geological model created with each colour representing a different units (left). Difference in density from host in g/cc (right).
+
+
+Set Up the Forward Modeling
+---------------------------
+
+We now have all the objects we need to create the files for the forward model. The next step is outputting the files which are read by the fortran code.
+
+
+    - Create Grav3D forward model through :ref:`create forward modeling <createForward>`.
+    - 
 
 
 

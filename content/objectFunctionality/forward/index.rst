@@ -2,19 +2,21 @@
 
 .. include:: <isonum.txt>
 
-Forward Modeling
-================
+Functionality for Forward Modeling Objects
+==========================================
 
 
     .. toctree::
        :maxdepth: 2
 
-       Set the working directory <setWorkDir>
-       Edit options <editOptions>
-       Write files <writeAll>
-       Run <run>
-       Load results <loadResults>
-       Copy the item <copyOptions>
+       general
+       gravity
+       magnetics
+       dcip
+       fem
+       tem
+       ns
+
 
 
 
