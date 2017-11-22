@@ -29,6 +29,7 @@ Here, we describe the specific set of actions (or methods) which can be applied 
     data/index
     mesh/index
     model/index
+    image/index
     workflow/index
     forward/index
     inversion/index
