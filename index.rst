@@ -5,9 +5,8 @@
 
 .. figure:: /images/Cookbook_Landing.png
    :align: left
-   :scale: 100%
+   :scale: 75%
 
-|
 |
 |
 |
