@@ -66,6 +66,13 @@ Once the image is selected, the legend defining each distinct geological unit ca
 	- **Plan-view image** |rarr| **Legend** |rarr| **Create** |rarr| **Table**
 	- **Cross-section image** |rarr| **Legend** |rarr| **Create** |rarr| **Table**
 
+**Also see:**
+
+	- Importing and formatting for legend files is explained :ref:`here <importLegendFile>`
+
+..	- :ref:`Legend file format <>`
+..	- :ref:`Import legend file <>`
+
 
 Import
 ^^^^^^
