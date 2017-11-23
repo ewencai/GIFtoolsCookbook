@@ -32,7 +32,7 @@ In addition to geophysical data, you may have access to topographical informatio
     - :ref:`Import the topography data <importTopo>` (3D GIF format)
     - :ref:`Import the geology image and link to topography <importImage>` (Image is plane view)
     - :ref:`Create a legend for the geological units in the image <objectGeneralImageCreateLegend>`
-    - :ref:`Import field observed gravity anomaly data <importGravData>` (GIF format)
+    - :ref:`Import field observed gravity anomaly data <importGravData>` (GIF format with data in mGal)
 
 .. tip:: - Use **Edit** |rarr| **Rename** to change what objects in GIFtools are called
          - For any data object, :ref:`edit the data headers <objectDataHeaders>`. We set the observed gravity data to "Gravity (mGal)"
@@ -40,7 +40,7 @@ In addition to geophysical data, you may have access to topographical informatio
 
 .. figure:: images/TopoGeologyImage.png
     :align: center
-    :figwidth: 100%
+    :width: 700
 
     Topography imaged in VTK (left). Plan-view image for surface geological mapping (middle). Gravity anomaly data in mGal (right).
 
@@ -83,7 +83,7 @@ Approach 2: Custom locations
 
 .. figure:: images/SurveyCompare.png
     :align: center
-    :figwidth: 100%
+    :width: 700
 
     Data location from observed data file (left). Data locations for synthetic survey (right).
 
@@ -101,7 +101,7 @@ To predict field data, we must define the domain by creating a mesh. GIFtools ca
 
 .. figure:: images/MeshFromSurvey.png
     :align: center
-    :figwidth: 80%
+    :width: 550
 
     Mesh created from survey and viewed in VTK. Data locations from the survey have been imported.
 
@@ -139,31 +139,57 @@ Now that we have topography, a mesh, and an active cells model, we can create a 
 
     - :ref:`Start modelBuilder <createModelBuilder>`
     - :ref:`Create geology model from plan-view image <createGeoModelImage>` (Use a thickness of 200 m)
-    - :ref:`Set physical properties model <propModelFromGeoModel>` for the newly created GEOmodel (The approximate difference in density for the kimberlites and till relative to the host is found :ref:`here <AtoZ_TKCbackground>`)
+    - :ref:`Set physical properties model <propModelFromGeoModel>` for the newly created GEOmodel (The approximate difference in density for the kimberlites and till relative to the host is found :ref:`here <AtoZ_TKCbackground>`). **Units should be g/cc.**
     - Set I/O headers to define which information in the geological model is the physical property
+    - Create GIF model from the GEO model you created using **Geology Model** |rarr| **Create Model** |rarr| **From Property Values**
 
 .. figure:: images/GeologyModel.png
     :align: center
-    :figwidth: 100%
+    :width: 700
 
-    Geological model created with each colour representing a different units (left). Difference in density from host in g/cc (right).
-
-
-Set Up the Forward Modeling
----------------------------
-
-We now have all the objects we need to create the files for the forward model. The next step is outputting the files which are read by the fortran code.
+    Geological model created with each colour representing a different units (left). Density contrast in g/cc relative to host (right).
 
 
-    - Create Grav3D forward model through :ref:`create forward modeling <createForward>`.
-    -
+Forward Model the Data
+----------------------
+
+We now have all the objects we need to create the files for the forward model and run the fortran model. This is accomplished by carrying out the following steps:
+
+    - Create Grav3D forward model through :ref:`create forward modeling <createForward>`
+    - Select the forward modeling object and :ref:`edit options <objectFwdEditOptions>` to link
+        - GIF Model
+        - Data locations
+        - Topography
+    - :ref:`Write files <objectFwdWriteAll>`
+    - :ref:`Run GZFOR3D <objectFwdRun>`
 
 
+Load Predicted Data and Compare Against Observed Data
+-----------------------------------------------------
+
+Here, we compare the observed data to the predicted data from our forward model. We will also show how the difference between both datasets can be computed and plotted.
+
+    - :ref:`Load data <objectFwdLoadAll>`
+    - Using :ref:`add data from another object <objectCombineData>`, add the observed data to the predicted gravity data
+    - Using :ref:`column calculator <objectColumnCalculator>`, subtract the predicted data from the observed data
+    - :ref:`View the data <viewData>` (observed, predicted and difference) from the final data object you created
+
+.. figure:: images/CompareData.png
+    :align: center
+    :width: 700
+
+    Observed data (left). Predicted data (middle). Observed - predicted (right).
 
 
+.. tip:: :ref:`Edit data headers <objectDataHeaders>` to avoid confusion between predicted and observed data.
 
+Results
+-------
 
-
+    - Our synthetic model produces gravity anomalies of similar size and character.
+    - The northern portion of the largest anomaly does not match between predicted and observed gravity data
+    - The predicted data over-estimates the maximum anomaly amplitude
+    - Our synthetic model explains the data, but the margins of various kimberlite facies and their density distributions remain unresolved.
 
 
 
