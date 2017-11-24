@@ -1,8 +1,7 @@
 .. _format_index:
 
-
-File formats
-============
+UBC File formats
+================
 
 Data
 ^^^^
@@ -15,7 +14,7 @@ Data
     gravfile
     ggfile
     dcip2dObsfile
-    dcip3dObsfile    
+    dcip3dObsfile
     collarfile
     surveyfile
     bhpropfile
@@ -33,13 +32,13 @@ Topography
 
     topoGIF2Dfile
     topoGIF3Dfile
-    topoDiscretefile    
+    topoDiscretefile
 
 Meshes
 ^^^^^^
 .. toctree::
     :maxdepth: 1
- 
+
     mesh2Dfile
     mesh3Dfile
     meshOctreefile
