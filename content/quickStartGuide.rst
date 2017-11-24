@@ -48,26 +48,29 @@ GIFtools Framework
    :scale: 50%
 
 The GIFtools Framework has been designed to store, visualize and modify the
-different :ref:`objects <objectFunctionality_index>` needed to interact with
-the various Fortran executable. In computer language, an *object* is a
+different :ref:`Objects <objectFunctionality_index>` needed to interact with
+the various Fortran executable. In computer language, an **object** is a
 container holding a set of attributes and functions that can be used to
-perform tasks. You can think of it as a self- contained machine. For example,
-a *GIFdata* object knows about the geophysical experiment (location,
-transmitter, units, etc.), and can perform action (write to file, plot)
+perform tasks. You can think of it as computer hardware. For example, a
+:ref:`GIFdata <objectFunctionalityData>` object knows all the necessary
+details about the geophysical experiment (location, receivers, units, etc.)
+and can perform actions (add/substract, write to file, plot, etc.)
 
 .. figure:: ../images/ObjectLink.png
    :align: right
    :scale: 50%
 
-The *objects* can be linked to each other, like building blocks, to achieve
-more complex tasks. For example, a model needs mesh in order to exist in a 3D
+**Objects** can be linked to each other, like building blocks, to achieve
+more complex tasks. For example, a :ref:`Model <objectFunctionalityModel>` needs :ref:`Mesh <objectFunctionalityMesh>` in order to exist in a 3D
 space and be exported.
 
 
-More complex objects, an inversion for example, need to know about many other
-objects in order to be complete (data, mesh and model). Once all the pieces
-are connected, the inversion object can interact with external Fortran codes
-and knows how to handle the various outputs.
+More complex objects, such as a :ref:`GIFinversion <objectFunctionalityInv>`,
+need to know about many other objects in order to exist (:ref:`Data
+<objectFunctionalityData>`, :ref:`Mesh <objectFunctionalityMesh>` and
+:ref:`Model <objectFunctionalityModel>`). Once all the pieces are connected,
+the inversion object can interact with external Fortran codes and knows how to
+handle the various outputs.
 
 .. figure:: ../images/GIFproject.png
    :align: center

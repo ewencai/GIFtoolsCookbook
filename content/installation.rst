@@ -68,7 +68,6 @@ If you use a proxy server *and* you are using the `GIFtools_vXpX_install.exe`, y
 
 
 
-
 6. If everything worked out, you will get to the screen below giving you step 7's instructions. Click **Finish** and **read below to finish the install** so the link is not broken.
 
 .. figure:: ../images/giftoolsInstall6.png
@@ -77,13 +76,11 @@ If you use a proxy server *and* you are using the `GIFtools_vXpX_install.exe`, y
 
 
 
-
 7. Fix the *Start-in*  directory link for GIFtools. Go to the Start menu and find `GIFtools_vXpX` and **right-click** and select **properties**:
 
 .. figure:: ../images/giftoolsInstall7.png
     :align: center
     :width: 300
-
 
 
 
