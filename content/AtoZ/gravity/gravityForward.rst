@@ -140,6 +140,7 @@ Regions above the topography have an effective density of 0 and do not contribut
     - :ref:`Creating active cell model from topography <createActiveCellsModel>`
         - Choose 'from tops of cells'
 
+.. _AtoZGrav_Forward_Model_Geo:
 
 Create Density Model through Model Builder
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
