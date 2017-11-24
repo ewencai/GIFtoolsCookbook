@@ -19,6 +19,7 @@ Setup for the Inversion Exercise
 **If you have completed the tutorial** :ref:`"Forward Model Gravity Data and Compare Against Field Observations" <AtoZGrav_Forward>`:
 
     - Open your final GIFtools project
+    - :ref:`Import the true density model <importModel>`
 
 **If you have NOT completed the tutorial, you must complete the following steps from the tutorial:**
 
@@ -26,6 +27,7 @@ Setup for the Inversion Exercise
     - :ref:`Import the files into GIFtools <AtoZGrav_Forward_Import>`
     - :ref:`Create a mesh from the survey data <AtoZGrav_Forward_Mesh>`
     - :ref:`Create an active cells model and a synthetic geological model from topography and surface mapping <AtoZGrav_Forward_Model>`
+    - :ref:`Import the true density model <importModel>`
 
 
 Assign Uncertainties and Set I/O Headers
