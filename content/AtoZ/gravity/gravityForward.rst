@@ -10,8 +10,9 @@ Prelude
 
 Here, we show how GIFtools can be used to forward model gravity data for an arbitrary density model. We consider the case where we have a set of field observations and some a priori knowledge of the local geology; for this example, we know the anomaly is produced by the :ref:`TKC kimberlites <AtoZ_TKCbackground>`. The goal of this exercise is to forward model the survey data for a plausible density model, and see if the predicted gravity anomaly sufficiently matches the anomaly observed in the field data. A reasonable match ensures that our current geological understanding is able to explain the cause of the anomaly.
 
-.. tip:: The same workflow can be used to predict magnetic data for an arbitrary susceptibility or magnetic vector models.
+.. tip:: The same workflow can be used to predict magnetic data for an arbitrary susceptibility or magnetic vector model.
 
+.. _AtoZGrav_Forward_Download:
 
 Download files and start new project
 ------------------------------------
@@ -23,6 +24,9 @@ To complete this exercise, you must first download the necessary files and set u
 
 .. tip:: - Steps (without links) are also included with the download
          - Requires at least GIFtools version 2.1.3 (Oct 2017)
+
+
+.. _AtoZGrav_Forward_Import:
 
 Import files
 ------------
@@ -43,7 +47,6 @@ In addition to geophysical data, you may have access to topographical informatio
     :width: 700
 
     Topography imaged in VTK (left). Plan-view image for surface geological mapping (middle). Gravity anomaly data in mGal (right).
-
 
 Create a Survey
 ---------------
@@ -87,6 +90,8 @@ Approach 2: Custom locations
 
     Data location from observed data file (left). Data locations for synthetic survey (right).
 
+.. _AtoZGrav_Forward_Mesh:
+
 Create Mesh from Gravity Survey
 -------------------------------
 
@@ -95,17 +100,21 @@ To predict field data, we must define the domain by creating a mesh. GIFtools ca
     - :ref:`Create mesh from gravity data <objectDataCreateMesh>`
         - Don't forget to apply topography when creating the mesh!
         - Core cell widths = 25 m
+        - Extent above = 0 m
         - Depth of investigation = 400 m
         - Padding = 500 m on each side, 1000 m in depth
+        - Padding factor = 1.2
 
 
 .. figure:: images/MeshFromSurvey.png
     :align: center
     :width: 550
 
-    Mesh created from survey and viewed in VTK. Data locations from the survey have been imported.
+    Mesh created from survey and viewed in VTK. Gravity anomaly data from the survey have been imported at their locations.
 
 .. tip:: There are other ways to make meshes. If available, you could :ref:`import <importMesh>` a pre-existing mesh or :ref:`create and OcTree mesh <createOctreeMesh>`.
+
+.. _AtoZGrav_Forward_Model:
 
 Create Models
 -------------
