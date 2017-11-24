@@ -49,11 +49,7 @@ Assigning appropriate uncertainties to the data is necessary for running stable 
 Unconstrained Smooth Inversion
 ------------------------------
 
-Here, we perform the most basic type of gravity anomaly inversion.
-
-
-
-To run the inversion:
+Here, we perform the most basic type of gravity anomaly inversion. No a priori information is used in the inversion. Default inversion parameters use least-squares penalties on the model and its gradients. As a result, we expect the inversion to recover a smooth model. To run the inversion and view results:
 
     - :ref:`Create a gravity inversion object <createGravInv>`
     - :ref:`Edit the inversion parameters <invEditOptions>`
@@ -65,5 +61,36 @@ To run the inversion:
     - :ref:`Import inversion results <invLoadResults>`
     - View the results. The user is encouraged to:
         - Compare predicted and observed data and examine the misfit
-        - Lay the observed data over the final model
-        - Lay the geological image over the final model
+        - Lay the observed data over the final model to see if observed anomalies match the distribution of recovered densities
+        - Lay the geological image over the final model to see if the inversion results agree with geological surface mapping
+
+
+.. figure:: images/Inversion1_Misfit.png
+    :align: center
+    :width: 700
+
+    Observed data (left). Data predicted with final model (middle). Normalized misfit (right).
+
+
+.. figure:: images/Inversion1_Model.png
+    :align: center
+    :width: 700
+
+    True model with only non-zero density contrasts (left). NW slice of recovered model (middle). EW slice through southern anomaly (right).
+
+Results
+^^^^^^^
+
+    - Data predicted with the final recovered model fits the observed field data sufficiently
+    - The general distribution of density contrasts is recovered through inversion.
+    - By using the default set of inversion parameters however, we recovered a very smooth density contrast model
+    - Because the inversion was set to recover a smooth model, the inversion placed positive density contrast values (red) around the outside of the recovered structures
+
+
+Smooth Model Difference Inversion
+---------------------------------
+
+
+
+
+
