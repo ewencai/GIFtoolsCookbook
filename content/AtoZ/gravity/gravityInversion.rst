@@ -112,12 +112,6 @@ Here, we show the impact of reference models on the final inversion result. Two 
         - Examine the differences in data misfit for data predicted using *SMOOTH_MOD* and *SMOOTH_MOD_DIF* inversions
 
 
-.. figure:: images/Inversion2_Model.png
-    :align: center
-    :width: 700
-
-    Reference model from geological unit image (top-left). Model recovered using unconstrained smooth inversion (top-right). Model recovered using *SMOOTH_MOD* (bottom-left). Model recovered using *SMOOTH_MOD_DIF* (bottom-right).
-
 
 .. figure:: images/Inversion2_Misfit.png
     :align: center
@@ -125,18 +119,44 @@ Here, we show the impact of reference models on the final inversion result. Two 
 
     Data misfit thresholded at +/- 0.005 for the unconstrained smooth model (left), SMOOTH_MOD (middle) and SMOOTH_MOD_DIF (right).
 
+
+
+.. figure:: images/Inversion2_Model.png
+    :align: center
+    :width: 700
+
+    Reference model from geological unit image (top-left). Model recovered using unconstrained smooth inversion (top-right). Model recovered using *SMOOTH_MOD* (bottom-left). Model recovered using *SMOOTH_MOD_DIF* (bottom-right).
+
+
 Results
 ^^^^^^^
 
 
 
 
+Inversion with Soft Constraints
+-------------------------------
+
+Here, we show how compact and blocky models can be recovered by changing certain inversion parameters. Smooth models are recovered when the compactness parameter (p) and the set of blockiness parameters (q) are set to a value of 2. By decreasing the compactness parameter value, we recover models that have a smaller number of non-zero values; that is, models which fit the observed data using more compact structures. By decreasing the blockiness parameter value, we recover models that have a smaller number of non-zero gradients; that is, models which fit the observed data using structures that have very sharp edges. To complete this exercise:
+
+    - :ref:`Create a new gravity inversion object <createGravInv>`
+    - :ref:`Edit the inversion parameters <invEditOptions>`
+        - **Sensitivity Tab:** set the mesh, observed data and topography
+        - **Inversion Tab:**
+            - set the active cells
+            - use alpha S = 0.0016, alpha E = 1, alpha N = 1 and alpha Z = 1 for the weighting
+            - leave the reference and initial models as default values
+        - **Blocky model norms:** set Lp and Lq values and use default Lp/Lq scaling (try different combinations)
+        - Apply and write files when finished
+    - :ref:`Run the inversion <invRun>`
+    - :ref:`Import inversion results <invLoadResults>`
+    - View the results. The user is encouraged to:
+        - see how changes in the compactness parameter (p) affect recovered models
+        - see how changes in the blockiness parameters (q) affect recovered models
 
 
-
-
-
-
+Results
+^^^^^^^
 
 
 
