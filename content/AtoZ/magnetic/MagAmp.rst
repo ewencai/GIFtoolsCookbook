@@ -1,4 +1,4 @@
-.. _AtoZMag_EQS:
+.. _AtoZMag_Amp:
 
 Equivalent Source Processing for Magnetic Anomaly Data
 ======================================================
