@@ -16,9 +16,8 @@ Downloads
 ^^^^^^^^^
 
 .. example::    - `Download the demo <https://owncloud.eoas.ubc.ca/s/lDVLwPD2LKI2QKK>`__
-                    - Steps (without links) are also included with the download
-                    - Requires at least GIFtools version 2.1.3 (Oct 2017)
-                    - Requires MAG3D v6.0
+                    - Requires at least `GIFtools version 2.1.3 (Oct 2017) <https://gif.eos.ubc.ca/GIFtools/downloads2#Installation>`_
+                    - Requires `MAG3D v6.0 <https://gif.eos.ubc.ca/GIFtools/consortium#maginv3d>`_
 
 
 Step by step
@@ -79,6 +78,7 @@ Step by step
     - :ref:`Import the inversion results <invStep6>`
     - :ref:`View the convergence curves <invStep7>`
 
+.. _AtoZ_Mag_AmpSynthesis:
 
 Synthesis
 ^^^^^^^^^
