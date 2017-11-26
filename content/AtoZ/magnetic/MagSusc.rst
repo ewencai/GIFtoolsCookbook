@@ -12,7 +12,7 @@ Demonstrate the basic steps for the inversion of magnetic data using the
 induced magnetization assumption. We will start directly with *simulated* data
 and topography, as it is often the case in a greenfield exploration project.
 
-.. tip:: Link to `MAG3D documentation <http://mag3d.readthedocs.io/en/v6/index.html>`_
+.. note:: Link to `MAG3D documentation <http://mag3d.readthedocs.io/en/v6/index.html>`_
 
 Downloads
 ^^^^^^^^^
@@ -55,28 +55,30 @@ Step by step
     - :ref:`Assign Z value from radar altimeter and topography<assignElevTopo>`
     - :ref:`Set data uncertainties (1nT floor) <objectAssignUncert>`
 
-    .. tip:: - The observed magnetic data is now ready for export.
-             - At least two anomalies are easily identified.
-             - Note the large trend in the data coming from the NE.
+    .. note:: - The observed magnetic data is now ready for export.
+              - At least two anomalies are easily identified.
+              - Note the large trend in the data coming from the NE.
 
 .. figure:: images/AtoZ_Mag_MeshParam.png
     :align: right
-    :scale: 20%
+    :scale: 15%
 
     *Mesh specs*
+
+.. _AtoZMag_invObj:
 
 - **Step 3: Processing**
     - :ref:`Create a mesh from the observed data <objectDataCreateMesh>`
         - To reproduce this example, use the following parameters
     - :ref:`Create an inversion object (MAG3D 6.0)<createMagInv>`
+
+    .. figure:: images/AtoZ_Mag_InvOptions.png
+        :align: right
+        :scale: 15%
+
+        Inversion parameters
+
     - :ref:`Edit the options <invEditOptions>`
-
-        .. figure:: images/AtoZ_Mag_InvOptions.png
-            :align: right
-            :scale: 20%
-
-            Inversion parameters
-
         - Panel 1: Fill out Sensitivity Options
         - Panel 2: Adjust :math:`\alpha` parameters
         - Click *Apply and write files*
@@ -95,10 +97,9 @@ Step by step
     - :ref:`Import the inversion results <invStep6>`
     - :ref:`View the convergence curves <invStep7>`
 
-- **Step 5: Interpretation**
-    - Note the linear anomalies recovered on the edges of the core
-         mesh. This feature is due to the regional signal captured by our survey, but extents beyond the region of interest.
-         We can improve our result with the following step.
+.. note:: Note the linear anomalies recovered on the edges of the core
+          mesh. This feature is due to the regional signal captured by our survey, but extents beyond the region of interest.
+          We can improve our result with the following step.
 
 .. figure:: images/AtoZ_Mag_SyntheticData.png
             :align: right
@@ -106,24 +107,18 @@ Step by step
 
             De-trended data
 
-- **Step 6: De-trend and re-run**
+- **Step 5: De-trend and re-run**
     - :ref:`Remove first-order trend<objectPolyTrend>`
-
-    .. tip:: Note the large negative lobe along the NE edge of the southern mag anomaly.
 
     - :ref:`Create a new inversion copy <invCopyOptions>`
     - **Repeat Step 4**
+
+ .. note:: Note the large negative lobe along the NE edge of the southern mag anomaly.
 
 .. _AtoZ_MagSuscdiscuss:
 
 Synthesis
 ^^^^^^^^^
-
-.. figure:: images/AtoZ_MagSusc.png
-        :align: right
-        :scale: 50%
-
-        Recovered susceptibility model
 
 .. figure:: images/AtoZ_Mag_Misfit.png
         :align: right
@@ -136,34 +131,11 @@ Synthesis
     - The kimberlite pipe appears to be plunging towards SW, with a cone-shape zone of zero susceptibility.
     - The data residual map shows correlated signal near the main anomaly, indicative of poor fit of the large negative anomaly
 
+.. figure:: images/AtoZ_MagSusc.png
+        :align: center
+        :scale: 75%
 
-
-
-
-
-
-
-
-
-..     - Does the survey need to be adjusted to better image the anomalous response?
-..     - Are we using the right geophysical method to detect the desired target?
-..     - ...
-.. - Forward model
-..     - Is the anomalous response large enough compared to expected noise and instrument sensitivity?
-..     - How does the data change if the model has greater or less physical property contrast?
-..     - How deep can the deposit be before we cannot detect it anymore?
-..     - ...
-.. - Inversion
-..     - Does the recovered model match expectations?
-..     - What can be done to improve the recovered model?
-..     - What happens when we start to use non-default parameters?
-..     - What happens when the uncertainties are increased or decreased?
-..     - Can we include reference models? Impose bounds? Include cell and face weighting?
-..     - What other information do we have to constrain the inversion?
-..     - ...
-
-
-
+        Recovered susceptibility model
 
 
 
