@@ -29,6 +29,6 @@ Most codes thus far have involved the L2 (p=q=2) norm (which is a “sum of squa
 
 
 .. figure::
-     ../../../images/inversionFundamentals/InvFund_CompactNormInv_3Dview.png
+     ../../../images/InversionFundamentals/InvFund_CompactNormInv_3Dview.png
     :align: right
     :figwidth: 100%

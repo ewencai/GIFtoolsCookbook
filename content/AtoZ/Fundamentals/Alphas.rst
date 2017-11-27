@@ -32,7 +32,7 @@ Example of the effect of :math:`\alpha_s` on a block in a half-space example
 
 
 .. figure::
-     ../../../images/inversionFundamentals/Inversion_Fundamentals_AlphaS_Znormal.png
+     ../../../images/InversionFundamentals/Inversion_Fundamentals_AlphaS_Znormal.png
     :align: right
     :figwidth: 100%
 
@@ -43,12 +43,12 @@ Example of the effect of :math:`\alpha_x,\alpha_y,\alpha_z` on a block in a half
 
 
 .. figure::
-     ../../../images/inversionFundamentals/invFund_alpha_x_y_Znormal.png
+     ../../../images/InversionFundamentals/invFund_alpha_x_y_Znormal.png
     :align: right
     :figwidth: 100%
 
 .. figure::
-     ../../../images/inversionFundamentals/invFund_alpha_z_Ynormal.png
+     ../../../images/InversionFundamentals/invFund_alpha_z_Ynormal.png
     :align: right
     :figwidth: 100%
 

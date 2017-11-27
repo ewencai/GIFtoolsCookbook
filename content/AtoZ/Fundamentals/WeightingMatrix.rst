@@ -41,7 +41,7 @@ Example of Distance weighting on a block in a half-space example
 ----------------------------------------------------------------
 
 .. figure::
-     ../../../images/inversionFundamentals/invFund_NoDepthWeighting_Ynormal.png
+     ../../../images/InversionFundamentals/invFund_NoDepthWeighting_Ynormal.png
     :align: right
     :figwidth: 100%
 

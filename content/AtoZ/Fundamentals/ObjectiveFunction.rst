@@ -54,6 +54,6 @@ And:
 
 In this section, we will explore the effect of these different parameters on the recovered model through a susceptible block in a non-susceptible half-space mapped with a total magnetic ground survey.
 
-.. figure:: ../../../images/inversionFundamentals/model.png
+.. figure:: ../../../images/InversionFundamentals/model.png
     :align: right
     :figwidth: 100%

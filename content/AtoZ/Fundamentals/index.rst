@@ -3,7 +3,7 @@
 Fundamentals of Inversions
 ==========================
 
-.. figure:: ../../../images/inversionFundamentals/model.png
+.. figure:: ../../../images/InversionFundamentals/model.png
     :align: right
     :figwidth: 50%
 
