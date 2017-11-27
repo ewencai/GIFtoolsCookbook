@@ -3,7 +3,7 @@
 Fundamentals of Inversions
 ==========================
 
-.. figure:: ../../../images/TKC_7Steps.png
+.. figure:: ../../../images/inversionFundamentals/model.png
     :align: right
     :figwidth: 50%
 
