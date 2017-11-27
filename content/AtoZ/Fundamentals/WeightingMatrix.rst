@@ -10,13 +10,13 @@ The Weighting Matrices W
 With:
 
 .. math::
-    \phi_{small}(\mathbf{m}) = \alpha_s ||W_s(\mathbf{m}-\mathbf{m}_0)||^p
+    \phi_{small}(\mathbf{m}) = \alpha_s ||\color{blue}{W_s}(\mathbf{m}-\mathbf{m}_0)||^p
     :label: Smallness3
 
 And:
 
 .. math::
-    \phi_{smooth}(\mathbf{m}) =  \alpha_x ||W_x G_x(\mathbf{m}-\mathbf{m}_0)||^q + \alpha_y ||W_y G_y(\mathbf{m}-\mathbf{m}_0)||^q + \alpha_z ||W_z G_z(\mathbf{m}-\mathbf{m}_0)||^q
+    \phi_{smooth}(\mathbf{m}) =  \alpha_x ||\color{blue}{W_x} G_x(\mathbf{m}-\mathbf{m}_0)||^q + \alpha_y ||\color{blue}{W_y} G_y(\mathbf{m}-\mathbf{m}_0)||^q + \alpha_z ||\color{blue}{W_z} G_z(\mathbf{m}-\mathbf{m}_0)||^q
     :label: Smoothness3
 
 The smallness matrix Ws

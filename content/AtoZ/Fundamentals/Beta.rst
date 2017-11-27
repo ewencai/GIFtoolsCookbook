@@ -4,7 +4,7 @@ The Trade-Off Parameter Beta
 ============================
 
 .. math::
-    \phi(\mathbf{m}) = \phi_d(\mathbf{m}) + \beta \phi_m(\mathbf{m})
+    \phi(\mathbf{m}) = \phi_d(\mathbf{m}) + \color{blue}{\beta} \phi_m(\mathbf{m})
     :label: ObjFun2
 
 in :eq:`ObjFun2`, :math:`\beta` is a trade-off parameter that controls the relative importance of the model smoothness through the model objective function and data misfit function. :math:`\beta` is scaled to the total number of input data, and is usually automatically recovered through an optimisation routine that ensures the target misfit is reached.

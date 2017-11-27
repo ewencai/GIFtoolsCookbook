@@ -10,13 +10,13 @@ The Alphas Parameters
 With:
 
 .. math::
-    \phi_{small}(\mathbf{m}) = \alpha_s ||W_s(\mathbf{m}-\mathbf{m}_0)||^p
+    \phi_{small}(\mathbf{m}) = \color{blue}{\alpha_s} ||W_s(\mathbf{m}-\mathbf{m}_0)||^p
     :label: Smallness2
 
 And:
 
 .. math::
-    \phi_{smooth}(\mathbf{m}) =  \alpha_x ||W_x G_x(\mathbf{m}-\mathbf{m}_0)||^q + \alpha_y ||W_y G_y(\mathbf{m}-\mathbf{m}_0)||^q + \alpha_z ||W_z G_z(\mathbf{m}-\mathbf{m}_0)||^q
+    \phi_{smooth}(\mathbf{m}) =  \color{blue}{\alpha_x} ||W_x G_x(\mathbf{m}-\mathbf{m}_0)||^q + \color{blue}{\alpha_y} ||W_y G_y(\mathbf{m}-\mathbf{m}_0)||^q + \color{blue}{\alpha_z} ||W_z G_z(\mathbf{m}-\mathbf{m}_0)||^q
     :label: Smoothness2
 
 The model objective function is part of the equation that is minimised in the inversion process. It consists of four main components; one that defines how the model can vary from the reference model, and one for each of the allowed gradients in the x, y and z directions. Each of these four components has a coefficient that controls their relative importance to each other. These coefficients are denoted by α.

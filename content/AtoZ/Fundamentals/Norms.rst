@@ -10,13 +10,13 @@ Lp and Lq Norms
 With:
 
 .. math::
-    \phi_{small}(\mathbf{m}) = \alpha_s ||W_s(\mathbf{m}-\mathbf{m}_0)||^p
+    \phi_{small}(\mathbf{m}) = \alpha_s ||W_s(\mathbf{m}-\mathbf{m}_0)||^\color{blue}{p}
     :label: Smallness4
 
 And:
 
 .. math::
-    \phi_{smooth}(\mathbf{m}) =  \alpha_x ||W_x G_x(\mathbf{m}-\mathbf{m}_0)||^q + \alpha_y ||W_y G_y(\mathbf{m}-\mathbf{m}_0)||^q + \alpha_z ||W_z G_z(\mathbf{m}-\mathbf{m}_0)||^q
+    \phi_{smooth}(\mathbf{m}) =  \alpha_x ||W_x G_x(\mathbf{m}-\mathbf{m}_0)||^{\color{blue}{q}} + \alpha_y ||W_y G_y(\mathbf{m}-\mathbf{m}_0)||^{\color{blue}{q}} + \alpha_z ||W_z G_z(\mathbf{m}-\mathbf{m}_0)||^{\color{blue}{q}}
     :label: Smoothness4
 
 Introduced in v6 of the gravity and magnetics codes and available in the EM1DTM code, it is now possible to change the norms in the different part of the regularization.
