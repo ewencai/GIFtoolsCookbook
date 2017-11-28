@@ -179,7 +179,7 @@ Load Predicted Data and Compare Against Observed Data
 
 Here, we compare the observed data to the predicted data from our forward model. We will also show how the difference between both datasets can be computed and plotted.
 
-    - :ref:`Load data <objectFwdLoadAll>`
+    - :ref:`Load predicted data <objectFwdLoadAll>`
     - Using :ref:`add data from another object <objectCombineData>`, add the observed data to the predicted gravity data
     - Using :ref:`column calculator <objectColumnCalculator>`, subtract the predicted data from the observed data
     - :ref:`View the data <viewData>` (observed, predicted and difference) from the final data object you created
