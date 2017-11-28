@@ -132,8 +132,6 @@ Results
 ^^^^^^^
 
 
-
-
 Inversion with Soft Constraints
 -------------------------------
 
