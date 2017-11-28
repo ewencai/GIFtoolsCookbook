@@ -44,14 +44,6 @@ Example of the effect of :math:`\alpha_x,\alpha_y,\alpha_z` on a block in a half
  .. raw:: html
     :file: ./raw/AtoZ_InvFun_az.html
 
-.. .. figure::
-..      ../../../images/InversionFundamentals/alphazD10_Ynormal.png
-..     :align: right
-..     :figwidth: 100%
-
-.. .. figure::
-..      ../../../images/InversionFundamentals/alphazT10_Ynormal.png
-..     :align: right
-..     :figwidth: 100%
-
 In this example, We see that increasing :math:`\alpha_x,\alpha_y,\alpha_z` enforces the smoothness over the smallness term, or increases the length scales, effectively augmenting the smoothness of the recovered models in the desired direction.
+
+alphasD10_Znormal
