@@ -41,15 +41,16 @@ In this example, We see that decreasing :math:`\alpha_s` enforces the smoothness
 Example of the effect of :math:`\alpha_x,\alpha_y,\alpha_z` on a block in a half-space example
 -------------------------------------------------------------------------------------------------
 
-
+ .. raw:: html
+    :file: ./raw/AtoZ_InvFun_az.html
 
 .. .. figure::
-..      ../../../images/InversionFundamentals/invFund_alpha_x_y_Znormal.png
+..      ../../../images/InversionFundamentals/alphazD10_Ynormal.png
 ..     :align: right
 ..     :figwidth: 100%
 
 .. .. figure::
-..      ../../../images/InversionFundamentals/invFund_alpha_z_Ynormal.png
+..      ../../../images/InversionFundamentals/alphazT10_Ynormal.png
 ..     :align: right
 ..     :figwidth: 100%
 
