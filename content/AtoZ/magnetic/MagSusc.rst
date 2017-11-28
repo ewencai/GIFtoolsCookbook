@@ -30,7 +30,7 @@ Step by step
     - :ref:`Set the working directory <projSetWorkDir>`
     - :ref:`Import the topography data <importTopo>`
 
-.. figure:: images/AtoZ_Mag_LoadXYZ.png
+.. figure:: ./../../../images/AtoZ_Mag/AtoZ_Mag_LoadXYZ.png
     :align: right
     :scale: 30%
 
@@ -46,7 +46,7 @@ Step by step
         - Inclination = 83.3 degrees
         - Declination = 19.5 degrees
 
-    .. figure:: images/AtoZ_Mag_SyntheticData_trended.png
+    .. figure:: ./../../../images/AtoZ_Mag/AtoZ_Mag_SyntheticData_trended.png
         :align: right
         :scale: 20%
 
@@ -58,7 +58,7 @@ Step by step
               - At least two anomalies are easily identified.
               - Note the large trend in the data coming from the NE.
 
-.. figure:: images/AtoZ_Mag_MeshParam.png
+.. figure:: ./../../../images/AtoZ_Mag/AtoZ_Mag_MeshParam.png
     :align: right
     :scale: 15%
 
@@ -71,7 +71,7 @@ Step by step
         - To reproduce this example, use the following parameters
     - :ref:`Create an inversion object (MAG3D 6.0)<createMagInv>`
 
-    .. figure:: images/AtoZ_Mag_InvOptions.png
+    .. figure:: ./../../../images/AtoZ_Mag/AtoZ_Mag_InvOptions.png
         :align: right
         :scale: 15%
 
@@ -89,7 +89,7 @@ Step by step
          the regularization have equal weight. Based on the core mesh discretization:
          :math:`\alpha_s = \left[\frac{1}{dx}\right]^2` and :math:`\alpha_z = \left[\frac{1}{2}\right]^2`.
 
-.. figure:: images/AtoZ_Mag_invTrend.png
+.. figure:: ./../../../images/AtoZ_Mag/AtoZ_Mag_invTrend.png
             :align: right
             :scale: 20%
 
@@ -102,7 +102,7 @@ Step by step
           mesh. This feature is due to the regional signal captured by our survey, but extents beyond the region of interest.
           We can improve our result with the following step.
 
-.. figure:: images/AtoZ_Mag_SyntheticData.png
+.. figure:: ./../../../images/AtoZ_Mag/AtoZ_Mag_SyntheticData.png
             :align: right
             :scale: 20%
 
@@ -121,7 +121,7 @@ Step by step
 Synthesis
 ^^^^^^^^^
 
-.. figure:: images/AtoZ_Mag_Misfit.png
+.. figure:: ./../../../images/AtoZ_Mag/AtoZ_Mag_Misfit.png
         :align: right
         :scale: 30%
 
@@ -132,7 +132,7 @@ Synthesis
     - The kimberlite pipe appears to be plunging towards SW, with a cone-shape zone of zero susceptibility.
     - The data residual map shows correlated signal near the main anomaly, indicative of poor fit of the large negative anomaly
 
-.. figure:: images/AtoZ_MagSusc.png
+.. figure:: ./../../../images/AtoZ_Mag/AtoZ_MagSusc.png
         :align: center
         :scale: 75%
 

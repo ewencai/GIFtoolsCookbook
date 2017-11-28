@@ -32,7 +32,7 @@ Step by step
     - :ref:`Set the working directory <projSetWorkDir>`
     - :ref:`Import the topography data <importTopo>`
 
-.. figure:: images/AtoZ_Mag_Amp.png
+.. figure:: ./../../../images/AtoZ_Mag/AtoZ_Mag_Amp.png
     :align: right
     :scale: 30%
 
@@ -57,7 +57,7 @@ Step by step
 	.. tip:: **Alternatively** if you have already completed the :ref:`Magnetic Susceptibility Inversion <AtoZMag_Susc>` demo, you can :ref:`copy the inversion<invCopyOptions>` object and
 		 	 transfer the inversion parameter
 
-.. figure:: images/AtoZ_Mag_invAmpSmooth.png
+.. figure:: ./../../../images/AtoZ_Mag/AtoZ_Mag_invAmpSmooth.png
             :align: right
             :scale: 20%
 
@@ -68,7 +68,7 @@ Step by step
 
 .. note:: The recovered effective susceptibility model shows a near-vertical anomaly, in good agreement with the conceptual idea of a vertical kimberlite pipe.
 
-.. figure:: images/AtoZ_Mag_InvOptions.png
+.. figure:: ./../../../images/AtoZ_Mag/AtoZ_Mag_InvOptions.png
             :align: right
             :scale: 20%
 
@@ -86,6 +86,6 @@ Synthesis
 - We have recovered a compact effective susceptibility model that honors the amplitude data and resemble the shape of vertical kimberlite pipe.
 - Strongest magnetic anomaly is located near and over the zero susceptibility obtained with the :ref:`induced assumption<AtoZ_MagSuscdiscuss>`.
 
-.. figure:: images/AtoZ_Mag_invAmpCompact.png
+.. figure:: ./../../../images/AtoZ_Mag/AtoZ_Mag_invAmpCompact.png
             :align: center
             :scale: 75%

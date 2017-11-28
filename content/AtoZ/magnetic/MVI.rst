@@ -6,7 +6,9 @@ Magnetic Vector Inversion (MVI)
 Purpose
 ^^^^^^^
 
-Demonstrate the basic steps for the magnetic vector inversion in cartesian and spherical coordinates.
+ - Demonstrate the basic steps for the Magnetic Vector Inversion in Cartesian (MVI-C) and Spherical (MVI-S) coordinates.
+ - Improve the MVI-C solution with a cooperative inversion approach (amplitude + MVI-C)
+ - Demonstrate the adavantages of a sparse MVI-S code
 
 .. note:: Link to `MVI documentation <http://mvi.readthedocs.io/en/latest/>`_
 
@@ -56,7 +58,7 @@ Step by step
               	- Re-run cooperatively with the sparse magnetic :ref:`amplitude model<AtoZ_Mag_AmpSynthesis>`
               	- Run the :ref:`MVI-Spherical <AtoZ_Mag_MVIS>` code with sparsity constraints
 
-.. figure:: images/AtoZ_Mag_MVI_C.png
+.. figure:: ./../../../images/AtoZ_Mag/AtoZ_Mag_MVI_C.png
             :align: center
             :scale: 50%
 
@@ -64,7 +66,7 @@ Step by step
 - ALTERNATE ENDING #1: Run a Cooperative Magnetic Inversion (CMI): MVI-C + amplitude
     .. note:: In this inversion, we will use the compact model obtained in the :ref:`Magnetic Amplitude Inversion <AtoZMag_Amp>` demo to constrain the smooth MVI-C result.
 
-    .. figure:: images/AtoZ_Mag_MVIOptions.png
+    .. figure:: ./../../../images/AtoZ_Mag/AtoZ_Mag_MVIOptions.png
             :align: right
             :scale: 20%
 
@@ -79,7 +81,7 @@ Step by step
     - :ref:`Run the inversion <invRun>`
     - :ref:`Import the last inversion result <invStep6>`
 
-.. figure:: images/AtoZ_Mag_CMI.png
+.. figure:: ./../../../images/AtoZ_Mag/AtoZ_Mag_CMI.png
             :align: center
             :scale: 50%
 
@@ -88,9 +90,9 @@ Step by step
 .. _AtoZ_Mag_MVIS:
 
 - ALTERNATE ENDING #2: Run the inversion: MVI-Spherical**
-	.. warning:: The MVI-Spherical code is currently under review. The example below has been completed with the unreleased MVI 3.0.
+	.. warning:: The MVI-Spherical code (MVI 2.0) is currently under review. The example below has been completed with MVI 3.0 (expected release: early 2018).
 
-	.. figure:: images/AtoZ_Mag_InvOptions.png
+	.. figure:: ./../../../images/AtoZ_Mag/AtoZ_Mag_InvOptions.png
             :align: right
             :scale: 20%
 
@@ -103,9 +105,17 @@ Step by step
 
 
 
-.. figure:: images/AtoZ_Mag_MVI_S.png
+.. figure:: ./../../../images/AtoZ_Mag/AtoZ_Mag_MVI_S.png
             :align: center
             :scale: 50%
 
             Sparse MVI-S model
 
+
+Synthesis
+^^^^^^^^^
+
+We have recovered three magnetic vector models.
+
+ .. raw:: html
+    :file: ./AtoZ_Mag_Synthesis.html

@@ -3,7 +3,7 @@
 A to Z Examples for Magnetics
 =============================
 
-.. figure:: images/AtoZ_Mag_Landing.png
+.. figure:: ./../../../images/AtoZ_Mag/AtoZ_Mag_Landing.png
     :align: right
     :figwidth: 50%
 
@@ -19,5 +19,4 @@ three inversion approaches and compares their respective solutions:
    	Magnetic susceptibility inversion <MagSusc>
    	Magnetic amplitude inversion <MagAmp>
    	Magnetic Vector Inversion (MVI) <MVI>
-   	Synthesis <MagSynthesis>
 
