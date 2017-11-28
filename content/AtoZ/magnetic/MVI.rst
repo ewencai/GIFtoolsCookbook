@@ -109,9 +109,3 @@ Step by step
 
             Sparse MVI-S model
 
-
-
-Synthesis
-^^^^^^^^^
-
-- We have recovered three MVI models.

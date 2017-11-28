@@ -19,4 +19,5 @@ three inversion approaches and compares their respective solutions:
    	Magnetic susceptibility inversion <MagSusc>
    	Magnetic amplitude inversion <MagAmp>
    	Magnetic Vector Inversion (MVI) <MVI>
+   	Synthesis <MagSynthesis>
 
