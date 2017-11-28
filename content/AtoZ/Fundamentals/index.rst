@@ -19,4 +19,4 @@ Here, we present the different parameters and their effects through a synthetic 
     The Trade-Off Parameter<Beta>
     Including the Reference Model in the Smoothness Term<MrefInSmooth>
 
-This section was elaborated with the contribution of Marc Grujic from Rio Tinto.
+.. note:: This section was elaborated with the contribution of Marc Grujic from Rio Tinto.
