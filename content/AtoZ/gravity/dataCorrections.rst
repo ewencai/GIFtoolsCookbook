@@ -25,7 +25,7 @@ Here, we show how GIFtools can be used to carry out processing steps relevant to
 Setup for the Processing Exercise
 ---------------------------------
 
-    - `Download the demo <https://github.com/ubcgif/GIFtoolsCookbook/blob/master/assets/AtoZ_Gravity_4Download.zip>`__
+    - `Download the demo <https://github.com/ubcgif/GIFtoolsCookbook/raw/master/assets/AtoZ_Gravity_4Download.zip>`__
     - Open GIFtools
     - :ref:`Set the working directory <projSetWorkDir>`
 

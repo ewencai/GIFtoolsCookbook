@@ -37,20 +37,24 @@ Setup for the Forward Modeling Exercise
 
 **If you have NOT completed the previous tutorial, you must complete the following steps:**
 
-    - `Download the demo <https://github.com/ubcgif/GIFtoolsCookbook/blob/master/assets/AtoZ_Gravity_4Download.zip>`__
+    - `Download the demo <https://github.com/ubcgif/GIFtoolsCookbook/raw/master/assets/AtoZ_Gravity_4Download.zip>`__
     - Open GIFtools
     - :ref:`Set the working directory <projSetWorkDir>`
 
 
 .. tip:: - Steps (without links) are also included with the download
-         - Requires at least GIFtools version 2.1.3 (Oct 2017)
+         - Requires at least `GIFtools version 2.1.3 (Oct 2017) <https://gif.eos.ubc.ca/GIFtools/downloads2#Installation>`_
 
 .. _AtoZGrav_Forward_Import:
 
 Import files
 ------------
 
-In addition to geophysical data, you may have access to topographical information and/or geological surface maps/cross-sections. If this information is available to you, it can be imported to GIFtools. Here, we have surface topography and files which define several geological units through surface mapping.
+In addition to geophysical data, you may have access to topographical
+information and/or geological surface maps/cross-sections. If this information
+is available to you, it can be imported to GIFtools. Here, we have surface
+topography and files which define several geological units through surface
+mapping.
 
     - :ref:`Import the topography data <importTopo>` (3D GIF format). *This was imported in the previous exercise*
     - :ref:`Import field observed gravity anomaly data <importGravData>` (GIF format with data in mGal). *This was the final result of the previous exercise*
