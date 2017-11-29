@@ -53,12 +53,25 @@ In addition to raw geophysical data, you may have access to topographical inform
 Latitude and Free-Air Correction
 --------------------------------
 
-Generally, this processing step has been done by the client. However to demonstrate some basic functionality within GIFtools, we will perform simple latitude and free-air corrections on the raw gravity data. The latitude correction accounts for all of the mass contained within the reference ellipsoid approximation of the Earth. Generally a distinct latitude correction is applied for every survey location. However we will only be applying a constant value correction to the data; wherein we assume all survey locations are at a latitude of 64 :math:`\! ^o` N. The free-air correction accounts for the fact that the latitude correction is weaker the further you are from the Earth. GIFtools will be used to apply a specific free-air correction to each observation. The following expressions can be use to compute the latitude and free-air corrections:
+Generally, this processing step has been done by the client. However to
+demonstrate some basic functionality within GIFtools, we will perform simple
+latitude (:math:`g_l`) and free-air (:math:`g_{fa}`) corrections on the raw gravity data (:math:`g_{raw}`) such that.
 
 .. math::
-    g_{corr} = g_{raw} - g_l + g_{fa}
+    g_{corr} = g_{raw} - g_l + g_{fa} \;.
 
-where the `latitude correction (Int'l grav. formula 1967) <https://en.wikipedia.org/wiki/Normal_gravity_formula>`__ in mGal is given by
+.. figure:: images/AtoZ_Grav_FreeAir.png
+    :align: center
+    :scale: 30%
+
+
+The latitude correction accounts for all of the mass contained within the
+reference ellipsoid approximation of the Earth. Generally a distinct latitude
+correction is applied for every survey location. However we will only be
+applying a constant value correction to the data; wherein we assume all survey
+locations are at a latitude of 64 :math:`\! ^o` N.
+
+The `latitude correction (Int'l grav. formula 1967) <https://en.wikipedia.org/wiki/Normal_gravity_formula>`_ in mGal is given by
 
 .. math::
     \begin{align}
@@ -66,8 +79,12 @@ where the `latitude correction (Int'l grav. formula 1967) <https://en.wikipedia.
     &= 982217.559014 \textrm{ mGal at TKC}
     \end{align}
 
-
-and the `free air correction: <https://en.wikipedia.org/wiki/Free-air_gravity_anomaly>`__ in mGal is given by
+The free-air correction accounts for the fact that the latitude correction is
+weaker the further you are from the Earth. GIFtools will be used to apply a
+specific free-air correction to each observation. The following expressions
+can be use to compute the latitude and free-air corrections. The `free air
+correction: <https://en.wikipedia.org/wiki/Free-air_gravity_anomaly>`__ in
+mGal is given by:
 
 .. math::
     \Delta g_{fa} = 0.3086 \times Elevation(m)
@@ -91,7 +108,19 @@ To apply these corrections to the raw data, carry out the following steps:
 Topography and Regional Geology Correction
 ------------------------------------------
 
-At this point, we have accounted for all gravity contributions from matter that lies below a surface elevation of 0 m; e.g. the latitude and free-air corrections. We must now remove the background gravity contribution from all regional mass that lies above 0 m elevation. If the topography is flat, you may choose to use a `slab correction <https://en.wikipedia.org/wiki/Bouguer_anomaly>`__. Here, we show how GIFtools can remove the background contribution while taking into account the regional topography. To remove the background gravity, do the following:
+At this point, we have accounted for all gravity contributions from matter
+that lies below a surface elevation of 0 m; e.g. the latitude and free-air
+corrections. We must now remove the background gravity contribution from all
+regional mass that lies above 0 m elevation. If the topography is flat, you
+may choose to use a `slab correction
+<https://en.wikipedia.org/wiki/Bouguer_anomaly>`__. Here, we show how GIFtools
+can remove the background contribution while taking into account the regional
+topography.
+
+.. figure:: images/AtoZ_Grav_TerrCorr.png
+    :align: center
+    :scale: 30%
+
 
 Create a Mesh
 ^^^^^^^^^^^^^
