@@ -31,7 +31,7 @@ The benefits of geophysical inversion are illustrated in the figure on the right
 
 Inversion is successful in recovering geological structures when:
 
-	- There is a sufficient physical property contrast between the target and the surrounding geology
-	- The data are sensitive to the target; i.e. the geophysical response from that target is observed in the data
+	- There is a sufficient physical property contrast between the target structure and the surrounding geology
+	- The data are sensitive to the target structure; i.e. the geophysical response from that structure is observed in the data
 	- Parameters relevant to the inversion are set appropriately
 

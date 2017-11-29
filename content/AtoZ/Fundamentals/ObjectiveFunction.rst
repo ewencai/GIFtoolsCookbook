@@ -3,14 +3,27 @@
 The Objective Function
 ======================
 
+Geophysical inversion recovers a physical property model which fits the data and has geologically reasonable structures. But how is this done in practice? The majority of geophyiscal inversion algorithms work by minimizing an objective function (:math:`\phi`) with respect to the physical property model (:math:`\mathbf{m}`):
+
+.. math::
+    \phi(\mathbf{m}) = \phi_d(\mathbf{m}) + \beta \phi_m(\mathbf{m})
+    :label: ObjFun
+
+Defining the objective function, we have three components:
+
+    - :math:`\phi_d (\mathbf{m})` is the **data misfit**. The data misfit is responsible for ensuring the recovered model predicts data which fits the set of field observations.
+    
+    - :math:`\phi_m (\mathbf{m})` is the **model objective function**. The model objective function ensures that the recovered model contains plausible geological structures.
+    
+    - :math:`\beta` is the **trade-off parameter**. The trade-off parameter weights the relative contribution of :math:`\phi_d (\mathbf{m})` and :math:`\phi_m (\mathbf{m})` towards the objective function.
+
+
 The inverse problem is formulated as the minimization of a model dependent
 Objective Function. This Objective Function :math:`\phi(\mathbf{m})` is
 written as the weighted sum of two main term, the data misfit :math:`\phi_d` and the
 regularization :math:`\phi_m` (equation \ref{eq1})
 
-.. math::
-    \phi(\mathbf{m}) = \phi_d(\mathbf{m}) + \beta \phi_m(\mathbf{m})
-    :label: ObjFun
+
 
 -  :math:`\mathbf{m}` is the inversion model at each iteration (also the starting model at the beginning of the inversion).
 - :math:`\beta` is a :ref:`trade-off parameter<AtoZBeta>` that controls the relative importance of the regularization compared to the data misfit function.
