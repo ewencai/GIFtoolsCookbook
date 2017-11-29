@@ -17,7 +17,7 @@ Downloads
 
 .. example::    - `Download the demo <https://owncloud.eoas.ubc.ca/s/lDVLwPD2LKI2QKK>`__
                     - Requires at least `GIFtools version 2.1.3 (Oct 2017) <https://gif.eos.ubc.ca/GIFtools/downloads2#Installation>`_
-                    - Requires `MAG3D v6.0 <http://gif.eos.ubc.ca/GIFtools/consortium>`_
+                    - Requires `MAG3D v6.0 <http://gif.eos.ubc.ca/GIFtools>`_
 
 
 Step by step
