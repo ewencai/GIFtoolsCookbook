@@ -31,7 +31,7 @@ Setup for the Processing Exercise
 
 
 .. tip:: - Steps (without links) are also included with the download
-         - Requires at least GIFtools version 2.1.3 (Oct 2017)
+         - Requires at least `GIFtools version 2.1.3 (Oct 2017) <https://gif.eos.ubc.ca/GIFtools/downloads2#Installation>`_
 
 
 .. _AtoZGrav_Corrections_Import:
