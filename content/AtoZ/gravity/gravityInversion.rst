@@ -61,16 +61,26 @@ Here, we perform the most basic type of gravity anomaly inversion. No a priori i
     - :ref:`Edit the inversion parameters <invEditOptions>`
         - **Sensitivity Tab:** set mesh, observed data and topography
         - **Inversion Tab:**
-            - set the active cells
-            - use alpha S = 0.0016, alpha E = 1, alpha N = 1 and alpha Z = 1 for the weighting
+            - Set the active cells
+
+            .. note:: As a general *best practice*, in the absence of a priori
+                      information, :math:`\alpha` values should be set such that all
+                      :ref:`components of the regularization <AtoZalphas>` have equal weight. Based
+                      on the core mesh discretization used in this problem:
+                      :math:`\alpha_s = \left[\frac{1}{dx}\right]^2 = 0.0016`,
+                      :math:`\alpha_x=\alpha_y=\alpha_z = 1`
+
         - **Blocky model norms:** *leave all as default*
         - Apply and write files when finished
     - :ref:`Run the inversion <invRun>`
     - :ref:`Import inversion results <invLoadResults>`
-    - View the results. The user is encouraged to:
-        - Compare predicted and observed data and examine the misfit
-        - Lay the observed data over the final model to see if observed anomalies match the distribution of recovered densities
-        - Lay the geological image over the final model to see if the inversion results agree with geological surface mapping
+    - :reF:`View the results <viewData>`.
+
+    .. note:: **The user is encouraged to:**
+
+              - Compare predicted and observed data and examine the misfit
+              - Lay the observed data over the final model to see if observed anomalies match the distribution of recovered densities
+              - Lay the geological image over the final model to see if the inversion results agree with geological surface mapping
 
 
 .. figure:: images/Inversion1_Misfit.png
@@ -96,26 +106,33 @@ Results
     - Because the inversion was set to recover a smooth model, the inversion placed positive density contrast values (red) around the outside of the recovered structures
 
 
-Inversion with Hard Constraints
--------------------------------
+Inversion with *Hard* Constraints
+---------------------------------
 
-Here, we show the impact of reference models on the final inversion result. Two inversion will be run - one using *SMOOTH_MOD* and one using *SMOOTH_MOD_DIFF*. *SMOOTH_MOD* tries to return a model which 1) has the same structure as the reference model but 2) is smooth. *SMOOTH_MOD_DIF* on the other hand tries to return a model which 1) has the same structure as the reference model and 2) has smooth and sharp gradients in the same places as the reference model. Both inversions are constrained with the model that was made using the geological surface map (see :ref:`here <AtoZGrav_Forward_Model_Geo>`). To complete this exercise:
+Here, we show the impact of reference models on the final inversion result.
+Two inversion will be run - one using :ref:`SMOOTH_MOD <AtoZSmoothInDiff>` and
+one using :ref:`SMOOTH_MOD_DIFF <AtoZSmoothInDiff>`. Both inversions are
+constrained with the model that was made using the geological surface map (see
+:ref:`here <AtoZGrav_Forward_Model_Geo>`). To complete this exercise:
 
     - :ref:`Create a new gravity inversion object <createGravInv>`
     - :ref:`Edit the inversion parameters <invEditOptions>`
         - **Sensitivity Tab:** set the mesh, observed data and topography
         - **Inversion Tab:**
             - set the active cells
-            - use alpha S = 0.0016, alpha E = 1, alpha N = 1 and alpha Z = 1 for the weighting
+            - set :math:`\alpha_s = \left[\frac{1}{dx}\right]^2 = 0.0016`, :math:`\alpha_x=\alpha_y=\alpha_z = 1`
             - set the reference and starting models using the model you created from the surface mapping
-            - under the reference model option, choose either *SMOOTH_MOD* or *SMOOTH_MOD_DIF*
-        - **Blocky model norms:** *leave all as default*
+            - under the reference model option, choose either :ref:`*SMOOTH_MOD* or *SMOOTH_MOD_DIF* <AtoZSmoothInDiff>`
+        - :ref:`Blocky model norms <AtoZNorms>`: *leave all as default*
         - Apply and write files when finished
     - :ref:`Run the inversion <invRun>`
     - :ref:`Import inversion results <invLoadResults>`
-    - View the results. The user is encouraged to:
-        - Examine the differences in recovered models using *SMOOTH_MOD* and *SMOOTH_MOD_DIF*
-        - Examine the differences in data misfit for data predicted using *SMOOTH_MOD* and *SMOOTH_MOD_DIF* inversions
+    - :reF:`View the results <viewData>`.
+
+    .. note:: **The user is encouraged to:**
+
+              - Examine the differences in recovered models using *SMOOTH_MOD* and *SMOOTH_MOD_DIF*
+              - Examine the differences in data misfit for data predicted using *SMOOTH_MOD* and *SMOOTH_MOD_DIF* inversions
 
 
 
@@ -141,8 +158,8 @@ Results
     - SMOOTH_MOD imposes the structures of the reference model but allows smooth gradients
     - SMOOTH_MOD_DIFF imposes the structures and gradients of the reference model
 
-Inversion with Soft Constraints
--------------------------------
+Inversion with *Soft* Constraints
+---------------------------------
 
 Here, we show how compact and blocky models can be recovered by changing certain inversion parameters. Smooth models are recovered when the compactness parameter (p) and the set of blockiness parameters (q) are set to a value of 2. By decreasing the compactness parameter value, we recover models that have a smaller number of non-zero values; that is, models which fit the observed data using more compact structures. By decreasing the blockiness parameter value, we recover models that have a smaller number of non-zero gradients; that is, models which fit the observed data using structures that have very sharp edges. To complete this exercise:
 
@@ -151,15 +168,18 @@ Here, we show how compact and blocky models can be recovered by changing certain
         - **Sensitivity Tab:** set the mesh, observed data and topography
         - **Inversion Tab:**
             - set the active cells
-            - use alpha S = 0.0016, alpha E = 1, alpha N = 1 and alpha Z = 1 for the weighting
+            - set :math:`\alpha_s = \left[\frac{1}{dx}\right]^2 = 0.0016`, :math:`\alpha_x=\alpha_y=\alpha_z = 1`
             - leave the reference and initial models as default values
-        - **Blocky model norms:** set Lp and Lq values and use default Lp/Lq scaling (try different combinations)
+        - :ref:`Blocky model norms <AtoZNorms>`: set p-values and use default Lp/Lq scaling (try different combinations)
         - Apply and write files when finished
     - :ref:`Run the inversion <invRun>`
     - :ref:`Import inversion results <invLoadResults>`
-    - View the results. The user is encouraged to:
-        - see how changes in the compactness parameter (p) affect recovered models
-        - see how changes in the blockiness parameters (q) affect recovered models
+    - :reF:`View the results <viewData>`.
+
+    .. note:: **The user is encouraged to:**
+
+              - see how changes in the compactness parameter (p) affect recovered models
+              - see how changes in the blockiness parameters (q) affect recovered models
 
 
  .. figure:: images/LpLqInversion.png
