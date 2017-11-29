@@ -135,6 +135,9 @@ Here, we show the impact of reference models on the final inversion result. Two 
 Results
 ^^^^^^^
 
+    - All three inversion match the data fairly well but with some anomalously high misfits over the location of the kimberlites.
+    - SMOOTH_MOD imposes the structures of the reference model but allows smooth gradients
+    - SMOOTH_MOD_DIFF imposes the structures and gradients of the reference model
 
 Inversion with Soft Constraints
 -------------------------------
@@ -157,8 +160,11 @@ Here, we show how compact and blocky models can be recovered by changing certain
         - see how changes in the blockiness parameters (q) affect recovered models
 
 
-Results
-^^^^^^^
+ .. figure:: images/LpLqInversion.png
+    :align: center
+    :width: 700
+
+    Inversion results for various soft constraints.
 
 
 

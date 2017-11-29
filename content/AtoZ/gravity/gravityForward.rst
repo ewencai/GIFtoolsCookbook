@@ -2,15 +2,22 @@
 
 .. include:: <isonum.txt>
 
-Forward Model Gravity Data and Compare Against Field Observations
-=================================================================
+Forward Modeling and Hypothesis Testing
+=======================================
 
-Prelude
--------
+Here, gravity anomaly data for a synthetic model is predicted to see if it matches an observed gravity anomaly.
 
-Here, we show how GIFtools can be used to forward model gravity data for an arbitrary density model. We consider the case where we have a set of field observations and some a priori knowledge of the local geology; for this example, we know the anomaly is produced by the :ref:`TKC kimberlites <AtoZ_TKCbackground>`. The goal of this exercise is to forward model the survey data for a plausible density model, and see if the predicted gravity anomaly sufficiently matches the observed gravity anomaly. A reasonable match ensures that our current geological understanding is able to explain the cause of the anomaly.
+
+.. Here, we show how GIFtools can be used to forward model gravity data for an arbitrary density model. We consider the case where we have a set of field observations and some a priori knowledge of the local geology; for this example, we know the anomaly is produced by the :ref:`TKC kimberlites <AtoZ_TKCbackground>`. The goal of this exercise is to forward model the survey data for a plausible density model, and see if the predicted gravity anomaly sufficiently matches the observed gravity anomaly. A reasonable match ensures that our current geological understanding is able to explain the cause of the anomaly.
 
 .. tip:: The same workflow can be used to predict magnetic data for an arbitrary susceptibility or magnetic vector model.
+
+
+.. figure:: images/HypothesisTitle.png
+    :align: center
+    :width: 700
+
+    A synthetic density model (left). Predicted data from the model (middle). Difference between predicted and observed (right).
 
 
 Setup for the Forward Modeling Exercise

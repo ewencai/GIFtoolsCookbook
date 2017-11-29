@@ -5,10 +5,16 @@
 Processing Gravity Data
 =======================
 
-Prelude
--------
+Here, we show how GIFtools can be used to carry out processing steps relevant to gravity data.
 
-Raw gravity data must be processed before it can be interpreted. When receiving gravity data from a client, the data may have already undergone 1 or more processing steps. The goal of this exercise is to show GIFtools can be used to carry out any remaining processing steps. For latitude and free-air corrections, we will demonstrate a simple approach; this is meant to show some basic functionality within GIFtools and is not meant to replace more rigorous methods. We will also show how GIFtools can be used to remove the background gravity and simultaneously apply a terrain correction. The end result is gravity anomaly data, which can be interpreted and inverted.
+.. figure:: images/ProcessingFinal.png
+    :align: center
+    :width: 700
+
+    Gravity data after latitude and free-air correction (left). Background gravity (middle). Final gravity anomaly data (right).
+
+
+.. Raw gravity data must be processed before it can be interpreted. When receiving gravity data from a client, the data may have already undergone 1 or more processing steps. The goal of this exercise is to show GIFtools can be used to carry out any remaining processing steps. For latitude and free-air corrections, we will demonstrate a simple approach; this is meant to show some basic functionality within GIFtools and is not meant to replace more rigorous methods. We will also show how GIFtools can be used to remove the background gravity and simultaneously apply a terrain correction. The end result is gravity anomaly data, which can be interpreted and inverted.
 
 .. _AtoZGrav_Corrections_Setup:
 
