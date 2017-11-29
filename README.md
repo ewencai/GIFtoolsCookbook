@@ -1,7 +1,8 @@
 # GIFtoolsCookbook
 
 ![alt text](https://github.com/ubcgif/GIFtoolsCookbook/blob/master/images/Cookbook_Landing.png)
-First of all, welcome! 
+
+**First of all, Welcome!** 
 
 Our Cookbook highlights the things you can do with GIFtools to make your inversion life easier.
 
