@@ -12,7 +12,7 @@ Here, A to Z examples relevant to the processing, interpretation and inversion o
 .. toctree::
  	:maxdepth: 1
 
-   	Applying Corrections to Raw Data <dataCorrections>
+   	Processing Gravity Data <dataCorrections>
    	Forward Modeling Gravity Data <gravityForward>
    	Inverting Gravity Data <gravityInversion>
 
