@@ -12,11 +12,11 @@ Here, we present the different parameters and their effects through a synthetic 
 .. toctree::
     :maxdepth: 1
 
-    The Objective Function <ObjectiveFunction>
+    The objective function <ObjectiveFunction>
+    The Beta parameter (trade-off)<Beta>
     The alphas parameters <Alphas>
     The weighting matrices <WeightingMatrix>
-    Lp and Lq norms <Norms>
-    The Trade-Off Parameter<Beta>
-    Including the Reference Model in the Smoothness Term<MrefInSmooth>
+    Sparse and blocky norms <Norms>
+    Reference model in the smoothness Term<MrefInSmooth>
 
-This section was elaborated with the contribution of Marc Grujic from Rio Tinto.
+.. note:: This section was elaborated with the contribution of Marc Grujic from Rio Tinto.
