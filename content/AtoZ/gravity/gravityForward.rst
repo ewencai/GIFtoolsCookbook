@@ -37,7 +37,7 @@ Setup for the Forward Modeling Exercise
 
 **If you have NOT completed the previous tutorial, you must complete the following steps:**
 
-    - `Download the demo <https://github.com/ubcgif/GIFtoolsCookbook/raw/master/assets/AtoZ_Gravity_4Download.zip>`__
+    - `Download the demo <https://github.com/ubcgif/GIFtoolsCookbook/raw/master/assets/AtoZ_Gravity_4Download.zip>`_
     - Open GIFtools
     - :ref:`Set the working directory <projSetWorkDir>`
 
