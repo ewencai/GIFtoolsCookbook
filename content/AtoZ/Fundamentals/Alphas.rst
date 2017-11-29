@@ -19,14 +19,14 @@ The model objective function consists of four main components; one that
 defines how the model can vary from the reference model, and one for each of
 the allowed gradients in the x, y and z directions. Each of these four
 components has a coefficient, denoted by α, that controls their relative
-importance to each other.
+importance in the regularization :math:`\phi_m (\mathbf{m})`.
 
 .. math::
-    \phi_m(\mathbf{m}) = &\color{blue}{\alpha_s} ||\mathbf{W}_s\;\mathbf{R}_s(\mathbf{m}-\mathbf{m}_0)||_2^2 +\\
-    &\color{blue}{\alpha_x} ||\mathbf{W}_x\;\mathbf{R}_x \; \mathbf{G}_x(\mathbf{m}-\mathbf{m}_0)||_2^2 +\\
-    &\color{blue}{\alpha_y} ||\mathbf{W}_y\;\mathbf{R}_y \; \mathbf{G}_y(\mathbf{m}-\mathbf{m}_0)||_2^2 +\\
-    &\color{blue}{\alpha_z} ||\mathbf{W}_z\;\mathbf{R}_z \; \mathbf{G}_z(\mathbf{m}-\mathbf{m}_0)||_2^2
-    :label: Regularizer
+    \phi_m(\mathbf{m}) = &\color{blue}{\alpha_s} ||\mathbf{W}_s\;\mathbf{R}_s(\mathbf{m}-\mathbf{m}_{ref})||_2^2 +\\
+    &\color{blue}{\alpha_x} ||\mathbf{W}_x\;\mathbf{R}_x \; \mathbf{G}_x(\mathbf{m}-\mathbf{m}_{ref})||_2^2 +\\
+    &\color{blue}{\alpha_y} ||\mathbf{W}_y\;\mathbf{R}_y \; \mathbf{G}_y(\mathbf{m}-\mathbf{m}_{ref})||_2^2 +\\
+    &\color{blue}{\alpha_z} ||\mathbf{W}_z\;\mathbf{R}_z \; \mathbf{G}_z(\mathbf{m}-\mathbf{m}_{ref})||_2^2
+    :label: Regularizer_alpha
 
 In this example, we demonstrate the effect that each α value has on the solution.
 
@@ -46,7 +46,7 @@ Reducing :math:`\alpha_s` results in an overall smoother model.
 It is sometimes useful to think of the α values in terms of *length scales*:
 
 .. math::
-    L_x = \sqrt{\frac{\alpha_x}{\alpha_s}} \quad L_y = \sqrt{\frac{\alpha_y}{\alpha_s}} \quad L_z = \sqrt{\frac{\alpha_z}{\alpha_s}}
+    L_x = \sqrt{\frac{\alpha_x}{\alpha_s}}, \quad L_y = \sqrt{\frac{\alpha_y}{\alpha_s}}, \quad L_z = \sqrt{\frac{\alpha_z}{\alpha_s}}
 
 These length scales can be adjusted to reflect a priori information about the
 general trend expected from the geology.
