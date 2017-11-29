@@ -8,7 +8,7 @@ Inverting Corrected Gravity Data
 Prelude
 -------
 
-Here, we show how GIFtools can be used to invert gravity anomaly data. We consider the case where we have a set of field observations and some a priori knowledge of the local geology; for this example, we know the anomaly is produced by the :ref:`TKC kimberlites <AtoZ_TKCbackground>`. We assume that all necessary corrections have been applied to the raw gravity data; see the :ref:`gravity data corrections tutorial <AtoZGrav_Corrections>`. The goal of this exercise is to invert the gravity anomaly data to recover the optimum density model. Several inversion will be run to show the impact of reference models and various penalty terms on the final inversion result.
+Here, we show how GIFtools can be used to invert gravity anomaly data. We consider the case where we have a set of field observations and some a priori knowledge of the local geology; for this example, we know the anomaly is produced by the :ref:`TKC kimberlites <AtoZ_TKCbackground>`. We assume that all necessary corrections have been applied to the raw gravity data; see the :ref:`processing gravity data exercise <AtoZGrav_Corrections>`. The goal of this exercise is to invert the gravity anomaly data to recover the optimum density model. Several inversion will be run to show the impact of reference models and various penalty terms on the final inversion result.
 
 .. tip:: The same workflow can be used to invert magnetic data for an arbitrary susceptibility or magnetic vector model.
 
@@ -19,15 +19,19 @@ Setup for the Inversion Exercise
 **If you have completed the tutorial** :ref:`"Forward Model Gravity Data and Compare Against Field Observations" <AtoZGrav_Forward>`:
 
     - Open your final GIFtools project
+    - :ref:`Set the working directory <projSetWorkDir>` (if you want to change it)
     - :ref:`Import the true density model <importModel>`
 
-**If you have NOT completed the tutorial, you must complete the following steps from the tutorial:**
+**If you have NOT completed the previous tutorial, you must complete the following steps:**
 
-    - :ref:`Download the necessary files and set the working directory <AtoZGrav_Forward_Download>`
-    - :ref:`Import the files into GIFtools <AtoZGrav_Forward_Import>`
-    - :ref:`Create a mesh from the survey data <AtoZGrav_Forward_Mesh>`
-    - :ref:`Create an active cells model and a synthetic geological model from topography and surface mapping <AtoZGrav_Forward_Model>`
+    - `Download the demo <https://owncloud.eoas.ubc.ca/s/lDVLwPD2LKI2QKK>`__
+    - Open GIFtools
+    - :ref:`Set the working directory <projSetWorkDir>`
     - :ref:`Import the true density model <importModel>`
+    - Carry out these steps from the forward modeling exercise:
+        - :ref:`Import files into GIFtools <AtoZGrav_Forward_Import>`
+        - :ref:`Create a mesh from the survey data <AtoZGrav_Forward_Mesh>`
+        - :ref:`Create an active cells model and a synthetic geological model from topography and surface mapping <AtoZGrav_Forward_Model>`
 
 
 Assign Uncertainties and Set I/O Headers

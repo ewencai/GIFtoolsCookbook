@@ -2,23 +2,23 @@
 
 .. include:: <isonum.txt>
 
-Data Corrections for Gravity Data
-=================================
+Processing Gravity Data
+=======================
 
 Prelude
 -------
 
-Raw gravity data must be processed before it can be interpreted. When receiving gravity data from a client, the data may have already undergone 1 or more processing steps. The goal of this exercise is to show processing of gravity data can be carried out with GIFtools. We will demonstrate a simple approach for performing the latitude and free-air corrections; this is meant to show some basic functionality within GIFtools and is not meant to replace more rigorous methods. We will also show how GIFtools can be use to remove the background gravity and simultaneously apply a terrain correction to isolate the anomalous gravity.
+Raw gravity data must be processed before it can be interpreted. When receiving gravity data from a client, the data may have already undergone 1 or more processing steps. The goal of this exercise is to show GIFtools can be used to carry out any remaining processing steps. For latitude and free-air corrections, we will demonstrate a simple approach; this is meant to show some basic functionality within GIFtools and is not meant to replace more rigorous methods. We will also show how GIFtools can be used to remove the background gravity and simultaneously apply a terrain correction. The end result is gravity anomaly data, which can be interpreted and inverted.
 
-.. _AtoZGrav_Corrections_Download:
+.. _AtoZGrav_Corrections_Setup:
 
-Download files and start new project
-------------------------------------
+Setup for the Processing Exercise
+---------------------------------
 
-To complete this exercise, you must first download the necessary files and set up the working directory for your project.
+    - `Download the demo <https://owncloud.eoas.ubc.ca/s/lDVLwPD2LKI2QKK>`__
+    - Open GIFtools
+    - :ref:`Set the working directory <projSetWorkDir>`
 
-.. example:: - `Download the demo <https://owncloud.eoas.ubc.ca/s/lDVLwPD2LKI2QKK>`__
-             - :ref:`Set the working directory <projSetWorkDir>`
 
 .. tip:: - Steps (without links) are also included with the download
          - Requires at least GIFtools version 2.1.3 (Oct 2017)
@@ -29,24 +29,24 @@ To complete this exercise, you must first download the necessary files and set u
 Import files
 ------------
 
-In addition to raw geophysical data, you may have access to topographical information. If this information is available to you, it can be imported to GIFtools and used in the terrain correction.
+In addition to raw geophysical data, you may have access to topographical information. If this information is available to you, it can be imported into GIFtools.
 
     - :ref:`Import the topography data <importTopo>` (3D GIF format)
     - :ref:`Import raw gravity data <importGravData>` (GIF format with data in mGal)
 
 .. tip:: - Use **Edit** |rarr| **Rename** to change what objects in GIFtools are called
-         - For any data object, :ref:`edit the data headers <objectDataHeaders>`. We set the observed gravity data to "G_raw"
-         - Observed data were generated synthetically using the best-available density model for TKC.
+         - For any data object, :ref:`edit the data headers <objectDataHeaders>`. We set the raw gravity data to "G_raw"
+         - Raw data were generated synthetically using the best-available density model for TKC and "un-processing" the data.
 
 Latitude and Free-Air Correction
 --------------------------------
 
-Generally, this processing step has been done by the client. However, to demonstrate some basic functionality within GIFtools, we will perform simple latitude and free-air corrections on the raw gravity data. Th latitude correction accounts for all of the mass contained within the reference ellipsoid approximation of the Earth. Generally a distinct latitude correction is applied for every survey location. However we will be applying a constant correction to all the data; wherein we assume all survey location are at a latitude of 64 :math:`\! ^o` N. The free-air correction accounts for the fact that gravity is weaker the further you are from the Earth. GIFtools will be used to apply a specific free-air correction to each observation. The following expressions can be use to compute the latitude and free-air corrections:
+Generally, this processing step has been done by the client. However to demonstrate some basic functionality within GIFtools, we will perform simple latitude and free-air corrections on the raw gravity data. The latitude correction accounts for all of the mass contained within the reference ellipsoid approximation of the Earth. Generally a distinct latitude correction is applied for every survey location. However we will only be applying a constant value correction to the data; wherein we assume all survey locations are at a latitude of 64 :math:`\! ^o` N. The free-air correction accounts for the fact that the latitude correction is weaker the further you are from the Earth. GIFtools will be used to apply a specific free-air correction to each observation. The following expressions can be use to compute the latitude and free-air corrections:
 
 .. math::
     g_{corr} = g_{raw} - g_l + g_{fa}
 
-where the `latitude correction (Int'l grav. formula 1967): <https://en.wikipedia.org/wiki/Normal_gravity_formula>`__ is given by
+where the `latitude correction (Int'l grav. formula 1967) <https://en.wikipedia.org/wiki/Normal_gravity_formula>`__ in mGal is given by
 
 .. math::
     \begin{align}
@@ -55,10 +55,10 @@ where the `latitude correction (Int'l grav. formula 1967): <https://en.wikipedia
     \end{align}
 
 
-and the `free air correction: <https://en.wikipedia.org/wiki/Free-air_gravity_anomaly>`__ is given by
+and the `free air correction: <https://en.wikipedia.org/wiki/Free-air_gravity_anomaly>`__ in mGal is given by
 
 .. math::
-    \Delta g_{fa} = 0.3086 \times Elevation(m) \;\; (in \; mGal)
+    \Delta g_{fa} = 0.3086 \times Elevation(m)
 
 To apply these corrections to the raw data, carry out the following steps:
 
@@ -77,12 +77,12 @@ To apply these corrections to the raw data, carry out the following steps:
 Topography and Regional Geology Correction
 ------------------------------------------
 
-At this point, we have accounted for all gravity contributions from matter that lies below a surface elevation of 0 m; e.g. the latitude and free-air corrections. We must now remove the background gravity contribution from all regional mass that lies above 0 m elevation. If the topography is flat, you may choose to use a `slab correction <https://en.wikipedia.org/wiki/Bouguer_anomaly>`__. Here, we show how GIFtools can remove the background contribution while taking into account the regional topography. To remove the background gravity, carry out the following steps:
+At this point, we have accounted for all gravity contributions from matter that lies below a surface elevation of 0 m; e.g. the latitude and free-air corrections. We must now remove the background gravity contribution from all regional mass that lies above 0 m elevation. If the topography is flat, you may choose to use a `slab correction <https://en.wikipedia.org/wiki/Bouguer_anomaly>`__. Here, we show how GIFtools can remove the background contribution while taking into account the regional topography. To remove the background gravity, do the following:
 
 Create a Mesh
 ^^^^^^^^^^^^^
 
-Here, we create a mesh that extends vertically to a depth which coincides with an elevation of 0 m. We do not want to pad below this depth because we have already accounted for that mass.
+Here, we create a mesh which defines the regional geology. The mesh should extend vertically downward to an elevation of 0 m. We do not want to pad below this depth because we have already accounted for the mass lying below 0 m. The mesh should extend as far as possible horizontally so that gravity contributions outside the survey area are accounted for.
 
     - :ref:`Create a mesh using gravity data <objectDataCreateMesh>` with the following parameters:
         - Don't forget to apply topography when creating the mesh!
@@ -104,10 +104,9 @@ Here, we create a mesh that extends vertically to a depth which coincides with a
 Create Active Cells from Topography
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Here, we account for the location topography.
+Here, we account for the local topography. Since air cells contribute negligibly towards the observe data, we do not need to include them when modeling the background gravity.
 
-    - Using your gravity data, :ref:`create an active cells model from topography <createActiveCellsModel>`
-        - Choose 'from tops of cells'
+    - Using your gravity data, :ref:`create an active cells model from topography <createActiveCellsModel>`. Choose 'from tops of cells'
 
 Create a Constant Density Model
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -152,6 +151,8 @@ To remove the background gravity from your data:
     :width: 700
 
     Gravity data after latitude and free-air correction (left). Background gravity (middle). Final gravity anomaly data (right).
+
+
 
 
 
