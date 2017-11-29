@@ -1,30 +1,15 @@
 .. _quickStartGuide:
 
 .. figure:: ../images/GIFtoolsLogo.png
-   :align: left
+   :align: center
    :scale: 75%
 
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
 
 GIFtools quick-start guide
 ==========================
 
-In the next section, you will find:
-- :ref:`GIFtools Framework <framework>`
-- :ref:`Installation guide <install>`
-- :ref:`Navigating GIFtools <lookAndFeel>`
-- :ref:`Tutorial guide  <tutorials>`
+- :ref:`Framework <framework>`
+- :ref:`Interface (GUI) <GUI>`
 
 Why GIFtools ?
 --------------
@@ -45,143 +30,57 @@ tasks needed from the user:
 
 (3) Manage and archive projects
 
-
-.. _framework:
-
-**GIFtools Framework**
-
 .. figure:: ../images/GTFramework.png
    :align: right
    :scale: 30%
 
 GIFtools has been designed to facilitate the interaction between the practicing
-geophysists and the various forward and inversion codes. The front-end of
-GIFtools is its Graphical User Interface (GUI) menu structure. A *GIFproject*
-is used to store, visualize and modify the different *objects* needed to
-interact with the various Fortran executable.
+geophysists and the various forward and inversion codes through a modular :ref:`Framework <framework>`. The front-end of
+GIFtools is its Graphical User Interface (:ref:`GUI <GUI>`) menu structure.
+
+.. _framework:
+
+GIFtools Framework
+------------------
 
 .. figure:: ../images/Object.png
    :align: right
    :scale: 50%
 
-In computer language, an *object* is a container holding a set of attributes
-and functions that can be used to perform tasks. You can think of it as a
-self-contained machine. For example, a *GIFdata* object knows about the
-geophysical experiment (location, transmitter, units, etc.), and can
-perform action (write to file, plot)
+The GIFtools Framework has been designed to store, visualize and modify the
+different :ref:`Objects <objectFunctionality_index>` needed to interact with
+the various Fortran executable. In computer language, an **object** is a
+container holding a set of attributes and functions that can be used to
+perform tasks. You can think of it as computer hardware. For example, a
+:ref:`GIFdata <objectFunctionalityData>` object knows all the necessary
+details about the geophysical experiment (location, receivers, units, etc.)
+and can perform actions (add/substract, write to file, plot, etc.)
 
 .. figure:: ../images/ObjectLink.png
    :align: right
    :scale: 50%
 
-The *objects* can be linked to each other, like building blocks, to achieve
-more complex tasks. For example, a model needs mesh in order to exist in a 3D
+**Objects** can be linked to each other, like building blocks, to achieve
+more complex tasks. For example, a :ref:`Model <objectFunctionalityModel>` needs :ref:`Mesh <objectFunctionalityMesh>` in order to exist in a 3D
 space and be exported.
 
 
-More complex objects, an inversion for example, need to know about many other
-objects in order to be complete (data, mesh and model). Once all the pieces
-are connected, the inversion object can interact with external Fortran codes
-and knows how to handle the various outputs.
+More complex objects, such as a :ref:`GIFinversion <objectFunctionalityInv>`,
+need to know about many other objects in order to exist (:ref:`Data
+<objectFunctionalityData>`, :ref:`Mesh <objectFunctionalityMesh>` and
+:ref:`Model <objectFunctionalityModel>`). Once all the pieces are connected,
+the inversion object can interact with external Fortran codes and knows how to
+handle the various outputs.
 
 .. figure:: ../images/GIFproject.png
    :align: center
    :scale: 50%
 
 
-.. _install:
+.. _GUI:
 
-Installation of GIFtools
-------------------------
-
-To install GIFtools, you will need to go the the website and download the latest installation executable (`Log-in required <https://gif.eos.ubc.ca/GIFtools/downloads>`_). The two available are either ``GIFtools_vXpX_install`` or ``GIFtools_vXpX_offlineInstall``. The only difference is that the off-line install is much bigger to ensure that the Matlab run-time environment that is needed is accessible if not already installed. The former installation executable will use the internet to call Matlab to check on the environment and download if necessary. Either way, **you will need administrator privileges**. Once downloaded here are the 7 steps to follow:
-
-
-1. Double click on executable, which will lead you to this screen (you can trust us...):
-
-.. figure:: ../images/giftoolsInstall1.png
-    :align: center
-    :width: 400
-
-
-
-If you use a proxy server *and* you are using the `GIFtools_vXpX_install.exe`, you will need to click on the **Connection Settings** button and put the server name and port along with a user ID and password to access the internet.
-
-2. Click **Next** and choose the installation directory for GIFtools. This does *not* necessarily need to be in ``C:\Program Files\GIF``! If you have created another folder somewhere on your computer, you may install GIFtools there (e.g., ``D:\GIFtools\``)
-
-.. figure:: ../images/giftoolsInstall2.png
-    :align: center
-    :width: 400
-
-
-
-**NOTE 1**:  If you have previous versions of GIFtools on your computer, you can put the latest version in the parent directory (e.g., ``C:\Program Files\GIF``). This directory will also be where you should place all of your executables (i.e. inversion executables, MeshTools3D, etc.) that GIFtools would require. Here is an example:
-
-.. figure:: ../images/giftoolsInstall3.png
-    :align: center
-    :width: 400
-
-
-
-**NOTE 2**: If you chose the ``Add a shortcut to the desktop`` option, you will need to perform step 7 on that shortcut too!
-
-
-4. Click **Next**: One of two things will now happen, either (1) you will have to install the run-time compiler or (2) the compiler will already be installed. If (1), follow the on-screen instructions (most likely just keep clicking next) and this will lead you to step 5. If (2) this window will show up:
-
-.. figure:: ../images/giftoolsInstall4.png
-    :align: center
-    :width: 400
-
-
-5. You are ready for install! Click **Install >**. It will take a minute or two.
-
-.. figure:: ../images/giftoolsInstall5.png
-    :align: center
-    :width: 400
-
-
-
-
-6. If everything worked out, you will get to the screen below giving you step 7's instructions. Click **Finish** and **read below to finish the install** so the link is not broken.
-
-.. figure:: ../images/giftoolsInstall6.png
-    :align: center
-    :width: 400
-
-
-
-
-7. Fix the *Start-in*  directory link for GIFtools. Go to the Start menu and find `GIFtools_vXpX` and **right-click** and select **properties**:
-
-.. figure:: ../images/giftoolsInstall7.png
-    :align: center
-    :width: 300
-
-
-
-
-Note that the *Start in:* field is blank. **Copy and paste** the *Target:*  field to the *Start in:* field. Then **remove GIFtools_vXpX.exe from the Start in** field so that only the directory is present:
-
-.. figure:: ../images/giftoolsInstall8.png
-    :align: center
-    :width: 300
-
-Click **Apply** and then **OK**. GIFtools is now installed and can be started from the Start menu
-
-
-Installation notes
-^^^^^^^^^^^^^^^^^^
-
-- *Why did we have to do step 7?* Windows makes a copy in the registry and starts GIFtools there. The visualization package (VTK) that is used requires static Java libraries and therefore GIFtools needs to be started where those dynamic libraries are located.
-
-- *Manual shortcuts to desktop do not require step 7!* If you have gone into GIFtools ``application`` directory, right-clicked and chose ``Create shortcut``, then the the shortcut (by default it will ask you if you want to put it on the desktop) will already have the *Start in:* field adjusted.
-
-
-
-.. _lookAndFeel:
-
-Navigating GIFtools
--------------------
+Graphical User Interface (GUI)
+------------------------------
 
 The next four subsections will describe the main components of GIFtools pointed out below:
 
@@ -233,16 +132,18 @@ This is a section where a log of what has happened to the selected item is recor
 
 .. _tutorials:
 
-Tutorial guide
---------------
+Need Help?
+^^^^^^^^^^
 
-This cookbook will get you to specific dialog boxes to finish your task(s). When you get to a dialog box and are not sure what to do, look for the question mark button:
+When you get to a dialog box and are not sure what to do, look for the question mark button:
 
 .. figure:: ../images/questionMark.png
     :align: center
     :width: 400
 
 
-The button will link you to a short tutorial on how (a) you got there and (b) what to do inside the dialog box. If you find a bad link, *please* email us a ubcgif[at]eos[dot]ubc[dot]ca and let us know!
+The button will link you to a short tutorial on how (a) you got there and (b)
+what to do inside the dialog box. If you find a bad link, let us know `here <https://github.com/ubcgif/help>`_ !
+
 
 

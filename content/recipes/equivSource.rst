@@ -5,6 +5,8 @@
 Do an equivalent source inversion through GIFtools
 ==================================================
 
+.. caution:: The equivalent source code is currently under review. Beware of topographic effects in the forward data.
+
 In this recipe, we step through an equivalent source inversion using magnetic data, starting from a TMI data file, a topography file, and a 3D mesh. At the bottom of this page, you will find the :ref:`files used in this recipe as well as the complete project and output files <esExample>`. The steps for doing an equivalent source inversion for gravity and gravity gradiometry are very similar to this.
 
 This recipe requires the following steps:
@@ -16,7 +18,7 @@ This recipe requires the following steps:
 
 **STEP 1: Import the necessary files**
 
-Start GIFtools or open an already existing project. Because we will be loading in a few files, it is easiest to :ref:`set the working directory <projSetWorkDir>` to the folder where the files are located and/or where you would like to do the forward model. 
+Start GIFtools or open an already existing project. Because we will be loading in a few files, it is easiest to :ref:`set the working directory <projSetWorkDir>` to the folder where the files are located and/or where you would like to do the forward model.
 
 The first step is then to import the magnetic data, the topography file, and the 3D mesh. :ref:`Importation of data <importData>` can slightly differ, depending on the file type (GIF format, Geosoft XYZ, etc). For this example, the magnetic data and the topography file are both in GIF format. Both are imported using the following menus:
 

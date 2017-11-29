@@ -19,6 +19,7 @@ Recipes
     Invert data in GIFtools <invertData>
     Do an equivalent source inversion <equivSource>
     Forward model amplitude data <fwdModAmpData>
+    Assign elevation from height and topography surface <assignElevTopo>
 
 
 ..   Project DC/IP 3D data onto a 2D lines for DCIP2D inversion <dcip3Dto2D>

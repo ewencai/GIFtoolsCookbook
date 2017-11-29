@@ -2,15 +2,15 @@
 
 .. include:: <isonum.txt>
 
-Object-Dependent Functionality
-==============================
+Object Functionality
+====================
 
 All of the these functions can be accessed through the menus at the top after selecting the object in the GIFtools tree. The main categories presented here are:
 
 
-In GIFtools, data, meshes, models and other things are defined as 'objects'. By doing this, GIFtools ensures that the user may only 
+In GIFtools, data, meshes, models and other things are defined as 'objects'. By doing this, GIFtools ensures that the user may only
 
-Here, we describe the specific set of actions (or methods) which can be applied to each type of object. 
+Here, we describe the specific set of actions (or methods) which can be applied to each type of object.
 
 
 ..    - :ref:`3.1. Data: <objectFunctionalityData>` functions that may be applied to data

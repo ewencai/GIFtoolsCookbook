@@ -4,12 +4,14 @@ Mesh
 ====
 
 .. toctree::
-    :maxdepth: 2
+    :maxdepth: 1
 
-    createConstantModel
-    createActiveCellsModel
+    addPaddingCells
+    createModel
+    createWeights
+    shiftCoordinates
     refineOctree
-    View in 3D <viewMesh>        
+    View in 3D <viewMesh>
     Export <export>
 
 

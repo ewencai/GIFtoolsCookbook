@@ -13,7 +13,7 @@ Under **Import** |rarr| **Data**, the user can import various types of geophysic
     - :ref:`Topography <importTopo>`
     - :ref:`Surface <importSurface>`
     - :ref:`Borehole Data <importBoreholeData>`
-    - :ref:`Miscellaneous Property data <importDCIP2Ddata>`
+    - :ref:`Miscellaneous Property data <importProp>`
     - :ref:`2D DCIP Data <importDCIP2Ddata>`
     - :ref:`3D DCIP Data <importDCIP3Ddata>`
     - :ref:`Frequency-Domain EM Data <importFemData>`
@@ -220,7 +220,7 @@ See below links for specifics on the files associated with borehole data:
 
     - :ref:`Collar file <bhCollarfile>`
     - :ref:`Survey file <bhSurveyfile>`
-    - :ref:`Property file <bhPropfile>`      
+    - :ref:`Property file <bhPropfile>`
 
 
 .. _importProp:
@@ -260,7 +260,7 @@ Use the main project menu: **Import** |rarr| **DC/IP** |rarr| **2D**
 
 
 **Note**: Importation from a CSV/XYZ file is found under **Import** |rarr| **DC/IP** and is independent of dimension in the menu
- 
+
 **File formats:**
 
 DC/IP 2D data can be imported via:
@@ -289,7 +289,7 @@ Use the main project menu: **Import** |rarr| **DC/IP** |rarr| **3D**
 DC/IP 3D data can be imported via:
 
     - :ref:`3D GIF <dcip3dfile>`
-    - :ref:`DCIPF3D <dcip3dfile>`      
+    - :ref:`DCIPF3D <dcip3dfile>`
     - :ref:`XYZ file <XYZfile>`
     - :ref:`CSV file <CSVfile>`
 

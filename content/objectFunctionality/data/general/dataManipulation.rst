@@ -24,7 +24,7 @@ To set the i/o header, select the object and then the menu **Data manipulation**
     :align: center
     :width: 400
 
- 
+
 .. _objectDataDownsample:
 
 Downsample Data
@@ -81,32 +81,6 @@ This function allows the user to remove data outside of a 3D mesh region that is
     :width: 400
 
 
-.. _objectAssignUncert:
-
-Assign uncertainties
---------------------
-
-Assigning uncertainties is vital to inversion and therefor is also required as an :ref:`i/o header<objectSetioHeaders>`. To assign uncertainties to a data object, click on the object and select the menu **Data manipulation** |rarr| **Assign uncertainties**
-
-.. figure:: ../../../../images/uncert.png
-    :align: center
-    :width: 400
-
-
-**NOTE** When assigning uncertainties to EM data, the user has two options:
-
-#. To assign a percentage and floor to all frequencies/times per data type use the menu **Data manipulation** |rarr| **Assign uncertainties** |rarr| **Simple**
-
-#. FOR TEM data: To open up the time-dependent uncertainty dialog, use the menu **Data manipulation** |rarr| **Assign uncertainties** |rarr| **Time dependent**
-
-#. FOR FEM data: To open up the frequency-dependent uncertainty dialog, use the menu **Data manipulation** |rarr| **Assign uncertainties** |rarr| **Time dependent**
-
-An example from FEM data (TEM is the same structure):
-
-
-.. figure:: ../../../../images/EMuncert.png
-    :align: center
-    :width: 400
 
 .. _objectCalculate:
 
@@ -127,9 +101,9 @@ Any data column may have a polynomial trend calculated. For access to this featu
     :align: center
     :width: 400
 
-**NOTE 1:** For removal of the trend, see the :ref:`Column calculator <objectColumnCalculator>` for how to subtract one column from another within a data object. 
+**NOTE 1:** For removal of the trend, see the :ref:`Column calculator <objectColumnCalculator>` for how to subtract one column from another within a data object.
 
-**NOTE 2:** The calculation of a polynomial trend can be accessed in the :ref:`data viewer <viewData>`. Data first need to be selected via the **View** |rarr| **Edit** |rarr| **Data selection** tab of the viwer control dialog. Then select its neighbouring tab: **View** |rarr| **Edit** |rarr| **Regional fit**. A new data column name is manditory as well as the degree of polynomial. 
+**NOTE 2:** The calculation of a polynomial trend can be accessed in the :ref:`data viewer <viewData>`. Data first need to be selected via the **View** |rarr| **Edit** |rarr| **Data selection** tab of the viwer control dialog. Then select its neighbouring tab: **View** |rarr| **Edit** |rarr| **Regional fit**. A new data column name is manditory as well as the degree of polynomial.
 
 .. figure:: ../../../../images/polyTrendFromViewer.png
     :align: center
@@ -194,12 +168,89 @@ On occasion, one may want to add noise to a forward modelled dataset in order to
 **NOTE 1:** Spatial (X,Y) :ref:`i/o Headers <objectSetioHeaders>` are not shown within the calculator.
 
 
- 
+.. _objectAddConstantCol:
+
+Add Constant Column
+^^^^^^^^^^^^^^^^^^^
+
+One may want to append a constant value to the data object.
 
 
 
+.. _objectCalcLineBearing:
+
+Calculate line and bearing
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Geophysical survey are often collected along survey lines. While the data may
+have Easting and Northing information, it is often useful to also know the
+direction (bearing) of survey. This function groups the survey observation stations with line IDs, and provide the local bearing of each observation with respect to its nearest neighbours.
+
+.. figure:: ../../../../images/dataCalcLineBearing.png
+    :align: center
+    :width: 400
+
+**NOTE:** The assumption is made that survey points are provided in the same order as they were collected.
 
 
+Coordinates
+-----------
+
+.. raw:: html
+    :file: ../../../../underconstruction.html
+
+
+.. figure:: ../../../../images/uncert.png
+    :align: center
+    :width: 400
+
+.. _objectShiftCoord:
+
+Shift spatial coordinates
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. _objectRotateCoord:
+
+Rotate spatial coordinates
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. _objectLookUpTable:
+
+Use look-up table
+^^^^^^^^^^^^^^^^^
+
+.. _objectElevFromSurface:
+
+Calculate elevation from surface
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+.. _objectAssignUncert:
+
+Assign uncertainties
+--------------------
+
+Assigning uncertainties is vital to inversion and therefor is also required as an :ref:`i/o header<objectSetioHeaders>`. To assign uncertainties to a data object, click on the object and select the menu **Data manipulation** |rarr| **Assign uncertainties**
+
+.. figure:: ../../../../images/uncert.png
+    :align: center
+    :width: 400
+
+
+**NOTE** When assigning uncertainties to EM data, the user has two options:
+
+#. To assign a percentage and floor to all frequencies/times per data type use the menu **Data manipulation** |rarr| **Assign uncertainties** |rarr| **Simple**
+
+#. FOR TEM data: To open up the time-dependent uncertainty dialog, use the menu **Data manipulation** |rarr| **Assign uncertainties** |rarr| **Time dependent**
+
+#. FOR FEM data: To open up the frequency-dependent uncertainty dialog, use the menu **Data manipulation** |rarr| **Assign uncertainties** |rarr| **Time dependent**
+
+An example from FEM data (TEM is the same structure):
+
+
+.. figure:: ../../../../images/EMuncert.png
+    :align: center
+    :width: 400
 
 
 .. _objectCombineData:
@@ -224,10 +275,13 @@ Any data object can be combined with another data object from its same class (e.
     :align: center
     :width: 400
 
+.. _objectCreateDiffData:
 
+Create different data type
+--------------------------
 
-
-
+.. raw:: html
+    :file: ../../../../underconstruction.html
 
 
 
