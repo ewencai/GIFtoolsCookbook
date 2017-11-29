@@ -5,13 +5,17 @@
 Processing Gravity Data
 =======================
 
-Here, we show how GIFtools can be used to carry out processing steps relevant to gravity data.
+Here, we show how GIFtools can be used to carry out processing steps relevant to gravity data such as:
+
+ - :ref:`Free-air correction <AtoZ_Grav_FreeAir>`
+ - :ref:`Simple terrain correction <AtoZ_Grav_TerrainCorr>`
 
 .. figure:: images/ProcessingFinal.png
     :align: center
-    :width: 700
+    :scale: 20%
 
     Gravity data after latitude and free-air correction (left). Background gravity (middle). Final gravity anomaly data (right).
+
 
 
 .. Raw gravity data must be processed before it can be interpreted. When receiving gravity data from a client, the data may have already undergone 1 or more processing steps. The goal of this exercise is to show GIFtools can be used to carry out any remaining processing steps. For latitude and free-air corrections, we will demonstrate a simple approach; this is meant to show some basic functionality within GIFtools and is not meant to replace more rigorous methods. We will also show how GIFtools can be used to remove the background gravity and simultaneously apply a terrain correction. The end result is gravity anomaly data, which can be interpreted and inverted.
@@ -21,7 +25,7 @@ Here, we show how GIFtools can be used to carry out processing steps relevant to
 Setup for the Processing Exercise
 ---------------------------------
 
-    - `Download the demo <https://owncloud.eoas.ubc.ca/s/lDVLwPD2LKI2QKK>`__
+    - `Download the demo <https://github.com/ubcgif/GIFtoolsCookbook/blob/master/assets/AtoZ_Gravity_4Download.zip>`__
     - Open GIFtools
     - :ref:`Set the working directory <projSetWorkDir>`
 
@@ -43,6 +47,8 @@ In addition to raw geophysical data, you may have access to topographical inform
 .. tip:: - Use **Edit** |rarr| **Rename** to change what objects in GIFtools are called
          - For any data object, :ref:`edit the data headers <objectDataHeaders>`. We set the raw gravity data to "G_raw"
          - Raw data were generated synthetically using the best-available density model for TKC and "un-processing" the data.
+
+.. _AtoZ_Grav_FreeAir:
 
 Latitude and Free-Air Correction
 --------------------------------
@@ -80,6 +86,8 @@ To apply these corrections to the raw data, carry out the following steps:
 
     Raw gravity data (left). Free-air correction based on elevation (middle). Gravity data after latitude and free-air correction (right).
 
+.. _AtoZ_Grav_TerrainCorr:
+
 Topography and Regional Geology Correction
 ------------------------------------------
 
@@ -98,7 +106,7 @@ Here, we create a mesh which defines the regional geology. The mesh should exten
         - Padding = 2000 m on each side, 0 m in depth
         - Padding factor = 1.2
 
-.. tip:: Here, the mesh does not extend *exactly* to an elevation of 0 m. For the purposes of the exercise, this is fine. In practice however, it would be wise to extend the mesh to exactly 0 m because you have accounted for all mass below that elevation already. 
+.. tip:: Here, the mesh does not extend *exactly* to an elevation of 0 m. For the purposes of the exercise, this is fine. In practice however, it would be wise to extend the mesh to exactly 0 m because you have accounted for all mass below that elevation already.
 
 
 .. figure:: images/MeshRemoval.png
@@ -150,7 +158,7 @@ Remove the Background Gravity
 To remove the background gravity from your data:
 
     - Use :ref:`add data from another GRAVdata object <objectCombineData>` to add the background gravity to the gravity data object where you are doing your processing
-    - Use the :ref:`column calculator <objectColumnCalculator>` to subtract the background data; which should result in just the gravity anomaly remaining 
+    - Use the :ref:`column calculator <objectColumnCalculator>` to subtract the background data; which should result in just the gravity anomaly remaining
 
 .. figure:: images/ProcessingFinal.png
     :align: center

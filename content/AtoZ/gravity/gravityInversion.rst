@@ -24,7 +24,7 @@ Setup for the Inversion Exercise
 
 **If you have NOT completed the previous tutorial, you must complete the following steps:**
 
-    - `Download the demo <https://owncloud.eoas.ubc.ca/s/lDVLwPD2LKI2QKK>`__
+    - `Download the demo <https://github.com/ubcgif/GIFtoolsCookbook/blob/master/assets/AtoZ_Gravity_4Download.zip>`__
     - Open GIFtools
     - :ref:`Set the working directory <projSetWorkDir>`
     - :ref:`Import the true density model <importModel>`
