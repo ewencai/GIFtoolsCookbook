@@ -12,6 +12,7 @@ Here, we present the different parameters and their effects through a synthetic 
 .. toctree::
     :maxdepth: 1
 
+    Basic concept <Concept>
     The objective function <ObjectiveFunction>
     The Beta parameter (trade-off)<Beta>
     The alphas parameters <Alphas>
