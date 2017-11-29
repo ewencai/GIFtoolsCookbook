@@ -24,7 +24,7 @@ Setup for the Inversion Exercise
 
 **If you have NOT completed the previous tutorial, you must complete the following steps:**
 
-    - `Download the demo <https://owncloud.eoas.ubc.ca/s/lDVLwPD2LKI2QKK>`__
+    - `Download the demo <https://github.com/ubcgif/GIFtoolsCookbook/raw/master/assets/AtoZ_Gravity_4Download.zip>`_
     - Open GIFtools
     - :ref:`Set the working directory <projSetWorkDir>`
     - :ref:`Import the true density model <importModel>`
@@ -33,6 +33,8 @@ Setup for the Inversion Exercise
         - :ref:`Create a mesh from the survey data <AtoZGrav_Forward_Mesh>`
         - :ref:`Create an active cells model and a synthetic geological model from topography and surface mapping <AtoZGrav_Forward_Model>`
 
+.. tip:: - Steps (without links) are also included with the download
+         - Requires at least `GIFtools version 2.1.3 (Oct 2017) <https://gif.eos.ubc.ca/GIFtools/downloads2#Installation>`_
 
 Assign Uncertainties and Set I/O Headers
 ----------------------------------------
