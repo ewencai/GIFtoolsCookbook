@@ -15,7 +15,7 @@ Purpose
 Downloads
 ^^^^^^^^^
 
-.. example::    - `Download the demo <https://owncloud.eoas.ubc.ca/s/lDVLwPD2LKI2QKK>`__
+.. example::    - `Download the demo <https://github.com/ubcgif/GIFtoolsCookbook/raw/master/assets/AtoZ_mag_4Download.zip>`_
                     - Requires at least `GIFtools version 2.1.3 (Oct 2017) <https://gif.eos.ubc.ca/GIFtools/downloads2#Installation>`_
                     - Requires `MVI v2.0 <http://gif.eos.ubc.ca/GIFtools>`_
 

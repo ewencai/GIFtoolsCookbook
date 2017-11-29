@@ -51,8 +51,8 @@ multiple methods (e.g. adding geological constraints to inversions).
 **A to Z: Synthetic TKC**
 
 For consistency, A to Z examples for each geophysical method consider the same
-geological model; the Tli Kwi Cho (TKC) kimberlite complex in NWT, Canada.
-`UBC-GIF <https://gif.eos.ubc.ca>`_ has worked extensively on the TKC area.
+geological model; the Tli Kwi Cho (TKC) kimberlite complex in NWT, Canada. The
+`UBC-GIF <https://gif.eos.ubc.ca>`_ Team has worked extensively on the TKC area.
 For background about the deposits, the geophysical surveys, and the outcome
 (including a combined petrophysical model), see the `Case History on EM Geosci
 <https://em.geosci.xyz/content/case_histories/do27do18tkc/index.html>`_.
