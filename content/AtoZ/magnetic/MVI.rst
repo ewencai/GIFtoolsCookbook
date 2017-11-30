@@ -115,7 +115,29 @@ Step by step
 Synthesis
 ^^^^^^^^^
 
-We have recovered three magnetic vector models.
+We have recovered three magnetic vector models with the following features:
+
+- The MVI-C model was successful  in locating the the magnetic kimberlite
+  despite the presence of remanence. Due to the smoothness constraint, the
+  magnetization direction changes throughout the anomaly, making difficult to
+  distinguish a shape or overall trend.
+
+- The Cooperative MVI-C and compact amplitude model dis a better job in
+  imaging a compact body. The magnetization orientation resemble much closely
+  the true model inside the pipe. The horizontal position of the maximum
+  anomaly appears to be slightly shifted West of the true model. This is due
+  assumptions made in the amplitude inversion.
+
+- The sparse MVI-S inversion was arguably the most accurate in recovering both
+  the position and magnetization orientation. Sparsity on the amplitude forced
+  a compact anomaly, while blocky orientation angles allowed for rapid changes
+  in the magnetization direction.
+
 
  .. raw:: html
     :file: ./AtoZ_Mag_Synthesis.html
+
+
+.. figure:: ./../../../images/AtoZ_Mag/AtoZ_Mag_True.png
+            :align: center
+            :scale: 0%
