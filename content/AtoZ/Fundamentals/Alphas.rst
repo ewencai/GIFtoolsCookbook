@@ -34,8 +34,9 @@ In this example, we demonstrate the effect that each α value has on the solutio
     :file: ./raw/AtoZ_InvFun_az.html
 
 As a general rule of thumb, larger :math:`\alpha_x`, :math:`\alpha_y` and
-:math:`\alpha_z` results in an increased smoothing in the corresponding direction.
-Reducing :math:`\alpha_s` results in an overall smoother model.
+:math:`\alpha_z` results in an increased smoothing in the corresponding
+direction, while reducing :math:`\alpha_s` results in an overall smoother
+model.
 
 .. tip:: In order to get equal contribution from all four components making up
          :math:`\phi_m(\mathbf{m})`, set :math:`\alpha_s=\frac{1}{h^2}`, where *h*

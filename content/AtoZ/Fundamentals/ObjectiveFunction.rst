@@ -12,9 +12,9 @@ Geophysical inversion recovers a physical property model which fits the data and
 This is sometimes referred to as "penalty-based optimization"; that is, the objective function is large if the model doesn't fit the data and/or has implausible structures. The objective function is comprised of three components:
 
     - **data misfit** :math:`\phi_d (\mathbf{m})`, which is responsible for ensuring the recovered model predicts data that fits the set of field observations.
-    
+
     - **model objective function** :math:`\phi_m (\mathbf{m})`, which ensures that the recovered model contains plausible geological structures.
-    
+
     - **trade-off parameter** :math:`\beta`, which weights the relative contribution of :math:`\phi_d (\mathbf{m})` and :math:`\phi_m (\mathbf{m})` towards the objective function.
 
 
@@ -32,7 +32,7 @@ where
     - :math:`\mathbf{d}` is the set of observed data.
     - :math:`\mathbf{W_d}` is a matrix which weights the difference in predicted and observed data by the data uncertainty. The uncertainty acts as an estimate of the standard deviation of random noise on each data point.
 
-The :math:`\mathbf{W_d}` matrix is used for 2 reasons. 1) If the observed data span several orders of magnitude, we want to make sure that the inversion doesn't focus on fitting the large values at the expense of the small values. 2) If the noise on our data are independent and Gaussian, then the predicted data fits the noise to an appropriate tolerance when :math:`\phi_d` equals the number of data; that is, the inversion fits the signal without fitting the noise (over-fitting). As a result, we generally stop the algorithm when the data misfit is equal to the number of data (target misfit).
+The :math:`\mathbf{W_d}` matrix is used for two reasons. 1) If the observed data span several orders of magnitude, we want to make sure that the inversion doesn't focus on fitting the large values at the expense of the small values. 2) If the noise on our data are independent and Gaussian, then the predicted data fits the noise to an appropriate tolerance when :math:`\phi_d` equals the number of data; that is, the inversion fits the signal without fitting the noise (over-fitting). As a result, we generally stop the algorithm when the data misfit is equal to the number of data (target misfit).
 
 
 ..    \phi_m(\mathbf{m}) = \alpha_s \int (w_s(\mathbf{r})(m(\mathbf{r})-m_0)^2 \delta v) + \alpha_x \int w_x(\mathbf{r})\left\( \frac{\delta(m(\mathbf{r})-m_0)}{\delta x}\right\)^2 \delta v + \alpha_z \int w_z(\mathbf{r})\left\( \frac{\delta(m(\mathbf{r})-m_0)}{\delta z}\right\)^2 \delta v + \alpha_z \int w_z(\mathbf{r})\left\( \frac{\delta(m(\mathbf{r})-m_0)}{\delta x}\right\)^2 \delta v

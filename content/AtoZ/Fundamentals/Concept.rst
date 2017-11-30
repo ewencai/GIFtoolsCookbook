@@ -15,7 +15,10 @@ Geophysical inversion recovers a physical property model which:
 	- fits the data (field observations), and
 	- is geologically reasonable (contains plausible structures)
 
-Geophysical inversion does not recover the exact distribution of a physical property; i.e. the *true model*. There may be a number of physical property models which satisfy the aforementioned requirements. Therefore, it is up to the user to set appropriate starting parameters for the inversion.
+Geophysical inversion does not recover the exact distribution of a physical
+property; i.e. the *true model*. There may be a number of physical property
+models which satisfy the aforementioned requirements. Therefore, it is up to
+the user to set appropriate starting parameters for the inversion.
 
 .. figure:: ../../../images/InversionFundamentals/ConceptTitle.png
     :align: right
@@ -25,7 +28,19 @@ Geophysical inversion does not recover the exact distribution of a physical prop
 
 **Example:**
 
-The benefits of geophysical inversion are illustrated in the figure on the right. In (a), we see several conductors and resistors buried below the Earth; i.e. the *true model*. In (b), we see the apparent resistivity data collected by a 2D DC resistivity survey plotted in pseudo-section. In (c), we see the physical property model recovered through inversion. If the geology is complex, the pseudo-section data can be very difficult to interpret. In this case, the inversion results are much easier to interpret.
+The benefits of geophysical inversion are illustrated in the figure on the
+right.
+
+- In **(a)**, we see several conductors and resistors buried below the Earth;
+  i.e. the *true model*.
+
+- In **(b)**, we see the apparent resistivity data collected
+  by a 2D DC resistivity survey plotted in pseudo-section.
+
+- In **(c)**, we see the
+  physical property model recovered through inversion. If the geology is
+  complex, the pseudo-section data can be very difficult to interpret. In this
+  case, the inversion results are much easier to interpret.
 
 **When is inversion able to recover a subsurface structure?**
 
