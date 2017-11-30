@@ -15,9 +15,6 @@ regularization :math:`\phi_m` (equation \ref{eq1})
 -  :math:`\mathbf{m}` is the inversion model at each iteration (also the starting model at the beginning of the inversion).
 - :math:`\beta` is a :ref:`trade-off parameter<AtoZBeta>` that controls the relative importance of the regularization compared to the data misfit function.
 
-.. raw:: html
-    :file: ./raw/AtoZ_InvFun_Lcurve.html
-
 The Data misfit -  :math:`\phi_d` in :eq:`ObjFun` is express as:
 
 .. math::
@@ -69,16 +66,3 @@ In this section, we will explore the effect of these different parameters on the
 .. figure:: ../../../images/InversionFundamentals/model.png
     :align: right
     :figwidth: 100%
-
-
-.. figure:: ../../../images/InversionFundamentals/iter_3.png
-    :align: right
-    :figwidth: 0%
-
-.. figure:: ../../../images/InversionFundamentals/iter_6.png
-    :align: right
-    :figwidth: 0%
-
-.. figure:: ../../../images/InversionFundamentals/iter_15.png
-    :align: right
-    :figwidth: 0%        

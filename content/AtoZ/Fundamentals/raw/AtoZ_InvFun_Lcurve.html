@@ -24,20 +24,20 @@ function MM_swapImage() { //v3.0
 
 <div class="row">
   <div class="row">
-    <strong>Example Tikhonov curve showing data misfit vs. regularization</strong> <br><br>
+    <strong>Example Tikhonov-curve (or L-curve)showing data misfit vs. regularization</strong> <br><br>
   </div>
   <div class="row">
     <div class="row">
       <input name="direction" value="OFF" onclick="MM_swapImage('airbornetdem_demo','','../../../_images/iter_3.png',1)" checked="checked" type="radio">
-        Iteration 3, chi factor 1.87
+        Iteration 3, &beta; 62769 (Underfit)
     </div>
     <div class="row">
       <input name="direction" value="OFF" onclick="MM_swapImage('airbornetdem_demo','','../../../_images/iter_6.png',1)" type="radio">
-        Iteration 6, chi factor 0.957
+        Iteration 6, &beta; 7846 (Reached Target misfit)
     </div>
     <div class="row">
       <input name="direction" value="OFF" onclick="MM_swapImage('airbornetdem_demo','','../../../_images/iter_15.png',1)" type="radio">
-        Iteration 15, chi factor 0.16
+        Iteration 15, &beta; 15 (Overfit)
     </div>
   </div>
   <br>

@@ -3,13 +3,17 @@
 The Beta Parameter (Trade-Off)
 ==============================
 
-In :eq:`ObjFun2`, :math:`\beta` is a trade-off parameter that controls the relative importance of the model smoothness through the model objective function and data misfit function. :math:`\beta` is scaled to the total number of input data, and is usually automatically recovered through an optimisation routine that ensures the target misfit is reached.
-In the UBC codes, there are four ways of specifing how :math:`\beta` should be chosen.
-
+In :eq:`ObjFun2`, :math:`\beta` is a trade-off parameter that controls the relative importance of the model smoothness through the model objective function and data misfit function. :math:`\beta` is scaled to the total number of input data, and is usually automatically recovered through an optimisation routine that ensures the target misfit is reached. In the UBC codes, there are four ways of specifing how :math:`\beta` should be chosen.
 
 .. math::
     \phi(\mathbf{m}) = \phi_d(\mathbf{m}) + \color{blue}{\beta} \phi_m(\mathbf{m})
     :label: ObjFun2
+
+To illustrate how :math:`\beta` impacts on data misfit and recovered model of the inversion, we 
+introduce below magnetic inversion exmaple. Here we start magnetic inversion with large :math:`\beta`, and cool down. Both recovered model and data fit are presented for corresponding beta.
+
+.. raw:: html
+    :file: ./raw/AtoZ_InvFun_Lcurve.html
 
 Errors on Data
 --------------
@@ -60,3 +64,16 @@ There is no “proof” that this approach works all the time. However it is usu
 - Small :math:`\phi_m(\mathbf{m})` is desirable since kernels are generally smooth (low frequency) and we usually have relatively few of them. In other words, if :math:`\phi_m(\mathbf{m})` were large, the model would have more structure (larger high frequency components), yet it is usually noise which tends to have high frequencies. Therefore, if model norms are large, we have probably fitted noise rather than data.
 - Small :math:`\phi_m(\mathbf{m})` may be desirable, but the minimum misfit must be avoided since that would imply some structure was reproducing noise.
 - The compromise is to take the values of :math:`\phi_d(\mathbf{m})` and  :math:`\phi_m(\mathbf{m})` at the “elbow” in the L-curve.
+
+
+.. figure:: ../../../images/InversionFundamentals/iter_3.png
+    :align: right
+    :figwidth: 0%
+
+.. figure:: ../../../images/InversionFundamentals/iter_6.png
+    :align: right
+    :figwidth: 0%
+
+.. figure:: ../../../images/InversionFundamentals/iter_15.png
+    :align: right
+    :figwidth: 0%        
