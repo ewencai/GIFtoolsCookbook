@@ -86,7 +86,7 @@ Step by step
 
 .. tip:: As a general *best practice*, in the absence of a priori
          information, :math:`\alpha` values should be set such that all components of
-         the regularization have equal weight. Based on the core mesh discretization:
+         the regularization have equal weight. Based on the core mesh discretization used in this problem:
          :math:`\alpha_s = \left[\frac{1}{dx}\right]^2` and :math:`\alpha_z = \left[\frac{1}{2}\right]^2`.
 
 .. figure:: ./../../../images/AtoZ_Mag/AtoZ_Mag_invTrend.png
