@@ -66,4 +66,3 @@ In this section, we will explore the effect of these different parameters on the
 .. figure:: ../../../images/InversionFundamentals/model.png
     :align: right
     :figwidth: 100%
-
