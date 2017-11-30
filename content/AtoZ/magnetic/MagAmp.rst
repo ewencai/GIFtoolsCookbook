@@ -44,9 +44,9 @@ Step by step
 .. _AtoZMagAmp_Step3:
 
 - **Step 3: Processing**
-	- Convert the observed TMI data to amplitude data
-		- OPTION A: :ref:`Equivalent source method <ESrecipe>`
-		- OPTION B: :ref:`Forward model data from an existing model <ampStep3>`
+	- By default, these data are interpreted as TMI data. For GIFtools to recognize as amplitude data, create an magnetic amplitude data object using :ref:`change data type <objectMagDataChangeType>`
+	- To create some amplitude data, we will :ref:`forward model data from an existing model <ampStep3>`
+	- Once import, remember to :ref:`assign uncertainties <objectAssignUncert>` (1nT) and :ref:`set I/O headers <objectSetioHeaders>`
 
 	- :ref:`Create an inversion object (MAG3D 6.0)<createMagInv>`
 	    - :ref:`Edit the options <AtoZMag_invObj>`

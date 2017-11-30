@@ -37,12 +37,12 @@ Step by step
     *Click on image*
 
 - **Step 2: Survey and Data**
-    - :ref:`Import magnetic data in XYZ format <importMagData>`
+    - :ref:`Import magnetic data in XYZ format <importMagData>`. The data being imported are TMI data.
 
     .. tip:: Assign the Easting and Northing (X, Y), but leave elevation empty. Make sure you load in both the *ralt* and *B_igrf* variables
 
     - :ref:`Set the field parameters for the newly created magnetic survey <objectEditFieldParam>`:
-        - Field strength = 59,850 nT
+        - Field strength (IGRF) = 59,850 nT
         - Inclination = 83.3 degrees
         - Declination = 19.5 degrees
 
@@ -50,9 +50,9 @@ Step by step
         :align: right
         :scale: 20%
 
-    - :ref:`Remove the IGRF from the tmi data<objectRemoveIGRF>`
-    - :ref:`Assign Z value from radar altimeter and topography<assignElevTopo>`
-    - :ref:`Set data uncertainties (1nT floor) <objectAssignUncert>`
+    - :ref:`Remove the IGRF from the TMI data<objectRemoveIGRF>`
+    - :ref:`Create elevation column for Mag data<objectMagDataElevation>` using the topography and known flight height (40 m)
+    - :ref:`Set data uncertainties (1nT floor) <objectAssignUncert>` for the TMI data
 
     .. note:: - The observed magnetic data is now ready for export.
               - At least two anomalies are easily identified.
@@ -109,9 +109,10 @@ Step by step
             De-trended data
 
 - **Step 5: De-trend and re-run**
-    - :ref:`Remove first-order trend<objectPolyTrend>`
-
-    - :ref:`Create a new inversion copy <invCopyOptions>`
+    - Using the Mag data object, :ref:`compute the first-order polynomial trend<objectPolyTrend>`
+    - Using the :ref:`column calculator <objectColumnCalculator>`, remove the polynomial trend from your data
+    - To create an inversion object with the same parameters as a previous one, use :ref:`create a new inversion copy <invCopyOptions>`
+    - :ref:`Write all files <invWriteAll>` to inversion directory
     - **Repeat Step 4**
 
  .. note:: Note the large negative lobe along the NE edge of the southern mag anomaly.
