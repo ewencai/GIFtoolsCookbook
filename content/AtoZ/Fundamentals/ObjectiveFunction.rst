@@ -3,36 +3,38 @@
 The Objective Function
 ======================
 
-Geophysical inversion recovers a physical property model which fits the data and has geologically reasonable structures. But how is this done in practice? The majority of geophyiscal inversion algorithms work by minimizing an objective function (:math:`\phi`) with respect to the physical property model (:math:`\mathbf{m}`):
+Geophysical inversion recovers a physical property model which fits the data and has geologically reasonable structures. But how is this done in practice? The majority of geophysical inversion algorithms work by minimizing an objective function (:math:`\phi`) with respect to the physical property model (:math:`\mathbf{m}`):
 
 .. math::
     \phi(\mathbf{m}) = \phi_d(\mathbf{m}) + \beta \phi_m(\mathbf{m})
     :label: ObjFun
 
-Defining the objective function, we have three components:
+This is sometimes referred to a "penalty-based optimization"; that is, the objective function is large if the model doesn't fit the data and/or has implausible structures. The objective function is comprised of three components:
 
-    - :math:`\phi_d (\mathbf{m})` is the **data misfit**. The data misfit is responsible for ensuring the recovered model predicts data which fits the set of field observations.
+    - **data misfit** :math:`\phi_d (\mathbf{m})`, which is responsible for ensuring the recovered model predicts data which fits the set of field observations.
     
-    - :math:`\phi_m (\mathbf{m})` is the **model objective function**. The model objective function ensures that the recovered model contains plausible geological structures.
+    - **model objective function** :math:`\phi_m (\mathbf{m})`, which ensures that the recovered model contains plausible geological structures.
     
-    - :math:`\beta` is the **trade-off parameter**. The trade-off parameter weights the relative contribution of :math:`\phi_d (\mathbf{m})` and :math:`\phi_m (\mathbf{m})` towards the objective function.
+    - **trade-off parameter** :math:`\beta`, which weights the relative contribution of :math:`\phi_d (\mathbf{m})` and :math:`\phi_m (\mathbf{m})` towards the objective function.
 
 
-The inverse problem is formulated as the minimization of a model dependent
-Objective Function. This Objective Function :math:`\phi(\mathbf{m})` is
-written as the weighted sum of two main term, the data misfit :math:`\phi_d` and the
-regularization :math:`\phi_m` (equation \ref{eq1})
+**Data Misfit:**
 
-
-
--  :math:`\mathbf{m}` is the inversion model at each iteration (also the starting model at the beginning of the inversion).
-- :math:`\beta` is a :ref:`trade-off parameter<AtoZBeta>` that controls the relative importance of the regularization compared to the data misfit function.
-
-The Data misfit -  :math:`\phi_d` in :eq:`ObjFun` is express as:
+The Data misfit (:math:`\phi_d`) in :eq:`ObjFun` is given by:
 
 .. math::
-    \phi_d(\mathbf{m}) = ||\mathbf{W}_d (\mathbf{F}(\mathbf{m})-\mathbf{d})||^2
+    \phi_d(\mathbf{m}) = \big \| \mathbf{W}_d [ \mathbf{F}(\mathbf{m})-\mathbf{d} ] \big \| ^2
     :label: DataMisfit
+
+where
+
+    - :math:`\mathbf{F[m]}` is the forward modeling operator; i.e. an operation that predicts the data for a given physical property model :math:`\mathbf{m}`
+    - :math:`\mathbf{d}` is the set of observed data
+    - :math:`\mathbf{W_d}` is a matrix which weights the difference in predicted and observed data by the data uncertainty
+
+The :math:`\mathbf{W_d}` is used for 2 reasons. 1) If the observed data span several orders of magnitude, we want to make sure that the inversion doesn't focus on fitting the large values at the expense of the small values. 2) If the noise on our data are independent and Gaussian, then the predicted data fits the noise to an appropriate tolerance when :math:`\phi_d` equals the number of data; that is, the inversion fits the signal without fitting the noise.
+
+
 
 With the forward operator :math:`\mathbf{F}` relating the model
 :math:`\mathbf{m}` to the the geophysical data :math:`\mathbf{d}`. the matrix
