@@ -158,7 +158,15 @@ However, we don't know:
 Create Active Cells Model from Topography
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Regions above the topography have an effective density of 0 and do not contribute towards the gravitational pull experienced at observation locations. For potential field problems, we MUST ensure that data locations lie outside the region of active cells (e.g. within the air cells). Here, we will use the topography data to create an active cells model.
+.. figure:: images/AtoZ_Grav_ActiveCell.png
+    :align: right
+    :scale: 30%
+
+Regions above the topography have an effective density of 0 and do not
+contribute towards the gravitational pull experienced at observation
+locations. For potential field problems, we MUST ensure that data locations
+lie outside the region of active cells (e.g. within the air cells). Here, we
+will use the topography data to create an active cells model.
 
     - :ref:`Creating active cell model from topography <createActiveCellsModel>`. Choose 'from tops of cells'
 
