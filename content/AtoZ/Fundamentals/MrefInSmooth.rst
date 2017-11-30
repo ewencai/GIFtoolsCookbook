@@ -11,7 +11,15 @@ The SMOOTH_MOD_DIF or SMOOTH_MOD options
     &{\alpha_z} ||\mathbf{W_z}\;\mathbf{R}_z \; \mathbf{G}_z(\mathbf{m}-\mathbf{\color{blue}m}_{\color{blue}ref})||_2^2
     :label: Regularizer_smooth_mod
 
-Introduced in v6 of the gravity and magnetics codes, this toggle controls whether the reference model is used in the gradient terms of the model objective function. If the reference model is used in the gradient terms (SMOOTH_MOD_DIF), then sharp boundaries that are present in the reference model will be preserved. If not used (SMOOTH_MOD), the difference to the gradient model will still be minimised, but the boundary is allowed to have a smooth transition.
+Introduced in v6 of the gravity and magnetics codes, this toggle controls
+whether the reference model is used in the gradient terms of the model
+objective function.
+
+If the reference model is used in the gradient terms
+(SMOOTH_MOD_DIF), then sharp boundaries that are present in the reference
+model will be preserved. If not used (SMOOTH_MOD), the difference to the
+gradient model will still be minimised, but the boundary is allowed to have a
+smooth transition.
 
 .. figure::
      ../../../images/InversionFundamentals/invFund_Smooth_Mod_DIF_allView.png
