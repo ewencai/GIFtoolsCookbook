@@ -22,7 +22,7 @@ Tutorials are organized by geophysical method:
     .. toctree::
        :maxdepth: 1
 
-        Introduction to fundamentals of inversions <Fundamentals/index>
+        Fundamentals of inversions <Fundamentals/index>
         Gravity: Forward modeling and constrained inversion <gravity/index>
         Magnetics: Dealing with remanence <magnetic/index>
         DCIP: Invert with tensor and Octree meshes <DCIP/index>

@@ -7,11 +7,12 @@ Fundamentals of Inversions
     :align: right
     :figwidth: 50%
 
-Here, we present the different parameters and their effects through a synthetic example of inverting a magnetic survey over a susceptible block in a half-space.
+Here, we explain geophysical inversion and describe the parameters which impact inversion results. To demonstrate the impact of each parameter, we invert synthetic magnetic survey collected over a susceptible block within a half-space.
 
 .. toctree::
     :maxdepth: 1
 
+    Basic concept <Concept>
     The objective function <ObjectiveFunction>
     The Beta parameter (trade-off)<Beta>
     The alphas parameters <Alphas>

@@ -3,33 +3,45 @@
 The Objective Function
 ======================
 
-The inverse problem is formulated as the minimization of a model dependent
-Objective Function. This Objective Function :math:`\phi(\mathbf{m})` is
-written as the weighted sum of two main term, the data misfit :math:`\phi_d` and the
-regularization :math:`\phi_m` (equation \ref{eq1})
+Geophysical inversion recovers a physical property model which fits the data and has geologically reasonable structures. But how is this done in practice? The majority of geophysical inversion algorithms work by minimizing an objective function (:math:`\phi`) with respect to the physical property model (:math:`\mathbf{m}`):
 
 .. math::
     \phi(\mathbf{m}) = \phi_d(\mathbf{m}) + \beta \phi_m(\mathbf{m})
     :label: ObjFun
 
--  :math:`\mathbf{m}` is the inversion model at each iteration (also the starting model at the beginning of the inversion).
-- :math:`\beta` is a :ref:`trade-off parameter<AtoZBeta>` that controls the relative importance of the regularization compared to the data misfit function.
+This is sometimes referred to as "penalty-based optimization"; that is, the objective function is large if the model doesn't fit the data and/or has implausible structures. The objective function is comprised of three components:
 
-The Data misfit -  :math:`\phi_d` in :eq:`ObjFun` is express as:
+    - **data misfit** :math:`\phi_d (\mathbf{m})`, which is responsible for ensuring the recovered model predicts data that fits the set of field observations.
+
+    - **model objective function** :math:`\phi_m (\mathbf{m})`, which ensures that the recovered model contains plausible geological structures.
+
+    - **trade-off parameter** :math:`\beta`, which weights the relative contribution of :math:`\phi_d (\mathbf{m})` and :math:`\phi_m (\mathbf{m})` towards the objective function.
+
+
+**Data Misfit:**
+
+The Data misfit (:math:`\phi_d`) in :eq:`ObjFun` is given by:
 
 .. math::
-    \phi_d(\mathbf{m}) = ||\mathbf{W}_d (\mathbf{F}(\mathbf{m})-\mathbf{d})||^2
+    \phi_d(\mathbf{m}) = \big \| \mathbf{W}_d [ \mathbf{F}(\mathbf{m})-\mathbf{d} ] \big \| ^2
     :label: DataMisfit
 
-With the forward operator :math:`\mathbf{F}` relating the model
-:math:`\mathbf{m}` to the the geophysical data :math:`\mathbf{d}`. the matrix
-:math:`W_d` summarize the estimated noise on each data point. The expected
-value for the data misfit is equal to the number of data :math:`nd` for a
-target misfit of 1 times the chifactor (user defined).
+where
+
+    - :math:`\mathbf{F[m]}` is the forward modeling operator; i.e. an operation that predicts the data for a given physical property model :math:`\mathbf{m}`.
+    - :math:`\mathbf{d}` is the set of observed data.
+    - :math:`\mathbf{W_d}` is a matrix which weights the difference in predicted and observed data by the data uncertainty. The uncertainty acts as an estimate of the standard deviation of random noise on each data point.
+
+The :math:`\mathbf{W_d}` matrix is used for two reasons. 1) If the observed data span several orders of magnitude, we want to make sure that the inversion doesn't focus on fitting the large values at the expense of the small values. 2) If the noise on our data are independent and Gaussian, then the predicted data fits the noise to an appropriate tolerance when :math:`\phi_d` equals the number of data; that is, the inversion fits the signal without fitting the noise (over-fitting). As a result, we generally stop the algorithm when the data misfit is equal to the number of data (target misfit).
+
 
 ..    \phi_m(\mathbf{m}) = \alpha_s \int (w_s(\mathbf{r})(m(\mathbf{r})-m_0)^2 \delta v) + \alpha_x \int w_x(\mathbf{r})\left\( \frac{\delta(m(\mathbf{r})-m_0)}{\delta x}\right\)^2 \delta v + \alpha_z \int w_z(\mathbf{r})\left\( \frac{\delta(m(\mathbf{r})-m_0)}{\delta z}\right\)^2 \delta v + \alpha_z \int w_z(\mathbf{r})\left\( \frac{\delta(m(\mathbf{r})-m_0)}{\delta x}\right\)^2 \delta v
 
-The regularizer :math:`\phi_m` in :eq:`ObjFun` itself can be divided in two sections, the smallness and the smoothness:
+
+
+**Model Objective Function/Regularization:**
+
+The model objective function (:math:`\phi_m`) is where we impose structures on the recovered model. It also acts as a regularizer; i.e. stabilizes the inversion algorithm. The model objective function can be divided in two sections, the smallness and the smoothness:
 
 .. math::
     \phi_m(\mathbf{m}) = \phi_{small}(\mathbf{m}) + \phi_{smooth}(\mathbf{m})

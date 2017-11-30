@@ -41,7 +41,7 @@ such :math:`k` denotes the iteration number and :math:`p` and :math:`\epsilon`
 are sparsity and threshold parameters respectively. A total of 6 variables can
 be manually adjusted by the user (:math:`p_s\;, p_x\;, p_y\;, p_z\;,
 \epsilon_s, \epsilon_{xyz}`).  The choice of :math:`p` and :math:`\epsilon`
-values is based upon prior knowledge.
+values is made based upon prior knowledge.
 
 
 .. For example, it makes sense to look for simple smooth models when
