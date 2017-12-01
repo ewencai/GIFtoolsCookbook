@@ -1,8 +1,8 @@
 .. _InversionFun_Reference:
 
 
-Reference Models (SMOOTH_MOD and SMOOTH_MOD_DIF)
-================================================
+Impact of Reference Models
+==========================
 
 .. math::
     \phi_m(\mathbf{m}) = &{\alpha_s} ||\mathbf{W_s}\;\mathbf{R}_s(\mathbf{m}-\mathbf{m}_{ref})||_2^2 +\\

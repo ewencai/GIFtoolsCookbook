@@ -10,9 +10,9 @@ The data misfit is responsible for ensuring the recovered model predicts data th
 
 This formulation of the data misfit is comprised of three components: the data predicted for a given model :math:`\big (\mathbf{F (m)} \big )`, the observed data (:math:`\mathbf{d_{obs}})` and the data weighting matrix (:math:`\mathbf{W_d})`.
 
-**Forward modeling operator**:**
+**Forward modeling operator**:
 
-The forward modeling operator :math:`\mathbf{F[\;\; ]}` predicts the data for a given physical property model :math:`\mathbf{m}`. Therefore, the misfit is a function which depends directly on a particular model.
+The forward modeling operator :math:`\mathbf{F(\;\; )}` predicts the data for a given physical property model :math:`\mathbf{m}`. Therefore, the misfit is a function which depends directly on a particular model.
 
 **Observed Data:**
 
@@ -20,18 +20,30 @@ The set of field observations which are being inverted is represented by :math:`
 
 **Data weighting matrix:**
 
-:math:`\mathbf{W_d}` is a matrix which weights the residuals between the observed data and the predicted data for a given model. :math:`\mathbf{W_d}` generally weights the residuals based on the uncertainties on the data. The :math:`\mathbf{W_d}` matrix is used for two reasons. 1) If the observed data span several orders of magnitude, we want to make sure that the inversion doesn't focus on fitting the large values at the expense of the small values. 2) It provides a reasonable stopping criteria for the inversion. If the noise on our data are independent and Gaussian, and the assigned uncertainties are correct, then the predicted data fits the observed data to an appropriate tolerance when :math:`\phi_d` equals the number of data; that is, the inversion fits the signal without fitting the noise (over-fitting).
+:math:`\mathbf{W_d}` is a matrix which weights the residuals between the observed data and the predicted data for a given model. :math:`\mathbf{W_d}` weights the residuals based on the uncertainties on the data. The :math:`\mathbf{W_d}` matrix is used for two reasons:
 
-.. _InversionFun_Misfit_Uncertainties:
+	1) If the observed data span several orders of magnitude, we want to make sure that the inversion doesn't focus on fitting the large values at the expense of the small values.
+	2) It is instrumental in providing a reasonable stopping criteria (link) for the inversion.
 
-Uncertainty Estimation and Target Misfit
-----------------------------------------
+GIF codes assume that the errors are independent and Gaussian. In this case, the uncertainties are estimations of the standard deviations of random noise on the data and :math:`\mathbf{W_d}` is a diagonal matrix of the form:
+
+.. math::
+	\mathbf{W_d} = \begin{bmatrix} 1/\sigma_1 & & & \\ & 1/\sigma_2 & \\ & & \ddots & \\ & & & 1/\sigma_N \end{bmatrix}
+
+where :math:`\sigma_i` is the standard deviation of random noise on data point :math:`i`. 
+
+.. _InversionFun_Misfit_Properties:
+
+Properties of the Data Misfit
+-----------------------------
 
 
 
 
 
 
+
+..If the noise on our data are independent and Gaussian, and the assigned uncertainties are correct, then the predicted data fits the observed data to an appropriate tolerance when :math:`\phi_d` equals the number of data; that is, the inversion fits the signal without fitting the noise (over-fitting).
 
 .. _InversionFun_Misfit_Practices:
 

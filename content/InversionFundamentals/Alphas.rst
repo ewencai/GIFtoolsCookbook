@@ -1,7 +1,7 @@
 .. _InversionFun_Alphas:
 
-The Alphas Parameters
-=====================
+Impact of Alpha Parameters
+==========================
 
 .. .. math::
 ..     \phi_m(\mathbf{m}) = \phi_{small}(\mathbf{m}) + \phi_{smooth}(\mathbf{m})

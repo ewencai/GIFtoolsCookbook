@@ -1,7 +1,7 @@
 .. _InversionFun_Weighting:
 
-The Weighting Matrices W
-========================
+Impact of Weighting Matrices
+============================
 
 Cell-based weighting matrices are used to enforce any a priori information
 available about the distribution of model parameters and their gradients. For

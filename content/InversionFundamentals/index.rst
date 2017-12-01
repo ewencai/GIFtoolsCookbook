@@ -19,7 +19,8 @@ Here, we explain geophysical inversion and describe the parameters which impact 
     The Beta parameter (trade-off)<Beta>
     The alphas parameters <Alphas>
     The weighting matrices <WeightingMatrix>
-    Sparse and blocky norms <Norms>
     Reference model in the smoothness Term<MrefInSmooth>
+    Sparse and blocky norms <Norms>
+    
 
 .. note:: This section was elaborated with the contribution of `Marc Grujic <https://github.com/coolbanans>`_

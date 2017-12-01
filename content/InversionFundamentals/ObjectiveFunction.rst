@@ -11,6 +11,8 @@ Geophysical inversion recovers a physical property model which fits the data and
 
 This is sometimes referred to as "penalty-based optimization"; that is, the objective function is large if the model doesn't fit the data and/or has implausible structures. The objective function is comprised of three components: the :ref:`data misfit <InversionFun_Misfit>` (:math:`\phi_d`), the :ref:`model objective function <InversionFun_MOF>` (:math:`\phi_m`) and the :ref:`trade-off parameter <InversionFun_Beta>` (:math:`\beta`).
 
+*NOTE: Click any of the following subheaders for a comprehensive description*
+
 :ref:`Data misfit: <InversionFun_Misfit>`
 -----------------------------------------
 
