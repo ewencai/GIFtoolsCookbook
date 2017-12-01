@@ -1,4 +1,4 @@
-.. _AtoZBeta:
+.. _InversionFun_Beta:
 
 The Beta Parameter (Trade-Off)
 ==============================
@@ -119,14 +119,14 @@ usually sensible for the following arguments:
 - The compromise is to take the values of :math:`\phi_d(\mathbf{m})` and  :math:`\phi_m(\mathbf{m})` at the “elbow” in the L-curve.
 
 
-.. figure:: ../../../images/InversionFundamentals/iter_3.png
+.. figure:: ../../images/InversionFundamentals/iter_3.png
     :align: right
     :figwidth: 0%
 
-.. figure:: ../../../images/InversionFundamentals/iter_6.png
+.. figure:: ../../images/InversionFundamentals/iter_6.png
     :align: right
     :figwidth: 0%
 
-.. figure:: ../../../images/InversionFundamentals/iter_15.png
+.. figure:: ../../images/InversionFundamentals/iter_15.png
     :align: right
     :figwidth: 0%

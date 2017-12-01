@@ -1,11 +1,11 @@
-.. _AtoZWeightingMatrix:
+.. _InversionFun_Weighting:
 
 The Weighting Matrices W
 ========================
 
 Cell-based weighting matrices are used to enforce any a priori information
 available about the distribution of model parameters and their gradients. For
-potential field problems, these matrices also hold a :ref:`depth or distance<AtoZDepthDistMatrix>` weighting function to counteract the rapid decay in
+potential field problems, these matrices also hold a :ref:`depth or distance<InversionFun_Distance>` weighting function to counteract the rapid decay in
 sensitivities.
 
 .. math::
@@ -26,7 +26,7 @@ The weighting functions :math:`W_x`, :math:`W_y` and :math:`W_z` can be designed
 :math:`W_x`, :math:`W_y` and :math:`W_z` are defined on the faces of each cell. The default values are 1 for all faces. Values less than 1 allow for breaks in the model, while values greater than one forces continuity across cell faces.
 Face-weighting can be performed in GIFtools. The UBC utility make_wdat.exe creates a face weights file that has layers of terrain-draped cells, where wx and wy are modified to force continuity in those directions. This can reduce near-surface artefacts, e.g. near electrodes.
 
-.. _AtoZDepthDistMatrix:
+.. _InversionFun_Distance:
 
 Depth or Distance Weighting
 ---------------------------
@@ -40,12 +40,12 @@ See for examples the :ref:`Gravity inversion<AtoZGrav_Inversion>` or :ref:`Magne
 
 
 .. figure::
-     ../../../images/InversionFundamentals/NoDepthWeighting_Ynormal.png
+     ../../images/InversionFundamentals/NoDepthWeighting_Ynormal.png
     :align: right
     :figwidth: 0%
 
 .. figure::
-     ../../../images/InversionFundamentals/alphazD10_Ynormal.png
+     ../../images/InversionFundamentals/alphazD10_Ynormal.png
     :align: right
     :figwidth: 0%
 

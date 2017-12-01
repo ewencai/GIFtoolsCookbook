@@ -21,6 +21,7 @@ Welcome to the GIFtools cookbook! Below you will find the Quick-start guide
     content/basicFunctionality/basicFunctionality_index
     content/objectFunctionality/objectFunctionality_index
     content/fileFormats/format_index
+    Fundamentals of Inversion <content/InversionFundamentals/index>
 
 The following items are training resources for practitioners - from short
 recipes to extended walk-through tutorials (A to Z)

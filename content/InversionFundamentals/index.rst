@@ -1,9 +1,9 @@
-.. _AtoZFundamentals_index:
+.. _InversionFun_index:
 
-Fundamentals of Inversions
-==========================
+Fundamentals of Inversion
+=========================
 
-.. figure:: ../../../images/InversionFundamentals/model.png
+.. figure:: ../../images/InversionFundamentals/model.png
     :align: right
     :figwidth: 50%
 
@@ -14,6 +14,8 @@ Here, we explain geophysical inversion and describe the parameters which impact 
 
     Basic concept <Concept>
     The objective function <ObjectiveFunction>
+    Data misfit and uncertainty estimation <DataMisfit>
+    Model objective function <MOF>
     The Beta parameter (trade-off)<Beta>
     The alphas parameters <Alphas>
     The weighting matrices <WeightingMatrix>

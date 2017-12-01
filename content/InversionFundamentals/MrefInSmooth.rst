@@ -1,8 +1,8 @@
-.. _AtoZSmoothInDiff:
+.. _InversionFun_Reference:
 
 
-The SMOOTH_MOD_DIF or SMOOTH_MOD options
-========================================
+Reference Models (SMOOTH_MOD and SMOOTH_MOD_DIF)
+================================================
 
 .. math::
     \phi_m(\mathbf{m}) = &{\alpha_s} ||\mathbf{W_s}\;\mathbf{R}_s(\mathbf{m}-\mathbf{m}_{ref})||_2^2 +\\
@@ -22,6 +22,21 @@ gradient model will still be minimised, but the boundary is allowed to have a
 smooth transition.
 
 .. figure::
-     ../../../images/InversionFundamentals/invFund_Smooth_Mod_DIF_allView.png
+     ../../images/InversionFundamentals/invFund_Smooth_Mod_DIF_allView.png
     :align: right
     :figwidth: 100%
+
+.. _InversionFun_Reference_smooth_mod:
+
+SMOOTH_MOD
+----------
+
+
+
+.. _InversionFun_Reference_smooth_mod_dif:
+
+SMOOTH_MOD_DIF
+--------------
+
+
+

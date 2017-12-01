@@ -11,6 +11,7 @@ GIFtools Site map
     content/basicFunctionality/basicFunctionality_index
     content/objectFunctionality/objectFunctionality_index
     content/fileFormats/format_index
+    content/InversionFundamentals/index
     content/recipes/recipe_index
     content/AtoZ/AtoZ_index
     content/videoTutorials

@@ -65,7 +65,7 @@ Here, we perform the most basic type of gravity anomaly inversion. No a priori i
 
             .. note:: As a general *best practice*, in the absence of a priori
                       information, :math:`\alpha` values should be set such that all
-                      :ref:`components of the regularization <AtoZalphas>` have equal weight. Based
+                      :ref:`components of the regularization <InversionFun_Alphas>` have equal weight. Based
                       on the core mesh discretization used in this problem:
                       :math:`\alpha_s = \left[\frac{1}{dx}\right]^2 = 0.0016`,
                       :math:`\alpha_x=\alpha_y=\alpha_z = 1`
@@ -110,8 +110,8 @@ Inversion with *Hard* Constraints
 ---------------------------------
 
 Here, we show the impact of reference models on the final inversion result.
-Two inversion will be run - one using :ref:`SMOOTH_MOD <AtoZSmoothInDiff>` and
-one using :ref:`SMOOTH_MOD_DIFF <AtoZSmoothInDiff>`. Both inversions are
+Two inversion will be run - one using :ref:`SMOOTH_MOD <InversionFun_Reference_smooth_mod>` and
+one using :ref:`SMOOTH_MOD_DIFF <InversionFun_Reference_smooth_mod_dif>`. Both inversions are
 constrained with the model that was made using the geological surface map (see
 :ref:`here <AtoZGrav_Forward_Model_Geo>`). To complete this exercise:
 
@@ -122,8 +122,8 @@ constrained with the model that was made using the geological surface map (see
             - set the active cells
             - set :math:`\alpha_s = \left[\frac{1}{dx}\right]^2 = 0.0016`, :math:`\alpha_x=\alpha_y=\alpha_z = 1`
             - set the reference and starting models using the model you created from the surface mapping
-            - under the reference model option, choose either :ref:`*SMOOTH_MOD* or *SMOOTH_MOD_DIF* <AtoZSmoothInDiff>`
-        - :ref:`Blocky model norms <AtoZNorms>`: *leave all as default*
+            - under the reference model option, choose either :ref:`*SMOOTH_MOD* or *SMOOTH_MOD_DIF* <InversionFun_Reference>`
+        - :ref:`Blocky model norms <InversionFun_Norms>`: *leave all as default*
         - Apply and write files when finished
     - :ref:`Run the inversion <invRun>`
     - :ref:`Import inversion results <invLoadResults>`
@@ -170,7 +170,7 @@ Here, we show how compact and blocky models can be recovered by changing certain
             - set the active cells
             - set :math:`\alpha_s = \left[\frac{1}{dx}\right]^2 = 0.0016`, :math:`\alpha_x=\alpha_y=\alpha_z = 1`
             - leave the reference and initial models as default values
-        - :ref:`Blocky model norms <AtoZNorms>`: set p-values and use default Lp/Lq scaling (try different combinations)
+        - :ref:`Blocky model norms <InversionFun_Norms>`: set p-values and use default Lp/Lq scaling (try different combinations)
         - Apply and write files when finished
     - :ref:`Run the inversion <invRun>`
     - :ref:`Import inversion results <invLoadResults>`

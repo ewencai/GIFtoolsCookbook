@@ -1,4 +1,4 @@
-.. _AtoZNorms:
+.. _InversionFun_Norms:
 
 Sparse and Blocky Norms
 =======================
@@ -67,27 +67,27 @@ values is made based upon prior knowledge.
 
 
 .. figure::
-     ../../../images/InversionFundamentals/model.png
+     ../../images/InversionFundamentals/model.png
     :align: right
     :figwidth: 0%
 
 .. figure::
-     ../../../images/InversionFundamentals/Compact0111_3Dview.png
+     ../../images/InversionFundamentals/Compact0111_3Dview.png
     :align: right
     :figwidth: 0%
 
 .. figure::
-     ../../../images/InversionFundamentals/Compact0222_3Dview.png
+     ../../images/InversionFundamentals/Compact0222_3Dview.png
     :align: right
     :figwidth: 0%
 
 .. figure::
-     ../../../images/InversionFundamentals/Compact2000_3Dview.png
+     ../../images/InversionFundamentals/Compact2000_3Dview.png
     :align: right
     :figwidth: 0%
 
 
 .. figure::
-     ../../../images/InversionFundamentals/Smooth_3Dview.png
+     ../../images/InversionFundamentals/Smooth_3Dview.png
     :align: right
     :figwidth: 0%

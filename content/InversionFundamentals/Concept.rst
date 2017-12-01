@@ -1,4 +1,4 @@
-.. _AtoZFundamentals_concept:
+.. _InversionFun_Basics:
 
 Geophysical Inversion Basics
 ============================
@@ -20,7 +20,7 @@ property; i.e. the *true model*. There may be a number of physical property
 models which satisfy the aforementioned requirements. Therefore, it is up to
 the user to set appropriate starting parameters for the inversion.
 
-.. figure:: ../../../images/InversionFundamentals/ConceptTitle.png
+.. figure:: ../../images/InversionFundamentals/ConceptTitle.png
     :align: right
     :figwidth: 40%
 
