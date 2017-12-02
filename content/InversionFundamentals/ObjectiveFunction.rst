@@ -11,7 +11,7 @@ Geophysical inversion recovers a physical property model which fits the data and
 
 This is sometimes referred to as "penalty-based optimization"; that is, the objective function is large if the model doesn't fit the data and/or has implausible structures. The objective function is comprised of three components: the :ref:`data misfit <InversionFun_Misfit>` (:math:`\phi_d`), the :ref:`model objective function <InversionFun_MOF>` (:math:`\phi_m`) and the :ref:`trade-off parameter <InversionFun_Beta>` (:math:`\beta`).
 
-*NOTE: Click any of the following subheaders for a comprehensive description*
+.. note:: Click any of the following subheaders for a comprehensive description.
 
 :ref:`Data misfit: <InversionFun_Misfit>`
 -----------------------------------------
@@ -30,10 +30,10 @@ The model objective function ensures that the recovered model contains plausible
 
 .. math::
     \begin{align}
-    \phi_m (\mathbf{m}) &= \alpha_s \int_V \big | \mathbf{W_s (m - m_{ref}) } \big |^2 dV \\
-    &+ \alpha_x \int_V \Bigg | \mathbf{W_x \dfrac{\partial (m - m_{ref})}{\partial \mathbf{x}} } \Bigg |^2 dV \\
-    &+ \alpha_y \int_V \Bigg | \mathbf{W_y \dfrac{\partial (m - m_{ref})}{\partial \mathbf{y}} } \Bigg |^2 dV \\
-    &+ \alpha_z \int_V \Bigg | \mathbf{W_z \dfrac{\partial (m - m_{ref})}{\partial \mathbf{z}} } \Bigg |^2 dV
+    \phi_m (\mathbf{m}) &= \alpha_s \int_V \big | \mathbf{W_s (m - m_{ref}) } \big |^p dV \\
+    &+ \alpha_x \int_V \Bigg | \mathbf{W_x \dfrac{\partial (m - m_{ref})}{\partial \mathbf{x}} } \Bigg |^{q_x} dV \\
+    &+ \alpha_y \int_V \Bigg | \mathbf{W_y \dfrac{\partial (m - m_{ref})}{\partial \mathbf{y}} } \Bigg |^{q_y} dV \\
+    &+ \alpha_z \int_V \Bigg | \mathbf{W_z \dfrac{\partial (m - m_{ref})}{\partial \mathbf{z}} } \Bigg |^{q_z} dV
     \end{align}
 
 A detailed explanation of the model objective function can be found :ref:`here <InversionFun_MOF>`.

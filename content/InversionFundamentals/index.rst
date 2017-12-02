@@ -14,13 +14,14 @@ Here, we explain geophysical inversion and describe the parameters which impact 
 
     Basic concept <Concept>
     The objective function <ObjectiveFunction>
-    Data misfit and uncertainty estimation <DataMisfit>
+    Data misfit and assigning uncertainties <DataMisfit>
     Model objective function <MOF>
     The Beta parameter (trade-off)<Beta>
     The alphas parameters <Alphas>
     The weighting matrices <WeightingMatrix>
-    Reference model in the smoothness Term<MrefInSmooth>
+    Reference model Term<ReferenceModel>
     Sparse and blocky norms <Norms>
+    Inversion parameters cheat sheet <CheatSheet>
     
 
 .. note:: This section was elaborated with the contribution of `Marc Grujic <https://github.com/coolbanans>`_

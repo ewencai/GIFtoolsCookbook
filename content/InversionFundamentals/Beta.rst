@@ -1,26 +1,34 @@
 .. _InversionFun_Beta:
 
-The Beta Parameter (Trade-Off)
-==============================
+Trade-Off Parameter (:math:`\mathbf{\beta}`)
+=============================================
 
-In :eq:`ObjFun2`, :math:`\beta` is a trade-off parameter that controls the
-relative importance of the model smoothness through the model objective
-function and data misfit function. :math:`\beta` is scaled to the total number
-of input data, and is usually automatically recovered through an optimisation
-routine that ensures the target misfit is reached. In the UBC codes, there are
-four ways of specifing how :math:`\beta` should be chosen.
+In the :ref:`objective function <InversionFun_ObjectiveFunction>`, :math:`\beta` is known as the **trade-off parameter**:
 
 .. math::
     \phi(\mathbf{m}) = \phi_d(\mathbf{m}) + \color{blue}{\beta} \phi_m(\mathbf{m})
-    :label: ObjFun2
+    :label: objfcn_beta
 
-To illustrate how :math:`\beta` impacts on data misfit and recovered model of
-the inversion, we  introduce below magnetic inversion example. Here we start
-magnetic inversion with large :math:`\beta`, and cool down. Both recovered
-model and data fit are presented for corresponding beta.
+The trade-off parameter weights the relative contributions from the :ref:`data misfit <InversionFun_Misfit>` (:math:`\phi_d`) and the :ref:`model objective function <InversionFun_MOF>` (:math:`\phi_m`) towards the objective function. In essence, it determines how much emphasis we put on fitting the data and how much emphasis we put on imposing structures/constraints on the recovered model.
 
-.. raw:: html
-    :file: ./raw/AtoZ_InvFun_Lcurve.html
+Impact of the Trade-Off Parameter
+---------------------------------
+
+The value of :math:`\beta` significantly impacts the model (:math:`\mathbf{m}`) which is recovered by minimizing Eq. :eq:`objfcn_beta`. If :math:`\beta` is too large, the recovered model will honour the specified set of geological structures/constraints but will not fit the set of field observed data. If :math:`\beta` is too small, the inversion will over-fit the data; i.e. fit high frequency noise as well as the signal. In order to fit the set of field observations exactly, the inversion will ultimately be forced to recover structures which are not geologically reasonable.
+
+**ADD EXAMPLE OF OVER AND UNDER FIT**
+
+
+
+
+Determining an Optimum :math:`\mathbf{\beta}`
+---------------------------------------------
+
+Beta Cooling
+^^^^^^^^^^^^
+
+
+
 
 Errors on Data
 --------------
