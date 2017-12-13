@@ -20,4 +20,4 @@ Here, we explain geophysical inversion and describe the parameters which impact 
     Sparse and blocky norms <Norms>
     Reference model in the smoothness Term<MrefInSmooth>
 
-.. note:: This section was elaborated with the contribution of `Marc Grujic <https://github.com/coolbanans>`_
+.. note:: This section was elaborated with the contribution of `Mark Grujic <https://github.com/coolbanans>`_
