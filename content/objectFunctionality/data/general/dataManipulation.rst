@@ -196,11 +196,17 @@ direction (bearing) of survey. This function groups the survey observation stati
 Coordinates
 -----------
 
-.. raw:: html
-    :file: ../../../../underconstruction.html
+This functionality is accessed through:
+
+**Data Manipulation** |rarr| **Coordinates**
+
+and can be used to:
+
+    - rotate or shift raw data into a local coordinate system
+    - use altitude data and surface topography to determine the data elevation
 
 
-.. figure:: ../../../../images/uncert.png
+.. figure:: ../../../../images/object/data/manipulationCoords.png
     :align: center
     :width: 400
 
@@ -209,20 +215,41 @@ Coordinates
 Shift spatial coordinates
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
+This functionality allows the user to shift the Easting and Northing locations of the data within a data object. The action creates new data columns and does not delete the preexisting Easting and Northing locations. This functionality is accessed through:
+
+**Data Manipulation** |rarr| **Coordinates** |rarr| **Shift spatial coordinates**
+
+
 .. _objectRotateCoord:
 
-Rotate spatial coordinates
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+Rotate spatial coordinates and data
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+This functionality allows the user to change the Easting and Northing locations of the data within a data object by rotating about a fixed point. The use may also apply the rotation to specified data columns; this is useful when the dataset contains horizontal field measurements. This functionality is accessed through:
+
+**Data Manipulation** |rarr| **Coordinates** |rarr| **Rotate spatial coordinates**
+
+
 
 .. _objectLookUpTable:
 
 Use look-up table
 ^^^^^^^^^^^^^^^^^
 
+.. raw:: html
+    :file: ../../../../underconstruction.html
+
+
+
 .. _objectElevFromSurface:
 
 Calculate elevation from surface
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+This functionality allows the user to create an elevation (height of the data) column from a surface of topography object. Elevations can be set at, above or below the surface by a specified amount. In addition, data columns (such as a flight altitude column) the data object can be used to create the elevation column. This functionality is accessed through:
+
+**Data Manipulation** |rarr| **Coordinates** |rarr| **Calculate elevation from surface**
+
 
 
 .. _objectAssignUncert:

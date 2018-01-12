@@ -52,19 +52,17 @@ Since the raw data were loaded in Geosoft XYZ format, we must add the transmitte
     - Create elevation from topography
     - :ref:`Add transmitters<objectEMaddTx>` and use the following parameters:
         - Dipole moment = 1 Am :math:`\! ^2`
-        - Along-line offset = 15 m
-        - Cross-line offset = 0 m
-        - Vertical offset = 0 m
-        - Normal angle from vertical = 0
-        - Azimuthal angle from North = 0
-
-    - :ref:`Add receivers<objectEMaddRx>` and use the following parameters:
-        - Dipole moment = 1 Am :math:`\! ^2`
         - Along-line offset = 0 m
         - Cross-line offset = 0 m
         - Vertical offset = 0 m
-        - Normal angle from vertical = 0
-        - Azimuthal angle from North = 0
+        - Compute bearing column (**link**)
+
+    - :ref:`Add receivers<objectEMaddRx>` and set the following parameters:
+        - Dipole moment = 1 Am :math:`\! ^2`
+        - Along-line offset = 15 m
+        - Cross-line offset = 0 m
+        - Vertical offset = 0 m
+        - Load bearing from data object (**link**)
 
     - Convert data from ppm to H/m
 
