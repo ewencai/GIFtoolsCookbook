@@ -51,7 +51,7 @@ Since the raw data were loaded in Geosoft XYZ format, we must add the transmitte
 
     - Create elevation from topography
     - :ref:`Add transmitters<objectEMaddTx>` and use the following parameters:
-        - Radius = ?
+        - Dipole moment = 1 Am :math:`\! ^2`
         - Along-line offset = 15 m
         - Cross-line offset = 0 m
         - Vertical offset = 0 m
@@ -59,8 +59,8 @@ Since the raw data were loaded in Geosoft XYZ format, we must add the transmitte
         - Azimuthal angle from North = 0
 
     - :ref:`Add receivers<objectEMaddRx>` and use the following parameters:
-        - Radius = ?
-        - Along-line offset = 15 m
+        - Dipole moment = 1 Am :math:`\! ^2`
+        - Along-line offset = 0 m
         - Cross-line offset = 0 m
         - Vertical offset = 0 m
         - Normal angle from vertical = 0

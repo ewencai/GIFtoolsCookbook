@@ -16,7 +16,7 @@ Select the object and the menu **"data type menu"** |rarr| **Add transmitters**
 
 The user may add the following types of transmitters:
 
-	- Airborne FEM and TEM circular loop transmitters
+	- Dipole transmitters
 
 
 
@@ -46,6 +46,9 @@ GIF formatted FEM (link) and TEM (link) contain all necessary information pertai
 
 Select the object and the menu **"data type menu"** |rarr| **Add receivers**
 
+The user may add the following types of receivers:
+
+	- Dipole receivers
 
 
 .. figure:: ../../../../images/object/data/em/addReceivers.png

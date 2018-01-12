@@ -14,7 +14,7 @@ Here, we explain geophysical inversion and describe the parameters which impact 
 
     Basic concept <Concept>
     The objective function <ObjectiveFunction>
-    Assigning uncertainties <Uncertainties>
+    Data uncertainties <Uncertainties>
     The Beta parameter (trade-off)<Beta>
     The alphas parameters <Alphas>
     The weighting matrices <WeightingMatrix>
