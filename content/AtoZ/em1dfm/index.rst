@@ -18,6 +18,7 @@ Here, we show dsfasd dasf asd
     .. toctree::
        :maxdepth: 1
 
-       Assigning Uncertainties <assignUncertainties>
+       Specifying Survey Parameters <assignUncertainties>
+       Static 1D Inversion <staticInversion>
 
 

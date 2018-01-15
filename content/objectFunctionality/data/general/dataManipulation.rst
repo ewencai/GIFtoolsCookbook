@@ -246,7 +246,7 @@ Use look-up table
 Calculate elevation from surface
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-This functionality allows the user to create an elevation (height of the data) column from a surface of topography object. Elevations can be set at, above or below the surface by a specified amount. In addition, data columns (such as a flight altitude column) the data object can be used to create the elevation column. This functionality is accessed through:
+This functionality allows the user to create an elevation (height of the data) column from a surface or topography object. Elevations can be set at, above or below the surface by a specified amount. In addition, data columns (such as a flight altitude column) within the data object can be used to create the elevation values. This functionality is accessed through:
 
 **Data Manipulation** |rarr| **Coordinates** |rarr| **Calculate elevation from surface**
 
@@ -257,7 +257,7 @@ This functionality allows the user to create an elevation (height of the data) c
 Assign uncertainties
 --------------------
 
-Assigning uncertainties is vital to inversion and therefor is also required as an :ref:`i/o header<objectSetioHeaders>`. To assign uncertainties to a data object, click on the object and select the menu **Data manipulation** |rarr| **Assign uncertainties**
+Assigning uncertainties is vital to inversion and therefore is also required as an :ref:`i/o header<objectSetioHeaders>`. To assign uncertainties to a data object, click on the object and select the menu **Data manipulation** |rarr| **Assign uncertainties**
 
 .. figure:: ../../../../images/uncert.png
     :align: center
@@ -270,7 +270,7 @@ Assigning uncertainties is vital to inversion and therefor is also required as a
 
 #. FOR TEM data: To open up the time-dependent uncertainty dialog, use the menu **Data manipulation** |rarr| **Assign uncertainties** |rarr| **Time dependent**
 
-#. FOR FEM data: To open up the frequency-dependent uncertainty dialog, use the menu **Data manipulation** |rarr| **Assign uncertainties** |rarr| **Time dependent**
+#. FOR FEM data: To open up the frequency-dependent uncertainty dialog, use the menu **Data manipulation** |rarr| **Assign uncertainties** |rarr| **Frequency dependent**
 
 An example from FEM data (TEM is the same structure):
 
