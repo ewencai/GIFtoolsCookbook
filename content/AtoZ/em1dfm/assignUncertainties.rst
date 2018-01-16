@@ -6,7 +6,7 @@
 Specifying Parameters for FEM Sounding Inversion
 ================================================
 
-Here, we detail the process of defining the survey parameters used for EM1DFM inversions. For GIF formatted 1D FEM data, the survey parameters are automatically read into GIFtools. For Geosoft XYZ and CSV files however, the survey information must be specified by the user. If not performed correctly, the observation file used in the EM1DFM inversion will not be formatted correctly. In this exercise, we:
+Here, we detail the process of defining the survey parameters used in EM1DFM inversions. For GIF formatted 1D FEM data, the survey parameters are automatically read into GIFtools. For Geosoft XYZ and CSV files however, the survey information must be specified by the user. If not performed correctly, the observation file used in the EM1DFM inversion will not be formatted correctly. In this exercise, we:
 
     - Define the data columns being imported from a Geosoft XYZ data file
     - Set transmitter, receiver and elevation information
@@ -50,11 +50,13 @@ Add Transmitter, Receiver and Elevation Information
 
 Since the raw data were loaded in Geosoft XYZ format, we must add the transmitter and receiver information for the airborne survey manually. Additionally, only an altitude column was provided in the raw data. Therefore, we must use the topography and altitude information to determine the elevation of each data point.
 
-    - :ref:`Create elevation from surface topography<objectElevFromSurface>`.
-        - Click **at surface** and use the altitude data from the FEMsounding object.
-        - :ref:`Set i/o header<objectSetioHeaders>` for Z to the elevation column you just created.
+    - :ref:`Create elevation from surface topography<objectElevFromSurface>`
+
+        - Click **at surface** and use the altitude data from the FEMsounding object
+        - :ref:`Set i/o header<objectSetioHeaders>` for Z to the elevation column you just created
 
     - :ref:`Add transmitters<objectEMaddTx>` to set the locations of the transmitters **relative to the current xyz data locations**. Use the following parameters:
+
         - Dipole moment = 1 Am :math:`\! ^2`
         - Set Azimuth angle as "Relative to bearing" and set bearing to calculate
         - Along-line offset = 0 m
@@ -63,6 +65,7 @@ Since the raw data were loaded in Geosoft XYZ format, we must add the transmitte
         
 
     - :ref:`Add receivers<objectEMaddRx>` to set the locations of the receivers **relative to the transmitter locations**. Use the following parameters:
+
         - Dipole moment = 1 Am :math:`\! ^2`
         - Set Azimuth angle as "Relative to bearing" and use the bearing column that was calculate when adding transmitters
         - Along-line offset = 15 m
@@ -78,6 +81,8 @@ Since the raw data were loaded in Geosoft XYZ format, we must add the transmitte
 
     Real component of the magnetic field at f = 5000 Hz (left). Imaginary component of the magnetic field at f = 5000 Hz (right)
 
+
+.. _AtoZem1dfm_uncert_assign:
 
 Assign Uncertainties
 --------------------
