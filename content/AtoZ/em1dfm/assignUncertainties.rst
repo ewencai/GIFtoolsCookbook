@@ -6,7 +6,7 @@
 Specifying Parameters for FEM Sounding Inversion
 ================================================
 
-Here, we detail the process of defining the survey parameters used in EM1DFM inversions. For GIF formatted 1D FEM data, the survey parameters are automatically read into GIFtools. For Geosoft XYZ and CSV files however, the survey information must be specified by the user. If not performed correctly, the observation file used in the EM1DFM inversion will not be formatted correctly. In this exercise, we:
+Here, we detail the process of defining the survey parameters used in EM1DFM inversions. For `GIF formatted 1D FEM data <http://em1dfm.readthedocs.io/en/latest/content/files/supporting.html>`__, the survey parameters are automatically read into GIFtools. For :ref:`Geosoft XYZ<XYZfile>` and :ref:`CSV<CSVfile>` files however, the survey information must be specified by the user. If not performed correctly, the observation file used in the EM1DFM inversion will not be formatted correctly. In this exercise, we:
 
     - Define the data columns being imported from a Geosoft XYZ data file
     - Set transmitter, receiver and elevation information

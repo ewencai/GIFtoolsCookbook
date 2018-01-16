@@ -41,7 +41,7 @@ This functionality is responsible for setting all inversion parameters pertainin
     :align: center
     :width: 700
 
-    Sensitivity (left), inversion (middle) and blocky model norms (right) tabs for GRAV3D inversion objects.
+    Sensitivity (left), inversion (middle) and blocky model norms (right) tabs for MAG inversion and MAG amplitude inversion objects.
 
 
 .. _invEditOptions_MVI:
@@ -78,7 +78,7 @@ This functionality is responsible for setting all inversion parameters pertainin
     :align: center
     :width: 700
 
-    Sensitivity (left), inversion (middle) and blocky model norms (right) tabs for GRAV3D inversion objects.
+    Sensitivity (left), inversion (middle) and blocky model norms (right) tabs for GRAV inversion objects.
 
 
 

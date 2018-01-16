@@ -95,10 +95,12 @@ Here, the set of FEM data are inverted using the adaptive 1D approach. In this c
 Setup the inversion
 ^^^^^^^^^^^^^^^^^^^
 
-    - Create another EM1DFM inversion using :ref:`copy options<invCopyOptions>` and set the output directory
-    - Use :ref:`edit options<invEditOptions>` to verify the current set of inversion parameters:
+    - Create another EM1DFM inversion using :ref:`copy options<invCopyOptions>`
+    - Click on the newly created EM1DFM inversion object and set the output directory
+    - Use :ref:`edit options<invEditOptions>` to verify and apply the current set of inversion parameters:
+        - Make sure the mesh and observed data are properly set
+        - Set the topography from the drop-down menu
         - Notice that the inversion parameters are identical to the previous inversion that was run
-        - Check to ensure the mesh and observed data are correct
         - Apply and write all files
 
 

@@ -2,8 +2,6 @@
 
 .. include:: <isonum.txt>
 
-.. raw:: html
-    :file: ../../../underconstruction.html
 
 
 A to Z Examples for EM1DFM
@@ -13,12 +11,13 @@ A to Z Examples for EM1DFM
     :align: right
     :figwidth: 50%
 
-Here, we show dsfasd dasf asd
+Here, we demonstrate the interpretation of FEM data through both independent 1D and laterally constrained 3D inversion approaches. Although 3D FEM inversion algorithms have been developed, they are computationally expensive and require significant time to compute a final model. Meanwhile 1D and laterally constrained 3D inversion approaches are computationally fast algorithms, capable of recovering information about 3D conductivity and susceptibility structures. The tutorial for the EM1DFM code is split into three parts:
 
     .. toctree::
        :maxdepth: 1
 
        Specifying Survey Parameters <assignUncertainties>
-       Static 1D Inversion <staticInversion>
+       Static and Adaptive 1D Inversion <staticInversion>
+       Laterally Constrained 3D Inversion <lateralInversion>
 
 
