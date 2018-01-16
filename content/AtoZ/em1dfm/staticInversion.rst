@@ -6,7 +6,7 @@
 Static and Adaptive 1D Inversion
 ================================
 
-Here, FEM data are inverted using both static and adaptive 1D inversion approaches. The adaptive approach takes into account surface topography whereas the static approach does not. In either case, every transmitter is associated with a distinct sounding location. A 1D model is then recovered independently for each sounding location; the set of 1D models can be visualized on a pseudo-3D mesh. Static and adaptive 1D inversion algorithms are a computationally fast way to obtain depth and horizontal location information about conductive/resistive and magnetically susceptible targets.
+Here, FEM data are inverted using both static and adaptive 1D inversion approaches. The adaptive approach takes into account surface topography whereas the static approach does not. In either case, every transmitter is associated with a distinct sounding location. A 1D model is then recovered independently for each sounding location; see `EM1DFM package overview <http://em1dfm.readthedocs.io/en/latest/content/overview.html>`__. The set of recovered 1D models can be interpolated and visualized on a 3D mesh. Static and adaptive 1D inversion algorithms are a computationally fast way to obtain depth and horizontal location information about conductive/resistive and magnetically susceptible targets.
 
 As part of this exercise, the user will:
 
