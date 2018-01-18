@@ -97,7 +97,7 @@ This functionality is responsible for setting all inversion parameters pertainin
 
 GIFtools is capable of carrying out three distinct 1D inversion approaches:
 
-	- **Static:** Each transmitter is associated with a distinct sounding. The inversion independently recovers a 1D model for each sounding. Inversion results are plotted on a pseudo-3D mesh.
+	- **Static:** Each transmitter is associated with a distinct sounding. The inversion independently recovers a 1D model for each sounding.
 	- **Adaptive:** Here, surface topography is provided. The inversion is carried out in the same way as before, however the vertical locations of models relative to one another are set based on topography
 	- **Laterally constrained:** In this approach, the data at each sounding are only sensitive to a particular 1D model. However, the set of 1D models is subject to smoothness constraints in the x and y directions. 
 
@@ -108,6 +108,27 @@ GIFtools is capable of carrying out three distinct 1D inversion approaches:
 
     Global (left), conductivity (middle) and susceptibility (right) tabs for EM1DFM inversion objects.
 
+
+Impact of Topography on Inversion and Plotting in 3D
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+**Generating the Mesh:**
+
+When survey parameters are set through **FEM sounding** |rarr| **Edit options**, a 3D mesh is generated based on the 1D mesh (layers) provided and the minimum lateral spacing between observation locations. The 3D mesh allows the user to plot the set of recovered 1D models but is not used in any of the inversion approaches. The x and y widths of cells within the 3D mesh are set based on the minimum lateral spacing between observation locations. The top of the 3D mesh corresponds with the elevation of the highest data observation location. The z widths of the cells within the 3D mesh are given directly by the 1D mesh (layers); thus if the 1D mesh has N layers, the 3D mesh will have N cells in the vertical.
+
+
+.. figure:: images/em1dfm_topo.png
+    :align: center
+    :width: 700
+
+    Recovered 1D models plotted on a 3D mesh without topography (left) and with (topography).
+
+
+**Impact on Inversion and Plotting:**
+
+The decision on whether or not to use topography results in two cases. **If topography is not included**, then every layer within the 1D model is active during each independent 1D inversion. Thus if the 1D mesh contains :math:`N` layers, each independently recovered 1D model will have :math:`N` conductivity and/or susceptibility values. When plotted on the 3D mesh at the corresponding horizontal location (based on observation location), all cells in the vertical direction are populated by non-zero values. However, since the top of the 3D mesh corresponds to the elevation of the highest observation location, the tops of all 1D models are also plotted at this height. As a result, data locations will appear underground when 1D models and data are plotted at the same time.
+
+**If topography is included**, then for every independent 1D inversion, the algorithm finds all the layers that would plot below the surface topography on the 3D mesh and sets them as active. Thus if the 1D mesh contained :math:`N` layers, the number of layers that are active in any 1D inversion is :math:`N_{act} \leq N`. When plotting the set of recovered 1D models, the highest non-zero value at each sounding location will correspond to the surface topography and all cells above it will be zero. When creating a 1D mesh, the user must ultimately account for the potential decrease in the number of active cells when deciding to include topography.
 
 
 
