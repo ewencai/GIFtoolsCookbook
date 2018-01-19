@@ -11,7 +11,7 @@ A to Z Examples for EM1DFM
     :align: right
     :figwidth: 50%
 
-Here, we demonstrate the interpretation of FEM data through both independent 1D and laterally constrained 3D inversion approaches. Although 3D FEM inversion algorithms have been developed, they are computationally expensive and require significant time to compute a final model. Meanwhile 1D and laterally constrained 3D inversion approaches are computationally fast algorithms, capable of recovering information about 3D conductivity and susceptibility structures. The tutorial for the EM1DFM code is split into three parts:
+Here, we demonstrate the interpretation of FEM data through both independent 1D and laterally constrained 3D inversion approaches. Although full 3D FEM inversion algorithms have been developed, they are significant time and processing power to compute a final model. Meanwhile 1D and laterally constrained 3D inversion approaches are computationally fast algorithms, capable of recovering information about 3D conductivity and susceptibility structures. The tutorial for the EM1DFM code is split into three parts:
 
     .. toctree::
        :maxdepth: 1

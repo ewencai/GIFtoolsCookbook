@@ -6,14 +6,13 @@
 Static and Adaptive 1D Inversion
 ================================
 
-Here, FEM data are inverted using both static and adaptive 1D inversion approaches. The adaptive approach takes into account surface topography whereas the static approach does not. In either case, every transmitter is associated with a distinct sounding location. A 1D model is then recovered independently for each sounding location; see the `EM1DFM package overview <http://em1dfm.readthedocs.io/en/latest/content/overview.html>`__ for background theory. The set of recovered 1D models are interpolated and visualized on a 3D mesh. Static and adaptive 1D inversion algorithms are a computationally fast way to obtain depth and horizontal location information about conductive/resistive and magnetically susceptible targets.
+Here, FEM data are inverted using both static and adaptive 1D inversion approaches. The adaptive approach takes into account surface topography whereas the static approach does not. In either case, every transmitter is associated with a distinct sounding location. A 1D model is then recovered independently for each sounding location; see the `EM1DFM package overview <http://em1dfm.readthedocs.io/en/latest/content/overview.html>`__ for further explanation. The set of recovered 1D models are visualized on a 3D mesh. Static and adaptive 1D inversion algorithms are a computationally fast way to obtain depth and horizontal location information about conductive/resistive and magnetically susceptible targets.
 
 As part of this exercise, the user will:
 
     - Create EM1DFM inversion objects
     - Set relevant inversion parameters
     - Attempt to explain the set of field observations using a set of 1D conductivity models (susceptibility models can be included)
-    - Examine inversion results which incorporate surface topography (adaptive approach)
     - Interpret inversion results generated from 1D inversions
 
 .. _AtoZem1dfm_static_setup:
@@ -28,7 +27,7 @@ Setup for the Exercise
 
 **If you have NOT completed the previous tutorial and would like to start here, complete the following steps:**
 
-    - Download the demo (**link**)
+    - Download the demo (**! LINK**)
     - Open GIFtools
     - :ref:`Set the working directory <projSetWorkDir>`
     - :ref:`Import raw FEM data <importFemData>` (1D FEM GIF format data in ppm)
@@ -49,7 +48,7 @@ Setup for the Exercise
 Static 1D FEM Inversion
 -----------------------
 
-Here, the set of FEM data are inverted using the static 1D approach.
+Here, the set of FEM data are inverted using the static 1D approach. This approach does not consider surface topography.
 
 Setup the inversion
 ^^^^^^^^^^^^^^^^^^^
@@ -61,8 +60,8 @@ Setup the inversion
             - **Set observed data from drop-down menu**
             - **Mode:** static 1D
             - **Model options:** for this example, data are inverted strictly for a conductivity model
-            - **Solver options:** leave as default or customize
-            - **Trade-off Mode:** leave as default or customize
+            - **Solver options:** leave as default
+            - **Trade-off Mode:** select discrepancy principle (computes :math:`\beta` using a line search)
         - **Conductivity tab:**
             - Leave as default or customize
         - **Susceptibility tab:**
@@ -83,7 +82,7 @@ Run Inversion and Load Results
 Discussion
 ^^^^^^^^^^
 
-**Image of inversion results and misfit**
+**! IMAGE OF INVERSION RESULTS AND DISCUSSION. BEST RESULT IS EM1DFMinv1d**
 
 
 Adaptive 1D FEM Inversion
@@ -94,6 +93,8 @@ Here, the set of FEM data are inverted using the adaptive 1D approach. In this c
 
 Setup the inversion
 ^^^^^^^^^^^^^^^^^^^
+
+**! IF EDIT OPTIONS DOESN'T WORK, NEED TO REPLACE THESE INSTRUCTIONS**
 
     - Create another EM1DFM inversion using :ref:`copy options<invCopyOptions>`
     - Click on the newly created EM1DFM inversion object and set the output directory
@@ -109,13 +110,13 @@ Run Inversion and Load Results
 
     - :ref:`Write inversion files <invWriteAll>`
     - :ref:`Run inversion <invRun>` (select desired input file)
-    - :ref:`Load results <invLoadResults>`
+    - Results for this algorithm are automatically loaded into GIFtools
     - :reF:`View the results <viewData>`
 
 Discussion
 ^^^^^^^^^^
 
-**Image of inversion results and misfit**
+**! IMAGE OF INVERSION RESULTS AND DISCUSSION. BEST RESULT IS EM1DFMinv2d**
 
 
 

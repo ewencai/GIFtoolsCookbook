@@ -27,7 +27,7 @@ Setup for the Exercise
 
 **If you have NOT completed the previous tutorial and would like to start here, complete the following steps:**
 
-    - Download the demo (**link**)
+    - Download the demo (**! LINK NEEDED**)
     - Open GIFtools
     - :ref:`Set the working directory <projSetWorkDir>`
     - :ref:`Import raw FEM data <importFemData>` (1D FEM GIF format data in ppm)
@@ -59,7 +59,7 @@ Setup the inversion
     - Click on the newly created EM1DFM inversion object to set the output directory
     - Set any necessary EM1DFM inversion parameters under :ref:`edit options<invEditOptions>`:
         - Make sure the mesh, observed data and topography are properly set!
-        - Set mode as "laterally constrained 3D" with *Max distance* = ??? and *Number of stations* = ???
+        - Mode: Laterally constrained 3D with *Max distance* = 1000 m, *Number of stations* = 16 and smoothing parameter = 100
 
 **If you have NOT completed the previous tutorial and are starting here:**
 
@@ -68,10 +68,10 @@ Setup the inversion
         - **Global tab**:
             - Set mesh from drop-down menu
             - Set observed data from drop-down menu
-            - Mode: Laterally constrained 3D with *Max distance* = ??? and *Number of stations* = ???
+            - Mode: Laterally constrained 3D with *Max distance* = 1000 m, *Number of stations* = 16 and smoothing parameter = 100
             - Model options: for this example, data are inverted strictly for a conductivity model
             - Solver options: leave as default or customize
-            - Trade-off Mode: leave as default or customize
+            - Trade-off Mode: set to discrepancy principle
         - **Conductivity tab:**
             - Leave as default or customize
         - **Susceptibility tab:**
@@ -86,13 +86,36 @@ Run Inversion and Load Results
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
     - :ref:`Run inversion <invRun>`
-    - :ref:`Load results <invLoadResults>`
+    - Results are loaded automatically for this algorithm
     - :reF:`View the results <viewData>`
 
 Discussion
 ^^^^^^^^^^
 
-**Image of inversion results and misfit**
+**! IMAGE OF RESULTS AND DISCUSSION. MUST RE-RUN INVERSION AFTER BUG WITH BETA**
+
+
+Laterally Constrained with Hard Constraints
+-------------------------------------------
+
+**! ADD THIS IF WE WANT**
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
