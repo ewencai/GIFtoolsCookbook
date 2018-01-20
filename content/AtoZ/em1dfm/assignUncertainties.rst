@@ -35,7 +35,7 @@ Import files
 
 In addition to raw geophysical data, you may have access to topographical information. If this information is available, it can be imported into GIFtools.
 
-    - :ref:`Import raw FEM data <importFemData>` (Geosoft XYZ format as an FEM sounding with data in ppm). 
+    - :ref:`Import raw FEM data <importFemData>` (Geosoft XYZ format as an FEM sounding with data in ppm).
     - :ref:`Import topography data <importTopo>` (3D GIF format)
     - :ref:`Import 1D mesh<importMesh>` (layers file)
 
@@ -62,7 +62,7 @@ Since the raw data were formatted according to the Geosoft XYZ format, the trans
         - Along-line offset = 0 m
         - Cross-line offset = 0 m
         - Set vertical offset as altitude column from data object
-        
+
 
     - :ref:`Add receivers<objectEMaddRx>` to set the locations of the receivers **relative to the transmitter locations**. Use the following parameters:
 
@@ -75,7 +75,7 @@ Since the raw data were formatted according to the Geosoft XYZ format, the trans
     - :ref:`Set data normalization to ppm<objectEMsetDataNorm>`
 
 
-.. figure:: images/dataPlot5000.png
+.. figure:: .\..\..\..\images\AtoZ_fem1d\dataPlot5000.png
     :align: center
     :width: 700
 

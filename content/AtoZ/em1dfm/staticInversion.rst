@@ -38,7 +38,7 @@ Setup for the Exercise
         - :ref:`Set i/o header<objectSetioHeaders>` for Z to the elevation column you just created.
 
 
-.. figure:: images/dataPlot5000.png
+.. figure:: .\..\..\..\images\AtoZ_fem1d\dataPlot5000.png
     :align: center
     :width: 700
 
