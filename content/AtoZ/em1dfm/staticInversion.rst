@@ -8,7 +8,7 @@ Static and Adaptive 1D Inversion
 
 Here, FEM data are inverted using both static and adaptive 1D inversion approaches. The adaptive approach takes into account surface topography whereas the static approach does not. In either case, every transmitter is associated with a distinct sounding location. A 1D model is then recovered independently for each sounding location; see the `EM1DFM package overview <http://em1dfm.readthedocs.io/en/latest/content/overview.html>`__ for further explanation. The set of recovered 1D models are visualized on a 3D mesh. Static and adaptive 1D inversion algorithms are a computationally fast way to obtain depth and horizontal location information about conductive/resistive and magnetically susceptible targets.
 
-.. figure:: .\..\..\..\images\AtoZ_fem1d\AtoZ_FEM1Dinv_adaptive.png
+.. figure:: .\..\..\..\images\AtoZ_fem1d\inv_fem1D_landing.png
     :align: center
     :scale: 75%
 
@@ -53,7 +53,14 @@ Setup for the Exercise
 Static 1D FEM Inversion
 -----------------------
 
-Here, the set of FEM data are inverted using the static 1D approach. This approach does not consider surface topography.
+.. figure:: .\..\..\..\images\AtoZ_fem1d\static_fem1D.png
+    :align: right
+    :scale: 75%
+
+    Conventional 1D inversion
+
+Here, the set of FEM data are inverted using the static 1D approach. This
+approach does not consider surface topography.
 
 Setup the inversion
 ^^^^^^^^^^^^^^^^^^^
@@ -95,7 +102,16 @@ Discussion
 Adaptive 1D FEM Inversion
 -------------------------
 
-Here, the set of FEM data are inverted using the adaptive 1D approach. In this case, surface topography is used to position the vertical locations of recovered 1D models relative to one another; i.e. the surface of each 1D model should correspond with the surface location.
+.. figure:: .\..\..\..\images\AtoZ_fem1d\adaptive_fem1D.png
+    :align: right
+    :scale: 75%
+
+    Adaptive 1D inversion
+
+Here, the set of FEM data are inverted using the adaptive 1D approach. In this
+case, surface topography is used to position the vertical locations of
+recovered 1D models relative to one another; i.e. the surface of each 1D model
+should correspond with the surface location.
 
 
 Setup the inversion
