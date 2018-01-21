@@ -6,7 +6,16 @@
 Static and Adaptive 1D Inversion
 ================================
 
-Here, FEM data are inverted using both static and adaptive 1D inversion approaches. The adaptive approach takes into account surface topography whereas the static approach does not. In either case, every transmitter is associated with a distinct sounding location. A 1D model is then recovered independently for each sounding location; see the `EM1DFM package overview <http://em1dfm.readthedocs.io/en/latest/content/overview.html>`__ for further explanation. The set of recovered 1D models are visualized on a 3D mesh. Static and adaptive 1D inversion algorithms are a computationally fast way to obtain depth and horizontal location information about conductive/resistive and magnetically susceptible targets.
+Here, FEM data are inverted using both static and adaptive 1D inversion
+approaches. The adaptive approach takes into account surface topography
+whereas the static approach does not. In either case, every transmitter is
+associated with a distinct sounding location. A 1D model is then recovered
+independently for each sounding location; see the `EM1DFM package overview
+<http://em1dfm.readthedocs.io/en/latest/content/overview.html>`__ for further
+explanation. The set of recovered 1D models are visualized on a 3D mesh.
+Static and adaptive 1D inversion algorithms are a computationally fast way to
+obtain depth and horizontal location information about conductive/resistive
+and magnetically susceptible targets.
 
 .. figure:: .\..\..\..\images\AtoZ_fem1d\inv_fem1D_landing.png
     :align: center
@@ -30,17 +39,17 @@ Setup for the Exercise
     - Open your preexisting GIFtools project
     - :ref:`Set the working directory <projSetWorkDir>` (if you would like to change it)
 
-**If you have NOT completed the previous tutorial and would like to start here, complete the following steps:**
+.. note:: If you have NOT completed the previous tutorial and would like to start here, complete the following steps:**
 
-    - `Download the demo <https://github.com/ubcgif/GIFtoolsCookbook/raw/master/assets/AtoZ_FEM1D_4Download.zip>`_
-    - Open GIFtools
-    - :ref:`Set the working directory <projSetWorkDir>`
-    - :ref:`Import raw FEM data <importFemData>` (1D FEM GIF format data in ppm)
-    - :ref:`Import the topography data <importTopo>` (3D GIF format)
-    - :ref:`Import 1D mesh<importMesh>` (layers file)
-    - :ref:`Create elevation from surface topography<objectElevFromSurface>`
-        - Set elevation at 40 m above topography
-        - :ref:`Set i/o header<objectSetioHeaders>` for Z to the elevation column you just created.
+            - `Download the demo <https://github.com/ubcgif/GIFtoolsCookbook/raw/master/assets/AtoZ_FEM1D_4Download.zip>`_
+            - Open GIFtools
+            - :ref:`Set the working directory <projSetWorkDir>`
+            - :ref:`Import raw FEM data <importFemData>` (1D FEM GIF format data in ppm)
+            - :ref:`Import the topography data <importTopo>` (3D GIF format)
+            - :ref:`Import 1D mesh<importMesh>` (layers file)
+            - :ref:`Create elevation from surface topography<objectElevFromSurface>`
+                - Set elevation at 40 m above topography
+                - :ref:`Set i/o header<objectSetioHeaders>` for Z to the elevation column you just created.
 
 
 .. figure:: .\..\..\..\images\AtoZ_fem1d\dataPlot5000.png
@@ -66,6 +75,11 @@ Setup the inversion
 ^^^^^^^^^^^^^^^^^^^
 
     - :ref:`Create an EM1DFM inversion object <createFEMInv>` and set the output directory
+
+    .. figure:: .\..\..\..\images\AtoZ_fem1d\Inv_static_inp.png
+        :align: right
+        :scale: 10%
+
     - Set the EM1DFM inversion parameters under :ref:`edit options<invEditOptions>`:
         - **Global tab**:
             - **Set mesh from drop-down menu**
@@ -97,6 +111,12 @@ Discussion
 ^^^^^^^^^^
 
 **! IMAGE OF INVERSION RESULTS AND DISCUSSION. BEST RESULT IS EM1DFMinv1d**
+
+.. raw:: html
+    :file: ./AtoZ_DataFit_Static_Imag.html
+
+.. raw:: html
+    :file: ./AtoZ_DataFit_Static_Real.html
 
 
 Adaptive 1D FEM Inversion
@@ -146,3 +166,26 @@ Discussion
 
 
 
+.. figure:: .\..\..\..\images\AtoZ_fem1d\InvStatic_Misfit_1000I.png
+    :align: right
+    :figwidth: 0%
+
+.. figure:: .\..\..\..\images\AtoZ_fem1d\InvStatic_Misfit_5000I.png
+    :align: right
+    :figwidth: 0%
+
+.. figure:: .\..\..\..\images\AtoZ_fem1d\InvStatic_Misfit_25000I.png
+    :align: right
+    :figwidth: 0%
+
+.. figure:: .\..\..\..\images\AtoZ_fem1d\InvStatic_Misfit_1000R.png
+    :align: right
+    :figwidth: 0%
+
+.. figure:: .\..\..\..\images\AtoZ_fem1d\InvStatic_Misfit_5000R.png
+    :align: right
+    :figwidth: 0%
+
+.. figure:: .\..\..\..\images\AtoZ_fem1d\InvStatic_Misfit_25000R.png
+    :align: right
+    :figwidth: 0%
