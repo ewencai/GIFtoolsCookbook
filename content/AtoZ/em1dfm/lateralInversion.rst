@@ -27,7 +27,7 @@ Setup for the Exercise
 
 **If you have NOT completed the previous tutorial and would like to start here, complete the following steps:**
 
-    - Download the demo (**! LINK NEEDED**)
+    - `Download the demo <https://github.com/ubcgif/GIFtoolsCookbook/raw/master/assets/AtoZ_FEM1D_4Download.zip>`_
     - Open GIFtools
     - :ref:`Set the working directory <projSetWorkDir>`
     - :ref:`Import raw FEM data <importFemData>` (1D FEM GIF format data in ppm)

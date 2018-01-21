@@ -28,9 +28,10 @@ must be specified by the user. In this exercise, we:
 Setup for the Exercise
 ----------------------
 
-    - Download the demo (**! LINK**)
+    - `Download the demo <https://github.com/ubcgif/GIFtoolsCookbook/raw/master/assets/AtoZ_FEM1D_4Download.zip>`_
     - Open GIFtools
     - :ref:`Set the working directory <projSetWorkDir>`
+
 
 
 .. tip:: - Steps (without links) are also included with the download
@@ -44,10 +45,9 @@ Import files
 
 In addition to raw geophysical data, you may have access to topographical information. If this information is available, it can be imported into GIFtools.
 
-    - :ref:`Import raw FEM data <importFemData>` (Geosoft XYZ format as an FEM sounding with data in ppm).
+    - :ref:`Import raw FEM data <importFemData>` (Geosoft XYZ format as an FEMsounding).
     - :ref:`Import topography data <importTopo>` (3D GIF format)
     - :ref:`Import 1D mesh<importMesh>` (layers file)
-
 
 .. tip:: - Use **Edit** |rarr| **Rename** to change what objects in GIFtools are called
          - For any data object, :ref:`edit the data headers <objectDataHeaders>`.

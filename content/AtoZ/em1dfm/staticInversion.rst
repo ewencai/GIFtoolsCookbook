@@ -8,12 +8,17 @@ Static and Adaptive 1D Inversion
 
 Here, FEM data are inverted using both static and adaptive 1D inversion approaches. The adaptive approach takes into account surface topography whereas the static approach does not. In either case, every transmitter is associated with a distinct sounding location. A 1D model is then recovered independently for each sounding location; see the `EM1DFM package overview <http://em1dfm.readthedocs.io/en/latest/content/overview.html>`__ for further explanation. The set of recovered 1D models are visualized on a 3D mesh. Static and adaptive 1D inversion algorithms are a computationally fast way to obtain depth and horizontal location information about conductive/resistive and magnetically susceptible targets.
 
+.. figure:: .\..\..\..\images\AtoZ_fem1d\AtoZ_FEM1Dinv_adaptive.png
+    :align: center
+    :scale: 75%
+
 As part of this exercise, the user will:
 
     - Create EM1DFM inversion objects
     - Set relevant inversion parameters
     - Attempt to explain the set of field observations using a set of 1D conductivity models (susceptibility models can be included)
     - Interpret inversion results generated from 1D inversions
+
 
 .. _AtoZem1dfm_static_setup:
 
@@ -27,7 +32,7 @@ Setup for the Exercise
 
 **If you have NOT completed the previous tutorial and would like to start here, complete the following steps:**
 
-    - Download the demo (**! LINK**)
+    - `Download the demo <https://github.com/ubcgif/GIFtoolsCookbook/raw/master/assets/AtoZ_FEM1D_4Download.zip>`_
     - Open GIFtools
     - :ref:`Set the working directory <projSetWorkDir>`
     - :ref:`Import raw FEM data <importFemData>` (1D FEM GIF format data in ppm)
@@ -68,8 +73,10 @@ Setup the inversion
             - Leave as default or customize (if being used)
         - Click apply and write all files
 
+.. note:: - GIFtools will immediately convert the 1D layers to a 3D mesh
+            using the smallest data separation to define the x-y cell size.
 
-.. note:: If you chose not to write the files from the edit options menu, you may do so through :ref:`write inversion files <invWriteAll>`
+          - If you chose not to write the files from the edit options menu, you may do so through :ref:`write inversion files <invWriteAll>`
 
 
 Run Inversion and Load Results
