@@ -104,8 +104,8 @@ Before inverting the data, we must assign uncertainties. The role of uncertainti
 
     - Use :ref:`assign frequency-dependent uncertainties<objectAssignUncert>` to create data columns containing the data uncertainties. Select "\% of data value" and use the following floor and percent values:
 
-        - :math:`H_{R}` at 1000 Hz = 0.5 ppm + 10 \%
-        - :math:`H_{R}` at 5000 Hz = 1.5 ppm + 10 \%
+        - :math:`H_{R}` at 1000 Hz = 1 ppm + 10 \%
+        - :math:`H_{R}` at 5000 Hz = 2 ppm + 10 \%
         - :math:`H_{R}` at 25000 Hz = 15 ppm + 10 \%
         - :math:`H_{I}` at 1000 Hz = 1 ppm + 2.5 \%
         - :math:`H_{I}` at 5000 Hz = 5 ppm + 2.5 \%

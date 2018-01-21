@@ -110,13 +110,31 @@ Run Inversion and Load Results
 Discussion
 ^^^^^^^^^^
 
-**! IMAGE OF INVERSION RESULTS AND DISCUSSION. BEST RESULT IS EM1DFMinv1d**
+.. figure:: .\..\..\..\images\AtoZ_fem1d\Inv_Static_model.png
+    :align: right
+    :scale: 30%
+
+    Recovered 1D conductivity models
+
+The inverted 1D conductivity models are automatically geo-reference in 3D for
+visualization and interpretation. Interpolated data misfit
+maps for each data components are show below.
+We note the following features
+
+ - Two regions of higher conductivity showing as arc conductors.
+ - Correlated residual on the in-phase misfit map over the conductors. Percentage values could be adjusted lower.
+
+Note that all 1D models extend vertically to the top of the mesh, even though
+the observation stations were acquired at different height. It is therefore
+expected that the relative depth of anomalies may not be representative of
+true 3D variations.
 
 .. raw:: html
     :file: ./AtoZ_DataFit_Static_Imag.html
 
 .. raw:: html
     :file: ./AtoZ_DataFit_Static_Real.html
+
 
 
 Adaptive 1D FEM Inversion
