@@ -102,7 +102,7 @@ Run Inversion and Load Results
 
     - :ref:`Run inversion <invRun>`
     - Results are loaded automatically for this algorithm
-    - :reF:`View the results <viewData>`
+    - :reF:`View the misfit map <viewData>`
 
 .. _AtoZem1dfm_lateral_discussion:
 
@@ -121,15 +121,13 @@ The lateral constraints strategy comes with many advantages:
     - Possible to employ a :math:`\beta`-cooling strategy similar to the 3D inversion code.
 
 The use of a global measure of data fit allows us to assess the convergence of
-the algorithm through the :ref:`convergence curve<convergence_curve>` window.
+the algorithm through the usual :ref:`convergence curve<convergence_curve>` window.
 
 .. figure:: .\..\..\..\images\AtoZ_fem1d\Inv_LC_convergence.png
     :align: right
     :figwidth: 45%
 
     Convergence curves
-
-
 
 
 Ideally we would like to test the hypothesis of a conductive overburden in 3D, as well as to impose bounds on the conductivity values.
@@ -141,15 +139,8 @@ Laterally Constrained with Geological Information
 -------------------------------------------------
 
 As a final example, we will impose 3D geological constraints on the Laterally Constrained 1D inversions.
+We first need to create the reference conductivity model from a surface:
 
-Setup the inversion
-^^^^^^^^^^^^^^^^^^^
-
-    .. figure:: .\..\..\..\images\AtoZ_fem1d\Inv_LC_inp.png
-        :align: right
-        :scale: 10%
-
-    - Click on a preexisting EM1DFM inversion object and :ref:`copy options<invCopyOptions>`
     - :ref:`Import the surface<importSurface>` file provided *TillLayer.topo*
     - From the previously create 3D mesh, :ref:`create a full active model<createActiveCellsModel>`
     - :ref:`Create a ModelBuilder<createModelBuilder>`
@@ -162,6 +153,9 @@ Setup the inversion
         - Using surface
             - Populate values
 
+We can now use this physical property model to define surface weights in order
+to encourage large gradients at the bottom of the till layer.
+
     .. figure:: .\..\..\..\images\AtoZ_fem1d\TillWeights.png
         :align: right
         :scale: 10%
@@ -169,17 +163,52 @@ Setup the inversion
     - From ModelBuilder -> Build Constraints
         - Weighting functions
             - From only a geological model
-             - Face weights (Weight value = 10)
+                - Face weights (Weight value = 100)
 
-.. figure:: .\..\..\..\images\AtoZ_fem1d\True_model.png
+
+Setup the inversion
+^^^^^^^^^^^^^^^^^^^
+
+    .. figure:: .\..\..\..\images\AtoZ_fem1d\Inv_LC_inp.png
+        :align: right
+        :scale: 10%
+
+    - Click on a preexisting EM1DFM inversion object and :ref:`copy options<invCopyOptions>`
+    - Select GIFweight object
+    - Select lower bound model
+
+Run Inversion and Load Results
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    - :ref:`Run inversion <invRun>`
+    - Results are loaded automatically for this algorithm
+    - :reF:`View the misfit map <viewData>`
+
+Discussion
+^^^^^^^^^^
+
+.. figure:: .\..\..\..\images\AtoZ_fem1d\Inv_LC_constrained.png
     :align: right
     :figwidth: 45%
 
-    True 3D conductivity model
+    Recovered 1D models with geological constraints
 
+This final solution differs from the previous inversion such that:
+    - A sharp gradient is preserved along the base of the till layer
+    - The upper conductivities are more consistent :math:`\approx 10^4 \Omega \cdot m`
+    - The top of the kimberlite pipes is at the right depth, and the compact shape of the pipes is better preserved
 
+.. figure:: .\..\..\..\images\AtoZ_fem1d\Inv_LC_constrained_EW.png
+    :align: left
+    :figwidth: 45%
 
+    EW section through the constrained 1D inversion
 
+.. figure:: .\..\..\..\images\AtoZ_fem1d\True_EW_section.png
+    :align: right
+    :figwidth: 45%
+
+    EW section through the true 3D conductivity model
 
 
 

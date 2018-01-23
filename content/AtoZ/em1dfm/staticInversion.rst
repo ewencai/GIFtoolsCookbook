@@ -195,14 +195,7 @@ that may be available:
     - Compact targets are recovered as arc-shaped conductors due to the 1D assumption
     - The inversion recovered a thin layer over the entire area of investigation, which appears to be slightly more conductive than the background.
 
-Ideally we would like to test the hypothesis of a conductive overburden in 3D,
-which will be covered in the :ref:`next section<AtoZem1dfm_lateral>`.
 
-.. .. figure:: .\..\..\..\images\AtoZ_fem1d\True_model.png
-..     :align: right
-..     :figwidth: 45%
-
-..     True 3D conductivity model
 
 
 .. figure:: .\..\..\..\images\AtoZ_fem1d\InvStatic_Misfit_1000I.png
