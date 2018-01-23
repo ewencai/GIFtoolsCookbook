@@ -88,11 +88,11 @@ Since the raw data were formatted according to the Geosoft XYZ format, the trans
     - :ref:`Set data normalization to ppm<objectEMsetDataNorm>`
 
 
-.. figure:: .\..\..\..\images\AtoZ_fem1d\dataPlot5000.png
-    :align: center
-    :width: 700
+.. raw:: html
+    :file: ./AtoZ_Data_Real.html
 
-    Real component of the magnetic field at f = 5000 Hz (left). Imaginary component of the magnetic field at f = 5000 Hz (right)
+.. raw:: html
+    :file: ./AtoZ_Data_Imag.html
 
 
 .. _AtoZem1dfm_uncert_assign:
@@ -104,12 +104,9 @@ Before inverting the data, we must assign uncertainties. The role of uncertainti
 
     - Use :ref:`assign frequency-dependent uncertainties<objectAssignUncert>` to create data columns containing the data uncertainties. Select "\% of data value" and use the following floor and percent values:
 
-        - :math:`H_{R}` at 1000 Hz = 1 ppm + 10 \%
-        - :math:`H_{R}` at 5000 Hz = 2 ppm + 10 \%
-        - :math:`H_{R}` at 25000 Hz = 15 ppm + 10 \%
-        - :math:`H_{I}` at 1000 Hz = 1 ppm + 2.5 \%
-        - :math:`H_{I}` at 5000 Hz = 5 ppm + 2.5 \%
-        - :math:`H_{I}` at 25000 Hz = 20 ppm + 2.5 \%
+        - 1000 Hz = 1 ppm
+        - 5000 Hz = 2 ppm
+        - 25000 Hz = 5 ppm
 
     - Set :ref:`i/o headers<objectSetioHeaders>` for all fields. Files used in the inversion cannot be written until this is performed.
 
@@ -119,3 +116,26 @@ Before inverting the data, we must assign uncertainties. The role of uncertainti
         - The recovered model does not fit the data too heavily at certain frequencies at the expense of others
         - the recovered model fits the real and imaginary components of the data equally
 
+.. figure:: .\..\..\..\images\AtoZ_fem1d\FEMdata_1000I.png
+    :align: right
+    :figwidth: 0%
+
+.. figure:: .\..\..\..\images\AtoZ_fem1d\FEMdata_5000I.png
+    :align: right
+    :figwidth: 0%
+
+.. figure:: .\..\..\..\images\AtoZ_fem1d\FEMdata_25000I.png
+    :align: right
+    :figwidth: 0%
+
+.. figure:: .\..\..\..\images\AtoZ_fem1d\FEMdata_1000R.png
+    :align: right
+    :figwidth: 0%
+
+.. figure:: .\..\..\..\images\AtoZ_fem1d\FEMdata_5000R.png
+    :align: right
+    :figwidth: 0%
+
+.. figure:: .\..\..\..\images\AtoZ_fem1d\FEMdata_25000R.png
+    :align: right
+    :figwidth: 0%

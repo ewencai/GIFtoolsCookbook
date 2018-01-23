@@ -19,14 +19,13 @@ and magnetically susceptible targets.
 
 .. figure:: .\..\..\..\images\AtoZ_fem1d\inv_fem1D_landing.png
     :align: center
-    :scale: 75%
+    :figwidth: 75%
 
 As part of this exercise, the user will:
 
-    - Create EM1DFM inversion objects
-    - Set relevant inversion parameters
-    - Attempt to explain the set of field observations using a set of 1D conductivity models (susceptibility models can be included)
-    - Interpret inversion results generated from 1D inversions
+    - :ref:`Set<AtoZem1dfm_static_setup>` relevant inversion parameters
+    - :ref:`Invert<AtoZem1dfm_static_inversion>` the field observations using a set of 1D conductivity models (susceptibility models can be included)
+    - :ref:`Interpret<AtoZem1dfm_static_discussion>` inversion results generated from 1D inversions
 
 
 .. _AtoZem1dfm_static_setup:
@@ -39,7 +38,7 @@ Setup for the Exercise
     - Open your preexisting GIFtools project
     - :ref:`Set the working directory <projSetWorkDir>` (if you would like to change it)
 
-.. note:: If you have NOT completed the previous tutorial and would like to start here, complete the following steps:**
+.. note:: If you have NOT completed the previous tutorial and would like to start here, complete the following steps:
 
             - `Download the demo <https://github.com/ubcgif/GIFtoolsCookbook/raw/master/assets/AtoZ_FEM1D_4Download.zip>`_
             - Open GIFtools
@@ -52,19 +51,20 @@ Setup for the Exercise
                 - :ref:`Set i/o header<objectSetioHeaders>` for Z to the elevation column you just created.
 
 
-.. figure:: .\..\..\..\images\AtoZ_fem1d\dataPlot5000.png
-    :align: center
-    :width: 700
+.. raw:: html
+    :file: ./AtoZ_Data_Real.html
 
-    Real component of the magnetic field at f = 5000 Hz (left). Imaginary component of the magnetic field at f = 5000 Hz (right)
+.. raw:: html
+    :file: ./AtoZ_Data_Imag.html
 
+.. _AtoZem1dfm_static_inversion:
 
 Static 1D FEM Inversion
 -----------------------
 
 .. figure:: .\..\..\..\images\AtoZ_fem1d\static_fem1D.png
     :align: right
-    :scale: 75%
+    :figwidth: 40%
 
     Conventional 1D inversion
 
@@ -112,7 +112,7 @@ Discussion
 
 .. figure:: .\..\..\..\images\AtoZ_fem1d\Inv_Static_model.png
     :align: right
-    :scale: 30%
+    :figwidth: 40%
 
     Recovered 1D conductivity models
 
@@ -130,10 +130,10 @@ expected that the relative depth of anomalies may not be representative of
 true 3D variations.
 
 .. raw:: html
-    :file: ./AtoZ_DataFit_Static_Imag.html
+    :file: ./AtoZ_DataFit_Static_Real.html
 
 .. raw:: html
-    :file: ./AtoZ_DataFit_Static_Real.html
+    :file: ./AtoZ_DataFit_Static_Imag.html
 
 
 
@@ -142,7 +142,7 @@ Adaptive 1D FEM Inversion
 
 .. figure:: .\..\..\..\images\AtoZ_fem1d\adaptive_fem1D.png
     :align: right
-    :scale: 75%
+    :figwidth: 40%
 
     Adaptive 1D inversion
 
@@ -154,8 +154,6 @@ should correspond with the surface location.
 
 Setup the inversion
 ^^^^^^^^^^^^^^^^^^^
-
-**! IF EDIT OPTIONS DOESN'T WORK, NEED TO REPLACE THESE INSTRUCTIONS**
 
     - Create another EM1DFM inversion using :ref:`copy options<invCopyOptions>`
     - Click on the newly created EM1DFM inversion object and set the output directory
@@ -174,14 +172,37 @@ Run Inversion and Load Results
     - Results for this algorithm are automatically loaded into GIFtools
     - :reF:`View the results <viewData>`
 
+.. note:: Since the inversion mesh changes as a function of sounding location,
+          each inversions are started in series. The overall inverse process will
+          take more time than with the static case.
+
+.. _AtoZem1dfm_static_discussion:
+
 Discussion
 ^^^^^^^^^^
 
-**! IMAGE OF INVERSION RESULTS AND DISCUSSION. BEST RESULT IS EM1DFMinv2d**
+.. figure:: .\..\..\..\images\AtoZ_fem1d\Inv_Adaptive_model.png
+    :align: right
+    :figwidth: 45%
 
+    Recovered 1D models with topography
 
+While the recovered conductivity value are near identical to the static case,
+we have recovered a pseudo 3D model that honors topography. Individual 1D
+models can be interpreted as a group in relation with geological information
+that may be available:
 
+    - Compact targets are recovered as arc-shaped conductors due to the 1D assumption
+    - The inversion recovered a thin layer over the entire area of investigation, which appears to be slightly more conductive than the background.
 
+Ideally we would like to test the hypothesis of a conductive overburden in 3D,
+which will be covered in the :ref:`next section<AtoZem1dfm_lateral>`.
+
+.. .. figure:: .\..\..\..\images\AtoZ_fem1d\True_model.png
+..     :align: right
+..     :figwidth: 45%
+
+..     True 3D conductivity model
 
 
 .. figure:: .\..\..\..\images\AtoZ_fem1d\InvStatic_Misfit_1000I.png

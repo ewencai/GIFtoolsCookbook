@@ -36,24 +36,25 @@ Setup for the Exercise
     - Open your preexisting GIFtools project
     - :ref:`Set the working directory <projSetWorkDir>` (if you would like to change it)
 
-**If you have NOT completed the previous tutorial and would like to start here, complete the following steps:**
+.. note:: **If you have NOT completed the previous tutorial and would like to start here, complete the following steps:**
 
-    - `Download the demo <https://github.com/ubcgif/GIFtoolsCookbook/raw/master/assets/AtoZ_FEM1D_4Download.zip>`_
-    - Open GIFtools
-    - :ref:`Set the working directory <projSetWorkDir>`
-    - :ref:`Import raw FEM data <importFemData>` (1D FEM GIF format data in ppm)
-    - :ref:`Import the topography data <importTopo>` (3D GIF format)
-    - :ref:`Import 1D mesh<importMesh>` (layers file)
-    - :ref:`Create elevation from surface topography<objectElevFromSurface>`
-        - Set elevation at 40 m above topography
-        - :ref:`Set i/o header<objectSetioHeaders>` for Z to the elevation column you just created.
+            - `Download the demo <https://github.com/ubcgif/GIFtoolsCookbook/raw/master/assets/AtoZ_FEM1D_4Download.zip>`_
+            - Open GIFtools
+            - :ref:`Set the working directory <projSetWorkDir>`
+            - :ref:`Import raw FEM data <importFemData>` (1D FEM GIF format data in ppm)
+            - :ref:`Import the topography data <importTopo>` (3D GIF format)
+            - :ref:`Import 1D mesh<importMesh>` (layers file)
+            - :ref:`Create elevation from surface topography<objectElevFromSurface>`
+                - Set elevation at 40 m above topography
+                - :ref:`Set i/o header<objectSetioHeaders>` for Z to the elevation column you just created.
 
 
-.. figure:: .\..\..\..\images\AtoZ_fem1d\dataPlot5000.png
-    :align: center
-    :width: 700
+.. raw:: html
+    :file: ./AtoZ_Data_Real.html
 
-    Real component of the magnetic field at f = 5000 Hz (left). Imaginary component of the magnetic field at f = 5000 Hz (right)
+.. raw:: html
+    :file: ./AtoZ_Data_Imag.html
+
 
 .. _AtoZem1dfm_lateral_inversion:
 
@@ -72,29 +73,26 @@ Setup the inversion
 
 **If you have completed the tutorial** :ref:`"Static and Adaptive 1D Inversion"<AtoZem1dfm_static>`:
 
+    .. figure:: .\..\..\..\images\AtoZ_fem1d\Inv_LC_inp.png
+        :align: right
+        :scale: 10%
+
     - Click on a preexisting EM1DFM inversion object and :ref:`copy options<invCopyOptions>`
     - Click on the newly created EM1DFM inversion object to set the output directory
     - Set any necessary EM1DFM inversion parameters under :ref:`edit options<invEditOptions>`:
         - Make sure the mesh, observed data and topography are properly set!
-        - Mode: Laterally constrained 3D with *Max distance* = 1000 m, *Number of stations* = 16 and smoothing parameter = 100
+        - Mode: Laterally constrained 3D
+            - *Max distance* = 1000 m
+            - *Number of stations* = 16
+            - *Smoothing parameter* = 100
+        - Use the *Fix Trade-off* mode
+            - *Initial beta* = 2000
+            - *Cooling factor* = 10
 
-**If you have NOT completed the previous tutorial and are starting here:**
+.. note:: **If you have NOT completed the previous tutorial and are starting here:**
 
-    - :ref:`Create an EM1DFM inversion object <createFEMInv>` and set the output directory
-    - Set the EM1DFM inversion parameters under :ref:`edit options<invEditOptions>`:
-        - **Global tab**:
-            - Set mesh from drop-down menu
-            - Set observed data from drop-down menu
-            - Mode: Laterally constrained 3D with *Max distance* = 1000 m, *Number of stations* = 16 and smoothing parameter = 100
-            - Model options: for this example, data are inverted strictly for a conductivity model
-            - Solver options: leave as default or customize
-            - Trade-off Mode: set to discrepancy principle
-        - **Conductivity tab:**
-            - Leave as default or customize
-        - **Susceptibility tab:**
-            - Leave as default or customize (if being used)
-        - Click apply and write all files
-
+            - :ref:`Create an EM1DFM inversion object <createFEMInv>` and set the output directory
+            - Set the EM1DFM inversion parameters under :ref:`edit options<invEditOptions>`:
 
 .. note:: If you chose not to write the files from the edit options menu, you may do so through :ref:`write inversion files <invWriteAll>`
 
@@ -110,15 +108,74 @@ Run Inversion and Load Results
 
 Discussion
 ^^^^^^^^^^
+.. figure:: .\..\..\..\images\AtoZ_fem1d\Inv_LC_model.png
+    :align: right
+    :figwidth: 45%
 
-**! IMAGE OF RESULTS AND DISCUSSION. MUST RE-RUN INVERSION AFTER BUG WITH BETA**
+    Recovered 1D models with topography and lateral constraints
+
+The lateral constraints strategy comes with many advantages:
+
+    - Neighboring 1D conductivity models are more consistent
+    - Conductivity structures are interpolated in 3D, possibly highlighting trends in the model and easing the interpretation.
+    - Possible to employ a :math:`\beta`-cooling strategy similar to the 3D inversion code.
+
+The use of a global measure of data fit allows us to assess the convergence of
+the algorithm through the :ref:`convergence curve<convergence_curve>` window.
+
+.. figure:: .\..\..\..\images\AtoZ_fem1d\Inv_LC_convergence.png
+    :align: right
+    :figwidth: 45%
+
+    Convergence curves
 
 
-Laterally Constrained with Hard Constraints
--------------------------------------------
 
-**! ADD THIS IF WE WANT**
 
+Ideally we would like to test the hypothesis of a conductive overburden in 3D, as well as to impose bounds on the conductivity values.
+which we covered in the :ref:`next section<AtoZem1dfm_lateral>`.
+
+.. _AtoZem1dfm_lateral_constr:
+
+Laterally Constrained with Geological Information
+-------------------------------------------------
+
+As a final example, we will impose 3D geological constraints on the Laterally Constrained 1D inversions.
+
+Setup the inversion
+^^^^^^^^^^^^^^^^^^^
+
+    .. figure:: .\..\..\..\images\AtoZ_fem1d\Inv_LC_inp.png
+        :align: right
+        :scale: 10%
+
+    - Click on a preexisting EM1DFM inversion object and :ref:`copy options<invCopyOptions>`
+    - :ref:`Import the surface<importSurface>` file provided *TillLayer.topo*
+    - From the previously create 3D mesh, :ref:`create a full active model<createActiveCellsModel>`
+    - :ref:`Create a ModelBuilder<createModelBuilder>`
+
+    .. figure:: .\..\..\..\images\AtoZ_fem1d\TillModel.png
+        :align: right
+        :scale: 10%
+
+    - From ModelBuilder -> Create Model
+        - Using surface
+            - Populate values
+
+    .. figure:: .\..\..\..\images\AtoZ_fem1d\TillWeights.png
+        :align: right
+        :scale: 10%
+
+    - From ModelBuilder -> Build Constraints
+        - Weighting functions
+            - From only a geological model
+             - Face weights (Weight value = 10)
+
+.. figure:: .\..\..\..\images\AtoZ_fem1d\True_model.png
+    :align: right
+    :figwidth: 45%
+
+    True 3D conductivity model
 
 
 
