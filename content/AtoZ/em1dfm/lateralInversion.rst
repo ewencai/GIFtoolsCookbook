@@ -141,9 +141,15 @@ Laterally Constrained with Geological Information
 As a final example, we will impose 3D geological constraints on the Laterally Constrained 1D inversions.
 We first need to create the reference conductivity model from a surface:
 
-    - :ref:`Import the surface<importSurface>` file provided *TillLayer.topo*
+    - :ref:`Import the surface<importSurface>` file provided: *TillLayer.topo*
     - From the previously create 3D mesh, :ref:`create a full active model<createActiveCellsModel>`
     - :ref:`Create a ModelBuilder<createModelBuilder>`
+
+    .. figure:: .\..\..\..\images\AtoZ_fem1d\AtoZ_fem_TillModel.png
+        :align: right
+        :figwidth: 45%
+
+        Physical property model built from till surface layer.
 
     .. figure:: .\..\..\..\images\AtoZ_fem1d\TillModel.png
         :align: right
@@ -152,6 +158,12 @@ We first need to create the reference conductivity model from a surface:
     - From ModelBuilder -> Create Model
         - Using surface
             - Populate values
+                - Assign :math:`10^{-4}` S\\m
+    - Change model values for the basement
+        - Model->Edit
+            - Replace value
+                - Old value: 0
+                - New value: :math:`10^{-5}` S\\m
 
 We can now use this physical property model to define surface weights in order
 to encourage large gradients at the bottom of the till layer.
