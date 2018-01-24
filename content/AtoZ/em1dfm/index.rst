@@ -7,19 +7,18 @@
 A to Z Examples for EM1DFM
 ==========================
 
-.. figure:: ..\..\..\images\AtoZ_fem1d\LC_fem1D.png
+.. figure:: ../../../images/AtoZ_fem1d/LC_fem1D.png
     :align: right
     :figwidth: 30%
 
 
 Here, we demonstrate the interpretation of FEM data through both independent
 1D inversions and with a laterally constrained pseudo-3D inversion approach.
-Although full 3D FEM inversion algorithms have been developed, they are
-significant time and processing power limitations to compute a final model.
-Meanwhile 1D and laterally constrained pseudo-3D inversion approaches are
-computationally fast algorithms, capable of recovering information about 3D
-conductivity and susceptibility structures. The tutorial for the EM1DFM code
-is split into three parts:
+Although full 3D FEM inversion algorithms have been developed, computer
+processing limitations still persist. Meanwhile 1D and laterally constrained
+pseudo-3D inversion approaches are computationally fast algorithms and capable of
+recovering bulk information about 3D conductivity and susceptibility structures.
+The tutorial for the EM1DFM inversion code is split into three parts:
 
     .. toctree::
        :maxdepth: 1
@@ -28,7 +27,7 @@ is split into three parts:
        Static and Adaptive 1D Inversion <staticInversion>
        Laterally Constrained 3D Inversion <lateralInversion>
 
-.. figure:: ..\..\..\images\AtoZ_fem1d\AtoZ_EM1DFM_landing_LC.png
+.. figure:: ../../../images/AtoZ_fem1d/AtoZ_EM1DFM_landing_LC.png
     :align: center
     :figwidth: 75%
 

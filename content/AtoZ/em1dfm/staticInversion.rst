@@ -17,7 +17,7 @@ Static and adaptive 1D inversion algorithms are a computationally fast way to
 obtain depth and horizontal location information about conductive/resistive
 and magnetically susceptible targets.
 
-.. figure:: .\..\..\..\images\AtoZ_fem1d\inv_fem1D_landing.png
+.. figure:: ./../../../images/AtoZ_fem1d/inv_fem1D_landing.png
     :align: center
     :figwidth: 75%
 
@@ -62,7 +62,7 @@ Setup for the Exercise
 Static 1D FEM Inversion
 -----------------------
 
-.. figure:: .\..\..\..\images\AtoZ_fem1d\static_fem1D.png
+.. figure:: ./../../../images/AtoZ_fem1d/static_fem1D.png
     :align: right
     :figwidth: 40%
 
@@ -76,7 +76,7 @@ Setup the inversion
 
     - :ref:`Create an EM1DFM inversion object <createFEMInv>` and set the output directory
 
-    .. figure:: .\..\..\..\images\AtoZ_fem1d\Inv_static_inp.png
+    .. figure:: ./../../../images/AtoZ_fem1d/Inv_static_inp.png
         :align: right
         :scale: 10%
 
@@ -110,7 +110,7 @@ Run Inversion and Load Results
 Discussion
 ^^^^^^^^^^
 
-.. figure:: .\..\..\..\images\AtoZ_fem1d\Inv_Static_model.png
+.. figure:: ./../../../images/AtoZ_fem1d/Inv_Static_model.png
     :align: right
     :figwidth: 40%
 
@@ -140,7 +140,7 @@ true 3D variations.
 Adaptive 1D FEM Inversion
 -------------------------
 
-.. figure:: .\..\..\..\images\AtoZ_fem1d\adaptive_fem1D.png
+.. figure:: ./../../../images/AtoZ_fem1d/adaptive_fem1D.png
     :align: right
     :figwidth: 40%
 
@@ -181,7 +181,7 @@ Run Inversion and Load Results
 Discussion
 ^^^^^^^^^^
 
-.. figure:: .\..\..\..\images\AtoZ_fem1d\Inv_Adaptive_model.png
+.. figure:: ./../../../images/AtoZ_fem1d/Inv_Adaptive_model.png
     :align: right
     :figwidth: 45%
 
@@ -198,26 +198,26 @@ that may be available:
 
 
 
-.. figure:: .\..\..\..\images\AtoZ_fem1d\InvStatic_Misfit_1000I.png
+.. figure:: ./../../../images/AtoZ_fem1d/InvStatic_Misfit_1000I.png
     :align: right
     :figwidth: 0%
 
-.. figure:: .\..\..\..\images\AtoZ_fem1d\InvStatic_Misfit_5000I.png
+.. figure:: ./../../../images/AtoZ_fem1d/InvStatic_Misfit_5000I.png
     :align: right
     :figwidth: 0%
 
-.. figure:: .\..\..\..\images\AtoZ_fem1d\InvStatic_Misfit_25000I.png
+.. figure:: ./../../../images/AtoZ_fem1d/InvStatic_Misfit_25000I.png
     :align: right
     :figwidth: 0%
 
-.. figure:: .\..\..\..\images\AtoZ_fem1d\InvStatic_Misfit_1000R.png
+.. figure:: ./../../../images/AtoZ_fem1d/InvStatic_Misfit_1000R.png
     :align: right
     :figwidth: 0%
 
-.. figure:: .\..\..\..\images\AtoZ_fem1d\InvStatic_Misfit_5000R.png
+.. figure:: ./../../../images/AtoZ_fem1d/InvStatic_Misfit_5000R.png
     :align: right
     :figwidth: 0%
 
-.. figure:: .\..\..\..\images\AtoZ_fem1d\InvStatic_Misfit_25000R.png
+.. figure:: ./../../../images/AtoZ_fem1d/InvStatic_Misfit_25000R.png
     :align: right
     :figwidth: 0%

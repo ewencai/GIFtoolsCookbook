@@ -16,7 +16,7 @@ The laterally constrained 3D inversion algorithm is a computationally fast way
 to invert FEM data while taking into account both vertical and horizontal
 variability of the Earth.
 
-.. figure:: ..\..\..\images\AtoZ_fem1d\AtoZ_EM1DFM_landing_LC.png
+.. figure:: ../../../images/AtoZ_fem1d/AtoZ_EM1DFM_landing_LC.png
     :align: center
     :figwidth: 75%
 
@@ -42,7 +42,7 @@ Setup for the Exercise
             - `Download the demo <https://github.com/ubcgif/GIFtoolsCookbook/raw/master/assets/AtoZ_FEM1D_4Download.zip>`_
             - Open GIFtools
             - :ref:`Set the working directory <projSetWorkDir>`
-            - :ref:`Import em1dfm data file: Assets\\FEM1D.obs <importFemData>` (1D FEM GIF format data in ppm)
+            - :ref:`Import em1dfm data file: Assets//FEM1D.obs <importFemData>` (1D FEM GIF format data in ppm)
             - :ref:`Import the topography data <importTopo>` (3D GIF format)
             - :ref:`Create elevation from surface topography<objectElevFromSurface>`
                 - Set elevation at 40 m above topography
@@ -62,7 +62,7 @@ Setup for the Exercise
 Laterally Constrained 3D FEM Inversion
 --------------------------------------
 
-.. figure:: .\..\..\..\images\AtoZ_fem1d\LC_fem1D.png
+.. figure:: ./../../../images/AtoZ_fem1d/LC_fem1D.png
     :align: right
     :scale: 75%
 
@@ -74,7 +74,7 @@ Setup the inversion
 
 **If you have completed the tutorial** :ref:`"Static and Adaptive 1D Inversion"<AtoZem1dfm_static>`:
 
-    .. figure:: .\..\..\..\images\AtoZ_fem1d\Inv_LC_inp.png
+    .. figure:: ./../../../images/AtoZ_fem1d/Inv_LC_inp.png
         :align: right
         :scale: 10%
 
@@ -109,7 +109,7 @@ Run Inversion and Load Results
 
 Discussion
 ^^^^^^^^^^
-.. figure:: .\..\..\..\images\AtoZ_fem1d\Inv_LC_model.png
+.. figure:: ./../../../images/AtoZ_fem1d/Inv_LC_model.png
     :align: right
     :figwidth: 45%
 
@@ -124,7 +124,7 @@ The lateral constraints strategy comes with many advantages:
 The use of a global measure of data fit allows us to assess the convergence of
 the algorithm through the usual :ref:`convergence curve<convergence_curve>` window.
 
-.. figure:: .\..\..\..\images\AtoZ_fem1d\Inv_LC_convergence.png
+.. figure:: ./../../../images/AtoZ_fem1d/Inv_LC_convergence.png
     :align: right
     :figwidth: 45%
 
@@ -146,13 +146,13 @@ We first need to create the reference conductivity model from a surface:
     - From the previously create 3D mesh, :ref:`create a full active model<createActiveCellsModel>`
     - :ref:`Create a ModelBuilder<createModelBuilder>`
 
-    .. figure:: .\..\..\..\images\AtoZ_fem1d\AtoZ_fem_TillModel.png
+    .. figure:: ./../../../images/AtoZ_fem1d/AtoZ_fem_TillModel.png
         :align: right
         :figwidth: 45%
 
         Physical property model built from till surface layer.
 
-    .. figure:: .\..\..\..\images\AtoZ_fem1d\TillModel.png
+    .. figure:: ./../../../images/AtoZ_fem1d/TillModel.png
         :align: right
         :scale: 10%
 
@@ -169,7 +169,7 @@ We first need to create the reference conductivity model from a surface:
 We can now use this physical property model to define surface weights in order
 to encourage large gradients at the bottom of the till layer.
 
-    .. figure:: .\..\..\..\images\AtoZ_fem1d\TillWeights.png
+    .. figure:: ./../../../images/AtoZ_fem1d/TillWeights.png
         :align: right
         :scale: 10%
 
@@ -182,7 +182,7 @@ to encourage large gradients at the bottom of the till layer.
 Setup the inversion
 ^^^^^^^^^^^^^^^^^^^
 
-    .. figure:: .\..\..\..\images\AtoZ_fem1d\Inv_LC_inp.png
+    .. figure:: ./../../../images/AtoZ_fem1d/Inv_LC_inp.png
         :align: right
         :scale: 10%
 
@@ -200,7 +200,7 @@ Run Inversion and Load Results
 Discussion
 ^^^^^^^^^^
 
-.. figure:: .\..\..\..\images\AtoZ_fem1d\Inv_LC_constrained.png
+.. figure:: ./../../../images/AtoZ_fem1d/Inv_LC_constrained.png
     :align: right
     :figwidth: 45%
 
@@ -211,13 +211,13 @@ This final solution differs from the previous inversion such that:
     - The upper conductivities are more consistent :math:`\approx 10^4 \Omega \cdot m`
     - The top of the kimberlite pipes is at the right depth, and the compact shape of the pipes is better preserved
 
-.. figure:: .\..\..\..\images\AtoZ_fem1d\Inv_LC_constrained_EW.png
+.. figure:: ./../../../images/AtoZ_fem1d/Inv_LC_constrained_EW.png
     :align: left
     :figwidth: 45%
 
     EW section through the constrained 1D inversion
 
-.. figure:: .\..\..\..\images\AtoZ_fem1d\True_EW_section.png
+.. figure:: ./../../../images/AtoZ_fem1d/True_EW_section.png
     :align: right
     :figwidth: 45%
 

@@ -6,7 +6,7 @@
 Specifying Parameters for FEM Sounding Inversion
 ================================================
 
-.. figure:: .\..\..\..\images\AtoZ_fem1d\xyz_to_FEM.png
+.. figure:: ./../../../images/AtoZ_fem1d/xyz_to_FEM.png
     :align: right
     :scale: 50%
 
@@ -58,7 +58,7 @@ In addition to raw geophysical data, you may have access to topographical inform
 Add Transmitter, Receiver and Elevation Information
 ---------------------------------------------------
 
-.. figure:: .\..\..\..\images\AtoZ_fem1d\create_FEM_Tx_Rx.png
+.. figure:: ./../../../images/AtoZ_fem1d/create_FEM_Tx_Rx.png
     :align: right
     :scale: 50%
 
@@ -117,26 +117,26 @@ Before inverting the data, we must assign uncertainties. The role of uncertainti
         - The recovered model does not fit the data too heavily at certain frequencies at the expense of others
         - the recovered model fits the real and imaginary components of the data equally
 
-.. figure:: .\..\..\..\images\AtoZ_fem1d\FEMdata_1000I.png
+.. figure:: ./../../../images/AtoZ_fem1d/FEMdata_1000I.png
     :align: right
     :figwidth: 0%
 
-.. figure:: .\..\..\..\images\AtoZ_fem1d\FEMdata_5000I.png
+.. figure:: ./../../../images/AtoZ_fem1d/FEMdata_5000I.png
     :align: right
     :figwidth: 0%
 
-.. figure:: .\..\..\..\images\AtoZ_fem1d\FEMdata_25000I.png
+.. figure:: ./../../../images/AtoZ_fem1d/FEMdata_25000I.png
     :align: right
     :figwidth: 0%
 
-.. figure:: .\..\..\..\images\AtoZ_fem1d\FEMdata_1000R.png
+.. figure:: ./../../../images/AtoZ_fem1d/FEMdata_1000R.png
     :align: right
     :figwidth: 0%
 
-.. figure:: .\..\..\..\images\AtoZ_fem1d\FEMdata_5000R.png
+.. figure:: ./../../../images/AtoZ_fem1d/FEMdata_5000R.png
     :align: right
     :figwidth: 0%
 
-.. figure:: .\..\..\..\images\AtoZ_fem1d\FEMdata_25000R.png
+.. figure:: ./../../../images/AtoZ_fem1d/FEMdata_25000R.png
     :align: right
     :figwidth: 0%
