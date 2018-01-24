@@ -35,7 +35,7 @@ Setup for the Exercise
 
 
 .. tip:: - Steps (without links) are also included with the download
-         - Requires at least GIFtools version ??? (**! LINK AND VERSION NUMBER NEEDED**)
+         - Requires at least `GIFtools version 2.2 <https://gif.eos.ubc.ca/GIFtools/downloads2>`_ (login required)
 
 
 .. _AtoZem1dfm_import:
@@ -48,6 +48,7 @@ In addition to raw geophysical data, you may have access to topographical inform
     - :ref:`Import raw FEM data <importFemData>` (Geosoft XYZ format as an FEMsounding).
     - :ref:`Import topography data <importTopo>` (3D GIF format)
     - :ref:`Import 1D mesh<importMesh>` (layers file)
+    - :ref:`Import surface layer<importSurface>` (3D GIF format)
 
 .. tip:: - Use **Edit** |rarr| **Rename** to change what objects in GIFtools are called
          - For any data object, :ref:`edit the data headers <objectDataHeaders>`.

@@ -16,9 +16,10 @@ The laterally constrained 3D inversion algorithm is a computationally fast way
 to invert FEM data while taking into account both vertical and horizontal
 variability of the Earth.
 
-.. figure:: .\..\..\..\images\AtoZ_fem1d\LC_landing.png
+.. figure:: ..\..\..\images\AtoZ_fem1d\AtoZ_EM1DFM_landing_LC.png
     :align: center
-    :scale: 75%
+    :figwidth: 75%
+
 
 As part of this exercise, the user will:
 
@@ -41,12 +42,12 @@ Setup for the Exercise
             - `Download the demo <https://github.com/ubcgif/GIFtoolsCookbook/raw/master/assets/AtoZ_FEM1D_4Download.zip>`_
             - Open GIFtools
             - :ref:`Set the working directory <projSetWorkDir>`
-            - :ref:`Import raw FEM data <importFemData>` (1D FEM GIF format data in ppm)
+            - :ref:`Import em1dfm data file: Assets\\FEM1D.obs <importFemData>` (1D FEM GIF format data in ppm)
             - :ref:`Import the topography data <importTopo>` (3D GIF format)
-            - :ref:`Import 1D mesh<importMesh>` (layers file)
             - :ref:`Create elevation from surface topography<objectElevFromSurface>`
                 - Set elevation at 40 m above topography
                 - :ref:`Set i/o header<objectSetioHeaders>` for Z to the elevation column you just created.
+            - :ref:`Import 1D mesh<importMesh>` (layers file)
 
 
 .. raw:: html
@@ -83,8 +84,8 @@ Setup the inversion
         - Make sure the mesh, observed data and topography are properly set!
         - Mode: Laterally constrained 3D
             - *Max distance* = 1000 m
-            - *Number of stations* = 16
-            - *Smoothing parameter* = 100
+            - *Number of stations* = 10
+            - *Smoothing parameter* = 10
         - Use the *Fix Trade-off* mode
             - *Initial beta* = 2000
             - *Cooling factor* = 10

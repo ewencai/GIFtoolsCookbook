@@ -43,12 +43,12 @@ Setup for the Exercise
             - `Download the demo <https://github.com/ubcgif/GIFtoolsCookbook/raw/master/assets/AtoZ_FEM1D_4Download.zip>`_
             - Open GIFtools
             - :ref:`Set the working directory <projSetWorkDir>`
-            - :ref:`Import raw FEM data <importFemData>` (1D FEM GIF format data in ppm)
+            - :ref:`Import em1dfm data file: Assets\\FEM1D.obs <importFemData>` (1D FEM GIF format data in ppm)
             - :ref:`Import the topography data <importTopo>` (3D GIF format)
-            - :ref:`Import 1D mesh<importMesh>` (layers file)
             - :ref:`Create elevation from surface topography<objectElevFromSurface>`
                 - Set elevation at 40 m above topography
                 - :ref:`Set i/o header<objectSetioHeaders>` for Z to the elevation column you just created.
+            - :ref:`Import 1D mesh<importMesh>` (layers file)
 
 
 .. raw:: html
