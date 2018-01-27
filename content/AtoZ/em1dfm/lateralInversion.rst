@@ -136,8 +136,8 @@ which we covered in the :ref:`next section<AtoZem1dfm_lateral>`.
 
 .. _AtoZem1dfm_lateral_constr:
 
-Laterally Constrained with Geological Information
--------------------------------------------------
+Geological Constraints: Hypothesis Testing
+------------------------------------------
 
 As a final example, we will impose 3D geological constraints on the Laterally Constrained 1D inversions.
 We first need to create the reference conductivity model from a surface:
