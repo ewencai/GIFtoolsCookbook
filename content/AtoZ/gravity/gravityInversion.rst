@@ -127,7 +127,7 @@ constrained with the model that was made using the geological surface map (see
         - Apply and write files when finished
     - :ref:`Run the inversion <invRun>`
     - :ref:`Import inversion results <invLoadResults>`
-    - :reF:`View the results <viewData>`.
+    - :reF:`View the results <viewData>`
 
     .. note:: **The user is encouraged to:**
 

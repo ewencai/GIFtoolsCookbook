@@ -61,8 +61,8 @@ and can perform actions (add/substract, write to file, plot, etc.)
    :scale: 50%
 
 **Objects** can be linked to each other, like building blocks, to achieve
-more complex tasks. For example, a :ref:`Model <objectFunctionalityModel>` needs :ref:`Mesh <objectFunctionalityMesh>` in order to exist in a 3D
-space and be exported.
+more complex tasks. For example, a :ref:`Model <objectFunctionalityModel>` needs a :ref:`Mesh <objectFunctionalityMesh>` in order to exist in 3D
+and be visualized.
 
 
 More complex objects, such as a :ref:`GIFinversion <objectFunctionalityInv>`,

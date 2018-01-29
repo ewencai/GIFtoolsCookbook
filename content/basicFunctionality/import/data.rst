@@ -306,6 +306,36 @@ To import Frequency-domain ElectroMagnetic (FEM) data, use the main project menu
     :width: 400
 
 
+GIF formatted data
+^^^^^^^^^^^^^^^^^^
+
+GIF formatted FEM data contains all necessary transmitter, receiver and frequency information. As a result, no further steps are required when loading GIF formatted data into GIFtools.
+
+
+Geosoft XYZ and CSV data
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+These data types do not contain transmitter, receiver and frequency information, only the raw data. As a result, an additional window will pop up when loading FEM data in these formats. The user will also be required to set transmitter (**link**) and receiver (**link**) information once the data are loaded.
+
+
+.. figure:: ../../../images/importFEM_other.png
+    :align: center
+    :width: 700
+
+
+**Step 1: assign spatial data, specify frequencies and number of data type**
+
+Click this button to specify the Easting, Northing and Elevation columns. The user will also specify the frequencies contained within the data and the number of data groups. If the data contain both real and imaginary components of the response at three different frequencies, then there are 3 frequencies and 2 data groups resulting in 6 total data columns.
+
+**Step 2: specify data types**
+
+Select which data type you would like to specify from the drop-down menu and click **specify type**. In the window that pops up, set the header name for the data type and assign the data to each frequency.
+
+**Step 3: add miscellaneous data**
+
+This step is used to define any remaining data columns. This might include orientation information for the transmitters and receivers, etc...
+
+
 **File formats:**
 
 FEM data can be imported in from three main file types:

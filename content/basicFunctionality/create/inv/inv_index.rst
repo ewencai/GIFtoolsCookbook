@@ -111,6 +111,8 @@ Frequency-domain EM (FEM) data can be inverted through the program ``E3D``, whic
 
 **Create** |rarr| **Inversion** |rarr| **Frequency-domain EM** |rarr| **E3D (octree)**
 
+**Create** |rarr| **Inversion** |rarr| **Frequency-domain EM** |rarr| **EM1DFM (1D)**
+
 
 .. _createTEMInv:
 
@@ -122,6 +124,8 @@ Time-domain EM (TEM) data can be inverted through the programs ``TDoctree (1 mes
 **Create** |rarr| **Inversion** |rarr| **Time-domain EM** |rarr| **TD octree (1 mesh)**
 
 **Create** |rarr| **Inversion** |rarr| **Time-domain EM** |rarr| **TD octree (tiled)**
+
+**Create** |rarr| **Inversion** |rarr| **Time-domain EM** |rarr| **EM1DTM (1D)**
 
 
 .. _createMTZ3DInv:

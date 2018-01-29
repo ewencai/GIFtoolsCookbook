@@ -196,11 +196,17 @@ direction (bearing) of survey. This function groups the survey observation stati
 Coordinates
 -----------
 
-.. raw:: html
-    :file: ../../../../underconstruction.html
+This functionality is accessed through:
+
+**Data Manipulation** |rarr| **Coordinates**
+
+and can be used to:
+
+    - rotate or shift raw data into a local coordinate system
+    - use altitude data and surface topography to determine the data elevation
 
 
-.. figure:: ../../../../images/uncert.png
+.. figure:: ../../../../images/object/data/manipulationCoords.png
     :align: center
     :width: 400
 
@@ -209,20 +215,41 @@ Coordinates
 Shift spatial coordinates
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
+This functionality allows the user to shift the Easting and Northing locations of the data within a data object. The action creates new data columns and does not delete the preexisting Easting and Northing locations. This functionality is accessed through:
+
+**Data Manipulation** |rarr| **Coordinates** |rarr| **Shift spatial coordinates**
+
+
 .. _objectRotateCoord:
 
-Rotate spatial coordinates
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+Rotate spatial coordinates and data
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+This functionality allows the user to change the Easting and Northing locations of the data within a data object by rotating about a fixed point. The use may also apply the rotation to specified data columns; this is useful when the dataset contains horizontal field measurements. This functionality is accessed through:
+
+**Data Manipulation** |rarr| **Coordinates** |rarr| **Rotate spatial coordinates**
+
+
 
 .. _objectLookUpTable:
 
 Use look-up table
 ^^^^^^^^^^^^^^^^^
 
+.. raw:: html
+    :file: ../../../../underconstruction.html
+
+
+
 .. _objectElevFromSurface:
 
 Calculate elevation from surface
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+This functionality allows the user to create an elevation (height of the data) column from a surface or topography object. Elevations can be set at, above or below the surface by a specified amount. In addition, data columns (such as a flight altitude column) within the data object can be used to create the elevation values. This functionality is accessed through:
+
+**Data Manipulation** |rarr| **Coordinates** |rarr| **Calculate elevation from surface**
+
 
 
 .. _objectAssignUncert:
@@ -230,27 +257,43 @@ Calculate elevation from surface
 Assign uncertainties
 --------------------
 
-Assigning uncertainties is vital to inversion and therefor is also required as an :ref:`i/o header<objectSetioHeaders>`. To assign uncertainties to a data object, click on the object and select the menu **Data manipulation** |rarr| **Assign uncertainties**
+Assigning uncertainties is vital to inversion and therefore is also required as an :ref:`i/o header<objectSetioHeaders>`. An explanation of the uncertainties and their role in the inversion process can be found in :ref:`inversion fundamentals<AtoZUncertainties>`. To assign uncertainties to a data object, click on the object and select the menu:
+
+**Data manipulation** |rarr| **Assign uncertainties**
 
 .. figure:: ../../../../images/uncert.png
     :align: center
     :width: 400
 
 
-**NOTE** When assigning uncertainties to EM data, the user has two options:
+Assign Simple Uncertainties
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-#. To assign a percentage and floor to all frequencies/times per data type use the menu **Data manipulation** |rarr| **Assign uncertainties** |rarr| **Simple**
+To apply the same floor and percent when computing uncertainties for all data, select:
 
-#. FOR TEM data: To open up the time-dependent uncertainty dialog, use the menu **Data manipulation** |rarr| **Assign uncertainties** |rarr| **Time dependent**
-
-#. FOR FEM data: To open up the frequency-dependent uncertainty dialog, use the menu **Data manipulation** |rarr| **Assign uncertainties** |rarr| **Time dependent**
-
-An example from FEM data (TEM is the same structure):
+**Data manipulation** |rarr| **Assign uncertainties** |rarr| **Simple**
 
 
-.. figure:: ../../../../images/EMuncert.png
-    :align: center
-    :width: 400
+Frequency and Time-Dependent Uncertainties
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The user may want to specify a particular floor and percent for the uncertainties at every distinct frequency/time. In this case, the user may select:
+
+    - **Data manipulation** |rarr| **Assign uncertainties** |rarr| **Time dependent**
+    - **Data manipulation** |rarr| **Assign uncertainties** |rarr| **Frequency dependent**
+
+Uncertainties are assigned by carrying out the following steps:
+
+    1. From the *data type* drop-down menu, select the data column for which uncertainties will be applied
+    2. From the *frequency/time* drop-down menu, select the frequency/time at which you are computing the uncertainties
+    3. Under *choose method*, select either *\% of number of data* or *\% of data value*. In either case, the percent uncertainty contribution is calculated in the same way. However:
+
+        - *\% of number of data* sets the floor value based on the magnitudes of sorted data values. If 1\% is chosen, the floor value is equal to the threshold value for the smallest 1\% in magnitude
+        - *\% of data value* sets the floor as the value entered
+
+    4. Click *assign selected* to apply the uncertainties
+    5. Repeat for all data columns and frequencies/times
+    6. When finished, select *OK* to finish
 
 
 .. _objectCombineData:

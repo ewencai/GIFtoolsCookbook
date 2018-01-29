@@ -17,6 +17,7 @@ This is sometimes referred to as "penalty-based optimization"; that is, the obje
 
     - **trade-off parameter** :math:`\beta`, which weights the relative contribution of :math:`\phi_d (\mathbf{m})` and :math:`\phi_m (\mathbf{m})` towards the objective function.
 
+.. _ObjectiveFunction_dmis:
 
 **Data Misfit:**
 
@@ -78,3 +79,4 @@ In this section, we will explore the effect of these different parameters on the
 .. figure:: ../../../images/InversionFundamentals/model.png
     :align: right
     :figwidth: 100%
+    :name: InvFundModel

@@ -47,3 +47,20 @@ To view (with the option to edit) the times or frequencies within a data set, cl
 
 
 
+.. _objectEMsetDataNorm:
+
+Set Data Normalization (FEM and TEMsounding Only)
+-------------------------------------------------
+
+Both the EM1DFM and EM1DTM inversion codes can interpret a variety of representations of EM data for both the real and imaginary components. To ensure the data are interpreted correctly by the EM1DFM and EM1DTM codes, the data normalization must be set to one of the following options:
+
+	- **ppm:** secondary field component as parts-per-million of the primary field
+	- **%:** secondary field component as a fractional percent of the strength of the primary field
+	- **A/m:** secondary field component in A/m
+	- **Total field:** total field (primary + secondary) in A/m
+
+This functionality can be accessed through 
+
+**Data manipulation** |rarr| **Set Data Normalization**
+
+
