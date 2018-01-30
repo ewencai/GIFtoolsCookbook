@@ -38,17 +38,20 @@ Setup for the Exercise
     - Open your preexisting GIFtools project
     - :ref:`Set the working directory <projSetWorkDir>` (if you would like to change it)
 
-.. note:: If you have NOT completed the previous tutorial and would like to start here, complete the following steps:
+**If you have NOT completed the previous tutorial and would like to start here, complete the following steps:**
 
-            - `Download the demo <https://github.com/ubcgif/GIFtoolsCookbook/raw/master/assets/AtoZ_FEM1D_4Download.zip>`_
-            - Open GIFtools
-            - :ref:`Set the working directory <projSetWorkDir>`
-            - :ref:`Import em1dfm data file: Assets\\FEM1D.obs <importFemData>` (1D FEM GIF format data in ppm)
-            - :ref:`Import the topography data <importTopo>` (3D GIF format)
-            - :ref:`Create elevation from surface topography<objectElevFromSurface>`
-                - Set elevation at 40 m above topography
-                - :ref:`Set i/o header<objectSetioHeaders>` for Z to the elevation column you just created.
-            - :ref:`Import 1D mesh<importMesh>` (layers file)
+    - `Download the demo <https://github.com/ubcgif/GIFtoolsCookbook/raw/master/assets/AtoZ_FEM1D_4Download.zip>`_
+    - Open GIFtools
+    - :ref:`Set the working directory <projSetWorkDir>`
+    - :ref:`Import em1dfm data file: Assets\\FEM1D.obs <importFemData>` (1D FEM GIF format data in ppm)
+    - :ref:`Import the topography data <importTopo>` (3D GIF format)
+    - :ref:`Create elevation from surface topography<objectElevFromSurface>`
+        - Set elevation at 40 m above topography
+        - :ref:`Set i/o header<objectSetioHeaders>` for Z to the elevation column you just created.
+        - :ref:`Import 1D mesh<importMesh>` (layers file)
+
+
+.. note:: Uncertainties were ascertained experimentally by running a multitude of inversions and examining the final normalized data misfits in each case.
 
 
 .. raw:: html
@@ -56,6 +59,10 @@ Setup for the Exercise
 
 .. raw:: html
     :file: ./AtoZ_Data_Imag.html
+
+
+*Real (left) and quadrature (right) components of synthetic FEM data collected over TKC*
+
 
 .. _AtoZem1dfm_static_inversion:
 
@@ -75,11 +82,6 @@ Setup the inversion
 ^^^^^^^^^^^^^^^^^^^
 
     - :ref:`Create an EM1DFM inversion object <createFEMInv>` and set the output directory
-
-    .. figure:: ./../../../images/AtoZ_fem1d/Inv_static_inp.png
-        :align: right
-        :scale: 10%
-
     - Set the EM1DFM inversion parameters under :ref:`edit options<invEditOptions>`:
         - **Global tab**:
             - **Set mesh from drop-down menu**
@@ -134,6 +136,8 @@ true 3D variations.
 
 .. raw:: html
     :file: ./AtoZ_DataFit_Static_Imag.html
+
+*Normalized data misfits for the real (left) and quadrature (right) components of the magnetic field*
 
 
 

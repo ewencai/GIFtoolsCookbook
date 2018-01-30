@@ -3,7 +3,7 @@
 Data Misfit and Uncertainties
 =============================
 
-Here, we discuss the importance of assigning appropriate uncertainties, the important of analyzing the data misfit, and present some best-practices. In the :ref:`objective function<ObjectiveFunction>`, we use a :ref:`data misfit<ObjectiveFunction_dmis>` term to ensure the inversion recovers a model which can fit the set of field observations. The data misfit can be expressed as a finite sum:
+Here, we discuss the importance of assigning appropriate uncertainties, the importance of analyzing the data misfit, and present some best-practices. In the :ref:`objective function<ObjectiveFunction>`, we use a :ref:`data misfit<ObjectiveFunction_dmis>` term to ensure the inversion recovers a model which can fit the set of field observations. The data misfit can be expressed as a finite sum:
 
 .. math::
 	\phi_d (\mathbf{m}) = \sum_{i=1}^N \phi_{d,i}^2 = \sum_{i=1}^N \Bigg ( \frac{\mathbf{F[m]}_i - d_i}{\varepsilon_i} \Bigg )^2

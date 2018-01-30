@@ -14,7 +14,8 @@ lateral constraints are added such that the set of recovered 1D models are
 smooth horizontally and can ultimately be constrained and interpreted in 3D.
 The laterally constrained 3D inversion algorithm is a computationally fast way
 to invert FEM data while taking into account both vertical and horizontal
-variability of the Earth.
+variability of the Earth. The final model recovered by this algorithm is fully
+3-dimensional.
 
 .. figure:: ../../../images/AtoZ_fem1d/AtoZ_EM1DFM_landing_LC.png
     :align: center
@@ -37,17 +38,20 @@ Setup for the Exercise
     - Open your preexisting GIFtools project
     - :ref:`Set the working directory <projSetWorkDir>` (if you would like to change it)
 
-.. note:: **If you have NOT completed the previous tutorial and would like to start here, complete the following steps:**
+**If you have NOT completed the previous tutorial and would like to start here, complete the following steps:**
 
-            - `Download the demo <https://github.com/ubcgif/GIFtoolsCookbook/raw/master/assets/AtoZ_FEM1D_4Download.zip>`_
-            - Open GIFtools
-            - :ref:`Set the working directory <projSetWorkDir>`
-            - :ref:`Import em1dfm data file: Assets//FEM1D.obs <importFemData>` (1D FEM GIF format data in ppm)
-            - :ref:`Import the topography data <importTopo>` (3D GIF format)
-            - :ref:`Create elevation from surface topography<objectElevFromSurface>`
-                - Set elevation at 40 m above topography
-                - :ref:`Set i/o header<objectSetioHeaders>` for Z to the elevation column you just created.
-            - :ref:`Import 1D mesh<importMesh>` (layers file)
+    - `Download the demo <https://github.com/ubcgif/GIFtoolsCookbook/raw/master/assets/AtoZ_FEM1D_4Download.zip>`_
+    - Open GIFtools
+    - :ref:`Set the working directory <projSetWorkDir>`
+    - :ref:`Import em1dfm data file: Assets//FEM1D.obs <importFemData>` (1D FEM GIF format data in ppm)
+    - :ref:`Import 1D mesh<importMesh>` (layers file)
+    - :ref:`Import the topography data <importTopo>` (3D GIF format)
+    - :ref:`Create elevation from surface topography<objectElevFromSurface>`
+        - Set elevation at 40 m above topography
+        - :ref:`Set i/o header<objectSetioHeaders>` for Z to the elevation column you just created.
+
+
+.. note:: Uncertainties were ascertained experimentally by running a multitude of inversions and examining the final normalized data misfits in each case.
 
 
 .. raw:: html
@@ -55,6 +59,8 @@ Setup for the Exercise
 
 .. raw:: html
     :file: ./AtoZ_Data_Imag.html
+
+*Real (left) and quadrature (right) components of synthetic FEM data collected over TKC*
 
 
 .. _AtoZem1dfm_lateral_inversion:
@@ -74,10 +80,6 @@ Setup the inversion
 
 **If you have completed the tutorial** :ref:`"Static and Adaptive 1D Inversion"<AtoZem1dfm_static>`:
 
-    .. figure:: ./../../../images/AtoZ_fem1d/Inv_LC_inp.png
-        :align: right
-        :scale: 10%
-
     - Click on a preexisting EM1DFM inversion object and :ref:`copy options<invCopyOptions>`
     - Click on the newly created EM1DFM inversion object to set the output directory
     - Set any necessary EM1DFM inversion parameters under :ref:`edit options<invEditOptions>`:
@@ -86,14 +88,16 @@ Setup the inversion
             - *Max distance* = 1000 m
             - *Number of stations* = 10
             - *Smoothing parameter* = 10
+            - Other parameters left as default values
         - Use the *Fix Trade-off* mode
             - *Initial beta* = 2000
             - *Cooling factor* = 10
+            - Other parameters left as default values
 
-.. note:: **If you have NOT completed the previous tutorial and are starting here:**
+**If you have NOT completed the previous tutorial and are starting here:**
 
-            - :ref:`Create an EM1DFM inversion object <createFEMInv>` and set the output directory
-            - Set the EM1DFM inversion parameters under :ref:`edit options<invEditOptions>`:
+    - :ref:`Create an EM1DFM inversion object <createFEMInv>` and set the output directory
+    - Set the EM1DFM inversion parameters under :ref:`edit options<invEditOptions>` using the parameters specified in the bullet list above
 
 .. note:: If you chose not to write the files from the edit options menu, you may do so through :ref:`write inversion files <invWriteAll>`
 
@@ -139,23 +143,21 @@ which we covered in the :ref:`next section<AtoZem1dfm_lateral>`.
 Geological Constraints: Hypothesis Testing
 ------------------------------------------
 
-As a final example, we will impose 3D geological constraints on the Laterally Constrained 1D inversions.
-We first need to create the reference conductivity model from a surface:
+It is well known that at TKC, there is a till overburden covering a portion of the survey area.
+As a final example we will impose 3D geological constraints on the laterally constrained 1D inversions.
+The geological constraints assume we have some a-priori information about the distribution and thickness of the overlying till.
+To apply geological constraints, we first need to create the reference conductivity model from a surface:
 
-    - :ref:`Import the surface<importSurface>` file provided: *TillLayer.topo*
-    - From the previously create 3D mesh, :ref:`create a full active model<createActiveCellsModel>`
-    - :ref:`Create a ModelBuilder<createModelBuilder>`
+Creating a Reference Model
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-    .. figure:: ./../../../images/AtoZ_fem1d/AtoZ_fem_TillModel.png
-        :align: right
-        :figwidth: 45%
+Here, we use surface topography and a surface object to define the upper and lower surfaces of the till layer, respectively.
+We then assign reasonable physical property values for the till and background.
+To accomplish this task, we use the model builder module.
 
-        Physical property model built from till surface layer.
-
-    .. figure:: ./../../../images/AtoZ_fem1d/TillModel.png
-        :align: right
-        :scale: 10%
-
+    - :ref:`Import the surface<importSurface>` file provided (TillLayer.topo)
+    - Select one of the 3D mesh objects created from a previous inversion and :ref:`create active model from topography<createActiveCellsModel>`. Use *from tops of cells*.
+    - Select the active cells model and :ref:`create a model builder module<createModelBuilder>`
     - From ModelBuilder -> Create Model
         - Using surface
             - Populate values
@@ -177,6 +179,13 @@ to encourage large gradients at the bottom of the till layer.
         - Weighting functions
             - From only a geological model
                 - Face weights (Weight value = 100)
+
+
+.. figure:: ./../../../images/AtoZ_fem1d/AtoZ_fem_TillModel.png
+    :align: right
+    :figwidth: 45%
+
+    Physical property model built from till surface layer.
 
 
 Setup the inversion
