@@ -36,6 +36,7 @@ Here, we describe the specific set of actions (or methods) which can be applied 
     esProcessing/index
     fortran/index
     survey/index
+    model_builder/index
 
 
 

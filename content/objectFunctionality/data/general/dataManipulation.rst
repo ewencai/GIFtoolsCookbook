@@ -269,7 +269,7 @@ Assigning uncertainties is vital to inversion and therefore is also required as 
 Assign Simple Uncertainties
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-To apply the same floor and percent when computing uncertainties for all data, select:
+To apply a constant floor value and identical percent when computing uncertainties for all data, select:
 
 **Data manipulation** |rarr| **Assign uncertainties** |rarr| **Simple**
 
@@ -284,16 +284,20 @@ The user may want to specify a particular floor and percent for the uncertaintie
 
 Uncertainties are assigned by carrying out the following steps:
 
-    1. From the *data type* drop-down menu, select the data column for which uncertainties will be applied
-    2. From the *frequency/time* drop-down menu, select the frequency/time at which you are computing the uncertainties
-    3. Under *choose method*, select either *\% of number of data* or *\% of data value*. In either case, the percent uncertainty contribution is calculated in the same way. However:
+- FOR ALL data columns you want to compute and assign uncertainties for:
 
-        - *\% of number of data* sets the floor value based on the magnitudes of sorted data values. If 1\% is chosen, the floor value is equal to the threshold value for the smallest 1\% in magnitude
-        - *\% of data value* sets the floor as the value entered
+    - Select the data column from the *data type* drop-down menu
+    - Fill in the *Column name*
+    - FOR ALL times/frequencies you want to compute and assign uncertainties for:
 
-    4. Click *assign selected* to apply the uncertainties
-    5. Repeat for all data columns and frequencies/times
-    6. When finished, select *OK* to finish
+        - Select the time/frequency from the *time/frequency* drop-down menu
+        - Under *choose method*, select either "*\% of number of data*"" or "*\% of data value*". The percent uncertainty contribution is calculated in the same way for both options. As for the floor:
+
+            - *\% of number of data* sets the floor value based on the magnitudes of sorted data values. If 1\% is chosen, the floor value is equal to the threshold value for the smallest 1\% in magnitude
+            - *\% of data value* sets the floor as the value entered
+        - Click *assign selected* to apply the uncertainties to that particular *data type* and *time/frequency*. If this button is not clicked, GIFtools will not temporarily remember these uncertainties while calculating uncertainties for another data type and/or frequency.
+
+When all uncertainties have been assigned, select *OK* to finish
 
 
 .. _objectCombineData:

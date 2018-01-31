@@ -93,11 +93,13 @@ Setup the inversion
             - *Initial beta* = 2000
             - *Cooling factor* = 10
             - Other parameters left as default values
+    - Apply and write all files
 
 **If you have NOT completed the previous tutorial and are starting here:**
 
     - :ref:`Create an EM1DFM inversion object <createFEMInv>` and set the output directory
     - Set the EM1DFM inversion parameters under :ref:`edit options<invEditOptions>` using the parameters specified in the bullet list above
+    - Apply and write all files
 
 .. note:: If you chose not to write the files from the edit options menu, you may do so through :ref:`write inversion files <invWriteAll>`
 
@@ -158,46 +160,43 @@ To accomplish this task, we use the model builder module.
     - :ref:`Import the surface<importSurface>` file provided (TillLayer.topo)
     - Select one of the 3D mesh objects created from a previous inversion and :ref:`create active model from topography<createActiveCellsModel>`. Use *from tops of cells*.
     - Select the active cells model and :ref:`create a model builder module<createModelBuilder>`
-    - From ModelBuilder -> Create Model
-        - Using surface
-            - Populate values
-                - Assign :math:`10^{-4}` S\\m
-    - Change model values for the basement
-        - Model->Edit
-            - Replace value
-                - Old value: 0
-                - New value: :math:`10^{-5}` S\\m
 
-We can now use this physical property model to define surface weights in order
-to encourage large gradients at the bottom of the till layer.
+    - :ref:`Create model using surfaces<objectFunctionalityMBbuild_surf1>` with the following parameters to create an initial physical property model:
+        - *Top surface* as *topography*
+        - *Bottom surface* as *surface object*
+        - *Value* as *physical property value* (set as :math:`10^{-4}` S/m)
+        - *Destination model* as *New Model* and provide a name (RefMod)
 
-    .. figure:: ./../../../images/AtoZ_fem1d/TillWeights.png
-        :align: right
-        :scale: 10%
+    - Setting physical property values for the active background cells in the newly created model can with the same functionality. Open the :ref:`Create model using surfaces<objectFunctionalityMBbuild_surf1>` window and use the following parameters
+        - *Top surface* as *surface object*
+        - *Bottom surface* as *Value* (:math:`10^8` m)
+        - *Value* as *physical property value* (set as :math:`10^{-5}` S/m)
+        - *Destination model* as the physical property model you just created
 
-    - From ModelBuilder -> Build Constraints
-        - Weighting functions
-            - From only a geological model
-                - Face weights (Weight value = 100)
+This model can be used as a reference model and constrain the final recover conductivity model.
 
+.. figure:: ./../../../images/AtoZ_fem1d/RefModTill.png
+    :align: center
+    :width: 600
 
-.. figure:: ./../../../images/AtoZ_fem1d/AtoZ_fem_TillModel.png
-    :align: right
-    :figwidth: 45%
-
-    Physical property model built from till surface layer.
+    Till layer defined within the reference model.
 
 
 Setup the inversion
 ^^^^^^^^^^^^^^^^^^^
 
-    .. figure:: ./../../../images/AtoZ_fem1d/Inv_LC_inp.png
-        :align: right
-        :scale: 10%
+    - Click on the last EM1DFM inversion object and :ref:`copy options<invCopyOptions>`
+    - Click on the newly created EM1DFM inversion object and set the output directory
+    - Use :ref:`edit options<invEditOptions>` to verify and apply the current set of inversion parameters
+        - Make sure the mesh and observed data are properly set
+        - Set the topography from the drop-down menu
+        - Notice that the inversion parameters are identical to the previous inversion that was run
+    - Within :ref:`edit options<invEditOptions>` *Conductivity* tab, set:
+        - *Initial model* as best-fitting halfspace
+        - *Reference model* as the model created in the previous subsection and choose "SMOOTH_MOD_DIF"
 
-    - Click on a preexisting EM1DFM inversion object and :ref:`copy options<invCopyOptions>`
-    - Select GIFweight object
-    - Select lower bound model
+    - Choose a lower bound of 10 :math:`\! ^{8} \; \Omega \!` m  for the conductivity model
+    - Apply and write all files
 
 Run Inversion and Load Results
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
