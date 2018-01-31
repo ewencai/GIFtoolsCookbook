@@ -101,7 +101,7 @@ Since the raw data were formatted according to the Geosoft XYZ format, the trans
 Assign Uncertainties
 --------------------
 
-Before inverting the data, we must assign uncertainties. The role of uncertainties in the inversion process is described in the :ref:`inversion fundamentals section<AtoZUncertainties>`. Because real and imaginary components of the observed response span different magnitudes, and the errors on the data may vary as such, distinct floor and percent uncertainties will be computed for each frequency.
+Before inverting the data, we must assign uncertainties. The role of uncertainties in the inversion process is described in the :ref:`inversion fundamentals section<AtoZUncertainties>`. Because real and imaginary components of the observed response each span different magnitudes, and the errors on the data may vary as such, distinct floor and percent uncertainties will be computed for each frequency.
 
     - Use :ref:`assign frequency-dependent uncertainties<objectAssignUncert>` to create data columns containing the data uncertainties. Select "\% of data value" and use the following floor and percent values:
 

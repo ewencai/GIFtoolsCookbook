@@ -71,12 +71,25 @@ The property data locations or locations based on data values may be used. Eithe
     :width: 400
 
  
-**Prequisites**
+**Prerequisites**
 
 A property data (PROPdata) item must be ref:`imported <importProp>`.
 
 
+.. _objectFunctionalityModReplaceValue:
 
+Replace Value
+-------------
+
+This functionality allows the user to change the physical property value of cells within a GIF model based on their current value. This functionality is accessed through:
+
+**GIFmodel** |rarr| **Edit** |rarr| **Replace value**
+
+The following fields are then filled in:
+
+	- **Old value:** approximate value for cells whose physical property will be replaced
+	- **New value:** new physical property value for cells being replaced
+	- **Tolerance:** The extent at which physical property values may differ from *old value* and be replace by *new value*
 
 
 
