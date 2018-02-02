@@ -195,7 +195,7 @@ Setup the inversion
         - *Initial model* as best-fitting halfspace
         - *Reference model* as the model created in the previous subsection and choose "SMOOTH_MOD_DIF"
 
-    - Choose a lower bound of 10 :math:`\! ^{8} \; \Omega \!` m  for the conductivity model
+    - Upper and lower bounds for the recovered model can be set if desired
     - Apply and write all files
 
 Run Inversion and Load Results
