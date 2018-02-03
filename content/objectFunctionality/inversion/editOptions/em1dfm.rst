@@ -17,6 +17,7 @@ This functionality is responsible for setting all inversion parameters pertainin
 
     Global (left), conductivity (middle) and susceptibility (right) tabs for EM1DFM inversion objects.
 
+.. _invEditOptions_em1dfm_global:
 
 Global Tab
 ----------
@@ -41,11 +42,11 @@ Global Tab
 
     - **Static:** Each transmitter is associated with a distinct sounding. The inversion independently recovers a 1D model for each sounding.
     - **Adaptive:** Here, surface topography is provided. The inversion is carried out in the same way as before, however the vertical locations of models relative to one another are set based on topography
-    - **Laterally constrained:** In this approach, the data at each sounding are only sensitive to a particular 1D model. However, the set of 1D models is subject to smoothness constraints in the x and y directions. For this algorithm, three parameters must be set:
+    - **Laterally constrained:** In this approach, the data at each sounding are only sensitive to a particular 1D model. However, the set of 1D models is subject to smoothness constraints in the x and y directions. For this algorithm, three parameters must be set (these parameters are described :ref:`below <invEditOptions_em1dfm_LCI>`): 
 
-        - **Max Distance:** 
-        - **Number of Stations:**
-        - **Smoothing Factor:**
+        - **Max Distance** 
+        - **Number of Stations**
+        - **Smoothing Factor**
 
 For each 1D inversion being run by the EM1DFM Fortran code, there are 4 ways in which the trade-off parameter (:math:`\beta`) can be calculated. The performance of each trade-off mode is determine by a set of parameters:
 
@@ -66,36 +67,58 @@ For each 1D inversion being run by the EM1DFM Fortran code, there are 4 ways in 
         - **Max Beta Decrease:** Maximum allowable decrease in :math:`\beta` for estimated of :math:`\beta` using the L-curve criterion
         - **Max Beta Iterations:** Maximum number of new :math:`\beta` the algorithm will compute to find the best value
 
+.. _invEditOptions_em1dfm_mod:
 
 Conductivity and Susceptibility Tabs
 ------------------------------------
 
 
-
+.. _invEditOptions_em1dfm_mode:
 
 Inversion Mode
 --------------
 
 Here, we describe approach taken by each inversion mode option.
 
+
+.. _invEditOptions_em1dfm_static:
+
 Static
 ^^^^^^
 
-In the static 1D inversion approach
+During the static inversion approach, 1D inversions are performed independently for each sounding according to the `EM1DFM manual <http://em1dfm.readthedocs.io/en/latest/index.html>`__. This results in one recovered model for every sounding. This approach does not consider topography and the active layers in each independent inversion are identical to those in the layer file (1D mesh) provided. The set of recovered 1D models can be plotted on a 3D mesh which is created while the inversion is running. The top of the 3D mesh is set as the elevation of the highest data observation. The surface location of each recovered model is plotted at the top of the mesh (even though the surface location and the top of the mesh might be at different elevations). 
 
 
-
+.. _invEditOptions_em1dfm_adaptive:
 
 Adaptive
 ^^^^^^^^
 
+During the adaptive inversion approach, topography is considered by including a topography data or surface data object. Without including topography, this inversion approach is identical to the static 1D inversion. If topography is included, then the top locations of the layers used for every independently recovered 1D model correspond to the top of the 3D mesh; the top if the 3D mesh is set as the elevation of the highest data observation. For each 1D inversion, layers above the surface topography are set as air cells (inactive) and the algorithm recovers a conductivity model for the cells below. When plotted on the 3D mesh, the tops of the recovered 1D models (including air cells) correspond to the top of the 3D mesh. Thus, direct comparison of laterally variability of recovered models is possible with this approach.
 
+
+.. _invEditOptions_em1dfm_LCI:
 
 Laterally Constrained
 ^^^^^^^^^^^^^^^^^^^^^
 
+**Algorithm**
+
+- **WHILE** :math:`\phi_d >` target misfit **AND** :math:`itr <` Max Global Iterations:
+    
+    - **FOR** every sounding location :math:`i`:
+
+        - Perform 1D inversion (the first :math:`\beta_i` is either set as a fixed value or determined using the discrepancy principle)
+
+    - **FOR** every sounding location :math:`i`:
+
+        - Find the closest :math:`N` stations within :math:`Max \; Distance` to the sounding
+        - Use the inverse weighting formula to update the reference model for the sounding
+        - Cool :math:`\beta_i` according to the cooling factor
 
 
+
+.. _invEditOptions_em1dfm_mesh:
 
 Plotting 1D Models on a 3D Mesh
 -------------------------------

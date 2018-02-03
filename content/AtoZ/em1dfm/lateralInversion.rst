@@ -51,7 +51,7 @@ Setup for the Exercise
         - :ref:`Set i/o header<objectSetioHeaders>` for Z to the elevation column you just created.
 
 
-.. note:: Uncertainties were ascertained experimentally by running a multitude of inversions and examining the final normalized data misfits in each case.
+.. note:: The uncertainties for this exercise are the same as the uncertainties used to invert real FEM data collected over TKC.
 
 
 .. raw:: html
@@ -87,19 +87,19 @@ Setup the inversion
         - Mode: Laterally constrained 3D
             - *Max distance* = 1000 m
             - *Number of stations* = 10
-            - *Smoothing parameter* = 10
+            - *Smoothing parameter* = 100
             - Other parameters left as default values
         - Use the *Fix Trade-off* mode
-            - *Initial beta* = 2000
-            - *Cooling factor* = 10
+            - *Initial beta* = 10
+            - *Cooling factor* = 2
             - Other parameters left as default values
-    - Apply and write all files
+    - Click *Apply*
 
 **If you have NOT completed the previous tutorial and are starting here:**
 
     - :ref:`Create an EM1DFM inversion object <createFEMInv>` and set the output directory
     - Set the EM1DFM inversion parameters under :ref:`edit options<invEditOptions>` using the parameters specified in the bullet list above
-    - Apply and write all files
+    - Click *Apply*
 
 .. note:: If you chose not to write the files from the edit options menu, you may do so through :ref:`write inversion files <invWriteAll>`
 

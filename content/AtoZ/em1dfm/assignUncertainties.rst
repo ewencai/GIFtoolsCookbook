@@ -52,7 +52,8 @@ In addition to raw geophysical data, you may have access to topographical inform
 
 .. tip:: - Use **Edit** |rarr| **Rename** to change what objects in GIFtools are called
          - For any data object, :ref:`edit the data headers <objectDataHeaders>`.
-         - Raw data were generated synthetically using the best-available conductivity model for TKC and the E3Doctree code
+         - Raw data were generated synthetically using the best-available conductivity model for TKC and the E3Doctree code.
+         - The standard deviation of Gaussian noise added was determined from the uncertainties used to invert real FEM data collected over TKC.
 
 
 Add Transmitter, Receiver and Elevation Information
@@ -103,19 +104,19 @@ Assign Uncertainties
 
 Before inverting the data, we must assign uncertainties. The role of uncertainties in the inversion process is described in the :ref:`inversion fundamentals section<AtoZUncertainties>`. Because real and imaginary components of the observed response each span different magnitudes, and the errors on the data may vary as such, distinct floor and percent uncertainties will be computed for each frequency.
 
-    - Use :ref:`assign frequency-dependent uncertainties<objectAssignUncert>` to create data columns containing the data uncertainties. Select "\% of data value" and use the following floor and percent values:
+    - Use :ref:`assign frequency-dependent uncertainties<objectAssignUncert>` to create data columns containing the data uncertainties. Use the following floor and percent values for both the real and imaginary data:
 
-        - 1000 Hz = 1 ppm
-        - 5000 Hz = 2 ppm
-        - 25000 Hz = 5 ppm
+        - 1000 Hz = 1 ppm floor + 0\%
+        - 5000 Hz = 2 ppm floor + 0\%
+        - 25000 Hz = 5 ppm floor + 0\%
 
     - Set :ref:`i/o headers<objectSetioHeaders>` for all fields. Files used in the inversion cannot be written until this is performed.
 
 .. note::
-    Uncertainties were ascertained experimentally by running a multitude of inversions and examining the final normalized data misfits in each case. If the applied uncertainties are correct:
-        - The recovered model does not fit the data too heavily in certain regions at the expense of others
-        - The recovered model does not fit the data too heavily at certain frequencies at the expense of others
-        - the recovered model fits the real and imaginary components of the data equally
+    The uncertainties for this exercise are the same as the uncertainties used to invert real FEM data collected over TKC. If the applied uncertainties are correct:
+        - The recovered model will not fit the data too heavily in certain regions at the expense of others
+        - The recovered model will not fit the data too heavily at certain frequencies at the expense of others
+        - the recovered model will fit the real and imaginary components of the data equally
 
 .. figure:: ./../../../images/AtoZ_fem1d/FEMdata_1000I.png
     :align: right

@@ -5,7 +5,7 @@
 Edit Options for Inversion Objects
 ==================================
 
-The edit options functionality is responsible for setting all parameters and objects used in the inversion. This includes setting the mesh, data, topography, bounds, regularization being used and algorithms used to compute the trade-off parameter. To set the inversion parameters through edit option, click the inversion object and select:
+The edit options functionality is responsible for setting all parameters and objects used in the inversion. This includes setting the mesh, data, topography, bounds, regularization being used and methods used to compute the trade-off parameter. To set the inversion parameters through edit options, click the inversion object and select:
 
 **[Inversion class]** |rarr| **Edit options**
 
