@@ -51,7 +51,7 @@ Setup for the Exercise
         - :ref:`Import 1D mesh<importMesh>` (layers file)
 
 
-.. note:: Uncertainties were ascertained experimentally by running a multitude of inversions and examining the final normalized data misfits in each case.
+.. note:: The uncertainties for this exercise are the same as the uncertainties used to invert real FEM data collected over TKC.
 
 
 .. raw:: html
@@ -91,7 +91,7 @@ Setup the inversion
             - **Solver options:** leave as default
             - **Trade-off Mode:** select discrepancy principle (computes :math:`\beta` using a line search)
         - **Conductivity tab:**
-            - Leave as default or customize
+            - Set alpha_s = 0.04 and alpha_z = 1 (since layer thickness is 5 m)
         - **Susceptibility tab:**
             - Leave as default or customize (if being used)
         - Click apply and write all files
@@ -124,7 +124,7 @@ maps for each data components are show below.
 We note the following features
 
  - Two regions of higher conductivity showing as arc conductors.
- - Correlated residual on the in-phase misfit map over the conductors. Percentage values could be adjusted lower.
+ - Mostly uncorrelated residual misfit map.
 
 Note that all 1D models extend vertically to the top of the mesh, even though
 the observation stations were acquired at different height. It is therefore
@@ -163,6 +163,7 @@ Setup the inversion
     - Click on the newly created EM1DFM inversion object and set the output directory
     - Use :ref:`edit options<invEditOptions>` to verify and apply the current set of inversion parameters:
         - Make sure the mesh and observed data are properly set
+        - Make sure alpha_s = 0.25 and alpha_z = 1
         - Set the topography from the drop-down menu
         - Notice that the inversion parameters are identical to the previous inversion that was run
         - Apply and write all files

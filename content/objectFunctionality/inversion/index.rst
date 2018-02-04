@@ -6,10 +6,10 @@ Inversion
 =========
 
     .. toctree::
-       :maxdepth: 2
+       :maxdepth: 1
 
        Set the working directory <setWorkDir>
-       Edit options <editOptions>
+       Edit Options <editOptions/index>
        Write files <writeAll>
        Run <run>
        Load results <loadResults>
