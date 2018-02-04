@@ -91,7 +91,7 @@ Setup the inversion
             - **Solver options:** leave as default
             - **Trade-off Mode:** select discrepancy principle (computes :math:`\beta` using a line search)
         - **Conductivity tab:**
-            - Set alpha_s = 0.25 and alpha_z = 1 (since layer thickness is 2 m)
+            - Set alpha_s = 0.04 and alpha_z = 1 (since layer thickness is 5 m)
         - **Susceptibility tab:**
             - Leave as default or customize (if being used)
         - Click apply and write all files
@@ -124,7 +124,7 @@ maps for each data components are show below.
 We note the following features
 
  - Two regions of higher conductivity showing as arc conductors.
- - Correlated residual on the in-phase misfit map over the conductors. Percentage values could be adjusted lower.
+ - Mostly uncorrelated residual misfit map.
 
 Note that all 1D models extend vertically to the top of the mesh, even though
 the observation stations were acquired at different height. It is therefore

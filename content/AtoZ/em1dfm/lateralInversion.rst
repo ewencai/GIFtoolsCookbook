@@ -87,11 +87,11 @@ Setup the inversion
         - Mode: Laterally constrained 3D
             - *Max distance* = 1000 m
             - *Number of stations* = 10
-            - *Smoothing parameter* = 100
+            - *Smoothing parameter* = 200
             - Other parameters left as default values
         - Use the *Fix Trade-off* mode
-            - *Initial beta* = 10
-            - *Cooling factor* = 2
+            - *Initial beta* = 1000
+            - *Cooling factor* = 5
             - Other parameters left as default values
     - Click *Apply*
 
@@ -130,15 +130,19 @@ The lateral constraints strategy comes with many advantages:
 The use of a global measure of data fit allows us to assess the convergence of
 the algorithm through the usual :ref:`convergence curve<convergence_curve>` window.
 
+Ideally we would like to test the hypothesis of a conductive overburden in 3D, as well as to impose bounds on the conductivity values.
+which we covered in the :ref:`next section<AtoZem1dfm_lateral>`.
+
 .. figure:: ./../../../images/AtoZ_fem1d/Inv_LC_convergence.png
-    :align: right
-    :figwidth: 45%
+    :align: center
+    :figwidth: 55%
 
     Convergence curves
 
+.. note:: After the fifth iteration, the global misfit begins to increase due
+          to the 3D smoothing of the recovered conductivity model. The user should consider re-running the inversion with
+          different smoothing parameters in order to test the stability of the solution.
 
-Ideally we would like to test the hypothesis of a conductive overburden in 3D, as well as to impose bounds on the conductivity values.
-which we covered in the :ref:`next section<AtoZem1dfm_lateral>`.
 
 .. _AtoZem1dfm_lateral_constr:
 
@@ -208,28 +212,35 @@ Run Inversion and Load Results
 Discussion
 ^^^^^^^^^^
 
+This final solution differs from the previous inversion such that:
+    - A sharp gradient is preserved along the base of the till layer
+    - The upper conductivities are more consistent :math:`\approx 10^4 \Omega \cdot m`
+    - The top of the kimberlite pipes is at the right depth
+
+The reader is invited to run multiple inversions with various smoothing
+parameters and data uncertainties to explore the range of solutions. Important
+to keep in mind that the true model is 3D, which cannot be fully accounted for
+by the 1D assumption. We did however manage to recover a first order estimate
+for the horizontal position of the kimberlite pipes and background
+conductivity structures.
+
+.. .. figure:: ./../../../images/AtoZ_fem1d/Inv_LC_constrained_EW.png
+..     :align: left
+..     :figwidth: 45%
+
+..     EW section through the constrained 1D inversion
+
 .. figure:: ./../../../images/AtoZ_fem1d/Inv_LC_constrained.png
-    :align: right
+    :align: left
     :figwidth: 45%
 
     Recovered 1D models with geological constraints
 
-This final solution differs from the previous inversion such that:
-    - A sharp gradient is preserved along the base of the till layer
-    - The upper conductivities are more consistent :math:`\approx 10^4 \Omega \cdot m`
-    - The top of the kimberlite pipes is at the right depth, and the compact shape of the pipes is better preserved
-
-.. figure:: ./../../../images/AtoZ_fem1d/Inv_LC_constrained_EW.png
-    :align: left
-    :figwidth: 45%
-
-    EW section through the constrained 1D inversion
-
-.. figure:: ./../../../images/AtoZ_fem1d/True_EW_section.png
+.. figure:: ./../../../images/AtoZ_fem1d/True_model.png
     :align: right
     :figwidth: 45%
 
-    EW section through the true 3D conductivity model
+    Sections through the true 3D conductivity model
 
 
 
