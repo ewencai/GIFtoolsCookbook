@@ -8,7 +8,7 @@ Purpose
 
  - Demonstrate the basic steps for the Magnetic Vector Inversion in Cartesian (MVI-C) and Spherical (MVI-S) coordinates.
  - Improve the MVI-C solution with a cooperative inversion approach (amplitude + MVI-C)
- - Demonstrate the adavantages of a sparse MVI-S code
+ - Demonstrate the advantages of a sparse MVI-S code
 
 .. note:: Link to `MVI documentation <http://mvi.readthedocs.io/en/latest/>`_
 

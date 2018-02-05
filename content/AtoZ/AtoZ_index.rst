@@ -22,7 +22,6 @@ Tutorials are organized by geophysical method:
     .. toctree::
         :maxdepth: 1
 
-        Fundamentals of inversions <Fundamentals/index>
         Gravity: Forward modeling and constrained inversion <gravity/index>
         Magnetics: Dealing with remanence <magnetic/index>
         EM1DFM: 1D and laterally constrained 3D inversion <em1dfm/index>

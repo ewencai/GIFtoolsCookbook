@@ -1,4 +1,4 @@
-.. _AtoZSmoothInDiff:
+.. _Fundamentals_SmoothInDiff:
 
 
 The SMOOTH_MOD_DIF or SMOOTH_MOD options
@@ -22,6 +22,6 @@ gradient model will still be minimised, but the boundary is allowed to have a
 smooth transition.
 
 .. figure::
-     ../../../images/InversionFundamentals/invFund_Smooth_Mod_DIF_allView.png
+     ../../images/InversionFundamentals/invFund_Smooth_Mod_DIF_allView.png
     :align: right
     :figwidth: 100%
