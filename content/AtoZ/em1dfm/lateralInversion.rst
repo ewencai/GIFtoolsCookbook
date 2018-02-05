@@ -212,16 +212,16 @@ Run Inversion and Load Results
 Discussion
 ^^^^^^^^^^
 
-This final solution differs from the previous inversion such that:
+This final solution differs from the previous inversion in that:
     - A sharp gradient is preserved along the base of the till layer
     - The upper conductivities are more consistent :math:`\approx 10^4 \Omega \cdot m`
     - The top of the kimberlite pipes is at the right depth
 
 The reader is invited to run multiple inversions with various smoothing
-parameters and data uncertainties to explore the range of solutions. Important
-to keep in mind that the true model is 3D, which cannot be fully accounted for
+parameters and data uncertainties to explore the range of solutions. It is important
+to keep in mind that the true model is 3D and cannot be characterized
 by the 1D assumption. We did however manage to recover a first order estimate
-for the horizontal position of the kimberlite pipes and background
+for the horizontal positions of the kimberlite pipes and background
 conductivity structures.
 
 .. .. figure:: ./../../../images/AtoZ_fem1d/Inv_LC_constrained_EW.png

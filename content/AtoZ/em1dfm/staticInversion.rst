@@ -118,7 +118,7 @@ Discussion
 
     Recovered 1D conductivity models
 
-The inverted 1D conductivity models are automatically geo-reference in 3D for
+The inverted 1D conductivity models are automatically geo-referenced in 3D for
 visualization and interpretation. Interpolated data misfit
 maps for each data components are show below.
 We note the following features
@@ -127,8 +127,8 @@ We note the following features
  - Mostly uncorrelated residual misfit map.
 
 Note that all 1D models extend vertically to the top of the mesh, even though
-the observation stations were acquired at different height. It is therefore
-expected that the relative depth of anomalies may not be representative of
+the observation stations were acquired at different heights. It is therefore
+expected that the relative depth of the anomalies may not be representative of
 true 3D variations.
 
 .. raw:: html
@@ -192,13 +192,13 @@ Discussion
 
     Recovered 1D models with topography
 
-While the recovered conductivity value are near identical to the static case,
-we have recovered a pseudo 3D model that honors topography. Individual 1D
-models can be interpreted as a group in relation with geological information
-that may be available:
+While the recovered conductivity values are nearly identical to those in the static case,
+we have recovered a pseudo-3D model that honours topography. Individual 1D
+models can be interpreted as a group while also considering geological information
+that may be available. From the set of recovered models, we see that:
 
-    - Compact targets are recovered as arc-shaped conductors due to the 1D assumption
-    - The inversion recovered a thin layer over the entire area of investigation, which appears to be slightly more conductive than the background.
+    - compact targets are recovered as arc-shaped conductors due to the 1D assumption
+    - the inversion recovered a thin layer over the entire area of investigation, which appears to be slightly more conductive than the background.
 
 
 
