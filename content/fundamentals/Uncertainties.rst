@@ -1,9 +1,9 @@
-.. _AtoZUncertainties:
+.. _Fundamentals_Uncertainties:
 
 Data Misfit and Uncertainties
 =============================
 
-Here, we discuss the importance of assigning appropriate uncertainties, the importance of analyzing the data misfit, and present some best-practices. In the :ref:`objective function<ObjectiveFunction>`, we use a :ref:`data misfit<ObjectiveFunction_dmis>` term to ensure the inversion recovers a model which can fit the set of field observations. The data misfit can be expressed as a finite sum:
+Here, we discuss the importance of assigning appropriate uncertainties, the importance of analyzing the data misfit, and present some best-practices. In the :ref:`objective function<Fundamentals_ObjectiveFunction>`, we use a :ref:`data misfit<Fundamentals_ObjectiveFunction_dmis>` term to ensure the inversion recovers a model which can fit the set of field observations. The data misfit can be expressed as a finite sum:
 
 .. math::
 	\phi_d (\mathbf{m}) = \sum_{i=1}^N \phi_{d,i}^2 = \sum_{i=1}^N \Bigg ( \frac{\mathbf{F[m]}_i - d_i}{\varepsilon_i} \Bigg )^2
@@ -23,7 +23,7 @@ If we assume that the noise on each datum is independent and Gaussian, then the 
 	2) The individual data misfits when plotted, are incoherent; that is, the recovered model does not fit the data well in some areas and poorly in others.
 
 
-.. figure:: ../../../images/InversionFundamentals/uncertainties_coherence.png
+.. figure:: ../../images/InversionFundamentals/uncertainties_coherence.png
     :align: center
     :width: 600
 
@@ -36,7 +36,7 @@ Why use Uncertainties
 Uncertainties are used to weight the difference between observed and predicted data in the data misfit function. This is done for two reasons:
 
 	1) If the observed data span several orders of magnitude, we want to make sure that the inversion doesn't focus on fitting the large values at the expense of the small values.
-	2) If the noise on our data are independent and Gaussian, then the data misfit provide a stopping criteria for the inversion. See :ref:`trade-off parameter<AtoZbeta>`.
+	2) If the noise on our data are independent and Gaussian, then the data misfit provide a stopping criteria for the inversion. See :ref:`trade-off parameter<Fundamentals_beta>`.
 
 In general, the uncertainty on each datum :math:`d_i` can be split into two contributions:
 
@@ -55,7 +55,7 @@ In the figure below, we see the results of three inversions to recover a suscept
 On the left, the floor value for all data points is set to equal the standard deviation of the noise that was added. By applying the correct uncertainties, we are able to recover a reasonable model which fits the data to an appropriate degree. In the middle, the data uncertainties are underestimated. As a result, the inversion must put non-geological structures in the recovered model to fit the data. On the right, the data uncertainties are overestimated. The inversion recovers a plausible model, however, there is a large artifact in the corresponding data misfit. The large misfits clustered over the susceptible block indicate that the recovered model does fit the data sufficiently there.
 
 
-.. figure:: ../../../images/InversionFundamentals/uncertainties_floor.png
+.. figure:: ../../images/InversionFundamentals/uncertainties_floor.png
     :align: center
     :width: 700
 

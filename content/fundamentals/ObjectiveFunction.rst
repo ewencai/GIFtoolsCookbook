@@ -1,4 +1,4 @@
-.. _ObjectiveFunction:
+.. _Fundamentals_ObjectiveFunction:
 
 The Objective Function
 ======================
@@ -17,7 +17,7 @@ This is sometimes referred to as "penalty-based optimization"; that is, the obje
 
     - **trade-off parameter** :math:`\beta`, which weights the relative contribution of :math:`\phi_d (\mathbf{m})` and :math:`\phi_m (\mathbf{m})` towards the objective function.
 
-.. _ObjectiveFunction_dmis:
+.. _Fundamentals_ObjectiveFunction_dmis:
 
 **Data Misfit:**
 
@@ -69,14 +69,14 @@ And:
 
 ..    \phi_m(\mathbf{m}) = \alpha_s ||W_s(\mathbf{m}-\mathbf{m}_0)||^p + \alpha_x ||W_x G_x(\mathbf{m}-\mathbf{m}_0)||^q + \alpha_y ||W_y G_y(\mathbf{m}-\mathbf{m}_0)||^q + \alpha_z ||W_z G_z(\mathbf{m}-\mathbf{m}_0)||^q
 
-- The :ref:`weighting matrices<AtoZWeightingMatrix>` :math:`\mathbf{W}_s`, :math:`\mathbf{W}_x`, :math:`\mathbf{W}_y` and :math:`\mathbf{W}_z` are cell-specific weightings for each of these terms. They can combine user-defined confidence models with depth or distance weighting.
-- the :ref:`alphas paramters<AtoZalphas>` :math:`\alpha_s`, :math:`\alpha_x`, :math:`\alpha_y`, and :math:`\alpha_z` control how important each of the four terms are relative to each other
-- The sparsity weights :math:`\mathbf{R}_s`, :math:`\mathbf{R}_x`, :math:`\mathbf{R}_y` and :math:`\mathbf{R}_z` are defined by the :ref:`lp-norms <AtoZNorms>`.
+- The :ref:`weighting matrices<Fundamentals_WeightingMatrix>` :math:`\mathbf{W}_s`, :math:`\mathbf{W}_x`, :math:`\mathbf{W}_y` and :math:`\mathbf{W}_z` are cell-specific weightings for each of these terms. They can combine user-defined confidence models with depth or distance weighting.
+- the :ref:`alphas parameters<Fundamentals_alphas>` :math:`\alpha_s`, :math:`\alpha_x`, :math:`\alpha_y`, and :math:`\alpha_z` control how important each of the four terms are relative to each other
+- The sparsity weights :math:`\mathbf{R}_s`, :math:`\mathbf{R}_x`, :math:`\mathbf{R}_y` and :math:`\mathbf{R}_z` are defined by the :ref:`lp-norms <Fundamentals_Norms>`.
 - In the UBC codes, the option SMOOTH_MOD_DIFF uses the reference model in all terms, while SMOOTH_MOD would only use the reference model in the Smallness term.
 
 In this section, we will explore the effect of these different parameters on the recovered model through a susceptible block in a non-susceptible half-space mapped with a total magnetic ground survey.
 
-.. figure:: ../../../images/InversionFundamentals/model.png
+.. figure:: ../../images/InversionFundamentals/model.png
     :align: right
     :figwidth: 100%
     :name: InvFundModel

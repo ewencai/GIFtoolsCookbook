@@ -257,7 +257,7 @@ This functionality allows the user to create an elevation (height of the data) c
 Assign uncertainties
 --------------------
 
-Assigning uncertainties is vital to inversion and therefore is also required as an :ref:`i/o header<objectSetioHeaders>`. An explanation of the uncertainties and their role in the inversion process can be found in :ref:`inversion fundamentals<AtoZUncertainties>`. To assign uncertainties to a data object, click on the object and select the menu:
+Assigning uncertainties is vital to inversion and therefore is also required as an :ref:`i/o header<objectSetioHeaders>`. An explanation of the uncertainties and their role in the inversion process can be found in :ref:`inversion fundamentals<Fundamentals_Uncertainties>`. To assign uncertainties to a data object, click on the object and select the menu:
 
 **Data manipulation** |rarr| **Assign uncertainties**
 

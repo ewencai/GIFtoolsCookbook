@@ -18,6 +18,7 @@ Welcome to the GIFtools cookbook! Below you will find the Quick-start guide
     :maxdepth: 1
 
     Quick-start guide <content/quickStartGuide>
+    content/installation
     content/basicFunctionality/basicFunctionality_index
     content/objectFunctionality/objectFunctionality_index
     content/fileFormats/format_index
@@ -28,10 +29,10 @@ recipes to extended walk-through tutorials (A to Z)
 .. toctree::
     :maxdepth: 1
 
+    content/fundamentals/index
     content/recipes/recipe_index
     content/AtoZ/AtoZ_index
     content/videoTutorials
-    content/installation
     Site map <sitemap>
 
 .. tip:: Try using the search bar to quickly find what you are looking for!

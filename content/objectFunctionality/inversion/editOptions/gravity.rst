@@ -14,8 +14,8 @@ Grav3D Inversion
 This functionality is responsible for setting all inversion parameters pertaining to the 3D gravity inversion codes; see `GRAV3D background theory <http://grav3d.readthedocs.io/en/latest/content/theory.html>`__. The edit options window is comprised of 3 tabs:
 
     - **Sensitivity:** Sets the mesh, observed data, topography, `sensitivity weighting <http://grav3d.readthedocs.io/en/latest/content/theory.html#depth-weighting-and-distance-weighting>`__ and `wavelet compression <http://grav3d.readthedocs.io/en/latest/content/theory.html#wavelet-compression-of-sensitivity-matrix>`__
-    - **Inversion:** Sets protocols for the :ref:`trade-off parameter<AtoZBeta>` (:math:`\beta`) and all parameters pertaining to the model objective function (:ref:`alphas<AtoZalphas>`, :ref:`cells weights<AtoZWeightingMatrix>`, upper and lower bounds, active cells, reference models and starting models)
-    - **Blocky model norms (ver 5.1 and above):** can be activated to recover sparse and blocky models; see :ref:`sparse and blocky norms<AtoZNorms>`
+    - **Inversion:** Sets protocols for the :ref:`trade-off parameter<Fundamentals_Beta>` (:math:`\beta`) and all parameters pertaining to the model objective function (:ref:`alphas<Fundamentals_alphas>`, :ref:`cells weights<Fundamentals_WeightingMatrix>`, upper and lower bounds, active cells, reference models and starting models)
+    - **Blocky model norms (ver 5.1 and above):** can be activated to recover sparse and blocky models; see :ref:`sparse and blocky norms<Fundamentals_Norms>`
 
 
 .. figure:: ../images/grav3d.png

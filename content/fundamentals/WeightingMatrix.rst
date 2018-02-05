@@ -1,11 +1,11 @@
-.. _AtoZWeightingMatrix:
+.. _Fundamentals_WeightingMatrix:
 
 The Weighting Matrices W
 ========================
 
 Cell-based weighting matrices are used to enforce any a priori information
 available about the distribution of model parameters and their gradients. For
-potential field problems, these matrices also hold a :ref:`depth or distance<AtoZDepthDistMatrix>` weighting function to counteract the rapid decay in
+potential field problems, these matrices also hold a :ref:`depth or distance<Fundamentals_DepthDistMatrix>` weighting function to counteract the rapid decay in
 sensitivities.
 
 .. math::
@@ -26,11 +26,11 @@ The weighting functions :math:`W_x`, :math:`W_y` and :math:`W_z` can be designed
 :math:`W_x`, :math:`W_y` and :math:`W_z` are defined on the faces of each cell. The default values are 1 for all faces. Values less than 1 allow for breaks in the model, while values greater than one forces continuity across cell faces.
 Face-weighting can be performed in GIFtools. The UBC utility make_wdat.exe creates a face weights file that has layers of terrain-draped cells, where wx and wy are modified to force continuity in those directions. This can reduce near-surface artefacts, e.g. near electrodes.
 
-.. _AtoZDepthDistMatrix:
+.. _Fundamentals_DepthDistMatrix:
 
 Depth or Distance Weighting
 ---------------------------
-The most common use of the weighting matrices is to define a depth or distance weigthing. The sensitivity of signal decays predominantly as a function of depth (for surface/airborne data). The rate of signal decay depends on the type of signal being modelled. Depth weighting takes this decay into account, ensuring that the inversion does not preferentially change cells at any one particular depth.
+The most common use of the weighting matrices is to define a depth or distance weighting. The sensitivity of signal decays predominantly as a function of depth (for surface/airborne data). The rate of signal decay depends on the type of signal being modelled. Depth weighting takes this decay into account, ensuring that the inversion does not preferentially change cells at any one particular depth.
 Unlike depth weighting, distance weighting weights the sensitivity of the model based on the radial distance from the observation to each cell, not just the depth. This is useful when inverting down-hole data, or data that is collected on highly irregular surfaces including extreme topography or rough airborne drapes.
 
 See for examples the :ref:`Gravity inversion<AtoZGrav_Inversion>` or :ref:`Magnetic inversion <AtoZMag_Susc>`.
@@ -40,12 +40,12 @@ See for examples the :ref:`Gravity inversion<AtoZGrav_Inversion>` or :ref:`Magne
 
 
 .. figure::
-     ../../../images/InversionFundamentals/NoDepthWeighting_Ynormal.png
+     ../../images/InversionFundamentals/NoDepthWeighting_Ynormal.png
     :align: right
     :figwidth: 0%
 
 .. figure::
-     ../../../images/InversionFundamentals/alphazD10_Ynormal.png
+     ../../images/InversionFundamentals/alphazD10_Ynormal.png
     :align: right
     :figwidth: 0%
 

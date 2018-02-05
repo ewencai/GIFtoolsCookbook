@@ -1,4 +1,4 @@
-.. _AtoZalphas:
+.. _Fundamentals_alphas:
 
 The Alphas Parameters
 =====================
@@ -76,26 +76,26 @@ general trend expected from the geology.
 .. This is just a dirty trick to force the figures to be updated for the html
 
 .. figure::
-     ../../../images/InversionFundamentals/alphasT10_Znormal.png
+     ../../images/InversionFundamentals/alphasT10_Znormal.png
     :align: right
     :figwidth: 0%
 
 .. figure::
-     ../../../images/InversionFundamentals/alphasD10_Znormal.png
+     ../../images/InversionFundamentals/alphasD10_Znormal.png
     :align: right
     :figwidth: 0%
 
 .. figure::
-     ../../../images/InversionFundamentals/alphaxT10_Znormal.png
+     ../../images/InversionFundamentals/alphaxT10_Znormal.png
     :align: right
     :figwidth: 0%
 
 .. figure::
-     ../../../images/InversionFundamentals/alphayT10_Znormal.png
+     ../../images/InversionFundamentals/alphayT10_Znormal.png
     :align: right
     :figwidth: 0%
 
 .. figure::
-     ../../../images/InversionFundamentals/alphazT10_Ynormal.png
+     ../../images/InversionFundamentals/alphazT10_Ynormal.png
     :align: right
     :figwidth: 0%

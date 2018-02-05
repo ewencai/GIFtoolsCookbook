@@ -1,9 +1,9 @@
-.. _AtoZFundamentals_index:
+.. _Fundamentals_index:
 
 Fundamentals of Inversions
 ==========================
 
-.. figure:: ../../../images/InversionFundamentals/model.png
+.. figure:: ../../images/InversionFundamentals/model.png
     :align: right
     :figwidth: 50%
 
