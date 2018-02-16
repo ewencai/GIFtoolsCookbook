@@ -287,17 +287,19 @@ Uncertainties are assigned by carrying out the following steps:
 - FOR ALL data columns you want to compute and assign uncertainties for:
 
     - Select the data column from the *data type* drop-down menu
-    - Fill in the *Column name*
+    - Fill in the *Column name* to specify the name of the column containing the uncertainties
     - FOR ALL times/frequencies you want to compute and assign uncertainties for:
 
         - Select the time/frequency from the *time/frequency* drop-down menu
-        - Under *choose method*, select either "*\% of number of data*"" or "*\% of data value*". The percent uncertainty contribution is calculated in the same way for both options. As for the floor:
+        - Under *Select data*, specify the fractional percent uncertainty and floor uncertainty for those data
+        - Click *Assign selected* to apply the uncertainties to that particular *data type* and *time/frequency*. Click *Assign to all* to apply the same factional percent and floor to the data at all times/frequencies. If either of these buttons is not clicked, GIFtools will not temporarily remember these uncertainties while calculating uncertainties for another data type and/or frequency.
 
-            - *\% of number of data* sets the floor value based on the magnitudes of sorted data values. If 1\% is chosen, the floor value is equal to the threshold value for the smallest 1\% in magnitude
-            - *\% of data value* sets the floor as the value entered
-        - Click *assign selected* to apply the uncertainties to that particular *data type* and *time/frequency*. If this button is not clicked, GIFtools will not temporarily remember these uncertainties while calculating uncertainties for another data type and/or frequency.
+When uncertainties for all data columns have been assigned, select *OK* to finish
 
-When all uncertainties have been assigned, select *OK* to finish
+
+.. figure:: ../../../../images/object/data/uncertainties_spec.png
+    :align: center
+    :width: 400
 
 
 .. _objectCombineData:
