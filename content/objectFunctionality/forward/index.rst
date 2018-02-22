@@ -5,18 +5,15 @@
 Forward Modeling
 ================
 
-
     .. toctree::
-       :maxdepth: 2
+       :maxdepth: 1
 
-       general
-       magnetics
-       gravity
-       gravGrad
-       dcip
-       fem
-       tem
-       ns
+       Set the working directory <setWorkDir>
+       Edit Options <editOptions/index>
+       Copy Options <copyOptions>
+       Write files <writeAll>
+       Run <run>
+       Load predicted data <loadResults>
 
 
 
