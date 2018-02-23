@@ -27,7 +27,7 @@ The first step is then to import the magnetic airborne survey locations and the 
 - For magnetic survey locations: **Import** |rarr| **Data** |rarr| **Magnetics** |rarr| Geosoft XYZ
 - For topography: **Import** |rarr| **Data** |rarr| **Topography** |rarr| 3D GIF (3D XYZ)
 
-.. figure:: ../../images/createOctreeMesh/importdata.png
+.. figure:: ../../../images/createOctreeMesh/importdata.png
         :figwidth: 75%
         :align: center
 
@@ -35,7 +35,7 @@ For the magnetic data, we also need to :ref:`set the inclination, declination, a
 
 Once the data are loaded, GIFtools will have the two items shown in the project tree on the left:
 
-.. figure:: ../../images/createOctreeMesh/step1.png
+.. figure:: ../../../images/createOctreeMesh/step1.png
         :figwidth: 75%
         :align: center
 
@@ -48,7 +48,7 @@ Now we :ref:`import the 3D mesh <importMesh3D>` and :ref:`import the associated 
 
 We now have 4 items in the GIFtools project tree:
 
-.. figure:: ../../images/createFwdMod/step1.png
+.. figure:: ../../../images/createFwdMod/step1.png
         :figwidth: 75%
         :align: center
 
@@ -60,7 +60,7 @@ With all files loaded, we are ready to :ref:`create the forward modelling item <
 
 **Create** |rarr| **Forward modelling**
 
-.. figure:: ../../images/createFwdMod.png
+.. figure:: ../../../images/createFwdMod.png
         :figwidth: 75%
         :align: center
 
@@ -70,7 +70,7 @@ For the magnetic example in this recipe, we will choose the MAG3D code (version 
 
 Choose a directory to write files to and run the forward modelling in. Click "Open". You will now see the forward model item in the GIFtools project tree on the left. For this example, it's called "forward (MAGforward)". You can always rename the first part of the name. The second part tells you what type of data is being forward modelled and/or which code is used.
 
-.. figure:: ../../images/createFwdMod/step2.png
+.. figure:: ../../../images/createFwdMod/step2.png
         :figwidth: 75%
         :align: center
 
@@ -91,19 +91,19 @@ Each forward modelling item has its own menu which contains the following:
 
 Depending on the code, some other options might be included in the menu, such as "Set version" for magnetics.
 
-.. figure:: ../../images/createFwdMod/step3.png
+.. figure:: ../../../images/createFwdMod/step3.png
         :figwidth: 75%
         :align: center
 
 Using the menu, select "Edit options". This brings up a dialog where the different parameters can be set. For the magnetics example, it looks like:
 
-.. figure:: ../../images/createFwdMod/step3a.png
+.. figure:: ../../../images/createFwdMod/step3a.png
         :figwidth: 75%
         :align: center
 
 Set each of the parameters by using the dropdown menus or filling in a value or text field. In the case of our example, the completed dialog looks like:
 
-.. figure:: ../../images/createFwdMod/step3b.png
+.. figure:: ../../../images/createFwdMod/step3b.png
         :figwidth: 75%
         :align: center
 
@@ -113,7 +113,7 @@ Click "Apply" to set the options. You can always access the dialog again through
 
 Once the options are set, the info panel will update to reflect the set parameters.
 
-.. figure:: ../../images/createFwdMod/step3c.png
+.. figure:: ../../../images/createFwdMod/step3c.png
         :figwidth: 75%
         :align: center
 

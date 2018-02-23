@@ -12,7 +12,7 @@ In GIFtools, surfaces are imported and used to create or edit a geology model. T
 1. :ref:`Import a surface <importSurface>` or surfaces (import each surface individually). Below is a surface and mesh used in this example.
 
    
-.. figure:: ../../images/surfaceEx.png
+.. figure:: ../../../images/surfaceEx.png
     :align: center
     :width: 400
 
@@ -23,7 +23,7 @@ In GIFtools, surfaces are imported and used to create or edit a geology model. T
 
    **Create** |rarr| **Model** |rarr| **Value between two surfaces**
 
-.. figure:: ../../images/mbCreateModel.png
+.. figure:: ../../../images/mbCreateModel.png
     :align: center
     :width: 400
 
@@ -47,7 +47,7 @@ In GIFtools, surfaces are imported and used to create or edit a geology model. T
 
 Here is contribution from the surface has contributed to the model. Unit 1 is blue (original unit) and Unit 2 is red. The physical properties, bounds, etc. for these two units is specified through step 5 (geology definition).
 
-.. figure:: ../../images/surfaceToModelEx.png
+.. figure:: ../../../images/surfaceToModelEx.png
     :align: center
     :width: 400
 

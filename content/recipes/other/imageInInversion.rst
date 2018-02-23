@@ -9,25 +9,25 @@ GIFtools can import a geologic image and convert it to a geology model. This all
 
 In GIFtools, :ref:`Import a geologic image <importGeoImage>`. The image should have solid colours indicating geologic zones (see below for example). The algorithms developed in GIFtools will struggle if annotations are included in the image.
 
-.. figure:: ../../images/ImageToGeoMod/geology2.png
+.. figure:: ../../../images/ImageToGeoMod/geology2.png
     :align: center
     :figwidth: 75%
 
 In this example, the image file is called "geology2.tif" and the world file is called "geology2.tifw". We do not have a legend file so are not importing one. The topography for this is called "topography.dat". We also import a 3D mesh (called "mesh.msh") into the GIFtools project. The project tree looks like the following:
 
-.. figure:: ../../images/ImageToGeoMod/tree.png
+.. figure:: ../../../images/ImageToGeoMod/tree.png
     :align: center
     :figwidth: 100%
 
 We can visualize the mesh, and then load in the topography and image over top:
 
-.. figure:: ../../images/ImageToGeoMod/mesh.png
+.. figure:: ../../../images/ImageToGeoMod/mesh.png
     :align: center
     :figwidth: 75%
 
 Next, we need to define a legend for the image. If the legend file was not imported with the mesh, either :ref:`import or create <importLegendFile>` the image legend through the image menu. This file gives the ID and its corresponding colour code (RGB). In this example, we have to :ref:`create the legend <importLegendFile>`. The table then looks like:
 
-.. figure:: ../../images/ImageToGeoMod/table.png
+.. figure:: ../../../images/ImageToGeoMod/table.png
     :align: center
     :figwidth: 100%
 
@@ -42,13 +42,13 @@ Click on the modelBuilder item in the project tree and use the following menus t
 
    **Create model** |rarr| **Geology model from** |rarr| **Map image**
 
-.. figure:: ../../images/ImageToGeoMod/creategeomodel.png
+.. figure:: ../../../images/ImageToGeoMod/creategeomodel.png
     :align: center
     :figwidth: 100%
 
 The following dialog opens up:
 
-.. figure:: ../../images/ImageToGeoMod/maptomodel.png
+.. figure:: ../../../images/ImageToGeoMod/maptomodel.png
     :align: center
     :figwidth: 100%
 
@@ -62,20 +62,20 @@ In this example, we will choose a thickness of 200 m. Click OK.
 
 Once the model has been created, it will appear in the project tree, within the modelBuilder folder. The model will have the image name followed by "_mod", which in this case is geology2_mod.
 
-.. figure:: ../../images/ImageToGeoMod/tree2.png
+.. figure:: ../../../images/ImageToGeoMod/tree2.png
     :align: center
     :figwidth: 100%
 
 The GEOmodel can be viewed by using the Visualization menu. We see the following:
 
-.. figure:: ../../images/ImageToGeoMod/model.png
+.. figure:: ../../../images/ImageToGeoMod/model.png
     :align: center
     :figwidth: 75%
 
 
 The geology model is zero wherever there was no information provided. In this example, the image did not stretch all the way to mesh extents and the mesh has more cells above and below the thickness of the image specified. Use the visualization controls to cut off zero values within the model.
 
-.. figure:: ../../images/ImageToGeoMod/model2.png
+.. figure:: ../../../images/ImageToGeoMod/model2.png
     :align: center
     :figwidth: 75%
 

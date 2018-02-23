@@ -15,7 +15,7 @@ After a :ref:`time-domain EM data from a csv or xyz file <importVTEMdata>` has b
 
 To add transmitters to a TEM data object, use the menus: **TEM data** |rarr| **Add transmitters** and select the desired method.
 
-.. figure:: ../../images/addTxtoTEMdata/menu.png
+.. figure:: ../../../images/addTxtoTEMdata/menu.png
         :align: center
         :figwidth: 75%
 
@@ -39,7 +39,7 @@ Add AEM coincident loop sources
 
 The second option is to add coincident loop sources and when selected, the following dialog pops up:
 
-.. figure:: ../../images/addTxtoTEMdata/addcoincident.png
+.. figure:: ../../../images/addTxtoTEMdata/addcoincident.png
         :figwidth: 75%
         :align: center
 
@@ -54,7 +54,7 @@ There is also a video that shows this functionality: :ref:`video tutorial <VTtem
 Add AEM offset loop sources
 --------------------------------
 
-.. figure:: ../../images/addTxtoTEMdata/addoffset.png
+.. figure:: ../../../images/addTxtoTEMdata/addoffset.png
         :figwidth: 75%
         :align: center
 
@@ -64,7 +64,7 @@ The bearing of the survey lines can be calculated directly from the data or prov
 
 The along-line, cross-line, and vertical offsets are values given in meters. The vertical offset is the vertical distance between the transmitter and the receiver. If the transmitter is above the receiver, this value should be positive. The along-line offset is how much the transmitter is in front of the receiver (positive in meters) or behind the receiver (negative in meters). The cross-line offset describes how much the receiver is to either side of the line. The following diagram shows the along-line (A) and cross-line (C) offset definitions:
 
-.. figure:: ../../images/addTxtoTEMdata/Picture1.png
+.. figure:: ../../../images/addTxtoTEMdata/Picture1.png
         :figwidth: 100%
         :align: center
                 

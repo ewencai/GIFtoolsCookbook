@@ -13,7 +13,7 @@ In this recipe, the example uses a 3D mesh and a susceptibility model. :ref:`Imp
 
 :ref:`View the model <objectModelView>` and decide what the physical property values are for the isosurfaces(s). The figure below shows the example model used in this recipe.
 
-.. figure:: ../../images/IsoToGeoMod/model.png
+.. figure:: ../../../images/IsoToGeoMod/model.png
     :align: center
     :figwidth: 75%
 
@@ -24,13 +24,13 @@ For this example, there will be a single isosurface at 0.002 SI. This means this
 
 To create a geology model, we need to :ref:`create a ModelBuilder module <createModelBuilder>`. In this example, we generate an active model from the susceptibility model: **Model** |rarr| **Create** |rarr| **Active topography model from air values**
 
-.. figure:: ../../images/IsoToGeoMod/activemodel.png
+.. figure:: ../../../images/IsoToGeoMod/activemodel.png
     :align: center
     :figwidth: 100%
 
 GIFtools will ask for the value of the air cells in the selected model, which here is -100. A tolerance is also requested.
 
-.. figure:: ../../images/IsoToGeoMod/replacevalue.png
+.. figure:: ../../../images/IsoToGeoMod/replacevalue.png
     :align: center
     :figwidth: 75%
 
@@ -38,25 +38,25 @@ An active model can be generated in other ways too. To create active cells model
 
 The figure below shows the active model, with values of 1 for active cells (below topography) and 0 for inactive cells (above topography).
 
-.. figure:: ../../images/IsoToGeoMod/activemodel2.png
+.. figure:: ../../../images/IsoToGeoMod/activemodel2.png
     :align: center
     :figwidth: 75%
 
 Now, start Modelbuilder.
 
-.. figure:: ../../images/IsoToGeoMod/startMB.png
+.. figure:: ../../../images/IsoToGeoMod/startMB.png
     :align: center
     :figwidth: 100%
 
 To create a geologic model from an isosurface: **Create model** |rarr| **Geology model from** |rarr| **GIF models**.
 
-.. figure:: ../../images/IsoToGeoMod/createmodel.png
+.. figure:: ../../../images/IsoToGeoMod/createmodel.png
     :align: center
     :figwidth: 100%
 
 The following window will pop up:
 
-.. figure:: ../../images/IsoToGeoMod/createmodel2.png
+.. figure:: ../../../images/IsoToGeoMod/createmodel2.png
     :align: center
     :figwidth: 75%
 
@@ -66,13 +66,13 @@ The second panel provided options on how to group or cluster cells in the model.
 
 The last panel asks for a new model name. In this example, we will call the geologic model "geomod". The figure below shows the completed window for this example:
 
-.. figure:: ../../images/IsoToGeoMod/createmodel3.png
+.. figure:: ../../../images/IsoToGeoMod/createmodel3.png
     :align: center
     :figwidth: 75%
 
 Click OK. Then pops up the following window:
 
-.. figure:: ../../images/IsoToGeoMod/createmodel4.png
+.. figure:: ../../../images/IsoToGeoMod/createmodel4.png
     :align: center
     :figwidth: 75%
 
@@ -80,13 +80,13 @@ In this window, we define the upper and lower boundaries for each of the groups.
 
 The window then looks like:
 
-.. figure:: ../../images/IsoToGeoMod/createmodel5.png
+.. figure:: ../../../images/IsoToGeoMod/createmodel5.png
     :align: center
     :figwidth: 75%
 
 Click OK to set the group values. A new GEOmodel will appear in the Model Builder folder with the name we gave it.
 
-.. figure:: ../../images/IsoToGeoMod/createmodel6.png
+.. figure:: ../../../images/IsoToGeoMod/createmodel6.png
     :align: center
     :figwidth: 100%
 
@@ -94,23 +94,23 @@ Click OK to set the group values. A new GEOmodel will appear in the Model Builde
 
 The geologic model contains three units (1 = background, 2 = anomaly, and 0 = air). The boundary between units 1 and 2 occurs where the susceptibility model was 0.002 SI. The following figures show a cross-section and plan view through the geologic model.
 
-.. figure:: ../../images/IsoToGeoMod/createmodel7.png
+.. figure:: ../../../images/IsoToGeoMod/createmodel7.png
     :align: center
     :figwidth: 75%
 
-.. figure:: ../../images/IsoToGeoMod/createmodel8.png
+.. figure:: ../../../images/IsoToGeoMod/createmodel8.png
     :align: center
     :figwidth: 75%
 
 This final figure shows the anomalous unit when the air and background units are cut-off.
 
-.. figure:: ../../images/IsoToGeoMod/createmodel9.png
+.. figure:: ../../../images/IsoToGeoMod/createmodel9.png
     :align: center
     :figwidth: 75%
 
 Now we have a geologic model that was based on the isosurface of a physical property model. We can look at the geology definition for this model: **Geology Model** |rarr| **Geology definition** |rarr| **Edit**, which brings up the following window.
 
-.. figure:: ../../images/IsoToGeoMod/geodef.png
+.. figure:: ../../../images/IsoToGeoMod/geodef.png
     :align: center
     :figwidth: 75%
 

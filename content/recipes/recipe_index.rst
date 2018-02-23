@@ -3,23 +3,47 @@
 Recipes
 =======
 
+Forward Modeling Recipes
+------------------------
+
 .. toctree::
     :maxdepth: 1
 
-    Create a geologic model from an image <imageInInversion>
-    Use a surface (or surfaces) in an inversion <surfaceInInversion>
-    Import TEM data from a Geosoft xyz or csv file <importVTEMdata>
-    Add transmitter information to a TEM data object <addTxToTEMdata>
-    Create a geology model from an isosurface <IsoSurfaceToGeoModel>
-    Create a physical property model from a geology model <propModelFromGeoModel>
-    Create weights from a geology model <weightsFromGeoModel>
-    Create a waveform for a TEM data set <createTEMwaveform>
-    Create an octree mesh using a Fortran utility <createOctreeMesh>
-    Forward model data in GIFtools <fwdModData>
-    Invert data in GIFtools <invertData>
-    Do an equivalent source inversion <equivSource>
-    Forward model amplitude data <fwdModAmpData>
-    Assign elevation from height and topography surface <assignElevTopo>
+    Forward model data in GIFtools <fwd/fwdModData>
+    Forward model amplitude data <fwd/fwdModAmpData>
+
+
+
+
+Inversion Recipes
+-----------------
+
+.. toctree::
+    :maxdepth: 1
+
+    Invert data in GIFtools <inv/invertData>
+    Do an equivalent source inversion <inv/equivSource>
+
+
+
+
+
+Other Recipes
+-------------
+
+.. toctree::
+    :maxdepth: 1
+
+    Create a geologic model from an image <other/imageInInversion>
+    Use a surface (or surfaces) in an inversion <other/surfaceInInversion>
+    Import TEM data from a Geosoft xyz or csv file <other/importVTEMdata>
+    Add transmitter information to a TEM data object <other/addTxToTEMdata>
+    Create a geology model from an isosurface <other/IsoSurfaceToGeoModel>
+    Create a physical property model from a geology model <other/propModelFromGeoModel>
+    Create weights from a geology model <other/weightsFromGeoModel>
+    Create a waveform for a TEM data set <other/createTEMwaveform>
+    Create an octree mesh using a Fortran utility <other/createOctreeMesh>
+    Assign elevation from height and topography surface <other/assignElevTopo>
 
 
 ..   Project DC/IP 3D data onto a 2D lines for DCIP2D inversion <dcip3Dto2D>
