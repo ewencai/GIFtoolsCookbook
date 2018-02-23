@@ -20,6 +20,7 @@ The options for each inversion type are organized as follows:
 
        Magnetic Inversions <magnetics>
        Gravity Inversions <gravity>
+       2D DCIP <dcip2d>
        EM1DFM Inversions <em1dfm>
 
 

@@ -15,7 +15,10 @@ The edit options functionality is responsible for setting all parameters and obj
 
 The options for each forward modeling type are organized as follows:
 
+    .. toctree::
+       :maxdepth: 2
 
+       DCIP2D <dcip2d>
 
 
 
