@@ -28,8 +28,14 @@ This functionality is responsible for setting all inversion parameters pertainin
 Basic
 -----
 
-	- **Mesh:** mesh object for the inversion
+	- **Mesh:** mesh for the recovered model
+
+		- **Default (DC only):** The cell size, core region and padding are set automatically based on the electrode spacings and locations. This option will output a mesh object.
+		- **Semi-default (DC only):** The user specifies the minimum number of cells between electrodes (*default* = 4) and the aspect ratio (*default* = 2). The aspect ratio is the vertical dimensions of the cells divided by the horizontal width. This options will output a mesh object.
+		- **Object:** a mesh object is provided. Reference models, starting models and bound models must all exist on this mesh. For IP inversion, the mesh from the DC inversion must be used.
+
 	- **Observed data:** DC or IP data depending on inversion
+	
 	- **Topography:**
 
 	    	- *Default:* Sets topography assuming all electrode are located on the Earth's surface

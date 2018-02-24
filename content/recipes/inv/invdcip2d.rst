@@ -46,18 +46,26 @@ To invert DC data and load the results into GIFtools, carry out the following st
 
     - :ref:`Set the inversion parameters through edit options <invEditOptions_dcip2d>`: Before we can invert DC data we must define the mesh, survey data, topography and inversion parameters. This is done through edit options.
 
+        .. figure:: ../images/dcip2d_inv_edit_options.png
+            :align: center
+            :width: 500
+
+            Edit options tabs showing inputs for test example.
+
     - :ref:`Write files <invWriteAll>`: Once everything is set for the inversion, this command is used to write all the input files for the Fortran code into the specified directory. If you have not set the working (output) directory or would like to change the working directory, use :ref:`set working directory <invSetWorkDir>`.
 
     - :ref:`Run the inversion <invRun>`: The forward model can be run directly from GIFtools using the inversion object.
 
     - :ref:`Load results <invLoadResults>`: Once completed, GIFtools can be used to the predicted data and models for each iteration. Since the results are unique to the inversion object, the results are loaded into that folder.
 
+    - :ref:`Examine convergence curves <convergence_curve>`, model and misfit maps: Once the inversion has terminated, it is beneficial to examine the convergence towards the final model. This analysis will indicate whether the inversion has hit the target misfit and provide some insight as to whether the assigned data uncertainties were reasonable. The quality of the recovered model can also be assessed by looking at the model itself or the misfit between the predicted and observed data.
 
-.. figure:: ../images/dcip2d_fwd_edit_options.png
+
+.. figure:: ../images/dcip2d_inv_dc_results.png
     :align: center
-    :width: 500
+    :width: 700
 
-    Edit options tabs showing inputs for test example.
+    Convergence curves (left) and recovered conductivity model - 7th iteration (right) for the test example using the above parameters.
 
 
 Invert IP Data and Load Results
@@ -75,22 +83,14 @@ To invert IP data and load the results into GIFtools, carry out a similar set of
 
     - :ref:`Load results <invLoadResults>`
 
+    - :ref:`Examine convergence curves <convergence_curve>` and model
 
-.. figure:: ../images/dcip2d_fwd_edit_options2.png
+
+.. figure:: ../images/dcip2d_inv_ip_results.png
     :align: center
-    :width: 500
+    :width: 700
 
-    Edit options tabs showing inputs for test example.
-
-
-Results
--------
-
-.. figure:: ../images/dcip2d_fwd_results.png
-        :align: center
-        :width: 700
-
-        Pseudo-section DC data (left) and IP data (right) from the test example. Notice the effect of the surface topography on the data points.
+    Recovered chargeability model - 8th iteration (left) and corresponding normalize data misfit (right). The chargeability was recovered using the conductivity model from the 7th iteration of the DC invesion.
 
 
 
