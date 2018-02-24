@@ -1,9 +1,14 @@
-.. _invEditOptions_dcip2d:
+.. _invEditOptions_dcip:
 
 .. include:: <isonum.txt>
 
-Edit Options for 2D DCIP Inversion Objects
-==========================================
+Edit Options for DCIP Inversion Objects
+***************************************
+
+.. _invEditOptions_dcip2d:
+
+DCIP2D
+======
 
 This functionality is responsible for setting all inversion parameters pertaining to the "DC2Dinversion" and "IP2Dinversion" codes. The edit options window is comprised of 2 tabs:
 
@@ -104,6 +109,22 @@ Advanced (Parameter 2)
 
 
 
+
+.. _invEditOptions_dcip3d:
+
+DCIP3D
+======
+
+
+
+
+
+
+
+.. _invEditOptions_dcipoctree:
+
+DCIP Octree
+===========
 
 
 

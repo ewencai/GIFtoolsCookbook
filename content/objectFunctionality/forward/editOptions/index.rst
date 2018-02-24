@@ -18,7 +18,7 @@ The options for each forward modeling type are organized as follows:
     .. toctree::
        :maxdepth: 2
 
-       DCIP2D <dcip2d>
+       DCIP <dcip>
 
 
 

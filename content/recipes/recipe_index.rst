@@ -11,6 +11,7 @@ Forward Modeling Recipes
 
     Forward model data in GIFtools <fwd/fwdModData>
     Forward model amplitude data <fwd/fwdModAmpData>
+    Forward model 2D DCIP data <fwd/fwddcip2d>
 
 
 
@@ -23,6 +24,7 @@ Inversion Recipes
 
     Invert data in GIFtools <inv/invertData>
     Do an equivalent source inversion <inv/equivSource>
+    Invert 2D DCIP data <inv/invdcip2d>
 
 
 

@@ -81,6 +81,8 @@ To create a DC/IP 2D inversion using the software package ``DCIP2D``, use the me
 
 - IP: **Create** |rarr| **Inversion** |rarr| **DC/IP** |rarr| **2D IP**
 
+To set the parameters for the inversion, see :ref:`edit options <invEditOptions_dcip2d>`.
+
 
 3D DC/IP
 ^^^^^^^^
@@ -91,6 +93,8 @@ To create a DC/IP 3D inversion using the software package ``DCIP3D``, use the me
 
 - IP: **Create** |rarr| **Inversion** |rarr| **DC/IP** |rarr| **3D IP**
 
+To set the parameters for the inversion, see :ref:`edit options <invEditOptions_dcip3d>`.
+
 
 Octree DC/IP
 ^^^^^^^^^^^^
@@ -100,6 +104,8 @@ To create a DC/IP octree inversion using the software package ``DCIPoctree``, us
 - DC: **Create** |rarr| **Inversion** |rarr| **DC/IP** |rarr| **Octree DC**
 
 - IP: **Create** |rarr| **Inversion** |rarr| **DC/IP** |rarr| **Octree IP**
+
+To set the parameters for the inversion, see :ref:`edit options <invEditOptions_dcipoctree>`.
 
 
 .. _createFEMInv:

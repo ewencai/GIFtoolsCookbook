@@ -1,9 +1,14 @@
-.. _fwdEditOptions_dcip2d:
+.. _fwdEditOptions_dcip:
 
 .. include:: <isonum.txt>
 
-Edit Options for DCIP2D Forward Modeling Objects
-================================================
+Edit Options for DCIP Forward Modeling Objects
+==============================================
+
+.. _fwdEditOptions_dcip2d:
+
+DCIP2D
+------
 
 This functionality is responsible for setting all forward modeling parameters pertaining to the "DC2Dforward" and "IP2Dforward" forward modeling codes; (**add link to manual**). Within the edit options window, the user may set the following parameters:
 
@@ -21,7 +26,7 @@ This functionality is responsible for setting all forward modeling parameters pe
 
     - **Wave:** To solve the 2D problem, the problem must be solved in the wave domain. *N* specifies the number of log-distribution waves numbers used between *Min* and *Max*. The default is set to: *N* = 13, *Min* = 2.5e-4 and *Max* = 1.
 
-    - **Other options:** 
+    - **Other options (IP only):** For IP forward modeling, the user may specify if the IP data are computed using a non-linear method or by a linear approximation (in which case the sensitivity is stored)
 
 
 .. note:: The conductivity and chargeability models are automatically linked to a mesh. That is why a mesh object does not need to be specified within edit options.
@@ -32,6 +37,19 @@ This functionality is responsible for setting all forward modeling parameters pe
     :width: 700
 
 
+.. _fwdEditOptions_dcip3d:
+
+DCIP3D
+------
+
+
+
+
+
+.. _fwdEditOptions_dcipoctree:
+
+DCIP Octree
+-----------
 
 
 
