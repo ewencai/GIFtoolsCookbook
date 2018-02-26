@@ -18,7 +18,7 @@ In this recipe, we demonstrate the 2-step processes of inverting 2D DC and IP da
     - DC data
     - IP data    
 
-`Download .zip file <https://github.com/ubcgif/GIFtoolsCookbook/raw/master/assets/recipe_inv_dcip2d.zip>`__ for a set of example files.
+.. `Download .zip file <https://github.com/ubcgif/GIFtoolsCookbook/raw/master/assets/recipe_inv_dcip2d.zip>`__ for a set of example files.
 
 
 Load Files
