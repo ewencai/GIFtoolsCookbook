@@ -7,8 +7,8 @@ Edit Options for Magnetic Inversion Objects
 
 .. _invEditOptions_Mag3D:
 
-Mag and Mag Amplitude Inversion
--------------------------------
+Mag and Mag Amplitude Inversion (Mag3D)
+---------------------------------------
 
 This functionality is responsible for setting all inversion parameters pertaining to the 3D magnetic inversion codes (Mag inversion and Mag amplitude inversion); see `MAG3D background theory <http://mag3d.readthedocs.io/en/latest/content/theory.html>`__. The edit options window is comprised of 3 tabs:
 

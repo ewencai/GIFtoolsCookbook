@@ -172,13 +172,13 @@ Predict Background Gravity and Load to GIFtools
 We now have all the items necessary to forward model the background gravity contribution.
 
     - Create Grav3D forward model through :ref:`create forward modeling <createForward>`
-    - Select the forward modeling object and :ref:`edit options <objectFwdEditOptions>` to link
+    - Select the forward modeling object and :ref:`edit options <fwdEditOptions_gravity>` to link
         - GIF Model
         - Data locations
         - Topography
-    - :ref:`Write files <objectFwdWriteAll>`
-    - :ref:`Run GZFOR3D <objectFwdRun>`
-    - :ref:`Load predicted data <objectFwdLoadAll>`
+    - :ref:`Write files <fwdWriteAll>`
+    - :ref:`Run GZFOR3D <fwdRun>`
+    - :ref:`Load predicted data <fwdLoadResults>`
 
 
 Remove the Background Gravity

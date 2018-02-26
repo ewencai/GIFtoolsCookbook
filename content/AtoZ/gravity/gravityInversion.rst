@@ -58,7 +58,7 @@ Unconstrained Smooth Inversion
 Here, we perform the most basic type of gravity anomaly inversion. No a priori information is used in the inversion. Default inversion parameters use least-squares penalties on the model and its gradients. As a result, we expect the inversion to recover a smooth model. To run the inversion and view results:
 
     - :ref:`Create a gravity inversion object <createGravInv>`
-    - :ref:`Edit the inversion parameters <invEditOptions>`
+    - :ref:`Edit the inversion parameters <invEditOptions_Grav3D>`
         - **Sensitivity Tab:** set mesh, observed data and topography
         - **Inversion Tab:**
             - Set the active cells
@@ -116,7 +116,7 @@ constrained with the model that was made using the geological surface map (see
 :ref:`here <AtoZGrav_Forward_Model_Geo>`). To complete this exercise:
 
     - :ref:`Create a new gravity inversion object <createGravInv>`
-    - :ref:`Edit the inversion parameters <invEditOptions>`
+    - :ref:`Edit the inversion parameters <invEditOptions_Grav3D>`
         - **Sensitivity Tab:** set the mesh, observed data and topography
         - **Inversion Tab:**
             - set the active cells
@@ -164,7 +164,7 @@ Inversion with *Soft* Constraints
 Here, we show how compact and blocky models can be recovered by changing certain inversion parameters. Smooth models are recovered when the compactness parameter (p) and the set of blockiness parameters (q) are set to a value of 2. By decreasing the compactness parameter value, we recover models that have a smaller number of non-zero values; that is, models which fit the observed data using more compact structures. By decreasing the blockiness parameter value, we recover models that have a smaller number of non-zero gradients; that is, models which fit the observed data using structures that have very sharp edges. To complete this exercise:
 
     - :ref:`Create a new gravity inversion object <createGravInv>`
-    - :ref:`Edit the inversion parameters <invEditOptions>`
+    - :ref:`Edit the inversion parameters <invEditOptions_Grav3D>`
         - **Sensitivity Tab:** set the mesh, observed data and topography
         - **Inversion Tab:**
             - set the active cells

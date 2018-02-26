@@ -18,6 +18,8 @@ The options for each forward modeling type are organized as follows:
     .. toctree::
        :maxdepth: 2
 
+       Gravity <gravity>
+       Magnetics <magnetics>
        DCIP <dcip>
 
 
