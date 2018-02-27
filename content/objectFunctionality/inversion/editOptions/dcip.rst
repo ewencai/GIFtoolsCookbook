@@ -10,7 +10,7 @@ Edit Options for DCIP Inversion Objects
 DCIP2D
 ======
 
-This functionality is responsible for setting all inversion parameters pertaining to the "DC2Dinversion" and "IP2Dinversion" codes. The edit options window is comprised of 2 tabs:
+This functionality is responsible for setting all inversion parameters pertaining to the "DC2Dinversion" and "IP2Dinversion" codes; see `DCIP2D online manual <http://dcip2d.readthedocs.io/en/latest/index.html>`__ . The edit options window is comprised of 2 tabs:
 
     - **Basic:** Sets minimum required input for the inversion
 

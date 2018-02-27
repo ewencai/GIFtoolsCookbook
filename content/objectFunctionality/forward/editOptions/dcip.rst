@@ -10,7 +10,7 @@ Edit Options for DCIP Forward Modeling Objects
 DCIP2D
 ------
 
-This functionality is responsible for setting all forward modeling parameters pertaining to the "DC2Dforward" and "IP2Dforward" forward modeling codes; (**add link to manual**). Within the edit options window, the user may set the following parameters:
+This functionality is responsible for setting all forward modeling parameters pertaining to the "DC2Dforward" and "IP2Dforward" forward modeling codes; see `DCIP2D online manual <http://dcip2d.readthedocs.io/en/latest/index.html>`__ . Within the edit options window, the user may set the following parameters:
 
     - **Locations:** Observation locations or observed data object. This object contains the electrode locations.
 
