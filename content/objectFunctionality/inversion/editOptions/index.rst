@@ -18,8 +18,9 @@ The options for each inversion type are organized as follows:
     .. toctree::
        :maxdepth: 2
 
-       Magnetic Inversions <magnetics>
        Gravity Inversions <gravity>
+       Magnetic Inversions <magnetics>
+       DCIP <dcip>
        EM1DFM Inversions <em1dfm>
 
 

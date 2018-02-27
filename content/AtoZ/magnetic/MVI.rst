@@ -40,7 +40,7 @@ Step by step
 
 - **Step 3: Processing**
     - :ref:`Create an inversion object (MVI 2.0)<createMagInv>`
-        - :ref:`Edit the options <AtoZMag_invObj>`
+        - :ref:`Edit the options <fwdEditOptions_MVI>`
             - Panel 1: Fill out Sensitivity Options (must use MVI data)
             - Panel 2: Adjust :math:`\alpha` parameters, same as :ref:`here <AtoZMag_alphaOpt>`
             - Click *Apply and write files*

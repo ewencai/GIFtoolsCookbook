@@ -79,7 +79,7 @@ Step by step
 
     .. _AtoZMag_alphaOpt:
 
-    - :ref:`Edit the options <invEditOptions>`
+    - :ref:`Edit the options <fwdEditOptions_Mag3D>`
         - Panel 1: Fill out Sensitivity Options
         - Panel 2: Adjust :math:`\alpha` parameters
         - Click *Apply and write files*

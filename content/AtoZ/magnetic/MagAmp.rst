@@ -49,7 +49,7 @@ Step by step
 	- Once import, remember to :ref:`assign uncertainties <objectAssignUncert>` (1nT) and :ref:`set I/O headers <objectSetioHeaders>`
 
 	- :ref:`Create an inversion object (MAG3D 6.0)<createMagInv>`
-	    - :ref:`Edit the options <AtoZMag_invObj>`
+	    - :ref:`Edit the options <invEditOptions_Mag3D>`
 	        - Panel 1: Fill out Sensitivity Options
 	        - Panel 2: Adjust :math:`\alpha` parameters
 	        - Click *Apply and write files*

@@ -9,7 +9,7 @@ In this recipe, we go through the steps to create a waveform for a TEM dataset. 
 
 The discretization of the waveform in the on-time and discretization of the off-time is of great importance. A new factorization of the modelling matrix is required whenever the stepping time (:math:`\Delta t`) is changed. The most computationally efficient discretization is when a single value of :math:`\Delta t` can be used for the full time range of interest. Most systems consists of an on-time portion (exponential, half-sign, ramp, etc) followed by an off-time. The on-time portion of the waveform may be modelled using a large value of :math:`\Delta t`. Data acquired in the off-time often spans a few decades of time, as shown below.
 
-.. figure:: ../../images/createWaveform/fig3.PNG
+.. figure:: ../../../images/createWaveform/fig3.PNG
         :align: center
         :figwidth: 100%
 
@@ -21,7 +21,7 @@ GIFtools has a utility to assist the user in generating a wave file. This utilit
 
 **TEM data** |rarr| **Waveform**
 
-.. figure:: ../../images/createWaveform/create.png
+.. figure:: ../../../images/createWaveform/create.png
         :align: center
         :figwidth: 100%
 
@@ -40,7 +40,7 @@ Importing an existing waveform
 
 The "Import" function allows you to import an existing waveform file in GIF format. GIF format for a waveform is as follows:
 
-.. figure:: ../../images/createWaveform/waveExample.png
+.. figure:: ../../../images/createWaveform/waveExample.png
         :align: center
         :figwidth: 50%
 
@@ -53,7 +53,7 @@ Creating a waveform with an exponential on-ramp, linear off-ramp
 
 The first waveform we will create has an exponential on-ramp, following by a linear off-ramp in the on-time part of the waveform. This is a general expression that can approximate the waveform for many systems. Using the waveform menu, select the first item "Create exponent on; ramp off" to open the following dialog.
 
-.. figure:: ../../images/createWaveform/createExp.png
+.. figure:: ../../../images/createWaveform/createExp.png
         :align: center
         :figwidth: 50%
 
@@ -71,13 +71,13 @@ where :math:`I` is the current (amperes), :math:`a` is the user-defined exponent
 
 For this example, we complete the dialog as following:
 
-.. figure:: ../../images/createWaveform/createExp2.png
+.. figure:: ../../../images/createWaveform/createExp2.png
         :align: center
         :figwidth: 50%
 
 Click the view button to view the waveform using these parameters:
 
-.. figure:: ../../images/createWaveform/fig6.png
+.. figure:: ../../../images/createWaveform/fig6.png
         :align: center
         :figwidth: 100%
 
@@ -97,7 +97,7 @@ Creating a step-off waveform
 
 The first waveform that can be created within GIFtools is a step-off function. This is a reverse Heaviside function and the simplest waveform to model. No actual geophysical system uses this exact waveform; however, recorded signals can often be deconvolved to conform to this waveform type. Peak current (maximum current) data are generally sampled only in the logarithmic domain. Using the waveform menu, select the second item "Create step off" to open the following dialog.
 
-.. figure:: ../../images/createWaveform/createStep.png
+.. figure:: ../../../images/createWaveform/createStep.png
         :align: center
         :figwidth: 50%
 
@@ -109,13 +109,13 @@ The second part of the dialog defines the discretization of the waveform in the 
 
 For this example, we complete the dialog as following:
 
-.. figure:: ../../images/createWaveform/createStep2.png
+.. figure:: ../../../images/createWaveform/createStep2.png
         :align: center
         :figwidth: 50%
 
 Click the view button to view the waveform using these parameters:
 
-.. figure:: ../../images/createWaveform/fig4.png
+.. figure:: ../../../images/createWaveform/fig4.png
         :align: center
         :figwidth: 100%
 

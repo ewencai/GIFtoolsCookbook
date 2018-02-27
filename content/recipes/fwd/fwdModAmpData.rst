@@ -25,7 +25,7 @@ The first step is then to import the magnetic data, the topography file, and the
 - For topography: **Import** |rarr| **Data** |rarr| **Topography** |rarr| 3D GIF (3D XYZ)
 - For the 3D mesh: **Import** |rarr| **Mesh** |rarr| **3D**
 
-.. figure:: ../../images/createOctreeMesh/importdata.png
+.. figure:: ../../../images/createOctreeMesh/importdata.png
         :figwidth: 75%
         :align: center
 
@@ -55,19 +55,19 @@ Now we can invert for an equivalent source model. To create the equivalent sourc
 
 **Create** |rarr| **Processing** |rarr| **Magnetic equivalent source**
 
-.. figure:: ../../images/createAmpData/step2.png
+.. figure:: ../../../images/createAmpData/step2.png
         :figwidth: 75%
         :align: center
 
 Choose a directory to write files to and run the equivalent source in. Click "Open". You will now see the equivalent source item in the GIFtools project tree on the left. For this example, it's called "MagEquivalentSource (MAGequivalentSource)". You can always rename the first part of the name.
 
-.. figure:: ../../images/createInversion/step2.png
+.. figure:: ../../../images/createInversion/step2.png
         :figwidth: 75%
         :align: center
 
 The info panel shows you which data item, topography, and mesh are being used. In addition, it will show you the sensitivity filename.
 
-.. figure:: ../../images/createAmpData/step2a.png
+.. figure:: ../../../images/createAmpData/step2a.png
         :figwidth: 75%
         :align: center
 
@@ -84,7 +84,7 @@ It also has a visualization menu. These menus are identical to those for an inve
 
 Use the menu and select **Edit options**. The dialog shown below pops up:
 
-.. figure:: ../../images/createAmpData/step2b.png
+.. figure:: ../../../images/createAmpData/step2b.png
         :figwidth: 75%
         :align: center
 
@@ -106,7 +106,7 @@ The final step is to forward model amplitude data from the equivalent source mod
 
 **Create** |rarr| **Forward modelling** |rarr| **Magnetics** |rarr| **MAG3D (v6.0)**
 
-.. figure:: ../../images/createAmpData/step3.png
+.. figure:: ../../../images/createAmpData/step3.png
         :figwidth: 75%
         :align: center
 
@@ -114,25 +114,25 @@ Select the magnetic data (MAGdata) item that we used for the equivalent source c
 
 **Data Manipulation** |rarr| **Choose different data type** |rarr| **Magnetic amplitude data**
 
-.. figure:: ../../images/createAmpData/step3a.png
+.. figure:: ../../../images/createAmpData/step3a.png
         :figwidth: 75%
         :align: center
 
 The following dialog will appear to set the I/O headers:
 
-.. figure:: ../../images/createAmpData/step3b.png
+.. figure:: ../../../images/createAmpData/step3b.png
         :figwidth: 75%
         :align: center
 
 Unset the data output using the drop-down menus.
 
-.. figure:: ../../images/createAmpData/step3c.png
+.. figure:: ../../../images/createAmpData/step3c.png
         :figwidth: 75%
         :align: center
 
 Click "OK". We now have a MAGAMPdata item in the GIFtools project tree.
 
-.. figure:: ../../images/createAmpData/step3d.png
+.. figure:: ../../../images/createAmpData/step3d.png
         :figwidth: 75%
         :align: center
 

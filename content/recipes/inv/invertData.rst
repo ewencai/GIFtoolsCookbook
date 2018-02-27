@@ -30,13 +30,13 @@ The first step is then to import the gravity data and the topography file. :ref:
 - For topography: **Import** |rarr| **Data** |rarr| **Topography** |rarr| 3D GIF (3D XYZ)
 - For the 3D mesh: **Import** |rarr| **Mesh** |rarr| **3D**
 
-.. figure:: ../../images/createOctreeMesh/importdata.png
+.. figure:: ../../../images/createOctreeMesh/importdata.png
         :figwidth: 75%
         :align: center
 
 Once the data and mesh are loaded, GIFtools will have three items shown in the project tree on the left:
 
-.. figure:: ../../images/createInversion/step1.png
+.. figure:: ../../../images/createInversion/step1.png
         :figwidth: 75%
         :align: center
 
@@ -50,7 +50,7 @@ Use the menu structure to set the uncertainty for the gravity data:
 
 A dialog pops up to add a percentage and/or a floor to each header. We completed the dialog as following for the gravity example, using 0 for percentage and 0.01 for the floor:
 
-.. figure:: ../../images/createInversion/step1a.png
+.. figure:: ../../../images/createInversion/step1a.png
         :figwidth: 75%
         :align: center
 
@@ -60,7 +60,7 @@ Click "OK" to apply the changes. Now use the menu structure to set the I/O heade
 
 For this gravity example, select the vertical gravity anomaly and the uncertainty from the drop-down boxes.
 
-.. figure:: ../../images/createInversion/step1b.png
+.. figure:: ../../../images/createInversion/step1b.png
         :figwidth: 75%
         :align: center
 
@@ -75,7 +75,7 @@ With all files loaded and the data properly assigned, we are ready to :ref:`crea
 
 **Create** |rarr| **Inversion**
 
-.. figure:: ../../images/createInv.png
+.. figure:: ../../../images/createInv.png
         :figwidth: 75%
         :align: center
 
@@ -85,7 +85,7 @@ For the gravity example in this recipe, we will choose the GRAV3D code (version 
 
 Choose a directory to write files to and run the inversion in. Click "Open". You will now see the inversion item in the GIFtools project tree on the left. For this example, it's called "gravityInversion (GRAVinversion)". You can always rename the first part of the name. The second part tells you what type of data is being inverted and/or which code is used.
 
-.. figure:: ../../images/createInversion/step2.png
+.. figure:: ../../../images/createInversion/step2.png
         :figwidth: 75%
         :align: center
 
@@ -106,7 +106,7 @@ Each inversion item has its own menu which contains the following:
 
 Depending on the code, some other options might be included in the menu, such as "Set version" for gravity.
 
-.. figure:: ../../images/createInversion/step3.png
+.. figure:: ../../../images/createInversion/step3.png
         :figwidth: 75%
         :align: center
 
@@ -114,7 +114,7 @@ Each inversion item also has a visualization menu, which can be used to view the
 
 Using the menu, select "Edit options". This brings up a dialog where the different parameters can be set. For the gravity example, it looks like:
 
-.. figure:: ../../images/createInversion/step3a.png
+.. figure:: ../../../images/createInversion/step3a.png
         :figwidth: 75%
         :align: center
 
@@ -122,13 +122,13 @@ The dialog has at least two tabs. In the case for the gravity example, there are
 
 Set the parameters by choosing from the drop-down menus and/or filling in text boxes. For our gravity example, the dialog looks as following:
 
-.. figure:: ../../images/createInversion/step3b.png
+.. figure:: ../../../images/createInversion/step3b.png
         :figwidth: 75%
         :align: center
 
 Now, click on the second tab. For the gravity inversion, it's called "Inversion":
 
-.. figure:: ../../images/createInversion/step3c.png
+.. figure:: ../../../images/createInversion/step3c.png
         :figwidth: 75%
         :align: center
 
@@ -136,7 +136,7 @@ This tab allows you to set the majority of the input options. Default values are
 
 In this example, we are leaving all values as default. Click on the third tab (if there is one). For gravity, it is called "Blocky model norms".
 
-.. figure:: ../../images/createInversion/step3d.png
+.. figure:: ../../../images/createInversion/step3d.png
         :figwidth: 75%
         :align: center
 
@@ -160,7 +160,7 @@ Now that the options are set, we can write the files to the working directory. T
 
 **Gravity inversion** |rarr| **Write files** |rarr| **GZINV3D Files**
 
-.. figure:: ../../images/createInversion/step4.png
+.. figure:: ../../../images/createInversion/step4.png
         :figwidth: 75%
         :align: center
 
@@ -196,7 +196,7 @@ Once the inversion is done, close the command window. In the working directory, 
 
 The output files can be quickly loaded into GIFtools using the menu structure for the inversion item. In the case of gravity, this is the menu to load recovered models and predicted data:
 
-.. figure:: ../../images/createInversion/step6.png
+.. figure:: ../../../images/createInversion/step6.png
         :figwidth: 75%
         :align: center
 
@@ -212,7 +212,7 @@ Once loaded, the inversion item will become a folder containing two folders: one
 
 For the gravity example, we loaded all results, which looks like the following in GIFtools:
 
-.. figure:: ../../images/createInversion/step6a.png
+.. figure:: ../../../images/createInversion/step6a.png
         :figwidth: 75%
         :align: center
 
@@ -230,13 +230,13 @@ Each inversion item has a second menu called "Visualization". This contains the 
 
 **Visualization** |rarr| **View progress**
 
-.. figure:: ../../images/createInversion/step7.png
+.. figure:: ../../../images/createInversion/step7.png
         :figwidth: 75%
         :align: center
 
 The **Convergence curve** menu item allows you to view a graph of the data misfit and model objective function per iteration and the Tikhonov curve. For the gravity example, it looks like:
 
-.. figure:: ../../images/createInversion/step7a.png
+.. figure:: ../../../images/createInversion/step7a.png
         :figwidth: 75%
         :align: center
 

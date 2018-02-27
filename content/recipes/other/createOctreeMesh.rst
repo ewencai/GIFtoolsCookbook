@@ -7,7 +7,7 @@ Create an octree mesh using a Fortran utility
 
 Each of the GIF octree codes comes with a utility to create an octree mesh. As of Version 2.1, the Fortran utilities to create octree meshes can be used through GIFtools. The figure below shows the menu structure for the available utilities.
 
-.. figure:: ../../images/createOctreeMesh/menustructure.png
+.. figure:: ../../../images/createOctreeMesh/menustructure.png
         :figwidth: 75%
         :align: center
 
@@ -32,7 +32,7 @@ The first step is then to import the magnetic airborne survey locations and the 
 - For magnetic survey locations: **Import** |rarr| **Data** |rarr| **Magnetics** |rarr| Geosoft XYZ
 - For topography: **Import** |rarr| **Data** |rarr| **Topography** |rarr| 3D GIF (3D XYZ)
 
-.. figure:: ../../images/createOctreeMesh/importdata.png
+.. figure:: ../../../images/createOctreeMesh/importdata.png
         :figwidth: 75%
         :align: center
 
@@ -40,7 +40,7 @@ For the magnetic data, we also need to :ref:`set the inclination, declination, a
 
 Once the data are loaded, GIFtools will have the two items shown in the project tree on the left:
 
-.. figure:: ../../images/createOctreeMesh/step1.png
+.. figure:: ../../../images/createOctreeMesh/step1.png
         :figwidth: 75%
         :align: center
 
@@ -51,13 +51,13 @@ Step 2
 
 With the data imported, we can create the octree mesh utility. To do so, use the menus and choose the appropriate code. For this example, we are using **Magnetics (PDE)**:
 
-.. figure:: ../../images/createOctreeMesh/menustructure.png
+.. figure:: ../../../images/createOctreeMesh/menustructure.png
         :figwidth: 75%
         :align: center
 
 GIFtools will prompt you to choose a working directory for the mesh creation. Pick a location and click **Open** in the dialog. You will then see the create mesh item added to the GIFtools project tree:
 
-.. figure:: ../../images/createOctreeMesh/step2.png
+.. figure:: ../../../images/createOctreeMesh/step2.png
         :figwidth: 75%
         :align: center
 
@@ -65,13 +65,13 @@ At this point, the data object and topography have not been assigned. The info p
 
 The menus for the create octree mesh utilities all look the same. Using the magnetics example, the menu allows you to change the working directory, set the data object, edit the utility options, run the utility, and load the output files.
 
-.. figure:: ../../images/createOctreeMesh/step2a.png
+.. figure:: ../../../images/createOctreeMesh/step2a.png
         :figwidth: 75%
         :align: center
 
 Select **Set data object** from the menu. For magnetics, the following dialog appears:
 
-.. figure:: ../../images/createOctreeMesh/step2b.png
+.. figure:: ../../../images/createOctreeMesh/step2b.png
         :figwidth: 75%
         :align: center
 
@@ -79,13 +79,13 @@ For other methods, you will see similar dialogs to select the appropriate data t
 
 Select the desired data set and click OK. The info panel will update, showing the selected data set.
 
-.. figure:: ../../images/createOctreeMesh/step2c.png
+.. figure:: ../../../images/createOctreeMesh/step2c.png
         :figwidth: 75%
         :align: center
 
 Now use the menu again and select **Edit options**. This brings up the following dialog:
 
-.. figure:: ../../images/createOctreeMesh/step2d.png
+.. figure:: ../../../images/createOctreeMesh/step2d.png
         :figwidth: 75%
         :align: center
 
@@ -109,7 +109,7 @@ For other codes like **E3D** and **TDoctree**, there will be a checkbox to **shi
 
 For the example here, we have completed the dialog with the following parameters:
 
-.. figure:: ../../images/createOctreeMesh/step2e.png
+.. figure:: ../../../images/createOctreeMesh/step2e.png
         :figwidth: 75%
         :align: center
 
@@ -135,7 +135,7 @@ To import the generated files, use the menu and select **Read output files**. Th
 
 For the magnetic example used in this recipe, GIFtools looks as following after loading the files into GIFtools:
 
-.. figure:: ../../images/createOctreeMesh/step3.png
+.. figure:: ../../../images/createOctreeMesh/step3.png
         :figwidth: 75%
         :align: center
 

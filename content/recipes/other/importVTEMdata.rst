@@ -19,7 +19,7 @@ There are several data formats to choose from. In this recipe, we focus on impor
 
 The following GUI will pop up:
 
-.. figure:: ../../images/importTEMdata/importTEMdata.png
+.. figure:: ../../../images/importTEMdata/importTEMdata.png
         :figwidth: 75%
         :align: center
 
@@ -28,7 +28,7 @@ Step 1
 
 Click on the "Step 1" button. The following GUI will pop up.
 
-.. figure:: ../../images/importTEMdata/importStep1.png
+.. figure:: ../../../images/importTEMdata/importStep1.png
         :figwidth: 50%
         :align: center
 
@@ -36,7 +36,7 @@ Choose the appropriate headers from the drop-down menus for Easting, Northing, a
 
 Next, add in the time channel information. This can be done in two ways: (1) Manually add the time channel information by clicking the plus or minus buttons to increase or decrease the number of time channels. Then the time can be entered in the second column. (2) Alternatively, you can load a text file that contains the time channels, as shown below.
 
-.. figure:: ../../images/importTEMdata/channelfile.png
+.. figure:: ../../../images/importTEMdata/channelfile.png
         :figwidth: 30%
         :align: center
 
@@ -48,7 +48,7 @@ The final step is to select the number of data groups. For this example, there a
 
 Once this information is entered, our GUI looks like:
 
-.. figure:: ../../images/importTEMdata/loadStep1_2.png
+.. figure:: ../../../images/importTEMdata/loadStep1_2.png
         :align: center
         :figwidth: 50%
 
@@ -59,7 +59,7 @@ Step 2
 
 With Step 1 complete, the GUI shows the number of data types selected. For our example, that's 4 data groups. Select the first data type to specify from the drop down menu. It will be called "Data type 1". Click the "Specify type" button and the following window will appear:
 
-.. figure:: ../../images/importTEMdata/loadStep2.png
+.. figure:: ../../../images/importTEMdata/loadStep2.png
         :align: center
         :figwidth: 50%
 
@@ -67,34 +67,34 @@ Here, you can change the header name for this data group from "Data type 1" to y
 
 1. Click on the empty cell below "Header" and a drop-down menu will appear. Select the desired header name. Repeat for each time channel. If there is no header associated for a particular time channel (i.e., there is no data associated with that time channel), leave the header field blank. For our example, the first header is "SFz[4]", as shown below:
 
-.. figure:: ../../images/importTEMdata/loadStep2_1.png
+.. figure:: ../../../images/importTEMdata/loadStep2_1.png
         :align: center
         :figwidth: 50%
 
 2. The faster method is click the "Load headers" button and select a file containing all the headers. The file format for the headers is shown below for two of the four data groups in our example. The headers in these files are SFz[4]-SFz[48] and BFz[4]-BFz[48]. This automatically fills in the header column, as shown in the second figure below.
 
-.. figure:: ../../images/importTEMdata/loadStep2_2.png
+.. figure:: ../../../images/importTEMdata/loadStep2_2.png
         :align: center
         :figwidth: 50%
 
-.. figure:: ../../images/importTEMdata/loadStep2_3.png
+.. figure:: ../../../images/importTEMdata/loadStep2_3.png
         :align: center
         :figwidth: 50%
 
 
 In the case where there are more time channels than headers, leave a blank line in the header file, as shown below. This will then not associate a header with that time channel and assign a dummy value as the data value when finished loading into GIFtools. In our example, there is only x component data for time channels 20-48, so the header file contains the headers SFx[20]-SFx[48] with blank lines above the first header.
 
-.. figure:: ../../images/importTEMdata/loadStep2_2b.png
+.. figure:: ../../../images/importTEMdata/loadStep2_2b.png
         :align: center
         :figwidth: 50%
 
-.. figure:: ../../images/importTEMdata/loadStep2_3b.png
+.. figure:: ../../../images/importTEMdata/loadStep2_3b.png
         :align: center
         :figwidth: 50%
 
 Once the headers have been added for this data group, click OK. You should now see that the first data group's name has been updated (if you changed it) and it has been assigned.
 
-.. figure:: ../../images/importTEMdata/loadStep2_4.png
+.. figure:: ../../../images/importTEMdata/loadStep2_4.png
         :align: center
         :figwidth: 50%
 
@@ -104,7 +104,7 @@ Step 3
 ------
 When all data types are assigned in Step 2, any remaining data columns detected in the file will appear as miscellaneous data in Step 3. The figure below shows what this looks like for our example. Here, you can select additional data to import. In our case, we've selected 4 additional columns of data, as shown below.
 
-.. figure:: ../../images/importTEMdata/loadStep3.png
+.. figure:: ../../../images/importTEMdata/loadStep3.png
         :align: center
         :figwidth: 50%
 
@@ -119,7 +119,7 @@ When everything is selected as desired, click OK to load in the time-domain EM d
 
 After the data has been loaded, the TEMdata object will appear in the GIFtools GUI, as shown below.
 
-.. figure:: ../../images/importTEMdata/importTEMdata4.png
+.. figure:: ../../../images/importTEMdata/importTEMdata4.png
         :align: center
         :figwidth: 75%
 

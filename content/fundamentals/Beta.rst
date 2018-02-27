@@ -45,6 +45,8 @@ there is only a poor estimate for the reliability of data? The GCV or L-Curve
 methods may be useful in this situation. All three methods are expanded upon
 next.
 
+.. _Fundamentals_Beta_Discrepancy:
+
 Chi-factor
 ----------
 
@@ -63,7 +65,7 @@ parameter.
 
 This allows the user to make adjustments so that misfit is consistent with
 prior knowledge of supplied errors. If data are noisy, or they do not adhere
-reliably to the normal assumptions (random, Gaussien, and zero mean), then
+reliably to the normal assumptions (random, Gaussian, and zero mean), then
 target misfit may have to be larger than N, so Chi-factor would be specified
 as more than 1. If data are quite clean then it may be acceptable to set Chi-
 factor < 1.

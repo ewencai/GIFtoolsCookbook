@@ -26,7 +26,7 @@ The first step is then to import the magnetic data, the topography file, and the
 - For topography: **Import** |rarr| **Data** |rarr| **Topography** |rarr| 3D GIF (3D XYZ)
 - For the 3D mesh: **Import** |rarr| **Mesh** |rarr| **3D**
 
-.. figure:: ../../images/createOctreeMesh/importdata.png
+.. figure:: ../../../images/createOctreeMesh/importdata.png
         :figwidth: 75%
         :align: center
 
@@ -56,19 +56,19 @@ Now we can invert for an equivalent source model. To create the equivalent sourc
 
 **Create** |rarr| **Processing** |rarr| **Magnetic equivalent source**
 
-.. figure:: ../../images/createAmpData/step2.png
+.. figure:: ../../../images/createAmpData/step2.png
         :figwidth: 75%
         :align: center
 
 Choose a directory to write files to and run the equivalent source in. Click "Open". You will now see the equivalent source item in the GIFtools project tree on the left. For this example, it's called "MagEquivalentSource (MAGequivalentSource)". You can always rename the first part of the name.
 
-.. figure:: ../../images/createInversion/step2.png
+.. figure:: ../../../images/createInversion/step2.png
         :figwidth: 75%
         :align: center
 
 The info panel shows you which data item, topography, and mesh are being used. In addition, it will show you the sensitivity filename.
 
-.. figure:: ../../images/createAmpData/step2a.png
+.. figure:: ../../../images/createAmpData/step2a.png
         :figwidth: 75%
         :align: center
 
@@ -85,7 +85,7 @@ It also has a visualization menu. These menus are identical to those for an inve
 
 Use the menu and select **Edit options**. The dialog shown below pops up:
 
-.. figure:: ../../images/createAmpData/step2b.png
+.. figure:: ../../../images/createAmpData/step2b.png
         :figwidth: 75%
         :align: center
 
