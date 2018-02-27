@@ -20,7 +20,7 @@ In this recipe, we demonstrate the 2-step processes of forward modeling 2D DC an
     - 2D chargeability model
     
 
-.. `Download .zip file <https://github.com/ubcgif/GIFtoolsCookbook/raw/master/assets/recipe_fwd_dcip2d.zip>`__ for a set of example files.
+`Download .zip file <https://github.com/ubcgif/GIFtoolsCookbook/raw/master/assets/recipe_fwd_dcip2d.zip>`__ for a set of example files.
 
 
 Load Files
