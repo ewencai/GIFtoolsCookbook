@@ -30,7 +30,7 @@ This functionality is responsible for setting all forward modeling parameters pe
 
         - **Non-linear:** In this case, the forward modeling operator is non-linear with respect to the model. The input model is an intrinsic chargeability model (:math:`\eta \in [0,1]`). The output data are the apparent intrinsic chargeabilities.
 
-        - **Linear:** In this case, we assume the chargeability is sufficiently small. The forward modeling operator becomes approximately linear with respect to the model. The input model can be any representation of intrinsic or integrated chargeability; i.e. :math:`\eta \ll 1`, mV/V, ms. The units used for the input model are the units used in the predicted data. Once again, the predicted data represent an apparent chargeability.
+        - **Linear:** In this case, we assume the chargeability is sufficiently small. The forward modeling operator becomes approximately linear with respect to the model. The input model can be any representation of intrinsic or integrated chargeability; i.e. :math:`\eta \ll 1`, mV/V, ms, mrad etc. The units used for the input model are the units used in the predicted data. Once again, the predicted data represent an apparent chargeability.
 
 
 .. note:: The conductivity and chargeability models are automatically linked to a mesh. That is why a mesh object does not need to be specified within edit options.
