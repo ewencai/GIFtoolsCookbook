@@ -24,6 +24,20 @@ This functionality is responsible for setting all inversion parameters pertainin
     Basic (left), advanced parameters 1 (middle) and advanced parameters 2 (right) tabs.
 
 
+Units
+-----
+
+**Inputs:**
+
+	- **Observed DC data:** observed voltage, normalized by the transmitter current (i.e. :math:`\Delta V/ \! I` )
+	- **Observed IP data:** apparent intrinsic chargeabilities (i.e. :math:`\eta_a \in [0,1]`)
+	- **Reference/background conductivity model:** S/m
+	- **Reference chargeability model:** intrinsic chargeabilities (i.e. :math:`\eta_a \in [0,1]`)
+
+**Outputs:**
+
+	- **Recovered conductivity model:** S/m
+	- **Recovered chargeability model:** intrinsic chargeabilities (i.e. :math:`\eta \in [0,1]`)
 
 Basic
 -----
@@ -34,13 +48,16 @@ Basic
 		- **Semi-default (DC only):** The user specifies the minimum number of cells between electrodes (*default* = 4) and the aspect ratio (*default* = 2). The aspect ratio is the vertical dimensions of the cells divided by the horizontal width. This options will output a mesh object.
 		- **Object:** a mesh object is provided. Reference models, starting models and bound models must all exist on this mesh. For IP inversion, the mesh from the DC inversion must be used.
 
-	- **Observed data:** DC or IP data depending on inversion
+	- **Observed data:**
+
+		- For DC inversion, the data are the observed voltage, normalized by the transmitter current (i.e. :math:`\Delta V/ \! I` ).
+		- For IP inversion, the data are the apparent intrinsic chargeabilities where :math:`\eta_a \in [0,1]`.
 	
 	- **Topography:**
 
-	    	- *Default:* Sets topography assuming all electrode are located on the Earth's surface
-	    	- *Value:* Set the surface to the specified elevation value
-	    	- *Object:* A 2D topography data object
+	    - *Default:* Sets topography assuming all electrode are located on the Earth's surface
+	    - *Value:* Set the surface to the specified elevation value
+	    - *Object:* A 2D topography data object
 
 	- **Conductivity Model (IP inversion only):** Constant value or conductivity model object. Reference and starting models are set in the advanced parameters tab.
 
