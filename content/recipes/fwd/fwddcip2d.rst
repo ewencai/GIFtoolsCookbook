@@ -15,7 +15,7 @@ In this recipe, we demonstrate the 2-step processes of forward modeling 2D DC an
 
     - 2D tensor mesh
     - 2D topography
-    - Locations
+    - Electrode Locations (A B M N)
     - 2D conductivity model
     - 2D chargeability model
     
@@ -45,7 +45,7 @@ Predict DC Data and Load Results
 
 To predict DC data and load the results into GIFtools, carry out the following steps:
 
-    - :ref:`Create 2D DC forward modeling object <createDCIPFwd>`: The forward modeling object is created to provide a single item that 1) contains all parameters relevant to the forward model and 2) keeps track of which mesh, data locations etc... are being used in the forward model.
+    - :ref:`Create 2D DC forward modeling object <createDCIPFwd>`: The forward modeling object is created to provide a single item that 1) contains all parameters relevant to the forward model and 2) keeps track of which mesh, data locations etc. are being used in the forward model.
 
     - :ref:`Set the forward modeling parameters through edit options <fwdEditOptions_dcip2d>`: Before we can predict data we must define the mesh, conductivity model, electrode locations, topography and other parameters. This is done through edit options.
 

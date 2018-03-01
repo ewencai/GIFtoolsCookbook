@@ -15,8 +15,8 @@ In this recipe, we demonstrate the 2-step processes of inverting 2D DC and IP da
 
     - 2D tensor mesh
     - 2D topography
-    - DC data
-    - IP data    
+    - DC data (with uncertainties)
+    - IP data (with uncertainties)
 
 `Download .zip file <https://github.com/ubcgif/GIFtoolsCookbook/raw/master/assets/recipe_inv_dcip2d.zip>`__ for a set of example files.
 
