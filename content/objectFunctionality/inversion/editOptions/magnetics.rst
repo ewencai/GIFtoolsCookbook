@@ -270,10 +270,6 @@ Inversion (Remanence) Tab
 
 
 
-.. _invEditOptions_MAGOCTDE:
-
-Mag PDE Inversion
------------------
 
 
 

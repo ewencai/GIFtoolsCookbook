@@ -70,17 +70,11 @@ Units
 **Inputs:**
 
     - **3D effective susceptibility  model:** this model is a 3d vector model containing effective susceptibility values in SI units. The first column contains the effective susceptibility values along the direction of the inducing field. The remaining columns are effective susceptibilities along two orthogonal directions with respect to the inducing field direction.
-    - **Lower bound:** effective susceptibility in SI units
 
 **Outputs:**
 
     - **Predicted data:** total magnetic intensity and amplitude data are predicted in nanoTeslas (*nT*)
 
-
-.. _fwdEditOptions_MagPDE:
-
-PDE Octree
-----------
 
 
 

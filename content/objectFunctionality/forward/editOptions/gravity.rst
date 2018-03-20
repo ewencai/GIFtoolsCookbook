@@ -40,10 +40,6 @@ Units
 
 
 
-.. _fwdEditOptions_GG:
-
-Gravity Gradiometry
--------------------
 
 
 

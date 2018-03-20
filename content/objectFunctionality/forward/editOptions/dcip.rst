@@ -55,19 +55,6 @@ Units
     - **IP data:** The IP data are the apparent chargeabilities. The units are the same as the input chargeability model.
 
 
-.. _fwdEditOptions_dcip3d:
-
-DCIP3D
-======
-
-
-
-
-
-.. _fwdEditOptions_dcipoctree:
-
-DCIP Octree
-===========
 
 
 
