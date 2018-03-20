@@ -15,3 +15,7 @@ The contents of this drop-down menu will allow the user to rename, copy and dele
         delete
 
 
+
+.. figure:: ../../../images/editMenu.png
+    :align: center
+    :width: 700

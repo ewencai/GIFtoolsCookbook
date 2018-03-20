@@ -63,16 +63,10 @@ DCIP3D
 
 
 
-
 .. _fwdEditOptions_dcipoctree:
 
 DCIP Octree
 ===========
-
-
-
-
-
 
 
 

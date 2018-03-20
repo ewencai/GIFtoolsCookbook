@@ -17,3 +17,8 @@ Create allows the user to generate objects which are used to carry out a wide va
         Fortran utility program <fortran/fortran_index>
         Create Survey <survey/survey_index>
         Model Builder <ModelBuilder/ModelBuilder_index>
+
+
+.. figure:: ../../../images/createMenu.png
+    :align: center
+    :width: 700

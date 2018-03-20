@@ -52,7 +52,7 @@ To create gravity gradiometry data from a density-contrast model using the tenso
 Create a DC/IP forward model
 ----------------------------
 
-To create a DC or IP forward model using the tensor code (``DCIP2D`` or ``DCIPF3D``) or the octree code (``DCIPoctree``), use the following menu structure:
+To create a DC or IP forward model using the tensor code (``DCIP2D`` or ``DCIP3D``) or the octree code (``DCIPoctree``), use the following menu structure:
 
 .. figure:: ../../../../images/create3DdcipForward.png
     :align: center
@@ -70,8 +70,8 @@ To create a DC or IP forward model which uses the software ``DCIP2D``, the menu 
 The inputs to the forward model can be specified though :ref:`edit options <fwdEditOptions_dcip2d>`
 
 
-3D mesh
-^^^^^^^
+3D Tensor code
+^^^^^^^^^^^^^^
 
 To create a DC or IP forward model which uses the software ``DCIPF3D``, the menu structure is:
 
@@ -82,7 +82,7 @@ To create a DC or IP forward model which uses the software ``DCIPF3D``, the menu
 The inputs to the forward model can be specified though :ref:`edit options <fwdEditOptions_dcip3d>`
 
 
-Octree mesh
+Octree code
 ^^^^^^^^^^^
 
 To create a DC or IP forward model which uses the software ``DCIPoctree``, the menu structure is:

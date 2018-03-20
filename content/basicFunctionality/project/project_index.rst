@@ -19,3 +19,6 @@ The contents of this drop-down menu will assist in saving, opening and managing 
         Find the version number <about>
 
 
+.. figure:: ../../../images/projectMenu.png
+    :align: center
+    :width: 700

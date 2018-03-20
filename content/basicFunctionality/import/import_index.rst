@@ -16,3 +16,9 @@ GIFtools is capable of importing data, meshes, physical property models, cell we
         Import Weights <weights>
         Import Images (Raster) <importImage>
         Import Shape Files (RBIS vector) <shape>
+
+
+
+.. figure:: ../../../images/importMenu.png
+    :align: center
+    :width: 700

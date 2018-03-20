@@ -79,7 +79,7 @@ Advanced (Parameter 1)
 
 	- **Default:** Sets the values of *alpha S*, *alpha X* and *alpha Z* based on cell dimensions
 	- **Alphas:** Sets specific values for *alpha S*, *alpha X* and *alpha Z*
-	- **Lengths:** User sets values *Len E* and *Len Z* which define the values of *alpha X* and *alpha Z* relative to *alpha X*. These relationships are given by :math:`L_x = \sqrt{\frac{\alpha_x}{\alpha_s}}` and :math:`L_z = \sqrt{\frac{\alpha_z}{\alpha_s}}`.
+	- **Lengths:** User sets values *Len E* and *Len Z* which define the values of *alpha X* and *alpha Z* relative to *alpha S*. These relationships are given by :math:`L_x = \sqrt{\frac{\alpha_x}{\alpha_s}}` and :math:`L_z = \sqrt{\frac{\alpha_z}{\alpha_s}}`.
 
 **Bounds:** Here, the user specified the lower and upper bounds for the inverted physical property values. For both lower and upper bounds, the user may choose from the following options:
 
@@ -131,8 +131,6 @@ Advanced (Parameter 2)
 
 
 
-
-
 .. _invEditOptions_dcip3d:
 
 DCIP3D
@@ -142,16 +140,10 @@ DCIP3D
 
 
 
-
-
 .. _invEditOptions_dcipoctree:
 
 DCIP Octree
 ===========
-
-
-
-
 
 
 
