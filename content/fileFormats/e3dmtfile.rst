@@ -35,7 +35,7 @@ Parameter definitions:
   
 - ``data``: Columns of data / uncertainty pairs depending upon the data type:
 
-  - **MT data:** For MT data, the 16 data columns are in MT coordinates (X+ north, Y+ East, Z+ down) and consist of the following in order:
+  - **MT data:** For MT data, the 16 data columns are in MT coordinates (X+ north, Y+ East, Z+ up) and consist of the following in order:
   
      - :math:`ZXX^r`: Real part of the ZXX component
      
