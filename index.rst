@@ -30,6 +30,7 @@ recipes to extended walk-through tutorials (A to Z)
     :maxdepth: 1
 
     content/fundamentals/index
+    content/signConvention
     content/recipes/recipe_index
     content/AtoZ/AtoZ_index
     content/videoTutorials

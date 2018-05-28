@@ -13,6 +13,7 @@ GIFtools Site map
     content/objectFunctionality/objectFunctionality_index
     content/fileFormats/format_index
     content/fundamentals/index
+    content/signConvention
     content/recipes/recipe_index
     content/AtoZ/AtoZ_index
     content/videoTutorials
