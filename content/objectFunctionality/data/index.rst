@@ -11,6 +11,8 @@ Data
 		magnetics/index
 		dcip/index
 		em/index
+		mt/index
+		ztem/index
 
 
 

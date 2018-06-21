@@ -77,7 +77,13 @@ Below is an example using MAGdata and exporting for MAG3D:
     :width: 400
 
 
- 
+Special types
+~~~~~~~~~~~~~
+
+Most data type can be export by the above method. However, certain data types require one or more additional steps. Links to exporting these data types are found below:
+
+    - :ref:`Export E3DMT version 1 observations/locations <objectDataTypeMT_export1>`
+    - :ref:`Export E3DMT version 2 observations/locations <objectDataTypeMT_export2>`
 
 
 
