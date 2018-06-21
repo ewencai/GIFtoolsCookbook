@@ -68,13 +68,19 @@ Here, we define the coordinate systems for data points for each code. In general
 
 .. _sign_dcip_coord:
 
-**DCIP details:** PENDING
+DCIP details
+~~~~~~~~~~~~
+
+ PENDING
 
 
 
 .. _sign_em1d_coord:
 
-**EM1DFM and EM1DTM details:** The EM1DFM and EM1DTM codes read and write data files where X is Easting, Y is Northing and Z is +ve downward. A value of Z = -5 m refers to a location that is 5 m above the surface; even if the surface is at an elevation not equal to 0 m. When loaded into GIFtools (Z +ve upwards), the Z values are automatically transformed into the correct elevation values. If EM1DFM or EM1DTM data are modeled using GIFtools, the resulting elevation values will take surface topography into account.
+EM1DFM and EM1DTM details
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+ The EM1DFM and EM1DTM codes read and write data files where X is Easting, Y is Northing and Z is +ve downward. A value of Z = -5 m refers to a location that is 5 m above the surface; even if the surface is at an elevation not equal to 0 m. When loaded into GIFtools (Z +ve upwards), the Z values are automatically transformed into the correct elevation values. If EM1DFM or EM1DTM data are modeled using GIFtools, the resulting elevation values will take surface topography into account.
 
 
 
@@ -85,7 +91,7 @@ Here, we define the coordinate systems for data points for each code. In general
 GIF Data Sign Conventions and Time-Dependency
 ---------------------------------------------
 
-Here, we define the sign conventions for various data types and the time-dependence (:math:`\pm i \omega t`) for frequency domain codes. If data are not formatted using the proper convention, it is unlikely that the inversion will be able to fit the data and return meaningful results.
+Here, we define the sign conventions for various data types and the :ref:`time-dependence for frequency domain codes <sign_time_conv>`. If data are not formatted using the proper convention, it is unlikely that the inversion will be able to fit the data and return meaningful results.
 
 .. important:: Make sure you scroll all the way to the right within the table to see all information pertaining to a particular code.
 
@@ -132,15 +138,15 @@ Here, we define the sign conventions for various data types and the time-depende
 |        |           |             | - Hx, Hy, Hz with z-axis pointing upward                                                                                            |
 |TDEM    |TDoctree   |octree       | - dBx/dt, dBy/dt, -dBz/dt with Z-axis pointing upward (:ref:`details<sign_tdem_conv>`)                                              |
 +--------+-----------+-------------+-------------------------------------------------------------------------------------------------------------------------------------+
-|        |           |             | - Time-dependency is :math:`-i\omega t` (:ref:`details<sign_time_conv>`)                                                            |
+|        |           |             | - Time-dependency is :math:`-i\omega t` (:ref:`MT details<sign_mt_conv>`, :ref:`ZTEM details<sign_ztem_conv>`)                      |
 |MT/ZTEM |MTZ3D      |             |                                                                                                                                     |
 |        |           |             |                                                                                                                                     |
 +--------+-----------+-------------+-------------------------------------------------------------------------------------------------------------------------------------+
-|        |           |             | - Time-dependency is :math:`+i\omega t` (:ref:`details<sign_time_conv>`)                                                            |
+|        |           |             | - Time-dependency is :math:`-i\omega t` (:ref:`MT details<sign_mt_conv>`, :ref:`ZTEM details<sign_ztem_conv>`)                      |
 |MT/ZTEM |E3DMT      |octree ver. 1|                                                                                                                                     |
 |        |           |             |                                                                                                                                     |
 +--------+-----------+-------------+-------------------------------------------------------------------------------------------------------------------------------------+
-|        |           |             | - Time-dependency can be chosen as :math:`\pm i\omega t` (:ref:`details<sign_time_conv>`)                                           |
+|        |           |             | - Time-dependency can be chosen as :math:`\pm i\omega t` (:ref:`MT details<sign_mt_conv>`, :ref:`ZTEM details<sign_ztem_conv>`)     |
 |MT/ZTEM |E3DMT      |octree ver. 2|                                                                                                                                     |
 |        |           |             |                                                                                                                                     |
 +--------+-----------+-------------+-------------------------------------------------------------------------------------------------------------------------------------+
@@ -154,60 +160,11 @@ Here, we define the sign conventions for various data types and the time-depende
     - Sign conventions for MTZTEM data are a mystery right now.
 
 
-.. _sign_mag_conv:
-
-**Magnetics:**
-
-For total magnetic intensity (TMI) data, the sign of the data is more or less determined by whether the secondary magnetic field has components parallel or anti-parallel to the Earth's inducing field; where the Earth's inducing field can be at a variety of orientations depending on latitude and regional variations. In this case, a positive data value generally indicates that the secondary magnetic field has vector components parallel to the Earth's inducing field; i.e. it 'adds to' the inducing field. In contrast, a negative data value indicates that components of the secondary field are anti-parallel, or 'oppose', the Earth's inducing field.
-
-For amplitude data, a positive value indicates that the magnitude of the total observed magnetic field (:math:`\mathbf{B_p + B_s}`) is larger than the Earth's inducing field (:math:`\mathbf{B_p}`); i.e. :math:`| \mathbf{B_p + B_s} | > |\mathbf{B_p} |`. The opposite is true for negative data values.
-
-
-.. _sign_dcip_conv:
-
-**DCIP data:**
-
-In the electrostatic case, the Ampere-Maxwell equation shows that :math:`\nabla \times \mathbf{E} = 0` and that :math:`\mathbf{E}` can be written as the gradient of a scalar potential:
-
-.. math::
-    \mathbf{E} = \pm \nabla V.
-
-By taking the divergence of Faraday`s law and substituting the previous expression, the DC resistivity problem is ultimately defined by the following expression:
-
-.. math::
-
-    - \nabla \cdot \sigma (\pm \nabla V) = \nabla \cdot \mathbf{j_e}
-
-As we can see, our choice in the relationship between :math:`\mathbf{E}` and :math:`V` changes the sign convention for the voltage measurements. In the case of UBC GIF codes, we choose :math:`\mathbf{E} = - \nabla V`. By this convention, 1) secondary potentials are positive in the vicinity of positive electric charges and negative in the vicinity of negative electric charges, and 2) positive potentials are observed near current sources and negative potentials are observed near current sinks.
-
-
-.. _sign_em1dfm_conv:
-
-**EM1DFM data:**
-
-The EM1DFM code models data for a small loop transmitter with dipole moment in the X (Easting), Y (Northing) or Z (downward) direction, and receiver coils with dipole moments in the X (Easting), Y (Northing) or Z (downward) direction. Thus a Z oriented transmitter will have a primary field which points downwards. And positive Hz values indicate fields with vertical components pointing downward. In X and Y however, the primary field and observed field components are in the Easting and Northing directions, respectively. If working outside the GIFtools framework, it is important to realize that transmitters, receivers and data are defined in a left-handed coordinate system with Z +ve downward.
-
-In GIFtools, we define transmitters and receiver in the X (Easting), Y (Northing) and Z (upward) directions. The EM1DFM code can be used to model data which use these transmitters and receivers; it merely requires a potential sign change upon loading the data. 
-
-
-.. _sign_em1dtm_conv:
-
-**EM1DTM data: PENDING**
-
-
-
-.. _sign_tdem_conv:
-
-**H3DTD and TDoctree data:**
-
-For most of the data columns (Hx, Hy, Hz, dBx/dt, dBy/dt), the data represent the true anomalous field components in the coordinate system that defines the data locations; i,e, X (Easting). Y (Northing) and Z (upwards). However, these codes represent the time-derivative of the vertical component as -dBz/dt.
-
-The sign convention for dBz/dt data can be explained as follows. For coincident loop airborne systems, the true dBz/dt response observed at the center of the receiver coil is typically negative and decaying during the off-time. However, the decay curves for this component have historically been plotted as positive and decaying. This is done for two reasons. 1) A positive decay curve is analogous to the strength of a decaying inductive response. 2) The raw voltage induced within the receiver coil is in fact positive and decaying. This is because the induced EMF is proportional to -dB/dt. When people first plotted the raw voltages for this component, it was positive and decaying and the convention for plotting dBz/dt data was born.
-
 
 .. _sign_time_conv:
 
-**Time-dependency (Fourier convention):**
+Time-dependency (Fourier convention)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The relationship between a time-dependent function :math:`f(t)` and its corresponding frequency response :math:`F(i \omega`) is given by the inverse Fourier transform:
 
@@ -253,6 +210,95 @@ and Maxwell's equations in the frequency domain are:
 where :math:`e^{-i\omega t}` is suppressed.
 
 As we can see, the phase relationship between :math:`\mathbf{E}` and :math:`\mathbf{B}` in Faraday's law is different for each convention; similarly for :math:`\mathbf{H}` and :math:`\mathbf{D}` in the Ampere-Maxwell law. Thus it is important to know which convention is being used when examining the electric and magnetic fields for a particular FDEM code.
+
+.. _sign_mag_conv:
+
+Magnetics
+~~~~~~~~~
+
+For total magnetic intensity (TMI) data, the sign of the data is more or less determined by whether the secondary magnetic field has components parallel or anti-parallel to the Earth's inducing field; where the Earth's inducing field can be at a variety of orientations depending on latitude and regional variations. In this case, a positive data value generally indicates that the secondary magnetic field has vector components parallel to the Earth's inducing field; i.e. it 'adds to' the inducing field. In contrast, a negative data value indicates that components of the secondary field are anti-parallel, or 'oppose', the Earth's inducing field.
+
+For amplitude data, a positive value indicates that the magnitude of the total observed magnetic field (:math:`\mathbf{B_p + B_s}`) is larger than the Earth's inducing field (:math:`\mathbf{B_p}`); i.e. :math:`| \mathbf{B_p + B_s} | > |\mathbf{B_p} |`. The opposite is true for negative data values.
+
+
+.. _sign_dcip_conv:
+
+DCIP data
+~~~~~~~~~
+
+In the electrostatic case, the Ampere-Maxwell equation shows that :math:`\nabla \times \mathbf{E} = 0` and that :math:`\mathbf{E}` can be written as the gradient of a scalar potential:
+
+.. math::
+    \mathbf{E} = \pm \nabla V.
+
+By taking the divergence of Faraday`s law and substituting the previous expression, the DC resistivity problem is ultimately defined by the following expression:
+
+.. math::
+
+    - \nabla \cdot \sigma (\pm \nabla V) = \nabla \cdot \mathbf{j_e}
+
+As we can see, our choice in the relationship between :math:`\mathbf{E}` and :math:`V` changes the sign convention for the voltage measurements. In the case of UBC GIF codes, we choose :math:`\mathbf{E} = - \nabla V`. By this convention, 1) secondary potentials are positive in the vicinity of positive electric charges and negative in the vicinity of negative electric charges, and 2) positive potentials are observed near current sources and negative potentials are observed near current sinks.
+
+
+.. _sign_em1dfm_conv:
+
+EM1DFM data
+~~~~~~~~~~~
+
+The EM1DFM code models data for a small loop transmitter with dipole moment in the X (Easting), Y (Northing) or Z (downward) direction, and receiver coils with dipole moments in the X (Easting), Y (Northing) or Z (downward) direction. Thus a Z oriented transmitter will have a primary field which points downwards. And positive Hz values indicate fields with vertical components pointing downward. In X and Y however, the primary field and observed field components are in the Easting and Northing directions, respectively. If working outside the GIFtools framework, it is important to realize that transmitters, receivers and data are defined in a left-handed coordinate system with Z +ve downward.
+
+In GIFtools, we define transmitters and receiver in the X (Easting), Y (Northing) and Z (upward) directions. The EM1DFM code can be used to model data which use these transmitters and receivers; it merely requires a potential sign change upon loading the data. 
+
+
+.. _sign_em1dtm_conv:
+
+EM1DTM data
+~~~~~~~~~~~
+
+PENDING**
+
+
+
+.. _sign_tdem_conv:
+
+H3DTD and TDoctree data
+~~~~~~~~~~~~~~~~~~~~~~~
+
+For most of the data columns (Hx, Hy, Hz, dBx/dt, dBy/dt), the data represent the true anomalous field components in the coordinate system that defines the data locations; i,e, X (Easting). Y (Northing) and Z (upwards). However, these codes represent the time-derivative of the vertical component as -dBz/dt.
+
+The sign convention for dBz/dt data can be explained as follows. For coincident loop airborne systems, the true dBz/dt response observed at the center of the receiver coil is typically negative and decaying during the off-time. However, the decay curves for this component have historically been plotted as positive and decaying. This is done for two reasons. 1) A positive decay curve is analogous to the strength of a decaying inductive response. 2) The raw voltage induced within the receiver coil is in fact positive and decaying. This is because the induced EMF is proportional to -dB/dt. When people first plotted the raw voltages for this component, it was positive and decaying and the convention for plotting dBz/dt data was born.
+
+.. _sign_mt_conv:
+
+MT data
+~~~~~~~
+
+The NSEM GIF codes are generally formulated to use a :math:`-i\omega t` convention for the time-dependence. However, this may not match the convention used by data loaded into GIFtools from other sources. MT data loaded from EDI files generally uses the `MT/EMAP data interchange standard <https://seg.org/Portals/0/SEG/News%20and%20Resources/Technical%20Standards/seg_mt_emap_1987.pdf>`__ , which is :math:`+i\omega t`. If the convention used for the data does not match that of the code, it is unlikely that the inversion will be able to fit the data and return meaningful results.
+
+We can determine the convention used by the data by examining the data away from any major 3D structures. If data are represented using the :math:`\boldsymbol{+i \omega t}` convention, then we expect:
+
+    - at background locations: :math:`Z_{xy} \sim \dfrac{i \omega \mu}{k} \;\;\; \textrm{and} \;\;\; Z_{yx} \sim \frac{- i \omega \mu}{k} \;\;\; \textrm{where} \;\;\; k = \sqrt{i\omega \mu}` 
+    - :math:`Re[Z_{xy}] > 0`, :math:`\; Im[Z_{xy}] > 0` and :math:`\phi_{xy} \in [0^o, \; 90^o]` (:math:`\sim 45^o` for a half-space)
+    - :math:`Re[Z_{yx}] < 0`, :math:`\; Im[Z_{yx}] < 0` and :math:`\phi_{yx} \in [-90^o, \; -180^o]` (:math:`\sim -135^o` for a half-space)
+
+If data are represented using the :math:`\boldsymbol{-i \omega t}` convention, then for these data we expect:
+
+    - at background locations: :math:`Z_{xy} \sim \dfrac{i \omega \mu}{k} \;\;\; \textrm{and} \;\;\; Z_{yx} \sim \frac{- i \omega \mu}{k} \;\;\; \textrm{where} \;\;\; k = \sqrt{i\omega \mu}`
+    - :math:`Re[Z_{xy}] > 0`, :math:`\; Im[Z_{xy}] < 0` and :math:`\phi_{xy} \in [0^o, \; -90^o]` (:math:`\sim -45^o` for a half-space)
+    - :math:`Re[Z_{yx}] < 0`, :math:`\; Im[Z_{yx}] > 0` and :math:`\phi_{yx} \in [90^o, \; 180^o]` (:math:`\sim 135^o` for a half-space)
+
+As we can see, to switch from one convention to another we must:
+
+    - Multiply the imaginary component of all impedance tensor elements by -1
+    - Multiply the phase value for all elements of the impedance tensor by -1
+
+
+.. _sign_ztem_conv:
+
+ZTEM data
+~~~~~~~~~
+
+PENDING
 
 
 
@@ -363,27 +409,31 @@ Here, we define the physical property and data units used by each code.
 
 .. _sign_dc_units:
 
-**DC data units:**
+DC data units
+~~~~~~~~~~~~~
 
 DC data are represented by the measured voltage (:math:`\Delta V`) normalized by the transmitter current (:math:`I`). Thus the units for DC data are V/A. 
 
 
 .. _sign_ip_units:
 
-**IP data units:**
+IP data units
+~~~~~~~~~~~~~
 
 Generally, IP data are represented by the measured off-time voltage (:math:`\Delta V (t)`) normalized by the transmitter current (:math:`I`); which would be in units for V/A. In this case, the user is forward modeling with and inverting for the intrinsic chargeability (:math:`\eta \in [0,1]`). If the user wishes to implement the linear model approximation, then other definitions of intrinsic chargeability (mV/V) or integrated chargeability (ms) can be used to define the chargeability. However, the units for the resulting IP data would no longer be V/A in this case.
 
 .. _sign_em1dtm_units:
 
-**EM1DTM data units:**
+EM1DTM data units
+~~~~~~~~~~~~~~~~~
 
 The EM1DTM code represents components of the dB/dt response as the induced voltage within an arbitrarily oriented receiver coil. Where :math:`\mathbf{m}` is the dipole moment for the receiver coil, :math:`V = \mathbf{m} \cdot d\mathbf{B}/dt \,` (no minus sign) because the coordinate system is left-handed! Thus a +ve voltage corresponds to a +ve dB/dt response in the direction defining the dipole moment of the receiver coil (which is also defined in a left-handed coordinate system).
 
 
 .. _sign_mt_units:
 
-**Impedance tensor (MT) data units:**
+Impedance tensor (MT) data units
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 MT data represent the entries of the impedence tensor (:math:`\mathbf{Z}`) where:
 
@@ -399,7 +449,8 @@ where 1 denotes fields resulting from plane waves with an electric field polariz
 
 .. _sign_ztem_units:
 
-**Transfer functions (ZTEM) data units:**
+Transfer functions (ZTEM) data units
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ZTEM data represent the entries of a transfer function (:math:`\mathbf{T}`) where:
 
