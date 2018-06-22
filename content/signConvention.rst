@@ -9,6 +9,9 @@ Here we provide a quick guide for the following:
     - :ref:`Types and sign conventions for data<sign_conv>`
     - :ref:`Units for physical properties and data<sign_units>`
 
+Some codes may have internal coordinate systems. These details are not important here. This section is focused on the data that are read and output by each code.
+
+
 
 .. _sign_coord:
 
@@ -60,10 +63,10 @@ Here, we define the coordinate systems for data points for each code. In general
 |MT/ZTEM |E3DMT      |2 (2017)     |   X   |   Y    | up  |                                 |
 +--------+-----------+-------------+-------+--------+-----+---------------------------------+
 
-.. note::
-    - Potential fields should be pretty straight forward
-    - Example data files for DCIP2D, DCIP3D and DCIPoctree show borehole data as having -ve Z locations. Thus we believe it is right-handed with Z +ve up. **However**, the z location may be defined as a distance relative to the top of the mesh. Details need to be hashed out
-    - There is no indication that any CSEM codes (other than 1D codes) are in a coordinate system other than X (easting), Y (northing) and Z (+ve up). Example data files in manuals put Z locations as positive numbers.
+.. .. note::
+..    - Potential fields should be pretty straight forward
+..    - Example data files for DCIP2D, DCIP3D and DCIPoctree show borehole data as having -ve Z locations. Thus we believe it is right-handed with Z +ve up. **However**, the z location may be defined as a distance relative to the top of the mesh. Details need to be hashed out
+..    - There is no indication that any CSEM codes (other than 1D codes) are in a coordinate system other than X (easting), Y (northing) and Z (+ve up). Example data files in manuals put Z locations as positive numbers.
 
 
 .. _sign_dcip_coord:
@@ -80,9 +83,7 @@ DCIP details
 EM1DFM and EM1DTM details
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
- The EM1DFM and EM1DTM codes read and write data files where X is Easting, Y is Northing and Z is +ve downward. A value of Z = -5 m refers to a location that is 5 m above the surface; even if the surface is at an elevation not equal to 0 m. When loaded into GIFtools (Z +ve upwards), the Z values are automatically transformed into the correct elevation values. If EM1DFM or EM1DTM data are modeled using GIFtools, the resulting elevation values will take surface topography into account.
-
-
+The EM1DFM and EM1DTM codes read and write data files where X is Easting, Y is Northing and Z is +ve downward. Thus Z = -5 m indicates the observation location is 5 m above the surface; even if the surface is not at an elevation equal to 0 m. When loaded into GIFtools (Z +ve upwards), the Z values are automatically transformed into the correct elevation values. If EM1DFM or EM1DTM data are modeled from the GIFtools GUI in a scenario where there is surface topography, the resulting Z (elevation) values in GIFtools will take surface topography into account.
 
 
 
@@ -121,9 +122,9 @@ Here, we define the sign conventions for various data types and the :ref:`time-d
 |FDEM    |EM1DFM     | 1.0         | - Hx, Hy, Hz with Z-axis pointing downward (:ref:`details<sign_em1dfm_conv>`)                                                       |
 +--------+-----------+-------------+-------------------------------------------------------------------------------------------------------------------------------------+
 |        |           |             | - Time-dependency is :math:`-i\omega t` (:ref:`details<sign_time_conv>`)                                                            |
-|FDEM    |EH3D       |             | - Hx, Hy, Hz with z-axis pointing ???                                                                                               |
-|        |           |             | - Ex, Ey, Ez with z-axis pointing ???                                                                                               |
-|        |           |             | - Jx, Jy, Jz with z-axis pointing ???                                                                                               |
+|FDEM    |EH3D       |             | - Hx, Hy, Hz with z-axis pointing upwards                                                                                           |
+|        |           |             | - Ex, Ey, Ez with z-axis pointing upwards                                                                                           |
+|        |           |             | - Jx, Jy, Jz with z-axis pointing upwards                                                                                           |
 +--------+-----------+-------------+-------------------------------------------------------------------------------------------------------------------------------------+
 |        |           |             | - Time-dependency is :math:`+i\omega t` (:ref:`details<sign_time_conv>`)                                                            |
 |FDEM    |E3D        |octree       |                                                                                                                                     |
@@ -152,12 +153,12 @@ Here, we define the sign conventions for various data types and the :ref:`time-d
 +--------+-----------+-------------+-------------------------------------------------------------------------------------------------------------------------------------+
 
 
-.. note::
-    - Time-dependency for FDEM codes was inferred from the initial formulation of Maxwell`s equations in the theory sections for each available manual; :math:`\nabla \times E = \mp i\omega B \rightarrow \pm i\omega t` convention. Exceptions: E3DMT ver 2 can be either. EM1DFM explicitly states a dependency of :math:`+i\omega t`.
-    - The theoretical background for DCIP2D, DCIP3D and DCIPoctree seem to indicate a :math:`E =-\nabla V` formulation base on the final expression :math:`\nabla \cdot \sigma \nabla V = \nabla \cdot J_s=-I \delta (r)`.
-    - Sign conventions for TDEM data were inferred from looking at an example TDoctree data file showing the response over a conductor. The positive decaying Hz and positive decaying dBz/dt indicated that the sign of the dBz/dt data were flipped. This was not the case for dBx/dt and dBy/dt. It is assumed that the same convention is used for H3DTD but I'm not sure. EM3DTM is explicitly stated however.
-    - Sign conventions for FDEM data (except EM1DFM) are a mystery right now
-    - Sign conventions for MTZTEM data are a mystery right now.
+.. .. note::
+..     - Time-dependency for FDEM codes was inferred from the initial formulation of Maxwell`s equations in the theory sections for each available manual; :math:`\nabla \times E = \mp i\omega B \rightarrow \pm i\omega t` convention. Exceptions: E3DMT ver 2 can be either. EM1DFM explicitly states a dependency of :math:`+i\omega t`.
+..     - The theoretical background for DCIP2D, DCIP3D and DCIPoctree seem to indicate a :math:`E =-\nabla V` formulation base on the final expression :math:`\nabla \cdot \sigma \nabla V = \nabla \cdot J_s=-I \delta (r)`.
+..     - Sign conventions for TDEM data were inferred from looking at an example TDoctree data file showing the response over a conductor. The positive decaying Hz and positive decaying dBz/dt indicated that the sign of the dBz/dt data were flipped. This was not the case for dBx/dt and dBy/dt. It is assumed that the same convention is used for H3DTD but I'm not sure. EM3DTM is explicitly stated however.
+..     - Sign conventions for FDEM data (except EM1DFM) are a mystery right now
+..     - Sign conventions for MTZTEM data are a mystery right now.
 
 
 
@@ -216,7 +217,11 @@ As we can see, the phase relationship between :math:`\mathbf{E}` and :math:`\mat
 Magnetics
 ~~~~~~~~~
 
+**Total magnetic intensity data:**
+
 For total magnetic intensity (TMI) data, the sign of the data is more or less determined by whether the secondary magnetic field has components parallel or anti-parallel to the Earth's inducing field; where the Earth's inducing field can be at a variety of orientations depending on latitude and regional variations. In this case, a positive data value generally indicates that the secondary magnetic field has vector components parallel to the Earth's inducing field; i.e. it 'adds to' the inducing field. In contrast, a negative data value indicates that components of the secondary field are anti-parallel, or 'oppose', the Earth's inducing field.
+
+**Amplitude data:**
 
 For amplitude data, a positive value indicates that the magnitude of the total observed magnetic field (:math:`\mathbf{B_p + B_s}`) is larger than the Earth's inducing field (:math:`\mathbf{B_p}`); i.e. :math:`| \mathbf{B_p + B_s} | > |\mathbf{B_p} |`. The opposite is true for negative data values.
 
@@ -247,7 +252,7 @@ EM1DFM data
 
 The EM1DFM code models data for a small loop transmitter with dipole moment in the X (Easting), Y (Northing) or Z (downward) direction, and receiver coils with dipole moments in the X (Easting), Y (Northing) or Z (downward) direction. Thus a Z oriented transmitter will have a primary field which points downwards. And positive Hz values indicate fields with vertical components pointing downward. In X and Y however, the primary field and observed field components are in the Easting and Northing directions, respectively. If working outside the GIFtools framework, it is important to realize that transmitters, receivers and data are defined in a left-handed coordinate system with Z +ve downward.
 
-In GIFtools, we define transmitters and receiver in the X (Easting), Y (Northing) and Z (upward) directions. The EM1DFM code can be used to model data which use these transmitters and receivers; it merely requires a potential sign change upon loading the data. 
+In GIFtools, we define transmitters and receiver for the 1D codes in the X (Easting), Y (Northing) and Z (upward) directions. So long as the appropriate sign change is applied, the EM1DFM code can be used to model data for transmitters and receivers defined within GIFtools. Therefore, the appropriate sign change is automatically applied to EM1DFM data when loaded into/exported from GIFtools.
 
 
 .. _sign_em1dtm_conv:
@@ -283,14 +288,14 @@ We can determine the convention used by the data by examining the data away from
 
 If data are represented using the :math:`\boldsymbol{-i \omega t}` convention, then for these data we expect:
 
-    - at background locations: :math:`Z_{xy} \sim \dfrac{i \omega \mu}{k} \;\;\; \textrm{and} \;\;\; Z_{yx} \sim \frac{- i \omega \mu}{k} \;\;\; \textrm{where} \;\;\; k = \sqrt{i\omega \mu}`
+    - at background locations: :math:`Z_{xy} \sim \dfrac{-i \omega \mu}{k} \;\;\; \textrm{and} \;\;\; Z_{yx} \sim \frac{ i \omega \mu}{k} \;\;\; \textrm{where} \;\;\; k = \sqrt{-i\omega \mu}`
     - :math:`Re[Z_{xy}] > 0`, :math:`\; Im[Z_{xy}] < 0` and :math:`\phi_{xy} \in [0^o, \; -90^o]` (:math:`\sim -45^o` for a half-space)
     - :math:`Re[Z_{yx}] < 0`, :math:`\; Im[Z_{yx}] > 0` and :math:`\phi_{yx} \in [90^o, \; 180^o]` (:math:`\sim 135^o` for a half-space)
 
 As we can see, to switch from one convention to another we must:
 
-    - Multiply the imaginary component of all impedance tensor elements by -1
-    - Multiply the phase value for all elements of the impedance tensor by -1
+    - Multiply the imaginary components of all impedance tensor elements by -1
+    - Multiply the phase values for all elements of the impedance tensor by -1
 
 
 .. _sign_ztem_conv:
@@ -399,12 +404,12 @@ Here, we define the physical property and data units used by each code.
 |MT/ZTEM |E3DMT      |octree ver. 2|- :math:`\kappa = SI` (background only)| - :math:`T_i:` unitless (:ref:`details<sign_ztem_units>`)            |
 +--------+-----------+-------------+---------------------------------------+----------------------------------------------------------------------+
 
-.. note::
-    - Units for potential fields are explicitly stated in manuals
-    - Units for DCIP codes should be consistent and were more or less stated in the DCIP2D manual
-    - Units for EM1DFM and EM1DTM are explicitly stated in manuals
-    - Units for NSEM codes are inferred but likely correct
-    - **Units for 3D CSEM codes have been assumed but not verified**
+.. .. note::
+..     - Units for potential fields are explicitly stated in manuals
+..     - Units for DCIP codes should be consistent and were more or less stated in the DCIP2D manual
+..     - Units for EM1DFM and EM1DTM are explicitly stated in manuals
+..     - Units for NSEM codes are inferred but likely correct
+..     - **Units for 3D CSEM codes have been assumed but not verified**
 
 
 .. _sign_dc_units:

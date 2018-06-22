@@ -446,6 +446,7 @@ Some things to note about loading E3DMT version 2 observed/locations data:
     - The user selects the `Observations <https://e3dmt.readthedocs.io/en/latest/content/files/obsFile.html#version-2-2017>`__ / `survey index file <https://e3dmt.readthedocs.io/en/latest/content/files/indexFile.html>`__ from the first pop-up window, the `receivers file <https://e3dmt.readthedocs.io/en/latest/content/files/receiverFile.html>`__ from the second pop-up window, and the `frequencies file <https://e3dmt.readthedocs.io/en/latest/content/files/freqFile.html>`__ form the third pup-up window.
     - Although it is good practice, the locations for each frequency do not need to match. Frequency-location pairs without data are given a value of NaN.
     - The IDs for the receivers do not need to be in any particular order but they do need to be unique.
+    - If the respective IDs for Hx and Hy receivers are all the same (e.g. a base station for ZTEM data), the resulting ZTEM data object will still have a datatype of *MTH*.
 
 Some things to note about loading E3DMT version 2 predicted data:
 
@@ -458,8 +459,8 @@ MT data: EDI format
 
 To load MT data that are in one or more EDI files (GIFtools will prompt and allow for multiple files), the menu structure is:
 
-    - Impedances: **Import** |rarr| **Data** |rarr| **Natural-source EM** |rarr| **MT EDI file(s)** |rarr| **Impedance**
-    - Apparent resitivity and phase: **Import** |rarr| **Data** |rarr| **Natural-source EM** |rarr| **MT EDI file(s)** |rarr| **Apparent resitivity and phase:**
+    - Make impedance data object: **Import** |rarr| **Data** |rarr| **Natural-source EM** |rarr| **MT EDI file(s)** |rarr| **Impedance**
+    - Make apparent resistivity data object: **Import** |rarr| **Data** |rarr| **Natural-source EM** |rarr| **MT EDI file(s)** |rarr| **Apparent resitivity and phase:**
 
 Once selected, the user must do the following:
 

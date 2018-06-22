@@ -34,7 +34,7 @@ Some things to note about this functionality
 Set/Reset Base Station
 ----------------------
 
-To forward model or invert ZTEM data using the MTZ3D or E3DMT version 1 codes, the base station must first be defined. If data were loaded into GIFtools using EDI or E3DMT version 2 formats, this functionality can be used to define the base station. If data were loaded from and E3DMT version 1 or MTZ3D data file, then the base station may automatically be defined. This functionality is accessed via:
+To forward model or invert ZTEM data using the MTZ3D or E3DMT version 1 codes, the base station must first be defined. If data were loaded into GIFtools using EDI or E3DMT version 2 formats, this functionality can be used to define the base station. If data were loaded from and E3DMT version 1 or MTZ3D data file, then the base station(s) may automatically be defined. This functionality is accessed via:
 
 **ZTEM data** |rarr| **Set/reset base station**
 
@@ -51,8 +51,8 @@ In the pop-up window shown below, the user specifies the following:
 
 Some things to note about this functionality:
 
-	- By using this functionality, you will replace any pre-existing base locations and replace the base station index column
-	- As of right now, the E3DMT version 2 does not use base stations. In the future, this may change.
+	- By using this functionality, you will replace any pre-existing base stations and replace the base station index (BASEID) column
+	- A base station can be set and used within the framework of the E3DMT version 2 code.
 
 
 .. _objectDataTypeZTEM_snid:
@@ -79,7 +79,8 @@ In the pop-up window shown below, the user specifies the following:
 Some things to note about this functionality:
 
     - The centers of loop receivers are at the location of the associated datum.
-    - By using this functionality, you will replace the receivers and receiver index column associated with this data object.
+    - By using this functionality, you will replace the receivers and receiver index column (SNID) associated with this data object.
+    - If :ref:`ZTEM data type <objectDataTypeZTEM_datatype>` is *MTH*, then Hx and Hy will be measured at the observation locations. If :ref:`ZTEM data type <objectDataTypeZTEM_datatype>` is *MTT* or *MTE* and you have :ref:`set a base station <objectDataTypeZTEM_basestn>`, then the locations of the loops measuring Hx and Hy will be at the location of the base station. This functionality will not work however if there are multiple base stations. 
 
 
 .. _objectDataTypeZTEM_rmbase:

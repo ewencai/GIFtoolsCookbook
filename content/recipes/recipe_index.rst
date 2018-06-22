@@ -3,6 +3,16 @@
 Recipes
 =======
 
+Data Processing
+---------------
+
+.. toctree::
+    :maxdepth: 1
+
+    NSEM: From raw EDI files to GIF formatted data <data/edi2e3dmt>
+
+
+
 Forward Modeling Recipes
 ------------------------
 
