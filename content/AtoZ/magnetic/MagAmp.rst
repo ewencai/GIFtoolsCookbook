@@ -88,4 +88,4 @@ Synthesis
 
 .. figure:: ./../../../images/AtoZ_Mag/AtoZ_Mag_invAmpCompact.png
             :align: center
-            :scale: 75%
+

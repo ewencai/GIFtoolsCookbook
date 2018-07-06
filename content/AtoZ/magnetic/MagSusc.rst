@@ -36,6 +36,8 @@ Step by step
 
     *Click on image*
 
+.. _AtoZ_mag_loadXYZ:
+
 - **Step 2: Survey and Data**
     - :ref:`Import magnetic data in XYZ format <importMagData>`. The data being imported are TMI data.
 

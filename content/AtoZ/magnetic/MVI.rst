@@ -17,7 +17,7 @@ Downloads
 
 .. example::    - `Download the demo <https://github.com/ubcgif/GIFtoolsCookbook/raw/master/assets/AtoZ_mag_4Download.zip>`_
                     - Requires at least `GIFtools version 2.1.3 (Oct 2017) <https://gif.eos.ubc.ca/GIFtools/downloads2#Installation>`_
-                    - Requires `MVI v2.0 <http://gif.eos.ubc.ca/GIFtools>`_
+                    - Requires `MVI v3.0 <http://gif.eos.ubc.ca/GIFtools>`_
 
 
 Step by step
@@ -34,15 +34,14 @@ Step by step
     - :ref:`Import the topography data <importTopo>`
 
 - **Step 2: Survey and Data**
-    - :ref:`Import the magnetic data in UBC format <magfile>`
+    - :ref:`Import the magnetic data from XYZ <AtoZ_mag_loadXYZ>`
 
 .. _AtoZMagMVI_Step3:
 
 - **Step 3: Processing**
-    - :ref:`Create an inversion object (MVI 2.0)<createMagInv>`
+    - :ref:`Create an inversion object (MVI v3.0)<createMagInv>`
         - :ref:`Edit the options <fwdEditOptions_MVI>`
             - Panel 1: Fill out Sensitivity Options (must use MVI data)
-            - Panel 2: Adjust :math:`\alpha` parameters, same as :ref:`here <AtoZMag_alphaOpt>`
             - Click *Apply and write files*
 
 .. _AtoZMVI_C:
