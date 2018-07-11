@@ -10,14 +10,19 @@ Purpose
  - Improve the MVI-C solution with a cooperative inversion approach (amplitude + MVI-C)
  - Demonstrate the advantages of a sparse MVI-S code
 
+.. figure:: ./../../../images/AtoZ_Mag/AtoZ_Mag_True.png
+            :align: center
+
+            The true model we will attempt to recover.
+
 .. note:: Link to `MVI documentation <http://mvi.readthedocs.io/en/latest/>`_
 
 Downloads
 ^^^^^^^^^
 
 .. example::    - `Download the demo <https://github.com/ubcgif/GIFtoolsCookbook/raw/master/assets/AtoZ_mag_4Download.zip>`_
-                    - Requires at least `GIFtools version 2.1.3 (Oct 2017) <https://gif.eos.ubc.ca/GIFtools/downloads2#Installation>`_
-                    - Requires `MVI v3.0 <http://gif.eos.ubc.ca/GIFtools>`_
+                    - Requires at least `GIFtools version 2.25 (July 2018) <https://gif.eos.ubc.ca/GIFtools/downloads2#Installation>`_
+                    - Requires `MVI v3.0 (13062018) <http://gif.eos.ubc.ca/GIFtools>`_
 
 
 Step by step
@@ -59,15 +64,18 @@ Step by step
 
 .. figure:: ./../../../images/AtoZ_Mag/AtoZ_Mag_MVI_C.png
             :align: center
-            :scale: 50%
 
 
-- ALTERNATE ENDING #1: Run a Cooperative Magnetic Inversion (CMI): MVI-C + amplitude
-    .. note:: In this inversion, we will use the compact model obtained in the :ref:`Magnetic Amplitude Inversion <AtoZMag_Amp>` demo to constrain the smooth MVI-C result.
+ALTERNATE ENDING #1: Cooperative Magnetic Inversion (CMI)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-    .. figure:: ./../../../images/AtoZ_Mag/AtoZ_Mag_MVIOptions.png
-            :align: right
-            :scale: 20%
+In this inversion, we will use the compact model obtained in the
+:ref:`Magnetic Amplitude Inversion <AtoZMag_Amp>` demo to constrain the smooth
+MVI-C result.
+
+    .. .. figure:: ./../../../images/AtoZ_Mag/AtoZ_Mag_InvOptions.png
+    ..         :align: right
+    ..         :scale: 20%
 
     - :ref:`Copy the inversion object from MVI-C <invCopyOptions>`
     - Create a cell weighting model :math:`\mathbf{w}`
@@ -82,16 +90,19 @@ Step by step
 
 .. figure:: ./../../../images/AtoZ_Mag/AtoZ_Mag_CMI.png
             :align: center
-            :scale: 50%
 
             Sparse CMI model
 
 .. _AtoZ_Mag_MVIS:
 
-- ALTERNATE ENDING #2: Run the inversion: MVI-Spherical**
-	.. warning:: The MVI-Spherical code (MVI 2.0) is currently under review. The example below has been completed with MVI 3.0 (expected release: early 2018).
+ALTERNATE ENDING #2: Sparse MVI-Spherical
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-	.. figure:: ./../../../images/AtoZ_Mag/AtoZ_Mag_InvOptions.png
+In this inversion, we will use the spherical transformation to apply sparsity
+on the amplitude and angles independantly. The user is invited to try
+different combination of norms to test the range of solutions.
+
+	.. figure:: ./../../../images/AtoZ_Mag/AtoZ_Mag_MVIOptions.png
             :align: right
             :scale: 20%
 
@@ -106,7 +117,6 @@ Step by step
 
 .. figure:: ./../../../images/AtoZ_Mag/AtoZ_Mag_MVI_S.png
             :align: center
-            :scale: 50%
 
             Sparse MVI-S model
 
