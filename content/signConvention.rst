@@ -282,13 +282,13 @@ The NSEM GIF codes are generally formulated to use a :math:`-i\omega t` conventi
 
 We can determine the convention used by the data by examining the data away from any major 3D structures. If data are represented using the :math:`\boldsymbol{+i \omega t}` convention, then we expect:
 
-    - at background locations: :math:`Z_{xy} \sim \dfrac{i \omega \mu}{k} \;\;\; \textrm{and} \;\;\; Z_{yx} \sim \frac{- i \omega \mu}{k} \;\;\; \textrm{where} \;\;\; k = \sqrt{i\omega \mu}` 
+    - at background locations: :math:`Z_{xy} \sim \dfrac{i \omega \mu}{k} \;\;\; \textrm{and} \;\;\; Z_{yx} \sim \frac{- i \omega \mu}{k} \;\;\; \textrm{where} \;\;\; k = \sqrt{i\omega \mu \sigma}` 
     - :math:`Re[Z_{xy}] > 0`, :math:`\; Im[Z_{xy}] > 0` and :math:`\phi_{xy} \in [0^o, \; 90^o]` (:math:`\sim 45^o` for a half-space)
     - :math:`Re[Z_{yx}] < 0`, :math:`\; Im[Z_{yx}] < 0` and :math:`\phi_{yx} \in [-90^o, \; -180^o]` (:math:`\sim -135^o` for a half-space)
 
 If data are represented using the :math:`\boldsymbol{-i \omega t}` convention, then for these data we expect:
 
-    - at background locations: :math:`Z_{xy} \sim \dfrac{-i \omega \mu}{k} \;\;\; \textrm{and} \;\;\; Z_{yx} \sim \frac{ i \omega \mu}{k} \;\;\; \textrm{where} \;\;\; k = \sqrt{-i\omega \mu}`
+    - at background locations: :math:`Z_{xy} \sim \dfrac{-i \omega \mu}{k} \;\;\; \textrm{and} \;\;\; Z_{yx} \sim \frac{ i \omega \mu}{k} \;\;\; \textrm{where} \;\;\; k = \sqrt{-i\omega \mu \sigma}`
     - :math:`Re[Z_{xy}] > 0`, :math:`\; Im[Z_{xy}] < 0` and :math:`\phi_{xy} \in [0^o, \; -90^o]` (:math:`\sim -45^o` for a half-space)
     - :math:`Re[Z_{yx}] < 0`, :math:`\; Im[Z_{yx}] > 0` and :math:`\phi_{yx} \in [90^o, \; 180^o]` (:math:`\sim 135^o` for a half-space)
 
@@ -444,8 +444,8 @@ MT data represent the entries of the impedence tensor (:math:`\mathbf{Z}`) where
 
 .. math::
     \begin{bmatrix} Z_{xx} & Z_{xy} \\ Z_{yx} & Z_{yy} \end{bmatrix} =
-    \begin{bmatrix} E_{x1} & E_{x2} \\ E_{y1} & E_{y2} \end{bmatrix}
-    \begin{bmatrix} H_{x1} & H_{x2} \\ H_{y1} & H_{y2} \end{bmatrix}^{-1}
+    \begin{bmatrix} E_{x}^{(1)} & E_{x}^{(2)} \\ E_{y}^{(1)} & E_{y}^{(2)} \end{bmatrix}
+    \begin{bmatrix} H_{x}^{(1)} & H_{x}^{(2)} \\ H_{y}^{(1)} & H_{y}^{(2)} \end{bmatrix}^{-1}
 
 
 where 1 denotes fields resulting from plane waves with an electric field polarized along the x direction, and 2 denotes fields resulting from planes with with an electric field polarized along the y direction. For a layered Earth, :math:`Z_{xy} = E_{x1}/H_{x2}`. Where the electric field units V/m and the magnetic field has units A/m, the units for elements of the impedence tensor is V/A.

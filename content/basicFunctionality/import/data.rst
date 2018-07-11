@@ -476,10 +476,10 @@ Once selected, the user must do the following:
 
 Some things to note about loading MT data from EDI files:
 
-    - EDI is defined by `The Society of Exploration Geophysicists MT / EMAP Data Interchange Standard <https://seg.org/Portals/0/SEG/News%20and%20Resources/Technical%20Standards/seg_mt_emap_1987.pdf>`__ .
+    - We assume the EDI file data are defined by `The Society of Exploration Geophysicists MT / EMAP Data Interchange Standard <https://seg.org/Portals/0/SEG/News%20and%20Resources/Technical%20Standards/seg_mt_emap_1987.pdf>`__ . That is, the data uses the :math:`+i\omega t` :ref:`time-dependency <sign_mt_conv>`.
     - GIFtools will convert the (LONG, LAT) to WGS84 UTM when importing.
     - GIFtools assumes that impedance tensor data have column names *ZXXR, ZXXI, ZXYR, ZXYI, ZYXR, ZYXI, ZYYR* and *ZYYI*. It also assumes the impedance data are in units mV/km/nT and will converted these data to V/A as required by GIF inversion programs.
-    - GIFtools does not make assumptions regarding the :ref:`time-dependency/Fourier convention <sign_time_conv>` of imaginary impedance tensor values or phase values. The user is responsible for managing whether data are represented using a :math:`+i\omega t` or :math:`- i\omega t` convention.
+    - GIFtools converts impedance data from a :math:`+i\omega t` (EDI standard) convention to a :math:`-i\omega t` (GIF standard) convention. However, this change is currently **not** applied to phase data columns if they exist.
 
 .. _importNSEMData_ascii:
 
