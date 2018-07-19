@@ -20,7 +20,7 @@ Purpose
 Downloads
 ^^^^^^^^^
 
-.. example::    - `Download the demo <https://github.com/ubcgif/GIFtoolsCookbook/raw/master/assets/AtoZ_mag_4Download.zip>`_
+.. example::    - `Download the demo <https://github.com/ubcgif/GIFtoolsCookbook/raw/master/assets/AtoZ_mag_4Download.zip>`_ **All files required for this example are located in the sub-folder "MVI"**.
                     - Requires at least `GIFtools version 2.25 (July 2018) <https://gif.eos.ubc.ca/GIFtools/downloads2#Installation>`_
                     - Requires `MVI v3.0 (13062018) <http://gif.eos.ubc.ca/GIFtools>`_
 
@@ -36,14 +36,15 @@ Step by step
 - **Step 1: Setup**
     - :ref:`Start a GIFtools project <basicFunctionality_index>`
     - :ref:`Set the working directory <projSetWorkDir>`
-    - :ref:`Import the topography data <importTopo>`
+    - :ref:`Import the topography data <importTopo>` from file **TKCtopo.dat**
+    - :ref:`Import the mesh <importMesh>` from file **TKC_magSynthetic.msh**
 
 - **Step 2: Survey and Data**
-    - :ref:`Import the magnetic data from XYZ <AtoZ_mag_loadXYZ>`
+    - :ref:`Import the processed TMI data in GIF format <magfile>` from the file **TKC_magSynthetic_Survey_noIGRF.mag**.
 
 .. _AtoZMagMVI_Step3:
 
-- **Step 3: Processing**
+- **Step 3: Processing (NEED IMAGE OF PANELS FILLED OUT)**
     - :ref:`Create an inversion object (MVI v3.0)<createMagInv>`
         - :ref:`Edit the options <fwdEditOptions_MVI>`
             - Panel 1: Fill out Sensitivity Options (must use MVI data)
@@ -56,11 +57,11 @@ Step by step
     - :ref:`Import the inversion results <invStep6>`
     - :ref:`View the convergence curves <invStep7>`
 
-    .. note:: - The magnetic vectors with the highest amplitude are located on the eastern margin of the anomaly.
-              - Although the direction of magnetization is smoothly changing, the average orientation appears to be pointing downward and towards east.
-              - We can try to improve this result in two different ways
-              	- Re-run cooperatively with the sparse magnetic :ref:`amplitude model<AtoZ_Mag_AmpSynthesis>`
-              	- Run the :ref:`MVI-Spherical <AtoZ_Mag_MVIS>` code with sparsity constraints
+.. note:: - The magnetic vectors with the highest amplitude are located on the eastern margin of the anomaly.
+          - Although the direction of magnetization is smoothly changing, the average orientation appears to be pointing downward and towards east.
+          - We can try to improve this result in two different ways
+          	- Re-run cooperatively with the sparse magnetic :ref:`amplitude model<AtoZ_Mag_AmpSynthesis>`
+          	- Run the :ref:`MVI-Spherical <AtoZ_Mag_MVIS>` code with sparsity constraints
 
 .. figure:: ./../../../images/AtoZ_Mag/AtoZ_Mag_MVI_C.png
             :align: center
