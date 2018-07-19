@@ -25,6 +25,7 @@ Tutorials are organized by geophysical method:
         Gravity: Forward modeling and constrained inversion <gravity/index>
         Magnetics: Dealing with remanence <magnetic/index>
         EM1DFM: 1D and laterally constrained 3D inversion <em1dfm/index>
+        EM1DTM: 1D and laterally constrained 3D inversion <em1dtm/index>
         DCIP: Invert with tensor and Octree meshes <DCIP/index>
         Frequency-EM: Inverting with tiled codes <FEM/index>
         Time-EM: Inverting in 1D and 3D <TEM/index>
