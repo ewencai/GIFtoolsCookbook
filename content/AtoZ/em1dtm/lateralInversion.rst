@@ -6,7 +6,7 @@
 Laterally Constrained 3D Inversion
 ==================================
 
-Here, frequency-domain data are inverted using the laterally constrained 3D
+Here, time-domain data are inverted using the laterally constrained 3D
 inversion approach. Just like in the previous exercise, every 1D model is
 associated with a distinct sounding location (see `em1dtm package overview
 <http://em1dtm.readthedocs.io/en/latest/content/overview.html>`__). However

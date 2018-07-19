@@ -24,7 +24,7 @@ split into three parts:
     .. toctree::
        :maxdepth: 1
 
-       Importing raw frequency-domain data <assignUncertainties>
+       Importing raw time-domain data <assignUncertainties>
        Static and Adaptive 1D Inversion <staticInversion>
        Laterally Constrained 3D Inversion <lateralInversion>
 
