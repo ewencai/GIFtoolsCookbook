@@ -8,18 +8,28 @@ Magnetic Susceptibility:
 Purpose
 ^^^^^^^
 
-Demonstrate the basic steps for the inversion of magnetic data using the
-induced magnetization assumption. We will start directly with *simulated* data
-and topography, as it is often the case in a greenfield exploration project.
+Demonstrate the basic steps for the inversion of TMI magnetic data using the
+induced magnetization assumption; i.e. no remanent magnetization. This exercise is meant to emulate greenfield exploration project where topography and magnetic data are available.
+Here, we start with topography and synthetic magnetic data from the current best TKC susceptibility model.
 
-.. note:: Link to `MAG3D documentation <http://mag3d.readthedocs.io/en/v6/index.html>`_
+
+.. note::
+    - Link to `MAG3D documentation <http://mag3d.readthedocs.io/en/v6/index.html>`_
+    - Click on any figure to enlarge
 
 Downloads
 ^^^^^^^^^
 
-.. example::    - `Download the demo <https://github.com/ubcgif/GIFtoolsCookbook/raw/master/assets/AtoZ_mag_4Download.zip>`_
+.. example::    - `Download the demo <https://github.com/ubcgif/GIFtoolsCookbook/raw/master/assets/AtoZ_mag_4Download.zip>`_ . **All files required for this example are located in the sub-folder "MagSusc".**
                     - Requires at least `GIFtools version 2.1.3 (Oct 2017) <https://gif.eos.ubc.ca/GIFtools/downloads2#Installation>`_
                     - Requires `MAG3D v6.0 <http://gif.eos.ubc.ca/GIFtools>`_
+
+
+.. figure:: ./../../../images/AtoZ_Mag/AtoZ_Mag_LoadXYZ.png
+    :align: right
+    :width: 175
+
+    *Import window*
 
 
 Step by step
@@ -28,31 +38,33 @@ Step by step
 - **Step 1: Setup**
     - :ref:`Start a GIFtools project <basicFunctionality_index>`
     - :ref:`Set the working directory <projSetWorkDir>`
-    - :ref:`Import the topography data <importTopo>`
+    - :ref:`Import the topography data <importTopo>` from file **TKCtopo.dat**.
 
-.. figure:: ./../../../images/AtoZ_Mag/AtoZ_Mag_LoadXYZ.png
-    :align: right
-    :scale: 30%
-
-    *Click on image*
+.. _AtoZ_mag_loadXYZ:
 
 - **Step 2: Survey and Data**
-    - :ref:`Import magnetic data in XYZ format <importMagData>`. The data being imported are TMI data.
+    - :ref:`Import magnetic data in XYZ format <importMagData>`. The data being imported are TMI data from the file **TKC_magSynthetic_Survey.xyz**.
 
     .. tip:: Assign the Easting and Northing (X, Y), but leave elevation empty. Make sure you load in both the *ralt* and *B_igrf* variables
+
+
+    .. figure:: ./../../../images/AtoZ_Mag/AtoZ_Mag_SyntheticData_trended.png
+        :align: right
+        :width: 175
+
+        *Observed data*
+
 
     - :ref:`Set the field parameters for the newly created magnetic survey <objectEditFieldParam>`:
         - Field strength (IGRF) = 59,850 nT
         - Inclination = 83.3 degrees
         - Declination = 19.5 degrees
 
-    .. figure:: ./../../../images/AtoZ_Mag/AtoZ_Mag_SyntheticData_trended.png
-        :align: right
-        :scale: 20%
 
-    - :ref:`Remove the IGRF from the TMI data<objectRemoveIGRF>`
-    - :ref:`Create elevation column for Mag data<objectMagDataElevation>` using the topography and known flight height (40 m)
-    - :ref:`Set data uncertainties (1nT floor) <objectAssignUncert>` for the TMI data
+    - :ref:`Set the IO headers for the observed data column "B_igrf" <objectSetioHeaders>`
+    - :ref:`Remove the IGRF from the TMI data<objectRemoveIGRF>`; IGRF field strength is 59850 nT.
+    - In the newly created data object, :ref:`create elevation column for Mag data<objectMagDataElevation>` using the topography and known flight height (40 m). Set the Z column to this new elevation using :ref:`Set the IO headers <objectSetioHeaders>`
+    - :ref:`Assign floor uncertainty of 1 nT <objectAssignUncert>` to all TMI data
 
     .. note:: - The observed magnetic data is now ready for export.
               - At least two anomalies are easily identified.
@@ -60,28 +72,49 @@ Step by step
 
 .. figure:: ./../../../images/AtoZ_Mag/AtoZ_Mag_MeshParam.png
     :align: right
-    :scale: 15%
+    :width: 150
 
-    *Mesh specs*
+    *Mesh parameters*
 
 .. _AtoZMag_invObj:
 
 - **Step 3: Processing**
+
+|
+
     - :ref:`Create a mesh from the observed data <objectDataCreateMesh>`
-        - To reproduce this example, use the following parameters
+        - To reproduce this example, use the parameters specified in the figure on the right
+
+|
+|
+|
+|
+|
+|
+
     - :ref:`Create an inversion object (MAG3D 6.0)<createMagInv>`
 
-    .. figure:: ./../../../images/AtoZ_Mag/AtoZ_Mag_InvOptions.png
-        :align: right
-        :scale: 15%
+|
+|
+|
+|
 
-        Inversion parameters
+.. figure:: ./../../../images/AtoZ_Mag/AtoZ_Mag_InvOptions.png
+    :align: right
+    :width: 175
 
-    .. _AtoZMag_alphaOpt:
+    *Inversion options*
+
+|
+|
+|
+|
+
+.. _AtoZMag_alphaOpt:
 
     - :ref:`Edit the options <fwdEditOptions_Mag3D>`
-        - Panel 1: Fill out Sensitivity Options
-        - Panel 2: Adjust :math:`\alpha` parameters
+        - Panel 1: Set mesh, observed data and topography. Leave sensitivity options as default.
+        - Panel 2: Adjust :math:`\alpha` parameters (see figure)
         - Click *Apply and write files*
 
 .. tip:: As a general *best practice*, in the absence of a priori
@@ -91,12 +124,21 @@ Step by step
 
 .. figure:: ./../../../images/AtoZ_Mag/AtoZ_Mag_invTrend.png
             :align: right
-            :scale: 20%
+            :width: 350
+
+            Recovered susceptibility model
 
 - **Step 4: Run the inversion**
     - :ref:`Run all the files <invStep5>`
     - :ref:`Import the inversion results <invStep6>`
     - :ref:`View the convergence curves <invStep7>`
+
+|
+|
+|
+|
+|
+
 
 .. note:: Note the linear anomalies recovered on the edges of the core
           mesh. This feature is due to the regional signal captured by our survey, but extents beyond the region of interest.
@@ -111,6 +153,7 @@ Step by step
 - **Step 5: De-trend and re-run**
     - Using the Mag data object, :ref:`compute the first-order polynomial trend<objectPolyTrend>`
     - Using the :ref:`column calculator <objectColumnCalculator>`, remove the polynomial trend from your data
+    - :ref:`Set the IO header <objectSetioHeaders>` for data column to be the detrended data
     - To create an inversion object with the same parameters as a previous one, use :ref:`create a new inversion copy <invCopyOptions>`
     - :ref:`Write all files <invWriteAll>` to inversion directory
     - **Repeat Step 4**
