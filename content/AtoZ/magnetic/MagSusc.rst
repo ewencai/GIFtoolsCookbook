@@ -90,14 +90,9 @@ Step by step
 |
 |
 |
-|
 
     - :ref:`Create an inversion object (MAG3D 6.0)<createMagInv>`
 
-|
-|
-|
-|
 
 .. figure:: ./../../../images/AtoZ_Mag/AtoZ_Mag_InvOptions.png
     :align: right
@@ -105,17 +100,16 @@ Step by step
 
     *Inversion options*
 
-|
-|
-|
-|
-
 .. _AtoZMag_alphaOpt:
 
     - :ref:`Edit the options <fwdEditOptions_Mag3D>`
         - Panel 1: Set mesh, observed data and topography. Leave sensitivity options as default.
         - Panel 2: Adjust :math:`\alpha` parameters (see figure)
         - Click *Apply and write files*
+
+|
+|
+|
 
 .. tip:: As a general *best practice*, in the absence of a priori
          information, :math:`\alpha` values should be set such that all components of

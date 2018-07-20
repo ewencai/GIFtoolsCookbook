@@ -99,17 +99,22 @@ Step by step
 
 .. note:: The recovered effective susceptibility model shows a near-vertical anomaly, in good agreement with the conceptual idea of a vertical kimberlite pipe.
 
-.. figure:: ./../../../images/AtoZ_Mag/AtoZ_Mag_InvOptions.png
+.. figure:: ./../../../images/AtoZ_Mag/AtoZ_Mag_AmpSparseOptions.png
             :align: right
             :scale: 20%
 
-            **This is not correct panel**
+            Sparsity parameters
 
-- **Step 5: Repeat the inversion with sparsity (WHAT PARAMETERS)**
+- **Step 5: Repeat the inversion with sparsity ([0, 2, 2, 2])**
     - :ref:`Copy the previous inversion object <invCopyOptions>`
     - Set the sparsity parameters ->
     - :ref:`Import the inversion results <invStep6>`
     - :ref:`View the convergence curves <invStep7>`
+
+|
+|
+|
+|
 
 .. _AtoZ_Mag_AmpSynthesis:
 

@@ -85,6 +85,14 @@ MVI-C result.
         - :ref:`Add a small threshold value <objectFunctionalityMathSimple>`: :math:`\mathbf{w} = \mathbf{w}+1e-2`
         - :ref:`Apply an inverse power function <objectFunctionalityMathSimple>`: :math:`\mathbf{w} = \mathbf{w}^{-1}`
         - :ref:`Assign the cell weights <objectMeshCreateWeights>`
+
+
+        .. figure:: ./../../../images/AtoZ_Mag/AtoZ_Mag_CMIweights.png
+              :align: center
+
+              Cell weights derived from the effective susceptibility model.
+
+
     - :ref:`Write all files <invWriteAll>`
     - :ref:`Run the inversion <invRun>`
     - :ref:`Import the last inversion result <invStep6>`
