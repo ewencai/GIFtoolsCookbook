@@ -45,10 +45,10 @@ Import files
 
 In addition to raw geophysical data, you may have access to topographical information. If this information is available, it can be imported into GIFtools.
 
-    - :ref:`Import raw TEM data <importFemData>` (Geosoft XYZ format as an TEMsounding).
-    - :ref:`Import topography data <importTopo>` (3D GIF format)
-    - :ref:`Import 1D mesh<importMesh>` (layers file)
-    - :ref:`Import surface layer<importSurface>` (3D GIF format)
+    - :ref:`Import raw TEM data <importTemData>` from the file **TKCdata_VTEM.xyz** (Geosoft XYZ format as a TEMsounding).
+    - :ref:`Import topography data <importTopo>` from the file **TKCtopo.dat** (3D GIF format)
+    - :ref:`Import 1D mesh<importMesh>` from the file **layer.msh** (layers file)
+    - :ref:`Import surface layer<importSurface>` from the file **TillLayer.topo** (3D GIF format)
 
 .. tip:: - Use **Edit** |rarr| **Rename** to change what objects in GIFtools are called
          - For any data object, :ref:`edit the data headers <objectDataHeaders>`.
@@ -56,8 +56,8 @@ In addition to raw geophysical data, you may have access to topographical inform
          - The standard deviation of Gaussian noise added was determined from the uncertainties used to invert real TEM data collected over TKC.
 
 
-Add Transmitter, Receiver and Elevation Information
----------------------------------------------------
+Set Survey Information
+---------------------
 
 .. figure:: ./../../../images/AtoZ_fem1d/create_FEM_Tx_Rx.png
     :align: right
@@ -72,8 +72,8 @@ Since the raw data were formatted according to the Geosoft XYZ format, the trans
 
     - :ref:`Add transmitters<objectEMaddTx>` to set the locations of the transmitters **relative to the current xyz data locations**. Use the following parameters:
 
-        - Dipole moment = 1 Am :math:`\! ^2`
-        - Set Azimuth angle as "Relative to bearing" and set bearing to calculate
+        - Loop transmitter with radius of 10 m
+        - Set "Rotation angles" as "Relative to bearing" and set bearing to calculate
         - Along-line offset = 0 m
         - Cross-line offset = 0 m
         - Set vertical offset as altitude column from data object
@@ -83,11 +83,13 @@ Since the raw data were formatted according to the Geosoft XYZ format, the trans
 
         - Dipole moment = 1 Am :math:`\! ^2`
         - Set Azimuth angle as "Relative to bearing" and use the bearing column that was calculated when adding transmitters
-        - Along-line offset = 15 m
+        - Along-line offset = 0 m
         - Cross-line offset = 0 m
         - Set vertical offset as altitude column from data object
 
-    - :ref:`Set data normalization to ppm<objectEMsetDataNorm>`
+    - :ref:`Set data normalization to Volts<objectEMsetDataNorm_TEM>`
+    - :ref:`Set time normalization to seconds<objectEMsetTimeNorm_TEM>`
+    - :ref:`Import and set waveform<objectEMwaveform_import>`
 
 
 **MUST GENERATE PLOTS FOR TEM**
@@ -108,7 +110,7 @@ Before inverting the data, we must assign uncertainties. The role of uncertainti
 
     - Use :ref:`assign time-dependent uncertainties<objectAssignUncert>` to create data columns containing the data uncertainties. Use the following floor and percent values for both the real and imaginary data:
 
-        - **WHAT ARE THE UNCERTAINTIES APPLIED?**
+        - **WHAT ARE THE UNCERTAINTIES APPLIED?** Right now I tried 1e-14 + 5\%
 
     - Set :ref:`i/o headers<objectSetioHeaders>` for all fields. Files used in the inversion cannot be written until this is performed.
 

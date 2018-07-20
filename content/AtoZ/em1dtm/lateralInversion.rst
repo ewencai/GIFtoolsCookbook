@@ -13,11 +13,11 @@ associated with a distinct sounding location (see `em1dtm package overview
 lateral constraints are added such that the set of recovered 1D models are
 smooth horizontally and can ultimately be constrained and interpreted in 3D.
 The laterally constrained 3D inversion algorithm is a computationally fast way
-to invert FEM data while taking into account both vertical and horizontal
+to invert TEM data while taking into account both vertical and horizontal
 variability of the Earth. The final model recovered by this algorithm is fully
 3-dimensional.
 
-.. figure:: ../../../images/AtoZ_fem1d/AtoZ_em1dtm_landing_LC.png
+.. figure:: ../../../images/AtoZ_TEM1d/AtoZ_em1dtm_landing_LC.png
     :align: center
     :figwidth: 75%
 
@@ -40,7 +40,7 @@ Setup for the Exercise
 
 **If you have NOT completed the previous tutorial and would like to start here, complete the following steps:**
 
-    - `Download the demo <https://github.com/ubcgif/GIFtoolsCookbook/raw/master/assets/AtoZ_FEM1D_4Download.zip>`_ (**FIX LINK**)
+    - `Download the demo <https://github.com/ubcgif/GIFtoolsCookbook/raw/master/assets/AtoZ_TEM1D_4Download.zip>`_ (**FIX LINK**)
     - Open GIFtools
     - :ref:`Set the working directory <projSetWorkDir>`
     - :ref:`Import em1dtm data file: Assets//TEM1D.obs <importTemData>` (1D TEM GIF format data in **WHAT UNITS?**)
@@ -49,9 +49,10 @@ Setup for the Exercise
     - :ref:`Create elevation from surface topography<objectElevFromSurface>`
         - Set elevation at 40 m above topography
         - :ref:`Set i/o header<objectSetioHeaders>` for Z to the elevation column you just created.
+    - :ref:`Import and set waveform<objectEMwaveform_import>`
 
 
-.. note:: The uncertainties for this exercise are the same as the uncertainties used to invert real TEM data collected over TKC.
+.. note:: **Something about uncertainties**
 
 
 **GENERATE TEM EQUIVALENT**
@@ -62,7 +63,7 @@ Setup for the Exercise
 .. raw:: html
     :file: ./AtoZ_Data_Imag.html
 
-*Real (left) and quadrature (right) components of synthetic FEM data collected over TKC*
+*Real (left) and quadrature (right) components of synthetic TEM data collected over TKC*
 
 
 .. _AtoZem1dtm_lateral_inversion:
@@ -72,7 +73,7 @@ Laterally Constrained 3D TEM Inversion
 
 **GENERATE TEM EQUIVALENT**
 
-.. figure:: ./../../../images/AtoZ_fem1d/LC_fem1D.png
+.. figure:: ./../../../images/AtoZ_TEM1d/LC_TEM1D.png
     :align: right
     :scale: 75%
 
@@ -84,7 +85,7 @@ Setup the inversion
 
 **If you have completed the tutorial** :ref:`"Static and Adaptive 1D Inversion"<AtoZem1dtm_static>`:
 
-    - Click on a preexisting em1dtm inversion object and :ref:`copy options<invCopyOptions>`
+    - Click on a pre-existing em1dtm inversion object and :ref:`copy options<invCopyOptions>`
     - Click on the newly created em1dtm inversion object to set the output directory
     - Set any necessary em1dtm inversion parameters under :ref:`edit options<invEditOptions>`:
         - Make sure the mesh, observed data and topography are properly set!
@@ -123,7 +124,7 @@ Discussion
 **NEW DISCUSSION SECTION NEEDED**
 
 
-.. figure:: ./../../../images/AtoZ_fem1d/Inv_LC_model.png
+.. figure:: ./../../../images/AtoZ_TEM1d/Inv_LC_model.png
     :align: right
     :figwidth: 45%
 
@@ -141,7 +142,7 @@ the algorithm through the usual :ref:`convergence curve<convergence_curve>` wind
 Ideally we would like to test the hypothesis of a conductive overburden in 3D, as well as to impose bounds on the conductivity values.
 which we covered in the :ref:`next section<AtoZem1dtm_lateral>`.
 
-.. figure:: ./../../../images/AtoZ_fem1d/Inv_LC_convergence.png
+.. figure:: ./../../../images/AtoZ_TEM1d/Inv_LC_convergence.png
     :align: center
     :figwidth: 55%
 
@@ -187,7 +188,7 @@ To accomplish this task, we use the model builder module.
 
 This model can be used as a reference model and constrain the final recover conductivity model.
 
-.. figure:: ./../../../images/AtoZ_fem1d/RefModTill.png
+.. figure:: ./../../../images/AtoZ_TEM1d/RefModTill.png
     :align: center
     :width: 600
 
@@ -232,7 +233,7 @@ by the 1D assumption. We did however manage to recover a first order estimate
 for the horizontal positions of the kimberlite pipes and background
 conductivity structures.
 
-.. .. figure:: ./../../../images/AtoZ_fem1d/Inv_LC_constrained_EW.png
+.. .. figure:: ./../../../images/AtoZ_TEM1d/Inv_LC_constrained_EW.png
 ..     :align: left
 ..     :figwidth: 45%
 
@@ -240,13 +241,13 @@ conductivity structures.
 
 **GENERATE TEM EQUIVALENT**
 
-.. figure:: ./../../../images/AtoZ_fem1d/Inv_LC_constrained.png
+.. figure:: ./../../../images/AtoZ_TEM1d/Inv_LC_constrained.png
     :align: left
     :figwidth: 45%
 
     Recovered 1D models with geological constraints
 
-.. figure:: ./../../../images/AtoZ_fem1d/True_model.png
+.. figure:: ./../../../images/AtoZ_TEM1d/True_model.png
     :align: right
     :figwidth: 45%
 
