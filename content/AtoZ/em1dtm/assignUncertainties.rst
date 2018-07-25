@@ -46,6 +46,10 @@ Import files
 In addition to raw geophysical data, you may have access to topographical information. If this information is available, it can be imported into GIFtools.
 
     - :ref:`Import raw TEM data <importTemData>` from the file **TKCdata_VTEM.xyz** (Geosoft XYZ format as a TEMsounding).
+
+        - Under *channel information*, import the time channels from the file **VTEMtimes.dat**
+        - When specifying headers, choose load file and use **headers.txt**
+
     - :ref:`Import topography data <importTopo>` from the file **TKCtopo.dat** (3D GIF format)
     - :ref:`Import 1D mesh<importMesh>` from the file **layer.msh** (layers file)
     - :ref:`Import surface layer<importSurface>` from the file **TillLayer.topo** (3D GIF format)
@@ -57,7 +61,7 @@ In addition to raw geophysical data, you may have access to topographical inform
 
 
 Set Survey Information
----------------------
+----------------------
 
 .. figure:: ./../../../images/AtoZ_fem1d/create_FEM_Tx_Rx.png
     :align: right
@@ -70,35 +74,32 @@ Since the raw data were formatted according to the Geosoft XYZ format, the trans
         - Click **at surface** and use the altitude data column from the TEMsounding object
         - :ref:`Set i/o header<objectSetioHeaders>` for Z to the elevation column you just created
 
-    - :ref:`Add transmitters<objectEMaddTx>` to set the locations of the transmitters **relative to the current xyz data locations**. Use the following parameters:
+    - :ref:`Add transmitters<objectEMaddTx>` to set the locations of the transmitters **relative to the current xyz data locations**. For the coincident loop system used for the survey we set the following parameters:
 
         - Loop transmitter with radius of 10 m
-        - Set "Rotation angles" as "Relative to bearing" and set bearing to calculate
         - Along-line offset = 0 m
         - Cross-line offset = 0 m
-        - Set vertical offset as altitude column from data object
+        - Set vertical offset as altitude column (**ralt**) from TEMsounding object
 
 
     - :ref:`Add receivers<objectEMaddRx>` to set the locations of the receivers **relative to the transmitter locations**. Use the following parameters:
 
         - Dipole moment = 1 Am :math:`\! ^2`
-        - Set Azimuth angle as "Relative to bearing" and use the bearing column that was calculated when adding transmitters
         - Along-line offset = 0 m
         - Cross-line offset = 0 m
-        - Set vertical offset as altitude column from data object
+        - Set vertical offset as altitude column (**ralt**) from data object
 
-    - :ref:`Set data normalization to Volts<objectEMsetDataNorm_TEM>`
+    - :ref:`Set data normalization to Volts<objectEMsetDataNorm_TEM>`. This determines the data units written to the observations file and interpreted by the EM1DTM code.
     - :ref:`Set time normalization to seconds<objectEMsetTimeNorm_TEM>`
-    - :ref:`Import and set waveform<objectEMwaveform_import>`
+    - :ref:`Import and set waveform<objectEMwaveform_import>` using the file **VTEM.wave**
 
-
-**MUST GENERATE PLOTS FOR TEM**
 
 .. raw:: html
-    :file: ./AtoZ_Data_Real.html
+    :file: ./AtoZ_Data_Obs.html
 
-.. raw:: html
-    :file: ./AtoZ_Data_Imag.html
+
+.. important:: Notice that the dBz/dt response is negative and decaying instead of positive and decaying; the latter being a commonly used convention for plotting the dBz/dt response. This was a conscious choice to ensure all data types within GIFtools were represented using a universal coordinate system; :ref:`see coordinates<sign_em1dfm_conv>`. If TEM data (not in GIF formatted data files) are loaded into GIFtools, and the vertical response is represented as -dBz/dt or the induced voltage in the receiver coil, the user **must** change the sign and units of the data to standard GIF format.
+
 
 
 .. _AtoZem1dtm_uncert_assign:
@@ -108,40 +109,25 @@ Assign Uncertainties
 
 Before inverting the data, we must assign uncertainties. The role of uncertainties in the inversion process is described in the :ref:`inversion fundamentals section<Fundamentals_Uncertainties>`. Because the observed response spans multiple orders of magnitudes of all time channels, and the errors on the data may vary as such, distinct floor and percent uncertainties will be computed for each time channel.
 
-    - Use :ref:`assign time-dependent uncertainties<objectAssignUncert>` to create data columns containing the data uncertainties. Use the following floor and percent values for both the real and imaginary data:
-
-        - **WHAT ARE THE UNCERTAINTIES APPLIED?** Right now I tried 1e-14 + 5\%
-
+    - Use :ref:`assign simple uncertainties<objectAssignUncert>` to create data columns containing the data uncertainties. Use 1e-17 T/s + 10\%.
     - Set :ref:`i/o headers<objectSetioHeaders>` for all fields. Files used in the inversion cannot be written until this is performed.
 
 .. note::
-    The uncertainties for this exercise are the same as the uncertainties used to invert real TEM data collected over TKC. If the applied uncertainties are correct:
+    The uncertainties for this exercise are based on the noise added to synthetic 3D TEM data. If the applied uncertainties are correct:
         - The recovered model will not fit the data too heavily in certain regions at the expense of others
         - The recovered model will not fit the data too heavily at certain times at the expense of others
 
-**MUST GENERATE AND REPLACE PLOTS FOR TEM**
 
-
-.. figure:: ./../../../images/AtoZ_fem1d/FEMdata_1000I.png
+.. figure:: ./../../../images/AtoZ_tem1d/TEMdata_00009.png
     :align: right
     :figwidth: 0%
 
-.. figure:: ./../../../images/AtoZ_fem1d/FEMdata_5000I.png
+.. figure:: ./../../../images/AtoZ_tem1d/TEMdata_00030.png
     :align: right
     :figwidth: 0%
 
-.. figure:: ./../../../images/AtoZ_fem1d/FEMdata_25000I.png
+.. figure:: ./../../../images/AtoZ_tem1d/TEMdata_00190.png
     :align: right
     :figwidth: 0%
 
-.. figure:: ./../../../images/AtoZ_fem1d/FEMdata_1000R.png
-    :align: right
-    :figwidth: 0%
 
-.. figure:: ./../../../images/AtoZ_fem1d/FEMdata_5000R.png
-    :align: right
-    :figwidth: 0%
-
-.. figure:: ./../../../images/AtoZ_fem1d/FEMdata_25000R.png
-    :align: right
-    :figwidth: 0%
