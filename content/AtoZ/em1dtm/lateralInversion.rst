@@ -17,7 +17,7 @@ to invert TEM data while taking into account both vertical and horizontal
 variability of the Earth. The final model recovered by this algorithm is fully
 3-dimensional.
 
-.. figure:: ../../../images/AtoZ_TEM1d/AtoZ_em1dtm_landing_LC.png
+.. figure:: ../../../images/AtoZ_FEM1d/AtoZ_em1dfm_landing_LC.png
     :align: center
     :figwidth: 75%
 
@@ -35,15 +35,15 @@ Setup for the Exercise
 
 **If you have completed the tutorial** :ref:`"Static and Adaptive 1D Inversion"<AtoZem1dtm_static>`:
 
-    - Open your preexisting GIFtools project
+    - Open your pre-existing GIFtools project
     - :ref:`Set the working directory <projSetWorkDir>` (if you would like to change it)
 
 **If you have NOT completed the previous tutorial and would like to start here, complete the following steps:**
 
-    - `Download the demo <https://github.com/ubcgif/GIFtoolsCookbook/raw/master/assets/AtoZ_TEM1D_4Download.zip>`_ (**FIX LINK**)
+    - `Download the demo <https://github.com/ubcgif/GIFtoolsCookbook/raw/master/assets/AtoZ_FEM1D_4Download.zip>`_ (**FIX LINK**)
     - Open GIFtools
     - :ref:`Set the working directory <projSetWorkDir>`
-    - :ref:`Import em1dtm data file: Assets//TEM1D.obs <importTemData>` (1D TEM GIF format data in **WHAT UNITS?**)
+    - :ref:`Import EM1DTM formatted data <importTemData>` from the file **TKCdata_VTEM_1Dformat.xyz**
     - :ref:`Import 1D mesh<importMesh>` (layers file)
     - :ref:`Import the topography data <importTopo>` (3D GIF format)
     - :ref:`Create elevation from surface topography<objectElevFromSurface>`
@@ -52,18 +52,17 @@ Setup for the Exercise
     - :ref:`Import and set waveform<objectEMwaveform_import>`
 
 
-.. note:: **Something about uncertainties**
+.. note::
+    The uncertainties for this exercise are based on the noise added to synthetic 3D TEM data. If the applied uncertainties are correct:
+        - The recovered model will not fit the data too heavily in certain regions at the expense of others
+        - The recovered model will not fit the data too heavily at certain times at the expense of others
 
-
-**GENERATE TEM EQUIVALENT**
 
 .. raw:: html
-    :file: ./AtoZ_Data_Real.html
+    :file: ./AtoZ_Data_Obs.html
 
 .. raw:: html
-    :file: ./AtoZ_Data_Imag.html
-
-*Real (left) and quadrature (right) components of synthetic TEM data collected over TKC*
+    :file: ./AtoZ_Data_Decay.html
 
 
 .. _AtoZem1dtm_lateral_inversion:
@@ -71,9 +70,7 @@ Setup for the Exercise
 Laterally Constrained 3D TEM Inversion
 --------------------------------------
 
-**GENERATE TEM EQUIVALENT**
-
-.. figure:: ./../../../images/AtoZ_TEM1d/LC_TEM1D.png
+.. figure:: ./../../../images/AtoZ_FEM1d/LC_FEM1D.png
     :align: right
     :scale: 75%
 

@@ -94,11 +94,17 @@ Since the raw data were formatted according to the Geosoft XYZ format, the trans
     - :ref:`Import and set waveform<objectEMwaveform_import>` using the file **VTEM.wave**
 
 
+.. important:: In keeping with a commonly used convention, we have chosen to plot -dBz/dt to show a positive decaying response; thus dBz/dt for a coincident loop system is negative and decaying in the universal coordinate system used by GIFtools. When loading TEM which are not already in GIF format, it is important that the sign of the vertical response is correct.
+
+
 .. raw:: html
     :file: ./AtoZ_Data_Obs.html
 
+.. raw:: html
+    :file: ./AtoZ_Data_Decay.html
 
-.. important:: Notice that the dBz/dt response is negative and decaying instead of positive and decaying; the latter being a commonly used convention for plotting the dBz/dt response. This was a conscious choice to ensure all data types within GIFtools were represented using a universal coordinate system; :ref:`see coordinates<sign_em1dfm_conv>`. If TEM data (not in GIF formatted data files) are loaded into GIFtools, and the vertical response is represented as -dBz/dt or the induced voltage in the receiver coil, the user **must** change the sign and units of the data to standard GIF format.
+
+
 
 
 
@@ -130,4 +136,14 @@ Before inverting the data, we must assign uncertainties. The role of uncertainti
     :align: right
     :figwidth: 0%
 
+.. figure:: ./../../../images/AtoZ_tem1d/TEMdecay_DO27.png
+    :align: right
+    :figwidth: 0%
 
+.. figure:: ./../../../images/AtoZ_tem1d/TEMdecay_DO18.png
+    :align: right
+    :figwidth: 0%
+
+.. figure:: ./../../../images/AtoZ_tem1d/TEMdecay_TILL.png
+    :align: right
+    :figwidth: 0%

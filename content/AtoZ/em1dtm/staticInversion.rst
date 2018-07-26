@@ -17,9 +17,7 @@ Static and adaptive 1D inversion algorithms are a computationally fast way to
 obtain depth and horizontal location information about conductive/resistive
 and magnetically susceptible targets.
 
-**GENERATE COINCIDENT LOOP TEM EQUIVALENT**
-
-.. figure:: ./../../../images/AtoZ_fem1d/inv_fem1D_landing.png
+.. figure:: ./../../../images/AtoZ_tem1d/inv_tem1D_landing.png
     :align: center
     :figwidth: 75%
 
@@ -45,7 +43,7 @@ Setup for the Exercise
     - `Download the demo <https://github.com/ubcgif/GIFtoolsCookbook/raw/master/assets/AtoZ_FEM1D_4Download.zip>`_ (**FIX LINK**)
     - Open GIFtools
     - :ref:`Set the working directory <projSetWorkDir>`
-    - :ref:`Import em1dtm data file: Assets\\TEM1D.obs <importTemData>` (1D TEM GIF format data in Volts)
+    - :ref:`Import EM1DTM formatted data <importTemData>` from the file **TKCdata_VTEM_1Dformat.xyz**
     - :ref:`Import 1D mesh<importMesh>` (layers file)
     - :ref:`Import the topography data <importTopo>` (3D GIF format)
     - :ref:`Create elevation from surface topography<objectElevFromSurface>`
@@ -54,27 +52,28 @@ Setup for the Exercise
     - :ref:`Import and set waveform<objectEMwaveform_import>`
 
 
-.. note:: **Something about uncertainties**
+.. note::
+    The uncertainties for this exercise are based on the noise added to synthetic 3D TEM data. If the applied uncertainties are correct:
+        - The recovered model will not fit the data too heavily in certain regions at the expense of others
+        - The recovered model will not fit the data too heavily at certain times at the expense of others
 
 
-**GENERATE TEM EQUIVALENT**
+.. important:: In keeping with a commonly used convention, we have chosen to plot -dBz/dt to show a positive decaying response; thus dBz/dt for a coincident loop system is negative and decaying in the universal coordinate system used by GIFtools. When loading TEM which are not already in GIF format, it is important that the sign of the vertical response is correct.
+
 
 .. raw:: html
-    :file: ./AtoZ_Data_Real.html
+    :file: ./AtoZ_Data_Obs.html
 
 .. raw:: html
-    :file: ./AtoZ_Data_Imag.html
+    :file: ./AtoZ_Data_Decay.html
 
 
-*Real (left) and quadrature (right) components of synthetic FEM data collected over TKC*
 
 
 .. _AtoZem1dtm_static_inversion:
 
 Static 1D TEM Inversion
 -----------------------
-
-**GENERATE TEM EQUIVALENT**
 
 .. figure:: ./../../../images/AtoZ_fem1d/static_fem1D.png
     :align: right
@@ -94,7 +93,6 @@ Setup the inversion
             - **Set mesh from drop-down menu**
             - **Set observed data from drop-down menu**
             - **Mode:** static 1D
-            - **Model options:** for this example, data are inverted strictly for a conductivity model
             - **Solver options:** leave as default
             - **Trade-off Mode:** select discrepancy principle (computes :math:`\beta` using a line search)
         - **Conductivity tab:**
@@ -117,20 +115,19 @@ Run Inversion and Load Results
 Discussion
 ^^^^^^^^^^
 
-**NEED NEW INTERPRETATION FOR TEM POTENTIALLY**
-
-.. figure:: ./../../../images/AtoZ_fem1d/Inv_Static_model.png
+.. figure:: ./../../../images/AtoZ_tem1d/Inv_Static_model.png
     :align: right
-    :figwidth: 40%
+    :figwidth: 50%
 
     Recovered 1D conductivity models
 
 The inverted 1D conductivity models are automatically geo-referenced in 3D for
 visualization and interpretation. Interpolated data misfit
-maps for each data components are show below.
+maps for each data components are shown below.
 We note the following features
 
- - Two regions of higher conductivity showing as arc conductors.
+ - Two vertically oriented conductive anomalies.
+ - A near-surface conductive layer.
  - Mostly uncorrelated residual misfit map.
 
 Note that all 1D models extend vertically to the top of the mesh, even though
@@ -138,20 +135,19 @@ the observation stations were acquired at different heights. It is therefore
 expected that the relative depth of the anomalies may not be representative of
 true 3D variations.
 
-.. raw:: html
-    :file: ./AtoZ_DataFit_Static_Real.html
+
 
 .. raw:: html
-    :file: ./AtoZ_DataFit_Static_Imag.html
+    :file: ./AtoZ_DataFit_Static.html
 
-*Normalized data misfits for the real (left) and quadrature (right) components of the magnetic field*
+
+We further note that at early time channels, anomalous data misfits appear over regions know to have overburden. At late time channels however, the data misfit maps do not show any trends. 
+
 
 
 
 Adaptive 1D TEM Inversion
 -------------------------
-
-**CREATE TEM EQUIVALENT**
 
 .. figure:: ./../../../images/AtoZ_fem1d/adaptive_fem1D.png
     :align: right
@@ -195,11 +191,9 @@ Run Inversion and Load Results
 Discussion
 ^^^^^^^^^^
 
-**NEW INTERPRETATION AND DISCUSSION NEEDED**
-
-.. figure:: ./../../../images/AtoZ_fem1d/Inv_Adaptive_model.png
+.. figure:: ./../../../images/AtoZ_tem1d/Inv_Adaptive_Model.png
     :align: right
-    :figwidth: 45%
+    :figwidth: 50%
 
     Recovered 1D models with topography
 
@@ -212,28 +206,16 @@ that may be available. From the set of recovered models, we see that:
     - the inversion recovered a thin layer over the entire area of investigation, which appears to be slightly more conductive than the background.
 
 
-
-
-.. figure:: ./../../../images/AtoZ_fem1d/InvStatic_Misfit_1000I.png
+.. figure:: ./../../../images/AtoZ_tem1d/Misfit_Static_00009.png
     :align: right
     :figwidth: 0%
 
-.. figure:: ./../../../images/AtoZ_fem1d/InvStatic_Misfit_5000I.png
+.. figure:: ./../../../images/AtoZ_tem1d/Misfit_Static_00030.png
     :align: right
     :figwidth: 0%
 
-.. figure:: ./../../../images/AtoZ_fem1d/InvStatic_Misfit_25000I.png
+.. figure:: ./../../../images/AtoZ_tem1d/Misfit_Static_00190.png
     :align: right
     :figwidth: 0%
 
-.. figure:: ./../../../images/AtoZ_fem1d/InvStatic_Misfit_1000R.png
-    :align: right
-    :figwidth: 0%
 
-.. figure:: ./../../../images/AtoZ_fem1d/InvStatic_Misfit_5000R.png
-    :align: right
-    :figwidth: 0%
-
-.. figure:: ./../../../images/AtoZ_fem1d/InvStatic_Misfit_25000R.png
-    :align: right
-    :figwidth: 0%
