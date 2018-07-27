@@ -92,6 +92,7 @@ Setup the inversion
         - Use the *Fix Trade-off* mode
             - *Initial beta* = 1000
             - *Cooling factor* = 5
+            - *Global Iterations* = 5
             - Other parameters left as default values
     - Click *Apply*
 
@@ -173,7 +174,7 @@ To accomplish this task, we use the model builder module.
 
     - Setting physical property values for the active background cells in the newly created model can with the same functionality. Open the :ref:`Create model using surfaces<objectFunctionalityMBbuild_surf1>` window and use the following parameters
         - *Top surface* as *surface object*
-        - *Bottom surface* as *Value* (:math:`10^8` m)
+        - *Bottom surface* as *Value* (:math:`-1000` m)
         - *Value* as *physical property value* (set as :math:`10^{-5}` S/m)
         - *Destination model* as the physical property model you just created
 

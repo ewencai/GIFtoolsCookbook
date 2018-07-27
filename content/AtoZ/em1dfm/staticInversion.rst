@@ -163,7 +163,7 @@ Setup the inversion
     - Click on the newly created EM1DFM inversion object and set the output directory
     - Use :ref:`edit options<invEditOptions>` to verify and apply the current set of inversion parameters:
         - Make sure the mesh and observed data are properly set
-        - Make sure alpha_s = 0.25 and alpha_z = 1
+        - Make sure alpha_s = 0.04 and alpha_z = 1
         - Set the topography from the drop-down menu
         - Notice that the inversion parameters are identical to the previous inversion that was run
         - Apply and write all files
