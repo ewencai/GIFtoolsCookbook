@@ -10,7 +10,7 @@ EM Data Menu
 Add Transmitters
 ----------------
 
-GIF formatted FEM (link) and TEM (link) contain all necessary information pertaining to the transmitters and receivers. However, Geosoft XYZ and CSV formatted FEM and TEM data do not (links). Here, the user may specify the transmitter locations and properties based on the data locations for XYZ and CSV formatted data.
+GIF formatted FEM (link) and TEM (link) contain all necessary information pertaining to the transmitters and receivers. However, XYZ formatted FEM and TEM data do not (links). Here, the user may specify the transmitter locations and properties based on the data locations for XYZ and CSV formatted data.
 
 Select the object and the menu **"data type menu"** |rarr| **Add transmitters**
 
@@ -47,7 +47,7 @@ For FEM and TEM soundings (for use in the 1D codes), the transmitter locations a
 Add Receivers
 -------------
 
-GIF formatted FEM (link) and TEM (link) contain all necessary information pertaining to the transmitters and receivers. However, Geosoft XYZ and CSV formatted FEM and TEM data do not (links). Here, the user may specify the receiver locations and properties based on the data locations for XYZ and CSV formatted data.
+GIF formatted FEM (link) and TEM (link) contain all necessary information pertaining to the transmitters and receivers. However, XYZ formatted FEM and TEM data do not (links). Here, the user may specify the receiver locations and properties based on the data locations for XYZ and CSV formatted data.
 
 Select the object and the menu **"data type menu"** |rarr| **Add receivers**
 

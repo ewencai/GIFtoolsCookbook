@@ -2,10 +2,10 @@
 
 .. include:: <isonum.txt>
 
-Import TEM data into GIFtools from Geosoft XYZ or CSV file
-==========================================================
+Import TEM data into GIFtools from XYZ or CSV file
+==================================================
 
-GIFtools can import time-domain EM data from a Geosoft xyz or csv file in a few simple steps. This recipe uses a VTEM data set from a csv file. The first line in the file should be the data headers. Double check the file formats before starting: :ref:`csv file <CSVfile>` and :ref:`Geosoft xyz file <XYZfile>`.
+GIFtools can import time-domain EM data from a xyz or csv file in a few simple steps. This recipe uses a VTEM data set from a csv file. The first line in the file should be the data headers. Double check the file formats before starting: :ref:`csv file <CSVfile>` and :ref:`xyz file <XYZfile>`.
 
 .. note:: If you have multiple component data and not all time channels are available for some components, GIFtools can handle that. This recipe uses an example where the x component data has less time channels than the z component.
 
@@ -15,7 +15,7 @@ To set the working directory: **Project** |rarr| **Set properties** |rarr| **Set
 
 Now, let's start importing the TEM data: **Import** |rarr| **Data** |rarr| **Time-domain EM**
 
-There are several data formats to choose from. In this recipe, we focus on importing from a Geosoft xyz or a csv file. The steps are the same for both data formats. The example used here is from a csv file:  **Import** |rarr| **Data** |rarr| **Time-domain EM** |rarr| **CSV file**.
+There are several data formats to choose from. In this recipe, we focus on importing from a XYZ or a csv file. The steps are the same for both data formats. The example used here is from a csv file:  **Import** |rarr| **Data** |rarr| **Time-domain EM** |rarr| **CSV file**.
 
 The following GUI will pop up:
 
@@ -32,7 +32,7 @@ Click on the "Step 1" button. The following GUI will pop up.
         :figwidth: 50%
         :align: center
 
-Choose the appropriate headers from the drop-down menus for Easting, Northing, and Elevation. For our example, this is X, Y, and DEM. 
+Choose the appropriate headers from the drop-down menus for Easting, Northing, and Elevation. For our example, this is X, Y, and DEM.
 
 Next, add in the time channel information. This can be done in two ways: (1) Manually add the time channel information by clicking the plus or minus buttons to increase or decrease the number of time channels. Then the time can be entered in the second column. (2) Alternatively, you can load a text file that contains the time channels, as shown below.
 
@@ -40,9 +40,9 @@ Next, add in the time channel information. This can be done in two ways: (1) Man
         :figwidth: 30%
         :align: center
 
-To load in a file with the time channels, click "Load text file" and select the desired file. The GUI will update with the number of times and the time channels. In the case of our example, there are 45 time chanels, ranging from 0.021 to 10.667 ms. 
+To load in a file with the time channels, click "Load text file" and select the desired file. The GUI will update with the number of times and the time channels. In the case of our example, there are 45 time chanels, ranging from 0.021 to 10.667 ms.
 
-.. note:: These units will have to be changed before inversion of the data, but this can easily be done using the **Data manipulation** menu once the data is loaded into GIFtools. 
+.. note:: These units will have to be changed before inversion of the data, but this can easily be done using the **Data manipulation** menu once the data is loaded into GIFtools.
 
 The final step is to select the number of data groups. For this example, there are 4: the horizontal and vertical components of the time derivative of the magnetic field (dB/dt) and the magnetic field (B), In our example, these are denoted as SFx, SFz, BFx, and BFz in the headers of the csv file. Click the plus or minus buttons to increase or decrease the desired number of data groups.
 
@@ -113,7 +113,7 @@ When all data types are assigned in Step 2, any remaining data columns detected 
 Load the data
 -------------
 
-When everything is selected as desired, click OK to load in the time-domain EM data into GIFtools. 
+When everything is selected as desired, click OK to load in the time-domain EM data into GIFtools.
 
 .. tip:: Depending on the size of the file, loading the data may take some time!
 

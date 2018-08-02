@@ -13,11 +13,10 @@ Specifying Parameters for FEM Sounding Inversion
 Here, we detail the process of defining the survey parameters used in EM1DFM
 inversions. For `GIF formatted 1D FEM data
 <http://em1dfm.readthedocs.io/en/latest/content/files/supporting.html>`__, the
-survey parameters are automatically read into GIFtools. For :ref:`Geosoft
-XYZ<XYZfile>` and :ref:`CSV<CSVfile>` files however, the survey information
+survey parameters are automatically read into GIFtools. For :ref:`XYZ<XYZfile>` and :ref:`CSV<CSVfile>` files however, the survey information
 must be specified by the user. In this exercise, we:
 
-    - Define the data columns being imported from a Geosoft XYZ data file
+    - Define the data columns being imported from a XYZ data file
     - Set transmitter, receiver and elevation information
     - Assign uncertainties to the data
 
@@ -45,7 +44,7 @@ Import files
 
 In addition to raw geophysical data, you may have access to topographical information. If this information is available, it can be imported into GIFtools.
 
-    - :ref:`Import raw FEM data <importFemData>` (Geosoft XYZ format as an FEMsounding).
+    - :ref:`Import raw FEM data <importFemData>` (XYZ format as an FEMsounding).
     - :ref:`Import topography data <importTopo>` (3D GIF format)
     - :ref:`Import 1D mesh<importMesh>` (layers file)
     - :ref:`Import surface layer<importSurface>` (3D GIF format)
@@ -63,7 +62,7 @@ Add Transmitter, Receiver and Elevation Information
     :align: right
     :scale: 50%
 
-Since the raw data were formatted according to the Geosoft XYZ format, the transmitter and receiver information for the airborne survey must be set manually. Additionally, only an altitude column was provided in the raw data. Therefore, we must use the topography and altitude information to determine the elevation of each data point.
+Since the raw data were formatted according to the XYZ format, the transmitter and receiver information for the airborne survey must be set manually. Additionally, only an altitude column was provided in the raw data. Therefore, we must use the topography and altitude information to determine the elevation of each data point.
 
     - :ref:`Create elevation from surface topography<objectElevFromSurface>`
 
