@@ -174,18 +174,18 @@ To accomplish this task, we use the model builder module.
     - :ref:`Create model using surfaces<objectFunctionalityMBbuild_surf1>` with the following parameters to create an initial physical property model:
         - *Top surface* as *topography*
         - *Bottom surface* as *surface object*
-        - *Value* as *physical property value* (set as :math:`10^{-4}` S/m)
+        - *Value* as *physical property value* (set as :math:`10^{-2}` S/m)
         - *Destination model* as *New Model* and provide a name (RefMod)
 
     - Setting physical property values for the active background cells in the newly created model can with the same functionality. Open the :ref:`Create model using surfaces<objectFunctionalityMBbuild_surf1>` window and use the following parameters
         - *Top surface* as *surface object*
         - *Bottom surface* as *Value* (:math:`10^8` m)
-        - *Value* as *physical property value* (set as :math:`10^{-5}` S/m)
+        - *Value* as *physical property value* (set as :math:`10^{-3}` S/m)
         - *Destination model* as the physical property model you just created
 
 This model can be used as a reference model and constrain the final recover conductivity model.
 
-.. figure:: ./../../../images/AtoZ_TEM1d/RefModTill.png
+.. figure:: ./../../../images/AtoZ_FEM1d/RefModTill.png
     :align: center
     :width: 600
 

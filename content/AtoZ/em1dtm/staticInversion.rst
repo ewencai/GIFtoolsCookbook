@@ -141,7 +141,7 @@ true 3D variations.
     :file: ./AtoZ_DataFit_Static.html
 
 
-We further note that at early time channels, anomalous data misfits appear over regions know to have overburden. At late time channels however, the data misfit maps do not show any trends. 
+We further note that at early time channels, anomalous data misfits appear between the two kimberlite pipes and towards the south. At late time channels however, the data misfit maps do not show any trends. 
 
 
 
