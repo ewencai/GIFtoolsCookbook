@@ -22,6 +22,19 @@ If we assume that the noise on each datum is independent and Gaussian, then the 
 	1) The data misfit :math:`\phi_d \approx N`, indicating the inversion has fit the signal without fitting the noise.
 	2) The individual data misfits when plotted, are incoherent; that is, the recovered model does not fit the data well in some areas and poorly in others.
 
+Eq. :eq:`eq1` is commonly represented as the L2-norm of a weighted residual between the observed data vector (:math:`d_{obs}`) and the predicted data for a given conductivity model :math:`\boldsymbol{\sigma}`, i.e.:
+
+.. math::
+    \phi_d (\mathbf{m}) = \big \| \mathbf{W_d} \big ( \mathbf{d_{obs}} - \mathbb{F}[\boldsymbol{\sigma}] \big ) \big \|^2
+    :label: eq2
+
+
+where :math:`W_d` is a diagonal matrix containing the reciprocals of the uncertainties :math:`\boldsymbol{\varepsilon}` for each measured data point, i.e.:
+
+.. math::
+    \mathbf{W_d} = \textrm{diag} \big [ \boldsymbol{\varepsilon}^{-1} \big ] 
+
+
 
 .. figure:: ../../images/InversionFundamentals/uncertainties_coherence.png
     :align: center

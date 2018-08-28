@@ -94,7 +94,7 @@ This functionality is responsible for setting all forward modeling parameters pe
 
         - **3D + Model:** A 3D background conductivity model is used. The background conductivity model must be defined on the OcTree mesh used to forward model the data.
 
-    .. note:: If surface topography is negligible, the the 1D background model is accurate and computationally efficient. If topography is significant, it is advised that a 3D background model is userd.
+    .. note:: If surface topography is negligible, the the 1D background model is accurate and computationally efficient. If topography is significant, it is advised that a 3D background model is used.
 
     - **Apply:** The values and objects specified are saved to the forward modeling object.
 

@@ -22,6 +22,7 @@ The options for each inversion type are organized as follows:
        Magnetic Inversions <magnetics>
        DCIP <dcip>
        EM1DFM Inversions <em1dfm>
+       Natural Source EM (MT and ZTEM) <nsem>
 
 
 
