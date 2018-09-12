@@ -1,8 +1,8 @@
 .. _installation:
 
 
-Installation of GIFtools
-========================
+Installation
+============
 
 To install GIFtools, you will need to go the the website and download the
 latest `installation executable <https://gif.eos.ubc.ca/GIFtools/downloads>`_
@@ -171,3 +171,48 @@ Browser
 ^^^^^^^
 
 -  Calls user-selected default browser for tutorial links
+
+
+Python Installation (Optional)
+------------------------------
+
+Starting from version 2.25, GIFtools has the option to run some functionalities from the open-source community.
+In order to get access to these codes, users must install Python and few additional packages. This is done through the Anaconda
+project. Please follow these steps to get setup:
+
+- (Windows Users) Update/install  `Microsoft Visual Studio 2017 <https://support.microsoft.com/en-ca/help/2977003/the-latest-supported-visual-c-downloads>`_
+    - Some Python packages use C++ to speed up core functions (i.e. `SimPEG <simpeg.xyz>`_)
+
+- Download the `installation package <https://www.eoas.ubc.ca/~dfournie/simpeg_install.zip>`_
+- Launch the Miniconda installation
+    .. figure:: ../images/MinicondaInstaller.png
+        :align: center
+        :width: 400
+
+    - For new users, recommended to let Anaconda set the Environment Path
+        .. figure:: ../images/AnacondaPath.png
+            :align: center
+            :width: 400
+
+- Open a Command Terminal in the current directory (Shift+rightClick) and enter:
+
+    .. figure:: ../images/OpenCommand.png
+        :align: center
+        :width: 400
+
+
+
+Enter>    `conda env create -f environment.yml`
+
+    .. figure:: ../images/InstallEnvironment.png
+        :align: center
+        :width: 600
+
+Full installation time :math:`\approx 15` min
+
+Congratulation, you should now have access to the `Python ecosystem <http://www.developintelligence.com/blog/python-ecosystem-2017/>`_!
+More packages can be installed through command lines:
+
+Either with anaconda (recommanded)>  `conda install anotherPackage`
+
+or alternatively through pip>   `pip install somePackageName`
