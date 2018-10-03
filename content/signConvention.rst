@@ -286,7 +286,7 @@ We can determine the convention used by the data by examining the data away from
     - :math:`Re[Z_{xy}] > 0`, :math:`\; Im[Z_{xy}] > 0` and :math:`\phi_{xy} \in [0^o, \; 90^o]` (:math:`\sim 45^o` for a half-space)
     - :math:`Re[Z_{yx}] < 0`, :math:`\; Im[Z_{yx}] < 0` and :math:`\phi_{yx} \in [-90^o, \; -180^o]` (:math:`\sim -135^o` for a half-space)
 
-If data are represented using the :math:`\boldsymbol{-i \omega t}` convention, then for these data we expect:
+If data are represented using the :math:`\boldsymbol{-i \omega t}` convention (GIFtools), then for these data we expect:
 
     - at background locations: :math:`Z_{xy} \sim \dfrac{-i \omega \mu}{k} \;\;\; \textrm{and} \;\;\; Z_{yx} \sim \frac{ i \omega \mu}{k} \;\;\; \textrm{where} \;\;\; k = \sqrt{-i\omega \mu \sigma}`
     - :math:`Re[Z_{xy}] > 0`, :math:`\; Im[Z_{xy}] < 0` and :math:`\phi_{xy} \in [0^o, \; -90^o]` (:math:`\sim -45^o` for a half-space)

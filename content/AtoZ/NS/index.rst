@@ -6,28 +6,27 @@
     :file: ../../../underconstruction.html
 
 
-Create a model
-==============
+From EDI Files to Inverting Natural Source EM Data
+==================================================
 
-In this activity, you are given a mesh, a topography file, and a geologic image (with world file). There is also a file that explains the units shown in the geologic map and expected physical property values. The goal is to create a physical property model (GIFmodel) using modelBuilder in GIFtools.
+This A to Z example tackles practical aspects of preparing and inverting natural source EM data (MT and/or ZTEM) using GIFtools.
+Here the user begins with a set of EDI formatted MT survey files, loads them into the GIFtools framework, interprets the data and inverts the data with two different OcTree codes (E3DMT versions 1 and 2).
+The goal is to use synthetic high frequency MT data to resolve the D0-27 and D0-18 anomalies.
+Once finished, the user will be familiar with:
 
-- **Task: create a survey**
-        - `Download the activity <https://www.eoas.ubc.ca/~sdevries/ActivitiesForLearning/Exercise4.zip>`__
-- **Discussion questions**
-    - With one physical property model, can you create a second using the same geologic model?
-    - Can you view the model?
-    - Can you create an isosurface?
-- **Take it a bit further**
-    - Given a different mesh, can you interpolate the model you created onto a new mesh?
-    - Can you create face weights in modelBuilder based on the geologic map?
-- **Helpful links**
-    - :ref:`Recipe to create a geology model from an image <imageInInversion>`
-    - :ref:`Recipe to create a physical property model from a geology model <propModelFromGeoModel>`
-    - :ref:`Recipe to create a geology model from an isosurface <IsoSurfaceToGeoModel>`
-    - :ref:`View a model in 3D <objectModelView>`
-    - :ref:`Interpolate a model onto a different mesh <createInterpolateModels>`
-    - :ref:`Recipe to create weights from a geology model <weightsFromGeoModel>`
+	- The coordinate systems and Fourier convention generally used for MT data
+	- Basic interpreting of MT data through apparent resistivities
+	- Practical strategies for inverting natural source data with the E3DMT codes
+	- Differences between E3DMT versions 1 and 2
 
+The full A to Z example is split into 2 parts:
+
+.. toctree::
+    :maxdepth: 1
+
+    Loading, interpreting and preparing data <data>
+    Inversion with E3DMT version 1 and 2 <inversion>
+    Joint MT and ZTEM inversion <joint>
 
 
 
