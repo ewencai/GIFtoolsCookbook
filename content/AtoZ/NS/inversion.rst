@@ -2,15 +2,12 @@
 
 .. include:: <isonum.txt>
 
-.. raw:: html
-    :file: ../../../underconstruction.html
-
 
 Inverting MT Data
 =================
 
 Here, we invert synthetic impedance tensor data using E3DMT versions 1 and 2.
-The goal is to show both codes are consistent and provide strategies for successful inversion.
+The goal is to provide strategies for successful inversion and show that both codes can be used to recover TKC.
 When inverting impedances, the E3DMT codes have a tendency to place conductive artifacts proximal to the receivers.
 To overcome this obstacle, we demonstrate a basic approach for limiting artifacts through the use of a reference model and interface weights.
 
@@ -39,7 +36,7 @@ Setup for the Exercise
     :align: center
     :width: 700
 
-    Real (left) and imaginary (right) components of impedance tensor element :math:`Z_{xy}` at 5000 Hz in V/A. Data shows that :math:`Z_{xy}` lies in the lower-righthand quadrant of the complext plane. This is consistent with the desired format in GIFtools.
+    Real (left) and imaginary (right) components of impedance tensor element :math:`Z_{xy}` at 5000 Hz in V/A. Data shows that :math:`Z_{xy}` lies in the lower-righthand quadrant of the complex plane. This is consistent with the desired format in GIFtools.
 
 
 .. figure:: ../../../images/AtoZ_E3DMT/data_appres.png
@@ -120,7 +117,7 @@ The results of the inversion are shown below. The convergence curve indicated th
     :align: center
     :width: 700
 
-    True model (top) and recovered model at iteration 2 (bottom).
+    True model (top) and recovered model at iteration 2 (bottom) at Easting = 557350 m.
 
 
 .. figure:: ../../../images/AtoZ_E3DMT/inversion1_misfit.png
@@ -186,4 +183,4 @@ In this case, it is likely that the data uncertainties used to invert data with 
     :align: center
     :width: 700
 
-    True model (top), final recovered model using E3DMT version 1 and final recovered model using E3DMT version 2 (bottom).
+    True model (top), final recovered model using E3DMT version 1 and final recovered model using E3DMT version 2 (bottom) at Easting = 557350 m.

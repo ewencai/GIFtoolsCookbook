@@ -2,9 +2,6 @@
 
 .. include:: <isonum.txt>
 
-.. raw:: html
-    :file: ../../../underconstruction.html
-
 
 Importing, Interpreting and Preparing NSEM Data
 ===============================================
