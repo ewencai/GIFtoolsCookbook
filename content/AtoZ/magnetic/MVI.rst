@@ -125,9 +125,9 @@ In this inversion, we will use the spherical transformation to apply sparsity
 on the amplitude and angles independantly. The user is invited to try
 different combination of norms to test the range of solutions.
 
-  .. figure:: ./../../../images/AtoZ_Mag/AtoZ_Mag_MVIOptions.png
-            :align: right
-            :scale: 20%
+    - .. figure:: ./../../../images/AtoZ_Mag/AtoZ_Mag_MVIOptions.png
+              :align: right
+              :scale: 20%
 
     - :ref:`Copy the previous inversion object <invCopyOptions>`
     - Change the inversion mode to Spherical
