@@ -83,7 +83,7 @@ Joint MT-ZTEM Inversion
 
 We will not jointly invert MT and ZTEM data to recover a single conductivity model for TKC.
 
-- :ref:`Create E3DMT ver 1 inversion object <createMTZTEMInv>`
+    - :ref:`Create E3DMT ver 1 inversion object <createMTZTEMInv>`
     - :ref:`Use edit options <invEditOptions_e3dmt_ver1>` to set the inversion parameters
 
         - Basic Tab:

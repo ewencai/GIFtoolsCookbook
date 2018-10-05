@@ -57,18 +57,18 @@ When inverting MT data, the E3DMT codes have a tendency to place conductive stru
 
 
 
-	- :ref:`Create and interface weights utility <createinterfWeights>`
-	- Use :ref:`edit options <utilEditOptions>` and set the following parameters:
+    - :ref:`Create and interface weights utility <createinterfWeights>`
+    - Use :ref:`edit options <utilEditOptions>` and set the following parameters:
 
-		- set the OcTree mesh
-		- set as *log model*
-		- set topography as the active cells model
-		- set 5 layers of surface weights with values 40, 20, 10, 5, and 2.5 in decreasing order
-		- Face value = 0.0002
-		- Face tolerance = 0.0002
+        - set the OcTree mesh
+        - set as *log model*
+        - set topography as the active cells model
+        - set 5 layers of surface weights with values 40, 20, 10, 5, and 2.5 in decreasing order
+        - Face value = 0.0002
+        - Face tolerance = 0.0002
 
-	- :ref:`Run the utility <utilRun>`
-	- :ref:`Load results <utilLoadResults>`
+    - :ref:`Run the utility <utilRun>`
+    - :ref:`Load results <utilLoadResults>`
 
 
 
@@ -77,30 +77,30 @@ E3DMT Version 1
 
 Let us now invert the impedance tensor data using E3DMT version 1. 
 
-	- :ref:`Create E3DMT ver 1 inversion object <createMTZTEMInv>`
-	- :ref:`Use edit options <invEditOptions_e3dmt_ver1>` to set the inversion parameters
+    - :ref:`Create E3DMT ver 1 inversion object <createMTZTEMInv>`
+    - :ref:`Use edit options <invEditOptions_e3dmt_ver1>` to set the inversion parameters
 
-		- Basic Tab:
-			- Select the impedance data
-			- Set mesh
-			- Set topography to active cells model
-			- No background susceptibility
-			- 1D conductivity of 0.0001 S/m (which we inferred from apparent resistivity maps)
-			- Use *Iterative* solver unless you have sufficient RAM to use *Direct* solver.
+        - Basic Tab:
+            - Select the impedance data
+            - Set mesh
+            - Set topography to active cells model
+            - No background susceptibility
+            - 1D conductivity of 0.0001 S/m (which we inferred from apparent resistivity maps)
+            - Use *Iterative* solver unless you have sufficient RAM to use *Direct* solver.
 
-		- Model Options Tab:
-			- Set *Chi Factor* = 1.
-			- *alpha S* = 0.0001, *alpha E* = 1, *alpha N* = 1 and *alpha Z* = 10 (to emphasize some vertical smoothness)
-			- Use the weights object to add additional weights
-			- Set the *active cells topo* as the active model cells
-			- Set initial model as 0.0001 S/m
-			- Set upper bound as 1 S/m and lower bound as 0.000001 S/m
-			- Set reference model as 0.0001 S/m
+        - Model Options Tab:
+            - Set *Chi Factor* = 1.
+            - *alpha S* = 0.0001, *alpha E* = 1, *alpha N* = 1 and *alpha Z* = 10 (to emphasize some vertical smoothness)
+            - Use the weights object to add additional weights
+            - Set the *active cells topo* as the active model cells
+            - Set initial model as 0.0001 S/m
+            - Set upper bound as 1 S/m and lower bound as 0.000001 S/m
+            - Set reference model as 0.0001 S/m
 
-	- Click *Apply and write files*
-	- :ref:`Run the inversion <invRun>`
-	- :ref:`Load results <invLoadResults>`
-	- :ref:`View convergence <convergence_curve>`
+    - Click *Apply and write files*
+    - :ref:`Run the inversion <invRun>`
+    - :ref:`Load results <invLoadResults>`
+    - :ref:`View convergence <convergence_curve>`
 
 
 The results of the inversion are shown below. The convergence curve indicated that the inversion reaches target misfit after 2 iterations. When comparing the true model and recovered model at iteration 2, we see that the inversion recovers the both the DO-27 and DO-18 kimberlite pipes. Surface weighting was able to limit near surface artifacts. However, the recovered model has a slightly lower conductivity than the true model. Given that the starting and reference models are a 0.0001 S/m halfspace, it is possible the uncertainties on the data are too large. When examining the normalized misfit, we see that locations over the pipes are not fit nearly as well as the background. Essentially, we are overfitting the background at the expense of the pipes. Although it is not shown here, we are not over-fitting the data at certain frequencies at the expense of others.
@@ -135,46 +135,46 @@ E3DMT Version 2
 
 Let us now invert the impedance tensor data using E3DMT version 2. Unlike version 1, version 2 requires that user define the receiver which measure the fields.
 
-	- Click the impedance data object and :ref:`set receivers from locations <objectDataTypeMT_snid>`. Use the following values:
+    - Click the impedance data object and :ref:`set receivers from locations <objectDataTypeMT_snid>`. Use the following values:
 
-		- Easting width = 1 m
-		- Northing width = 1 m
-		- Vertical width = 1 m
-		- Dipole length = 1 m
+        - Easting width = 1 m
+        - Northing width = 1 m
+        - Vertical width = 1 m
+        - Dipole length = 1 m
 
-	- :ref:`Create E3DMT ver 2 inversion object <createMTZTEMInv>`
-	- :ref:`Use edit options <invEditOptions_e3dmt_ver2>` to set the inversion parameters
+    - :ref:`Create E3DMT ver 2 inversion object <createMTZTEMInv>`
+    - :ref:`Use edit options <invEditOptions_e3dmt_ver2>` to set the inversion parameters
 
-		- Basic Tab:
-			- Select the impedance data
-			- Set mesh
-			- Set topography to active cells model
-			- No background susceptibility
-			- 1D background conductivity of 0.0001 S/m (which we inferred from apparent resistivity maps).
-			- Use *Iterative* solver unless you have sufficient RAM to use *Direct* solver.
+        - Basic Tab:
+            - Select the impedance data
+            - Set mesh
+            - Set topography to active cells model
+            - No background susceptibility
+            - 1D background conductivity of 0.0001 S/m (which we inferred from apparent resistivity maps).
+            - Use *Iterative* solver unless you have sufficient RAM to use *Direct* solver.
 
-		- Model Options Tab:
-			- Set *Chi Factor* = 1.
-			- *alpha S* = 0.0001, *alpha E* = 1, *alpha N* = 1 and *alpha Z* = 10 (to emphasize some vertical smoothness
-			- Use the weights object to add additional weights
-			- Set the *active cells topo* as the active model cells
-			- Set initial model as 0.0001 S/m
-			- Set upper bound as 1 S/m and lower bound as 0.000001 S/m
-			- Set reference model as 0.0001 S/m
+        - Model Options Tab:
+            - Set *Chi Factor* = 1.
+            - *alpha S* = 0.0001, *alpha E* = 1, *alpha N* = 1 and *alpha Z* = 10 (to emphasize some vertical smoothness
+            - Use the weights object to add additional weights
+            - Set the *active cells topo* as the active model cells
+            - Set initial model as 0.0001 S/m
+            - Set upper bound as 1 S/m and lower bound as 0.000001 S/m
+            - Set reference model as 0.0001 S/m
 
-		- Inversion Parameters Tab:
-			- Set *memory settings* as *write to file*
+        - Inversion Parameters Tab:
+            - Set *memory settings* as *write to file*
 
-	- Click *Apply and write files*
-	- :ref:`Run the inversion <invRun>`
-	- :ref:`Load results <invLoadResults>`
-	- :ref:`View convergence <convergence_curve>`
+    - Click *Apply and write files*
+    - :ref:`Run the inversion <invRun>`
+    - :ref:`Load results <invLoadResults>`
+    - :ref:`View convergence <convergence_curve>`
 
 
 The final model recovered using E3DMT version 2 is shown below. As we can see, the DO-27 and DO-18 kimerlite pipes are recovered. However when comparing the final recovered models from E3DMT versions 1 and 2, we notice they are slightly different. This can be explained by the following:
 
-	1. The measure of data misfit for both codes is different; see `E3DMT manual <https://e3dmt.readthedocs.io/en/manual_ver1/content/theory.html#data-misfit>`__ . Thus the optimization problem being solved at each beta and the target misfit are both different; which results in recovered models which are not identical.
-	2. Because receivers are explicitly defined in E3DMT version 2, there is a difference in how both codes compute predicted data from the solution of the fields on cell edges.
+    1. The measure of data misfit for both codes is different; see `E3DMT manual <https://e3dmt.readthedocs.io/en/manual_ver1/content/theory.html#data-misfit>`__ . Thus the optimization problem being solved at each beta and the target misfit are both different; which results in recovered models which are not identical.
+    2. Because receivers are explicitly defined in E3DMT version 2, there is a difference in how both codes compute predicted data from the solution of the fields on cell edges.
 
 In this case, it is likely that the data uncertainties used to invert data with E3DMT version 2 were too high. The target misfit could be reached using a trade-off parameter (beta) that was larger than necessary and the data are being under-fit. The end result is a model that is overly smooth and has a maximum conductivity which is too low. The user could have run this inversion with a chi factor less than 1 to recover models which put increasing emphasis on fitting the data.
 
