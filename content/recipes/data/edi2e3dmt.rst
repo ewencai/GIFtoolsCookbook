@@ -23,6 +23,10 @@ Loading the data and simple processing
     - :ref:`Assign uncertainties <objectAssignUncert>`
 
 
+.. important::
+    Before writing data files and attempting to invert MT data, it **strongly advised** that the data are viewed in terms of apparent resistivity. This information can be used to determine how resistivity changes with respect to depth, determine which frequencies are sensitive to your target and design an appropriate mesh.
+
+
 Additional Steps
 ----------------
 

@@ -21,6 +21,7 @@ The options for each forward modeling type are organized as follows:
        Gravity <gravity>
        Magnetics <magnetics>
        DCIP <dcip>
+       Natural Source EM (MT and ZTEM) <nsem>
 
 
 
