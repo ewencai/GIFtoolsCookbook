@@ -12,9 +12,9 @@ A to Z Examples for DCIP 2D/3D
     :align: right
     :figwidth: 50%
 
-In this activity, we will simulate a DC Resistivity survey over the TKC area.
-We run both the forward and inverse calculations (2D and 3D) to test the resolving
-capability of a Dipole-Dipole survey.
+In this activity, we will simulate and invert DC Resistivity data over the TKC
+area. We demonstrate how to batch 2D inversions and use the result for a subsequent 3D
+inversion.
 
 .. toctree::
     :maxdepth: 1

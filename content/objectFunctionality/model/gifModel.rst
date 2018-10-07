@@ -142,6 +142,13 @@ where *x* and *y* define the cell center location of model column **m** in the u
 - **No-data-value**: Value used in the search of empty model columns and air cells for the upward fill
 - **Interpolation type**: Perform the weighted averaging in linear or logarithmic space
 
++---------------------------------------------------------------+------------------------------------------------------------------+
+|.. figure:: ../../../images/InterpNDV/InterpNDV_lineModel.png  |   .. figure:: ../../../images/InterpNDV/InterpNDV_lineModel.png  |
+|    :align: center                                             |       :align: center                                             |
+|    :figwidth: 75%                                             |       :figwidth: 75%                                             |
+|                                                               |                                                                  |
++---------------------------------------------------------------+------------------------------------------------------------------+
+
 .. _objectFunctionalityAddPolyhedra:
 
 Add Rectangular Block and Polyhedra-Based Structures
