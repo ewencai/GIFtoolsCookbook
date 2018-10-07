@@ -10,7 +10,7 @@ Data Manipulation
 Calculate: Transform between apparent resistivity and normalized voltage
 ------------------------------------------------------------------------
 
-The DC/IP inversion algorithms require normalized voltage for their input. GIFtools offers a transform between apparent resitivity and normalized voltage (and vice versa). As a side product, the geometric factor will be calculated, although one could do that separately as a stand-alone task. Each transformation is found within the  **Data manipulation** |rarr| **Add data** submenu after clicking on the DC or IP item of interest. Each item in the menu list within GIFtools has the value to be calculated *first*. See below for each transformation. 
+The DC/IP inversion algorithms require normalized voltage for their input. GIFtools offers a transform between apparent resitivity and normalized voltage (and vice versa). As a side product, the geometric factor will be calculated, although one could do that separately as a stand-alone task. Each transformation is found within the  **Data manipulation** |rarr| **Add data** submenu after clicking on the DC or IP item of interest. Each item in the menu list within GIFtools has the value to be calculated *first*. See below for each transformation.
 
 .. figure:: ../../../../images/dcipCalculateMenu.png
     :align: center
@@ -67,14 +67,27 @@ For 3D IP data, use the menu:
     :align: center
     :width: 400
 
+.. _objectdcip3Dto2D_lineDEF:
 
-This menu brings up the dialog box shown below. The user has the option to use two points along the line or the line direction. The positive, non-zero tolerance (m) is used to determine which data are sufficiently near the line to use for the projection (like a box). At this point, topography can also be projected on the line (recommended) sampled at the given interval.
+    - OPTION 1: Line Definition
+        This menu brings up the dialog box shown below. The user has the option to use two points along the line or the line direction. The positive, non-zero tolerance (m) is used to determine which data are sufficiently near the line to use for the projection (like a box). At this point, topography can also be projected on the line (recommended) sampled at the given interval.
 
-.. figure:: ../../../../images/2DlineCreator.png
-    :align: center
-    :width: 300
+        .. figure:: ../../../../images/2DlineCreator.png
+            :align: center
+            :width: 300
 
-**NOTE:** For ease, one may use the table view (control + T or **Visualization** |rarr| **Table view**) while the dialog box is open to fill out the points along the line.
+        **NOTE:** For ease, one may use the table view (control + T or **Visualization** |rarr| **Table view**) while the dialog box is open to fill out the points along the line.
+
+
+.. _objectdcip3Dto2D_lineID:
+
+    - OPTION 2: Line ID
+        This menu brings up the dialog box shown below. DCIP data is seperated based on the ``lineID`` property. User can export ``TOPO2Ddata`` objects extracted from a ``TOPOdata`` object.
+
+        .. figure:: ../../../../images/dcip3Dto2D_lineID.png
+            :align: center
+            :width: 300
+
 
 
 VTK viewer
@@ -84,7 +97,7 @@ Select the DC/IP 3D data item and bring up the viewer (control + k) or:
 
 **Visualization** |rarr| **VTK view**
 
-Within the viewer, select the **Edit** tab on the control dialog and then **Data selection**. Using the control button will allow the user to make multiple selections. Select the data to project (or not project if it is easier) onto the 2D line (example below). 
+Within the viewer, select the **Edit** tab on the control dialog and then **Data selection**. Using the control button will allow the user to make multiple selections. Select the data to project (or not project if it is easier) onto the 2D line (example below).
 
 .. figure:: ../../../../images/ip3DviewerSelect.png
     :align: center
