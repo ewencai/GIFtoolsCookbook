@@ -1,15 +1,16 @@
 .. _AtoZDCIP_simulation:
 
+.. include:: <isonum.txt>
 
 Survey Design and Forward Simulation
 ====================================
 
-.. figure:: ./../../../images/AtoZ_Mag/AtoZ_Mag_Landing.png
+.. figure:: ./../../../images/AtoZ_DCIP/AtoZ_DC_fwrData.png
     :align: right
     :figwidth: 50%
 
 Here, we show how to create a simple dipole-dipole DC Resistivity survey over
-a conductivity model.
+a conductivity model and run the forward simulation.
 
 
 
@@ -23,16 +24,24 @@ Setup for the Exercise
     - :ref:`Set the working directory <projSetWorkDir>`
 
 
-.. tip:: - Steps (without links) are also included with the download
-         - Requires at least `GIFtools version 2.26 <https://gif.eos.ubc.ca/giftools/giftools_consortium2#Installation>`_ (login required)
+.. tip:: - Requires at least `GIFtools version 2.26 <https://gif.eos.ubc.ca/giftools/giftools_consortium2#Installation>`_ (login required)
 
 
-- Create surveys
+Create Overlapping surveys
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+In order to compare the resolving capabilities of different survey
+configurations. Using the :ref:`DCIP Survey Designer <createSurveyDCIP>`, we
+generate two survey blocks with the following parameters:
 
 +-------------------+-----------------------+-----------------------+
 |                   | Block 1               | Block 2               |
 +-------------------+-----------------------+-----------------------+
 | Survey Type       |   pole-dipole         | dipole-dipole         |
++-------------------+-----------------------+-----------------------+
+| Dimension         |   3D                  | 3D                    |
++-------------------+-----------------------+-----------------------+
+| Topography        | TKCtopo  (apply topo) | TKCtopo  (apply topo) |
 +-------------------+-----------------------+-----------------------+
 | Centroid          | 557250 E, 7134000 N   | 557400 E, 7133600 N   |
 +-------------------+-----------------------+-----------------------+
@@ -50,10 +59,31 @@ Setup for the Exercise
 +-------------------+-----------------------+-----------------------+
 
 
-- Merge surveys
-- Apply topography
-- Run DCIP3D forward
-- Add noise
-- View data
+Merge the surveys
+^^^^^^^^^^^^^^^^^
 
+.. figure:: ./../../../images/AtoZ_DCIP/AtoZ_DC_survey.png
+    :align: right
+    :figwidth: 50%
+
+- Since we are creating two separate surveys, the ``lineID`` assigned to Block 1 and 2 will be repeated. We will add a constant to the line ID so that they are all unique identifiers.
+    - :ref:`Add constant value <objectConstantCalculator>` to Block 2 ``lineID`` property (+ 5)
+
+- Select Block 1 and :ref:`combine block 2 <objectCombineData>` to form one large survey.
+    - **Data Manipulation** |rarr| **Add Data** |rarr| **Merge other DCIP3D data**
+    - Rename the combine object ``DCSurveyFull``
+
+
+Forward model data
+^^^^^^^^^^^^^^^^^^
+
+- :ref:`Create a DC Forward <createDCIPFwd>` object
+- :ref:`Edit input options <fwdEditOptions_dcip3d>`
+    - Set ``Locations`` to ``DCSurveyFull``
+    - Set ``Topography`` to ``TOPOdata`` and select ``TKCtopo``
+    - Set ``Conductivity`` to ``TKC_condModel``
+- :ref:`Write files <fwdWriteAll>`
+    - Select ``Surface Data Format``
+- :ref:`Run the forward <fwdRun>`
+- After completion, :ref:`Load the predicted data <fwdLoadResults>`
 

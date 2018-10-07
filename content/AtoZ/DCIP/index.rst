@@ -2,19 +2,17 @@
 
 .. include:: <isonum.txt>
 
-.. raw:: html
-    :file: ../../../underconstruction.html
-
 A to Z Examples for DCIP 2D/3D
 ==============================
 
-.. figure:: ./../../../images/AtoZ_Mag/AtoZ_Mag_Landing.png
-    :align: right
-    :figwidth: 50%
-
-In this activity, we will simulate and invert DC Resistivity data over the TKC
-area. We demonstrate how to batch 2D inversions and use the result for a subsequent 3D
+In this activity, we will simulate and invert DC Resistivity data over the synthetic TKC
+conductivity model. We demonstrate how to batch 2D inversions and use the result in a subsequent 3D
 inversion.
+
+.. figure:: ./../../../images/AtoZ_DCIP/AtoZ_DCIP_Landing.png
+    :align: center
+    :figwidth: 100%
+
 
 .. toctree::
     :maxdepth: 1
