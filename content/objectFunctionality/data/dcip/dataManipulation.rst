@@ -82,7 +82,7 @@ For 3D IP data, use the menu:
 .. _objectdcip3Dto2D_lineID:
 
     - OPTION 2: Line ID
-        This menu brings up the dialog box shown below. DCIP data is seperated based on the ``lineID`` property. User can export ``TOPO2Ddata`` objects extracted from a ``TOPOdata`` object.
+        This menu brings up the dialog box shown below. DCIP data are seperated based on the ``lineID`` property. User can export ``TOPO2Ddata`` objects extracted from a ``TOPOdata`` object.
 
         .. figure:: ../../../../images/dcip3Dto2D_lineID.png
             :align: center

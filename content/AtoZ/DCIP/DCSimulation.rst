@@ -74,6 +74,8 @@ Merge the surveys
     - Rename the combine object ``DCSurveyFull``
 
 
+.. _AtoZdcip_Forward:
+
 Forward model data
 ^^^^^^^^^^^^^^^^^^
 
@@ -84,6 +86,6 @@ Forward model data
     - Set ``Conductivity`` to ``TKC_condModel``
 - :ref:`Write files <fwdWriteAll>`
     - Select ``Surface Data Format``
-- :ref:`Run the forward <fwdRun>`
+- :ref:`Run the forward simulation <fwdRun>`
 - After completion, :ref:`Load the predicted data <fwdLoadResults>`
 
