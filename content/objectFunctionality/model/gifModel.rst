@@ -29,8 +29,8 @@ Set Air/Ground Cells in Models
 
 There are two ways to assign aircell values to a physical property model.
 
-From active model
------------------
+OPTION 1: From active model
+---------------------------
 
 For **GEO models** and **GIF models**, the physical property values for the air cells can be manual set through either:
 
@@ -47,8 +47,8 @@ For **GEO models** and **GIF models**, the physical property values for the air 
 
 .. _objectModelFillUpwardCutAirCells:
 
-Fill values upward and cut with topography
-------------------------------------------
+OPTION 2: Fill values upward and cut with topography
+----------------------------------------------------
 
 TThis function allows the user to re-define the air/ground interface. First,
 model values from the top ground cells (from no-data-value) are copied
