@@ -477,7 +477,7 @@ Once selected, the user must do the following:
 
 .. important::
 
-    - We assume the EDI file data are defined by `The Society of Exploration Geophysicists MT / EMAP Data Interchange Standard <https://seg.org/Portals/0/SEG/News%20and%20Resources/Technical%20Standards/seg_mt_emap_1987.pdf>`__ . That is, the EDI data uses a :math:`+i\omega t` :ref:`time-dependency <sign_mt_conv>`. Also, the data will likely need to be converted from Northing-Easting-Down to Easting-Northing-Up (GIF).
+    - We assume the EDI file data are defined by `The Society of Exploration Geophysicists MT / EMAP Data Interchange Standard <https://seg.org/Portals/0/SEG/News%20and%20Resources/Technical%20Standards/seg_mt_emap_1987.pdf>`__ . That is, the EDI data uses a :math:`+i\omega t` :ref:`time-dependency <sign_mt_conv>`. Also, the data are Northing-Easting-Down.
     - GIFtools will convert the (LONG, LAT) to WGS84 UTM when importing.
     - GIFtools converts impedance data from a :math:`+i\omega t` (EDI standard) convention to a :math:`-i\omega t` (GIF standard) convention automatically.
     - GIFtools assumes that impedance tensor data have column names *ZXXR, ZXXI, ZXYR, ZXYI, ZYXR, ZYXI, ZYYR* and *ZYYI* and the apparent resistivities have column names *RHOXX, PHSXX, RHOXY, RHOXY, RHOYX, RHOYX, RHOYY* and *RHOYY*.

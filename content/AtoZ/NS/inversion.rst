@@ -9,7 +9,7 @@ Inverting MT Data
 Here, we invert synthetic impedance tensor data using E3DMT versions 1 and 2.
 The goal is to provide strategies for successful inversion and show that both codes can be used to recover TKC.
 When inverting impedances, the E3DMT codes have a tendency to place conductive artifacts proximal to the receivers.
-To overcome this obstacle, we demonstrate a basic approach for limiting artifacts through the use of a reference model and interface weights.
+To overcome this obstacle, we demonstrate a basic approach for limiting artifacts through the use of interface weights.
 
 
 .. _AtoZNS_inversion_setup:
@@ -24,7 +24,7 @@ Setup for the Exercise
 
 **If you have NOT completed the previous tutorial and would like to start here, complete the following steps:**
 
-    - `Download the demo <https://github.com/ubcgif/GIFtoolsCookbook/raw/master/assets/AtoZ_FEM1D_4Download.zip>`_
+    - Download the demo (**pending**)
     - Open GIFtools
     - :ref:`Set the working directory <projSetWorkDir>`
     - :ref:`Import the observed data in E3DMT version 1 format: Assets\\MTdata.obs <importNSEMData_e3dmt1>` (Impedance tensor data in V/A)
@@ -54,8 +54,6 @@ Reducing Artifacts through Interface Weighting
 ----------------------------------------------
 
 When inverting MT data, the E3DMT codes have a tendency to place conductive structures near receiver locations due to the sensitivity of the data to those cells. Here, we generate interface weights to counteract this problem. By forcing lateral smoothness within the top few layers of cells, we can limit the artifacts and force the inversion to place conductive structures at the appropriate depths.
-
-
 
     - :ref:`Create and interface weights utility <createinterfWeights>`
     - Use :ref:`edit options <utilEditOptions>` and set the following parameters:

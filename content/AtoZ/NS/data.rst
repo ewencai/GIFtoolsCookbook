@@ -15,7 +15,7 @@ For this exercise, we:
 Setup for the Exercise
 ----------------------
 
-	- Download the demo (link)
+	- Download the demo (**pending**)
 	- Open GIFtools
 	- :ref:`Set the working directory <projSetWorkDir>`
 
@@ -26,11 +26,11 @@ Setup for the Exercise
 Import Files
 ------------
 
-	- :ref:`Import impedance data from EDI files <importNSEMData_edi>` in sub-folder *MTdataEDI*. Use the button to ensure the data are transformed from Northing-Easting-Down (EDI standard) to Easting-Northing-Up (GIF).
-	- Ensure that :ref:`IO headers are set <objectSetioHeaders>` for all impedance data. Because we have transformed the data, :math:`Z_{xy}` is Easting-Northing.
+	- :ref:`Import impedance data from EDI files <importNSEMData_edi>` in sub-folder *MTdataEDI*. Data are in standard EDI format (Northing-Easting-Down), which is also used by GIF codes.
+	- Ensure that :ref:`IO headers are set <objectSetioHeaders>` for all impedance data.
 
 
-.. note:: In this case, we have transformed MT data from a widely used coordinate system into GIF's coordinate system. If a non-standard coordinate system is being used in the EDI files, it is imperative the user transform the data to GIF within GIFtools before inverting. This can be done by :ref:`changing data headers <objectDataHeaders>`, :ref:`multiplying certain columns by -1 <objectConstantCalculator>` and/or :ref:`re-setting io Headers <objectSetioHeaders>`.
+.. note:: In this case, MT data are in a widely used coordinate system which matches that of the GIF codes. If a non-standard coordinate system is being used in the EDI files, it is imperative the user transform the data to GIF within GIFtools before inverting. This can be done by :ref:`changing data headers <objectDataHeaders>`, :ref:`multiplying certain columns by -1 <objectConstantCalculator>` and/or :ref:`re-setting io Headers <objectSetioHeaders>`.
 
 
 Interpreting the data
