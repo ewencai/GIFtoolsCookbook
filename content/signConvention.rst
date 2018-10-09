@@ -140,15 +140,15 @@ Here, we define the sign conventions for various data types and the :ref:`time-d
 |TDEM    |TDoctree   |octree       | - dBx/dt, dBy/dt, -dBz/dt with Z-axis pointing upward (:ref:`details<sign_tdem_conv>`)                                              |
 +--------+-----------+-------------+-------------------------------------------------------------------------------------------------------------------------------------+
 |        |           |             | - Time-dependency is :math:`-i\omega t` (:ref:`MT details<sign_mt_conv>`, :ref:`ZTEM details<sign_ztem_conv>`)                      |
-|MT/ZTEM |MTZ3D      |             |                                                                                                                                     |
+|MT/ZTEM |MTZ3D      |             | - The data convention has X = Easting, Y = Northing and Z = Down. So :math:`Z_{xy}` is Z-Northing-Easting.                          |
 |        |           |             |                                                                                                                                     |
 +--------+-----------+-------------+-------------------------------------------------------------------------------------------------------------------------------------+
 |        |           |             | - Time-dependency is :math:`-i\omega t` (:ref:`MT details<sign_mt_conv>`, :ref:`ZTEM details<sign_ztem_conv>`)                      |
-|MT/ZTEM |E3DMT      |octree ver. 1|                                                                                                                                     |
+|MT/ZTEM |E3DMT      |octree ver. 1| - The data convention has X = Easting, Y = Northing and Z = Down. So :math:`Z_{xy}` is Z-Northing-Easting.                          |
 |        |           |             |                                                                                                                                     |
 +--------+-----------+-------------+-------------------------------------------------------------------------------------------------------------------------------------+
 |        |           |             | - Time-dependency can be chosen as :math:`\pm i\omega t` (:ref:`MT details<sign_mt_conv>`, :ref:`ZTEM details<sign_ztem_conv>`)     |
-|MT/ZTEM |E3DMT      |octree ver. 2|                                                                                                                                     |
+|MT/ZTEM |E3DMT      |octree ver. 2| - The data convention has X = Easting, Y = Northing and Z = Down. So :math:`Z_{xy}` is Z-Northing-Easting.                          |
 |        |           |             |                                                                                                                                     |
 +--------+-----------+-------------+-------------------------------------------------------------------------------------------------------------------------------------+
 
@@ -278,7 +278,9 @@ The sign convention for dBz/dt data can be explained as follows. For coincident 
 MT data
 ~~~~~~~
 
-The NSEM GIF codes are generally formulated to use a :math:`-i\omega t` convention for the time-dependence. However, this may not match the convention used by data loaded into GIFtools from other sources. MT data loaded from EDI files generally uses the `MT/EMAP data interchange standard <https://seg.org/Portals/0/SEG/News%20and%20Resources/Technical%20Standards/seg_mt_emap_1987.pdf>`__ , which is :math:`+i\omega t`. If the convention used for the data does not match that of the code, it is unlikely that the inversion will be able to fit the data and return meaningful results.
+**Fourier Convention**
+
+The NSEM GIF codes are formulated to use a :math:`-i\omega t` convention for the time-dependence. However, this may not match the convention used by data loaded into GIFtools from other sources. MT data loaded from EDI files generally uses the `MT/EMAP data interchange standard <https://seg.org/Portals/0/SEG/News%20and%20Resources/Technical%20Standards/seg_mt_emap_1987.pdf>`__ , which is :math:`+i\omega t`. If the convention used for the data does not match that of the code, it is unlikely that the inversion will be able to fit the data and return meaningful results.
 
 We can determine the convention used by the data by examining the data away from any major 3D structures. If data are represented using the :math:`\boldsymbol{+i \omega t}` convention, then we expect:
 
@@ -296,6 +298,17 @@ As we can see, to switch from one convention to another we must:
 
     - Multiply the imaginary components of all impedance tensor elements by -1
     - Multiply the phase values for all elements of the impedance tensor by -1
+
+**Data Convention**
+
+MT data uses a sign convention based on a Northing-Easting-Down coordinate system (right-handed). The labeling of the impedance tensor elements is such that X = Easting and Y = Northing, thus:
+
+	- :math:`Z_{xx}` is Z-Northing-Northing
+	- :math:`Z_{xy}` is Z-Northing-Easting
+	- :math:`Z_{yx}` is Z-Easting-Northing
+	- :math:`Z_{yy}` is Z-Easting-Easting
+
+For more on this, see the `E3DMT manual <https://e3dmt.readthedocs.io/en/manual_ver1/content/theory.html#natural-sources-mt-and-ztem>`__
 
 
 .. _sign_ztem_conv:
