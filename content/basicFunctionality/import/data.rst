@@ -312,8 +312,8 @@ GIF formatted data
 GIF formatted FEM data contains all necessary transmitter, receiver and frequency information. As a result, no further steps are required when loading GIF formatted data into GIFtools.
 
 
-Geosoft XYZ and CSV data
-^^^^^^^^^^^^^^^^^^^^^^^^
+XYZ and CSV data
+^^^^^^^^^^^^^^^^
 
 These data types do not contain transmitter, receiver and frequency information, only the raw data. As a result, an additional window will pop up when loading FEM data in these formats. The user will also be required to set transmitter (**link**) and receiver (**link**) information once the data are loaded.
 
@@ -417,7 +417,7 @@ E3DMT version 1 data
     - **Import** |rarr| **Data** |rarr| **Natural-source EM** |rarr| **MT / ZTEM: GIF format** |rarr| **E3DMT Predicted Data (ver 1)**
 
 Some things to note about loading E3DMT version 1 observed/locations data:
- 
+
     - If MT and ZTEM are contained within the same file, GIFtools will parse into an IMPdata object and a ZTEMdata object
     - Although it is good practice, the locations for each frequency do not need to be the same. Frequency-location pairs without data are given a value of NaN.
 
@@ -491,7 +491,7 @@ ZTEM data: ASCII format
 ^^^^^^^^^^^^^^^^^^^^^^^
 To load ZTEM data that are in a CSV or XYZ ASCII format, the menu structure is:
 
-- XYZ format: **Import** |rarr| **Data** |rarr| **Natural-source EM** |rarr| **ZTEM general ASCII** |rarr| **Geosoft XYZ**
+- XYZ format: **Import** |rarr| **Data** |rarr| **Natural-source EM** |rarr| **ZTEM general ASCII** |rarr| **XYZ**
 - CSV format: **Import** |rarr| **Data** |rarr| **Natural-source EM** |rarr| **ZTEM general ASCII** |rarr| **CSV file**
 
 .. figure:: ../../../images/importZTEMascii.png

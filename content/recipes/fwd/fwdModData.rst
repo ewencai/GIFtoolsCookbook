@@ -20,18 +20,18 @@ This recipe requires the following steps:
 
 **STEP 1: import a survey, a mesh, and a model**
 
-Start GIFtools or open an already existing project. Because we will be loading in a few files, it is easiest to :ref:`set the working directory <projSetWorkDir>` to the folder where the files are located and/or where you would like to do the forward model. 
+Start GIFtools or open an already existing project. Because we will be loading in a few files, it is easiest to :ref:`set the working directory <projSetWorkDir>` to the folder where the files are located and/or where you would like to do the forward model.
 
-The first step is then to import the magnetic airborne survey locations and the topography file. :ref:`Importation of data <importData>` will slightly differ, depending on the file type (GIF format, Geosoft XYZ, etc). For this example, the magnetic survey file is structured as a Geosoft XYZ while the topography file is in GIF format. Both are imported using the following menus:
+The first step is then to import the magnetic airborne survey locations and the topography file. :ref:`Importation of data <importData>` will slightly differ, depending on the file type (GIF format, XYZ, etc). For this example, the magnetic survey file is structured as a XYZ while the topography file is in GIF format. Both are imported using the following menus:
 
-- For magnetic survey locations: **Import** |rarr| **Data** |rarr| **Magnetics** |rarr| Geosoft XYZ
+- For magnetic survey locations: **Import** |rarr| **Data** |rarr| **Magnetics** |rarr| XYZ
 - For topography: **Import** |rarr| **Data** |rarr| **Topography** |rarr| 3D GIF (3D XYZ)
 
 .. figure:: ../../../images/createOctreeMesh/importdata.png
         :figwidth: 75%
         :align: center
 
-For the magnetic data, we also need to :ref:`set the inclination, declination, and field strength <objectEditFieldParam>`. This can be done through the data manipulation menu. 
+For the magnetic data, we also need to :ref:`set the inclination, declination, and field strength <objectEditFieldParam>`. This can be done through the data manipulation menu.
 
 Once the data are loaded, GIFtools will have the two items shown in the project tree on the left:
 
@@ -107,7 +107,7 @@ Set each of the parameters by using the dropdown menus or filling in a value or 
         :figwidth: 75%
         :align: center
 
-Click "Apply" to set the options. You can always access the dialog again through the menu to make changes. 
+Click "Apply" to set the options. You can always access the dialog again through the menu to make changes.
 
 .. note:: If the forward model has run, GIFtools does not allow you to edit the options anymore. However, you can copy the options (through the menu), and then change the parameters on the copied item.
 
@@ -157,7 +157,7 @@ For some forward modelling codes, you can also import the locations file:
 
 **Magnetics forward modelling** |rarr| **Load** |rarr| **Locations file**
 
-.. note:: One error message that is most likely to appear is one saying that the code isn't found in the path. When creating the forward modelling item, GIFtools automatically looks for the code executable and warns you if it cannot find it. 
+.. note:: One error message that is most likely to appear is one saying that the code isn't found in the path. When creating the forward modelling item, GIFtools automatically looks for the code executable and warns you if it cannot find it.
 
 .. note:: Once the forward model has run, GIFtools does not allow you to edit the options anymore. However, you can copy the options (through the menu), and then change the parameters on the copied item.
 
