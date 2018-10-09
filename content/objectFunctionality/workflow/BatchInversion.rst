@@ -49,7 +49,7 @@ used as a template for all subsequent inversions. General inversion options,
 such as :math:`\alpha`-values, reference and starting models can be set on
 this object.
 
-**Create** |rarr| **Workflow** |rarr| **Set Template**
+**Workflow** |rarr| **Set Template**
 
 .. figure:: ../../../images/Workflows/batchInversion_setTemplate.png
     :align: center
@@ -65,7 +65,7 @@ Select Data Objects
 This option will prompt a menu for the selection of ``Data`` objects, for
 which an ``Inversion`` object will be created.
 
-**Create** |rarr| **Workflow** |rarr| **Select Data Objects**
+**Workflow** |rarr| **Select Data Objects**
 
 .. figure:: ../../../images/Workflows/batchInversion_selectData.png
     :align: center
@@ -88,7 +88,7 @@ With this option, the ``Batch Inversion`` routine copies the ``Template`` and re
 the components specific to each inversions (data, mesh, topography). By default, the selected ``Data`` and
 ``TOPO2Ddata`` objects will be copied to the newly created inversion object.
 
-**Create** |rarr| **Workflow** |rarr| **Create Inversions**
+**Workflow** |rarr| **Create Inversions**
 
 .. _batchInversionRun:
 
@@ -97,7 +97,7 @@ Run Inversions
 
 Option to run all the inversion in series.
 
-**Create** |rarr| **Workflow** |rarr| **Run**
+**Workflow** |rarr| **Run**
 
 OPTION 1: Run locally
 ---------------------
@@ -134,7 +134,7 @@ objects. If the inversion was run on a remote machine, the directories must be
 copied in the working directory of the parent ``BatchInversion``. Only the
 last model and predicted will be loaded, but convergence curves can be viewed.
 
-**Create** |rarr| **Workflow** |rarr| **Load All**
+**Workflow** |rarr| **Load All**
 
 
 .. _batchInversionMerge:
