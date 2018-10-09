@@ -28,7 +28,7 @@ must be specified by the user. In this exercise, we:
 Setup for the Exercise
 ----------------------
 
-    - `Download the demo <https://github.com/ubcgif/GIFtoolsCookbook/raw/master/assets/AtoZ_FEM1D_4Download.zip>`_ (**MAKE CORRECT LINK TO DOWNLOAD DEMO**)
+    - Download the demo
     - Open GIFtools
     - :ref:`Set the working directory <projSetWorkDir>`
 
