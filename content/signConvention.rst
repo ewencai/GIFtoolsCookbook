@@ -140,15 +140,15 @@ Here, we define the sign conventions for various data types and the :ref:`time-d
 |TDEM    |TDoctree   |octree       | - dBx/dt, dBy/dt, -dBz/dt with Z-axis pointing upward (:ref:`details<sign_tdem_conv>`)                                              |
 +--------+-----------+-------------+-------------------------------------------------------------------------------------------------------------------------------------+
 |        |           |             | - Time-dependency is :math:`-i\omega t` (:ref:`MT details<sign_mt_conv>`, :ref:`ZTEM details<sign_ztem_conv>`)                      |
-|MT/ZTEM |MTZ3D      |             | - The data convention has X = Easting, Y = Northing and Z = Down. So :math:`Z_{xy}` is Z-Northing-Easting.                          |
+|MT/ZTEM |MTZ3D      |             | - The data convention has X = Northing, Y = Easting and Z = Down. So :math:`Z_{xy}` is Z-Northing-Easting.                          |
 |        |           |             |                                                                                                                                     |
 +--------+-----------+-------------+-------------------------------------------------------------------------------------------------------------------------------------+
 |        |           |             | - Time-dependency is :math:`-i\omega t` (:ref:`MT details<sign_mt_conv>`, :ref:`ZTEM details<sign_ztem_conv>`)                      |
-|MT/ZTEM |E3DMT      |octree ver. 1| - The data convention has X = Easting, Y = Northing and Z = Down. So :math:`Z_{xy}` is Z-Northing-Easting.                          |
+|MT/ZTEM |E3DMT      |octree ver. 1| - The data convention has X = Northing, Y = Easting and Z = Down. So :math:`Z_{xy}` is Z-Northing-Easting.                          |
 |        |           |             |                                                                                                                                     |
 +--------+-----------+-------------+-------------------------------------------------------------------------------------------------------------------------------------+
 |        |           |             | - Time-dependency can be chosen as :math:`\pm i\omega t` (:ref:`MT details<sign_mt_conv>`, :ref:`ZTEM details<sign_ztem_conv>`)     |
-|MT/ZTEM |E3DMT      |octree ver. 2| - The data convention has X = Easting, Y = Northing and Z = Down. So :math:`Z_{xy}` is Z-Northing-Easting.                          |
+|MT/ZTEM |E3DMT      |octree ver. 2| - The data convention has X = Northing, Y = Easting and Z = Down. So :math:`Z_{xy}` is Z-Northing-Easting.                          |
 |        |           |             |                                                                                                                                     |
 +--------+-----------+-------------+-------------------------------------------------------------------------------------------------------------------------------------+
 
@@ -301,7 +301,7 @@ As we can see, to switch from one convention to another we must:
 
 **Data Convention**
 
-MT data uses a sign convention based on a Northing-Easting-Down coordinate system (right-handed). The labeling of the impedance tensor elements is such that X = Easting and Y = Northing, thus:
+MT data uses a sign convention based on a Northing-Easting-Down coordinate system (right-handed). The labeling of the impedance tensor elements is such that X = Northing, Y = Easting, thus:
 
 	- :math:`Z_{xx}` is Z-Northing-Northing
 	- :math:`Z_{xy}` is Z-Northing-Easting
