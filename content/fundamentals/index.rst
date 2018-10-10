@@ -20,5 +20,6 @@ Here, we explain geophysical inversion and describe the parameters which impact 
     The weighting matrices <WeightingMatrix>
     Sparse and blocky norms <Norms>
     Reference model in the smoothness Term<MrefInSmooth>
+    Data weighting and joint inversion <JointInversion>
 
 .. note:: This section was elaborated with the contribution of `Mark Grujic <https://github.com/coolbanans>`_

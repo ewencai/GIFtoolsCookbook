@@ -7,16 +7,16 @@ A to Z Examples for Magnetics
     :align: right
     :figwidth: 50%
 
-Here, A to Z examples relevant to the processing and inversion of magnetic
-data in the presence of remanence.  The effect of remanence has long been
+Here, we provide A to Z examples relevant to the processing and inversion of magnetic
+data in the presence of remanence. The effects of remanence has long been
 recognized as an obstacle for the geological interpretation and modeling of
-magnetic data, especially true in the case of TKC. This tutorial covers
+magnetic data. This is especially true in the case of TKC. Our tutorial covers
 three inversion approaches and compares their respective solutions:
 
 .. toctree::
  	:maxdepth: 1
 
-   	Magnetic susceptibility inversion <MagSusc>
-   	Magnetic amplitude inversion <MagAmp>
+   	Magnetic susceptibility inversion from TMI data <MagSusc>
+   	Magnetic susceptibility inversion from amplitude data <MagAmp>
    	Magnetic Vector Inversion (MVI) <MVI>
 

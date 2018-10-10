@@ -48,7 +48,7 @@ Other Recipes
 
     Create a geologic model from an image <other/imageInInversion>
     Use a surface (or surfaces) in an inversion <other/surfaceInInversion>
-    Import TEM data from a Geosoft xyz or csv file <other/importVTEMdata>
+    Import TEM data from a XYZ or csv file <other/importVTEMdata>
     Add transmitter information to a TEM data object <other/addTxToTEMdata>
     Create a geology model from an isosurface <other/IsoSurfaceToGeoModel>
     Create a physical property model from a geology model <other/propModelFromGeoModel>

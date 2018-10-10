@@ -30,7 +30,7 @@ Downloads
 Step by step
 ^^^^^^^^^^^^
 
-.. tip:: If you have already completed the :ref:`Magnetic Susceptibility Inversion <AtoZMag_Susc>` demo, you may advance directly to :ref:`Step 3<AtoZMagAmp_Step3>`. Use the final de-trended data as your data column and use the final recovered model from Step 5 to predict amplitude data.
+.. tip:: If you have already completed the :ref:`Magnetic Susceptibility Inversion <AtoZMag_Susc>` demo, you may advance directly to :ref:`Step 3<AtoZMagAmp_Step3>`. Use the final de-trended data as your data column and use the final recovered model from :ref:`Step 5 of the previous exercise<AtoZMag_invObj_step5>` to predict amplitude data.
 
 
 .. figure:: ./../../../images/AtoZ_Mag/AtoZ_Mag_Amp.png
@@ -67,9 +67,9 @@ Step by step
 .. _AtoZMagAmp_Step3:
 
 - **Step 3: Processing**
-	- By default, magnetic data are interpreted as being TMI data. For GIFtools to work with amplitude data, we must create an magnetic amplitude data object using :ref:`change data type <objectMagDataChangeType>`
+	- By default, magnetic data are interpreted as being TMI data. For GIFtools to work with amplitude data, we must create a magnetic amplitude data object using :ref:`change data type <objectMagDataChangeType>`
 	- To create some amplitude data, we will :ref:`forward model data from an existing model <ampStep3>`
-	- Once import, remember to :ref:`assign uncertainties <objectAssignUncert>` (1nT) and :ref:`set I/O headers <objectSetioHeaders>`
+	- Once imported, remember to :ref:`assign uncertainties <objectAssignUncert>` (1nT floor) and :ref:`set I/O headers <objectSetioHeaders>`
 
 	- :ref:`Create an inversion object (MAG3D 6.0)<createMagInv>`
 	    - :ref:`Edit the options <invEditOptions_Mag3D>`
@@ -77,8 +77,8 @@ Step by step
 	        - Panel 2: Adjust :math:`\alpha` parameters
 	        - Click *Apply and write files*
 
-	.. tip:: **Alternatively** if you have already completed the :ref:`Magnetic Susceptibility Inversion <AtoZMag_Susc>` demo, you can :ref:`copy the inversion<invCopyOptions>` object and
-		 	 transfer the inversion parameter
+.. tip:: **Alternatively** if you have already completed the :ref:`Magnetic Susceptibility Inversion <AtoZMag_Susc>` demo, you can :ref:`copy the inversion<invCopyOptions>` object and
+	 	 transfer the inversion parameter
 
 .. figure:: ./../../../images/AtoZ_Mag/AtoZ_Mag_invAmpSmooth.png
             :align: right
@@ -99,25 +99,30 @@ Step by step
 
 .. note:: The recovered effective susceptibility model shows a near-vertical anomaly, in good agreement with the conceptual idea of a vertical kimberlite pipe.
 
-.. figure:: ./../../../images/AtoZ_Mag/AtoZ_Mag_InvOptions.png
+.. figure:: ./../../../images/AtoZ_Mag/AtoZ_Mag_AmpSparseOptions.png
             :align: right
             :scale: 20%
 
-            **This is not correct panel**
+            Sparsity parameters
 
-- **Step 5: Repeat the inversion with sparsity (WHAT PARAMETERS)**
+- **Step 5: Repeat the inversion with sparsity ([0, 2, 2, 2])**
     - :ref:`Copy the previous inversion object <invCopyOptions>`
     - Set the sparsity parameters ->
     - :ref:`Import the inversion results <invStep6>`
     - :ref:`View the convergence curves <invStep7>`
+
+|
+|
+|
+|
 
 .. _AtoZ_Mag_AmpSynthesis:
 
 Synthesis
 ^^^^^^^^^
 
-- We have recovered a compact effective susceptibility model that honors the amplitude data and resemble the shape of vertical kimberlite pipe.
-- Strongest magnetic anomaly is located near and over the zero susceptibility obtained with the :ref:`induced assumption<AtoZ_MagSuscdiscuss>`.
+- We have recovered a compact effective susceptibility model that honors the amplitude data and resembles the shape of vertical kimberlite pipe.
+- Unlike in the :ref:`TMI inversion<AtoZ_MagSuscdiscuss>` results, secondary susceptible structures are not generated in the recovered model in order to fit the data.
 
 .. figure:: ./../../../images/AtoZ_Mag/AtoZ_Mag_invAmpCompact.png
             :align: center

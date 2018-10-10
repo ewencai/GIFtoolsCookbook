@@ -8,8 +8,7 @@ Magnetic Susceptibility:
 Purpose
 ^^^^^^^
 
-Demonstrate the basic steps for the inversion of TMI magnetic data using the
-induced magnetization assumption; i.e. no remanent magnetization. This exercise is meant to emulate greenfield exploration project where topography and magnetic data are available.
+To demonstrate the basic steps for inverting TMI magnetic data using the induced magnetization assumption; i.e. no remanent magnetization. This exercise is meant to emulate a greenfield exploration project where topography and magnetic data are available.
 Here, we start with topography and synthetic magnetic data from the current best TKC susceptibility model.
 
 
@@ -55,7 +54,7 @@ Step by step
         *Observed data*
 
 
-    - :ref:`Set the field parameters for the newly created magnetic survey <objectEditFieldParam>`:
+    - :ref:`Set the inducing field parameters for the newly created magnetic survey <objectEditFieldParam>`:
         - Field strength (IGRF) = 59,850 nT
         - Inclination = 83.3 degrees
         - Declination = 19.5 degrees
@@ -66,9 +65,9 @@ Step by step
     - In the newly created data object, :ref:`create elevation column for Mag data<objectMagDataElevation>` using the topography and known flight height (40 m). Set the Z column to this new elevation using :ref:`Set the IO headers <objectSetioHeaders>`
     - :ref:`Assign floor uncertainty of 1 nT <objectAssignUncert>` to all TMI data
 
-    .. note:: - The observed magnetic data is now ready for export.
-              - At least two anomalies are easily identified.
-              - Note the large trend in the data coming from the NE.
+.. note:: - The observed magnetic data can now be exported in GIF format.
+          - At least two anomalies are easily identified.
+          - Note the large trend in the data coming from the NE.
 
 .. figure:: ./../../../images/AtoZ_Mag/AtoZ_Mag_MeshParam.png
     :align: right
@@ -90,10 +89,10 @@ Step by step
 |
 |
 |
-|
 
     - :ref:`Create an inversion object (MAG3D 6.0)<createMagInv>`
 
+|
 |
 |
 |
@@ -105,17 +104,16 @@ Step by step
 
     *Inversion options*
 
-|
-|
-|
-|
-
 .. _AtoZMag_alphaOpt:
 
     - :ref:`Edit the options <fwdEditOptions_Mag3D>`
         - Panel 1: Set mesh, observed data and topography. Leave sensitivity options as default.
         - Panel 2: Adjust :math:`\alpha` parameters (see figure)
         - Click *Apply and write files*
+
+|
+|
+|
 
 .. tip:: As a general *best practice*, in the absence of a priori
          information, :math:`\alpha` values should be set such that all components of
@@ -141,14 +139,16 @@ Step by step
 
 
 .. note:: Note the linear anomalies recovered on the edges of the core
-          mesh. This feature is due to the regional signal captured by our survey, but extents beyond the region of interest.
-          We can improve our result with the following step.
+          mesh that extend beyond the region of interest. These features are due to the regional signal captured by our survey.
+          We can improve our result with the instructions in **Step 5**.
 
 .. figure:: ./../../../images/AtoZ_Mag/AtoZ_Mag_SyntheticData.png
             :align: right
             :scale: 20%
 
             De-trended data
+
+.. _AtoZMag_invObj_step5:
 
 - **Step 5: De-trend and re-run**
     - Using the Mag data object, :ref:`compute the first-order polynomial trend<objectPolyTrend>`
@@ -173,8 +173,9 @@ Synthesis
 
 - We have recovered a susceptibility model that honors the data within the target misfit.
 - Considering a near-vertical inducing field, at least two features should raise some serious flags regarding the presence of remanence.
-    - The kimberlite pipe appears to be plunging towards SW, with a cone-shape zone of zero susceptibility.
-    - The data residual map shows correlated signal near the main anomaly, indicative of poor fit of the large negative anomaly
+
+    1. The kimberlite pipe appears to be plunging towards SW, and a secondary susceptible structure presents outside the region of interest and plunges to the East.
+    2. The data residual map shows correlated signal near the main anomaly, indicating a poor fit for the large negative anomaly.
 
 .. figure:: ./../../../images/AtoZ_Mag/AtoZ_MagSusc.png
         :align: center
