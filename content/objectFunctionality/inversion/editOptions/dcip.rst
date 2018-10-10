@@ -157,14 +157,20 @@ This option allows to create :ref:`cell and face weights <Fundamentals_Weighting
 **DCinversion** |rarr| **Discrete Topo/Weights** |rarr| **Create Sensitivity Weights**
 
 .. math::
-	\mathbf{w_s} = \mathbf{J}_approx / max(\mathbf{J}_approx) + \delta
+	\mathbf{w_s} = \mathbf{J}_{approx} / max(\mathbf{J}_{approx}) + \delta
+
+.. math::
 	\mathbf{w_x} = \mathbf{A}_c^{f_x}\mathbf{w_s}
+
+.. math::
 	\mathbf{w_y} = \mathbf{A}_c^{f_y}\mathbf{w_s}
+
+.. math::
 	\mathbf{w_z} = \mathbf{A}_c^{f_z}\mathbf{w_s}
 
 where :math:`\mathbf{w_s}`, :math:`\mathbf{w_s}`, :math:`\mathbf{w_s}` and
 :math:`\mathbf{w_s}` are the cell-center and cell-face weights,
-:math:`\mathbf{J}_approx` are the values from the ``sensitivity.txt`` file,
+:math:`\mathbf{J}_{approx}` are the values from the ``sensitivity.txt`` file,
 values from :math:`\delta` is a user-defined threhold parameter
 ([DEFAULT=1e-2]) and :math:`\mathbf{A}_c^{f_x}, \mathbf{A}_c^{f_y},
 \mathbf{A}_c^{f_z}` are averaging operators taking the cell-center values to

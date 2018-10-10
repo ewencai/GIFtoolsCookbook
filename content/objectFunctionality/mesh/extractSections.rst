@@ -17,3 +17,7 @@ The function returns a ``GIFfolder`` with mesh and model corresponding to the
 chosen sections. The sections are stored on a 2.5D mesh made up of 1 m thick
 layers.
 
+
+.. figure:: ./../../../images/extractSectionsDiagram.png
+    :align: center
+    :figwidth: 100%

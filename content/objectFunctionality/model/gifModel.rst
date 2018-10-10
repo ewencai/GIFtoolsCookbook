@@ -143,7 +143,7 @@ where *x* and *y* define the cell center location of model column **m** in the u
 - **Interpolation type**: Perform the weighted averaging in linear or logarithmic space
 
 +---------------------------------------------------------------+------------------------------------------------------------------+
-|.. figure:: ../../../images/InterpNDV/InterpNDV_lineModel.png  |   .. figure:: ../../../images/InterpNDV/InterpNDV_lineModel.png  |
+|.. figure:: ../../../images/AtoZ_DCIP/AtoZ_DC_inv2D.png        |   .. figure:: ../../../images/AtoZ_DCIP/AtoZ_DC_inv2DInterp.png  |
 |    :align: center                                             |       :align: center                                             |
 |    :figwidth: 75%                                             |       :figwidth: 75%                                             |
 |                                                               |                                                                  |

@@ -43,4 +43,8 @@ where *x* and *y* define the cell center location of model column **m** in the u
 | Translation [X,Y]              | Grid translation distances                            |
 +--------------------------------+-------------------------------------------------------+
 
+.. example::    - `Download this example <https://github.com/ubcgif/GIFtoolsCookbook/raw/master/assets/example_ModelMerge.zip>`_
 
+.. figure:: ./../../../images/mergeModels3Dexample.png
+    :align: center
+    :figwidth: 100%

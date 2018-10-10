@@ -55,7 +55,7 @@ As a first step, we invert the :ref:`simulated data <AtoZdcip_Forward>` with a p
     - :ref:`Edit the options <invEditOptions_dcip3d>`
         - Panel 2: Adjust :math:`\alpha` parameters: :math:`\alpha_s=0.0025, \alpha_x=\alpha_z=1`
         - Click *Apply and write files*
-    - :ref:`Run the inversion <>`
+    - :ref:`Run the inversion <invRun>`
 
 
 .. figure:: ./../../../images/AtoZ_DCIP/AtoZ_DCIP_Unconstrained.png
