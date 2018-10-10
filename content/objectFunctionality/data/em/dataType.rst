@@ -77,11 +77,6 @@ For FEM and TEM soundings (for use in the 1D codes), the receiver locations are 
 
 
 
-
-
-
-
-
 .. _objectEMremoveTx:
 
 Remove Transmitters
@@ -90,3 +85,99 @@ Remove Transmitters
 This functionality allows the user to remove transmitter information from the data object.
 
 Select the object and the menu **"data type menu"** |rarr| **Remove transmitters**
+
+
+
+
+.. _objectEMwaveform:
+
+Waveform (TDEM objects only)
+----------------------------
+
+Here, we describe functionality related to defining, viewing and exporting waveforms for TEM data objects. This functionality is accessed through:
+
+**data type menu** |rarr| **Waveform**
+
+
+.. _objectEMwaveform_exp:
+
+Create Exponent On - Ramp Off
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Here, the user defines an exponential ramp-on linear ramp-off waveform and sets it to the selected TEM data object. This functionality is accessed through:
+
+**data type menu** |rarr| **Waveform** |rarr| **Create exponent on; ramp off**
+
+The parameters defining this waveform are as follows:
+
+	- **minimum time:** the starting time for the waveform (in seconds). This time **must** be before your first time channel
+	- **maximum time:** the end time for the waveform (in seconds). This time **must** be after your latest time channel
+	- **time = 0:** the shut-off time
+	- **Number of segments:** Number of intervals after t0 which use a different time-step length
+	- **Samples per segment:** Number of linearly sampled points which define the time-step length in each segment
+	- **Exponent slope:** The constant :math:`\alpha` defining the exponential ramp on
+	- **Exponent time:** The duration of the exponential ramp on
+	- **Number of exp samples:** Number of data points, linearly sampled, defining the waveform during the exponential ramp on
+	- **Ramp time:** The duration of the linear ramp off
+	- **Number of ramp samples:** Number of data points, linearly sampled, defining the waveform during the linear ramp off
+
+
+
+.. _objectEMwaveform_stepoff:
+
+Create Step Off
+^^^^^^^^^^^^^^^
+
+Here, the user defines a step-off waveform and sets it to the selected TEM data object. This functionality is accessed through:
+
+**data type menu** |rarr| **Waveform** |rarr| **Create step off**
+
+The parameters defining this waveform are as follows:
+
+	- **minimum time:** the starting time for the waveform (in seconds). This time **must** be before your first time channel
+	- **maximum time:** the end time for the waveform (in seconds). This time **must** be after your latest time channel
+	- **time = 0:** the shut-off time
+	- **Number of segments:** Number of intervals after t0 which use a different time-step length
+	- **Samples per segment:** Number of linearly sampled points which define the time-step length in each segment
+
+
+
+.. _objectEMwaveform_import:
+
+Import a Waveform
+^^^^^^^^^^^^^^^^^
+
+Here, the user imports a custom waveform from a text file and sets it to the selected TEM data object. This functionality is accessed through:
+
+**data type menu** |rarr| **Waveform** |rarr| **Import (3D format)**
+
+
+.. _objectEMwaveform_view:
+
+View
+^^^^
+
+Here, the user may look at the waveform assigned to the selected TEM data object. This functionality is accessed through:
+
+**data type menu** |rarr| **Waveform** |rarr| **View**
+
+.. _objectEMwaveform_1D:
+
+Export for 1D
+^^^^^^^^^^^^^
+
+Here, the user may export the waveform in the format used by the EM1DTM code. This functionality is accessed through:
+
+**data type menu** |rarr| **Waveform** |rarr| **Export for 1D**
+
+
+.. _objectEMwaveform_3D:
+
+Export for 3D
+^^^^^^^^^^^^^
+
+Here, the user may export the waveform in the format used by 3D codes. This functionality is accessed through:
+
+**data type menu** |rarr| **Waveform** |rarr| **Export for 3D**
+
+

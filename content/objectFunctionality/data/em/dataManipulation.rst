@@ -52,15 +52,60 @@ To view (with the option to edit) the times or frequencies within a data set, cl
 Set Data Normalization (FEM and TEMsounding Only)
 -------------------------------------------------
 
-Both the EM1DFM and EM1DTM inversion codes can interpret a variety of representations of EM data for both the real and imaginary components. To ensure the data are interpreted correctly by the EM1DFM and EM1DTM codes, the data normalization must be set to one of the following options:
-
-	- **ppm:** secondary field component as parts-per-million of the primary field
-	- **%:** secondary field component as a fractional percent of the strength of the primary field
-	- **A/m:** secondary field component in A/m
-	- **Total field:** total field (primary + secondary) in A/m
-
-This functionality can be accessed through 
+Both the EM1DFM and EM1DTM inversion codes can interpret a variety of representations of EM data.
+To ensure the data are interpreted correctly by the EM1DFM and EM1DTM codes, the data normalization must be properly set.
+This functionality can be accessed through:
 
 **Data manipulation** |rarr| **Set Data Normalization**
 
+
+.. _objectEMsetDataNorm_FEM:
+
+FEM data
+^^^^^^^^
+
+For FEM sounding data, the options for defining the type of data are as follows:
+
+    - **ppm:** secondary field component as parts-per-million of the primary field
+    - **%:** secondary field component as a fractional percent of the strength of the primary field
+    - **A/m:** secondary field component in A/m
+    - **Total field:** total field (primary + secondary) in A/m
+
+
+.. _objectEMsetDataNorm_TEM:
+
+TEM data
+^^^^^^^^
+
+For TEM sounding data, the options for defining **B-field data** are as follows:
+
+    - **nano-Tesla**
+    - **micro-Tesla**
+    - **milli-Tesla**
+
+and the options for defining **dB/dt data** are as follows:
+
+    - **micro-Volts**
+    - **milli-Volts**
+    - **Volts**
+
+.. note:: If the dipole moment of the receiver is 1 Am :math:`\! ^2`, then the magnitude of the EMF induced in the receiver coil in Volts equals the time-derivative of the magnetic flux density in T/s.
+
+
+.. _objectEMsetTimeNorm:
+
+Set Time Normalization (TEMsounding Only)
+-----------------------------------------
+
+The EM1DTM inversion code can use a variety of units for the time channel column.
+To ensure the data are interpreted correctly by the EM1DTM code, the time normalization must be properly set.
+This functionality can be accessed through:
+
+**Data manipulation** |rarr| **Set Time Normalization**
+
+The options for defining the units of the time column are as follows:
+
+    - **micro-seconds**
+    - **milli-seconds**
+    - **seconds**
 
