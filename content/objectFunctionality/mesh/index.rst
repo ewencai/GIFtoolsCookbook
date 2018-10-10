@@ -13,6 +13,8 @@ Mesh
     refineOctree
     View in 3D <viewMesh>
     Export <export>
+    Extract Sections <extractSections>
+    Interpolate 3D Models <merge3DModels>
 
 
 

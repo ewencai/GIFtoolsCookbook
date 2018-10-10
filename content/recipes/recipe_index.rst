@@ -35,9 +35,9 @@ Inversion Recipes
     Invert data in GIFtools <inv/invertData>
     Do an equivalent source inversion <inv/equivSource>
     Invert 2D DCIP data <inv/invdcip2d>
+    Exploring the model space <inv/modelSpace>
 
-
-
+s
 
 
 Other Recipes
