@@ -411,7 +411,7 @@ MTZ3D data
 E3DMT version 1 data
 ~~~~~~~~~~~~~~~~~~~~
 
-`Observed/locations <https://e3dmt.readthedocs.io/en/latest/content/files/obsFile.html#version-1-2014-and-2015>`__ data and `predicted <https://e3dmt.readthedocs.io/en/latest/content/files/preFile.html#version-1-2014-and-2015>`__ data can be loaded from:
+`Observed/locations <https://e3dmt.readthedocs.io/en/manual_ver1/content/files/obsFile.html>`__ data and `predicted <https://e3dmt.readthedocs.io/en/manual_ver1/content/files/preFile.html>`__ data can be loaded from:
 
     - **Import** |rarr| **Data** |rarr| **Natural-source EM** |rarr| **MT / ZTEM: GIF format** |rarr| **E3DMT Obeserved/Locations Data (ver 1)**
     - **Import** |rarr| **Data** |rarr| **Natural-source EM** |rarr| **MT / ZTEM: GIF format** |rarr| **E3DMT Predicted Data (ver 1)**
@@ -436,14 +436,14 @@ Some things to note about loading E3DMT version 1 predicted data:
 E3DMT version 2 data
 ~~~~~~~~~~~~~~~~~~~~
 
-`Observed/locations <https://e3dmt.readthedocs.io/en/latest/content/files/obsFile.html#version-2-2017>`__ data and `predicted <https://e3dmt.readthedocs.io/en/latest/content/files/preFile.html#version-2-2017>`__ data can be loaded from:
+`Observed/locations <https://e3dmt.readthedocs.io/en/manual_ver2/content/files/obsFile.html>`__ data and `predicted <https://e3dmt.readthedocs.io/en/manual_ver2/content/files/preFile.html>`__ data can be loaded from:
 
     - **Import** |rarr| **Data** |rarr| **Natural-source EM** |rarr| **MT / ZTEM: GIF format** |rarr| **E3DMT Obeserved/Locations Data (ver 2)**
     - **Import** |rarr| **Data** |rarr| **Natural-source EM** |rarr| **MT / ZTEM: GIF format** |rarr| **E3DMT Predicted Data (ver 2)**
 
 Some things to note about loading E3DMT version 2 observed/locations data:
 
-    - The user selects the `Observations <https://e3dmt.readthedocs.io/en/latest/content/files/obsFile.html#version-2-2017>`__ / `survey index file <https://e3dmt.readthedocs.io/en/latest/content/files/indexFile.html>`__ from the first pop-up window, the `receivers file <https://e3dmt.readthedocs.io/en/latest/content/files/receiverFile.html>`__ from the second pop-up window, and the `frequencies file <https://e3dmt.readthedocs.io/en/latest/content/files/freqFile.html>`__ form the third pup-up window.
+    - The user selects the `Observations <https://e3dmt.readthedocs.io/en/manual_ver2/content/files/obsFile.html>`__ / `survey index file <https://e3dmt.readthedocs.io/en/manual_ver2/content/files/indexFile.html>`__ from the first pop-up window, the `receivers file <https://e3dmt.readthedocs.io/en/manual_ver2/content/files/receiverFile.html>`__ from the second pop-up window, and the `frequencies file <https://e3dmt.readthedocs.io/en/manual_ver2/content/files/freqFile.html>`__ form the third pup-up window.
     - Although it is good practice, the locations for each frequency do not need to match. Frequency-location pairs without data are given a value of NaN.
     - The IDs for the receivers do not need to be in any particular order but they do need to be unique.
     - If the respective IDs for Hx and Hy receivers are all the same (e.g. a base station for ZTEM data), the resulting ZTEM data object will still have a datatype of *MTH*.
