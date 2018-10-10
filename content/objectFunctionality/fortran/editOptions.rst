@@ -15,3 +15,9 @@ To change the options of the utility, click on the utility item, select the menu
 
 
 
+.. _utilEditOptions_E3DMT:
+
+E3DMT Mesh Utility
+------------------
+
+**IMAGE AND EXPLANATION NEEDED**

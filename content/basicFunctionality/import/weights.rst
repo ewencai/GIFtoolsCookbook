@@ -12,7 +12,7 @@ Import weights
 Import full weights file
 ------------------------
 
-RECIPE PENDING
+**Import** |rarr| **Weights** |rarr| **Full weight file**
 
 
 
@@ -22,4 +22,10 @@ RECIPE PENDING
 Import only face weights
 ------------------------
 
-RECIPE PENDING
+
+
+**Import** |rarr| **Weights** |rarr| **Only faces**
+
+
+
+
