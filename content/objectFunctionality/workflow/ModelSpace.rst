@@ -31,6 +31,8 @@ under investigation will be altered for subsequent inversions
     :figwidth: 40%
 
 
+.. _objectFunctionalityWorkflowModelSpaceEdit:
+
 Edit Options
 ^^^^^^^^^^^^
 
@@ -54,6 +56,7 @@ execution.
 
 **Workflow** |rarr| **Write all**
 
+.. _objectFunctionalityWorkflowModelSpaceRun:
 
 Run
 ^^^
@@ -64,7 +67,7 @@ OPTION 1: Run locally
 ---------------------
 
 Just as for any other inversion programs, the Fortran executable can be called locally.
-The user has to wait for all inversions to be completed before carrying on with the project.
+Make sure you have sufficient resources to run the inversion.
 
 
 OPTION 2: Run remotely
@@ -84,6 +87,7 @@ where:
 
 ``[FortranCode]`` is name of the inversion routine to be used (e.g. ``dcinv2d``, ``maginv3d``)
 
+.. _objectFunctionalityWorkflowModelSpaceLoad:
 
 Load All
 ^^^^^^^^
