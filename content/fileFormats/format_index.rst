@@ -51,5 +51,6 @@ Models
     modelfile
     model2Dfile
     modelVectorfile
+    modelNormfile
     geodeffile
 

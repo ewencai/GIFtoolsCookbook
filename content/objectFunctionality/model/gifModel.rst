@@ -107,6 +107,7 @@ The following fields are then filled in:
 	- **Tolerance:** The extent at which physical property values may differ from *old value* and be replace by *new value*
 
 
+<<<<<<< HEAD
 .. _objectFunctionalityFillNDValue:
 
 Fill No-Data-Values (2D Interpolation)
@@ -176,6 +177,16 @@ A property data (PROPdata) item must be ref:`imported <importProp>`.
 
 Switch Mesh (of equal size)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+=======
+.. _objectFunctionalityModCreateActive:
+
+Create Active Model
+-------------------
+
+This functionality will examine the cell values in a *GIFmodel* and create and *ACTIVEmodel* object. The *ACTIVEmodel* keeps track of which cells like below the surface topography. This functionality is accessed through:
+
+**GIFmodel** |rarr| **Create** |rarr| **Active model**
+>>>>>>> Update_AtoZ_em1dtm
 
 So long as the size of the mesh is the same, the associated mesh for any model can be changed through either:
 

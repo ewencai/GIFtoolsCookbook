@@ -312,8 +312,8 @@ GIF formatted data
 GIF formatted FEM data contains all necessary transmitter, receiver and frequency information. As a result, no further steps are required when loading GIF formatted data into GIFtools.
 
 
-Geosoft XYZ and CSV data
-^^^^^^^^^^^^^^^^^^^^^^^^
+XYZ and CSV data
+^^^^^^^^^^^^^^^^
 
 These data types do not contain transmitter, receiver and frequency information, only the raw data. As a result, an additional window will pop up when loading FEM data in these formats. The user will also be required to set transmitter (**link**) and receiver (**link**) information once the data are loaded.
 
@@ -411,13 +411,13 @@ MTZ3D data
 E3DMT version 1 data
 ~~~~~~~~~~~~~~~~~~~~
 
-`Observed/locations <https://e3dmt.readthedocs.io/en/latest/content/files/obsFile.html#version-1-2014-and-2015>`__ data and `predicted <https://e3dmt.readthedocs.io/en/latest/content/files/preFile.html#version-1-2014-and-2015>`__ data can be loaded from:
+`Observed/locations <https://e3dmt.readthedocs.io/en/manual_ver1/content/files/obsFile.html>`__ data and `predicted <https://e3dmt.readthedocs.io/en/manual_ver1/content/files/preFile.html>`__ data can be loaded from:
 
     - **Import** |rarr| **Data** |rarr| **Natural-source EM** |rarr| **MT / ZTEM: GIF format** |rarr| **E3DMT Obeserved/Locations Data (ver 1)**
     - **Import** |rarr| **Data** |rarr| **Natural-source EM** |rarr| **MT / ZTEM: GIF format** |rarr| **E3DMT Predicted Data (ver 1)**
 
 Some things to note about loading E3DMT version 1 observed/locations data:
- 
+
     - If MT and ZTEM are contained within the same file, GIFtools will parse into an IMPdata object and a ZTEMdata object
     - Although it is good practice, the locations for each frequency do not need to be the same. Frequency-location pairs without data are given a value of NaN.
 
@@ -436,14 +436,14 @@ Some things to note about loading E3DMT version 1 predicted data:
 E3DMT version 2 data
 ~~~~~~~~~~~~~~~~~~~~
 
-`Observed/locations <https://e3dmt.readthedocs.io/en/latest/content/files/obsFile.html#version-2-2017>`__ data and `predicted <https://e3dmt.readthedocs.io/en/latest/content/files/preFile.html#version-2-2017>`__ data can be loaded from:
+`Observed/locations <https://e3dmt.readthedocs.io/en/manual_ver2/content/files/obsFile.html>`__ data and `predicted <https://e3dmt.readthedocs.io/en/manual_ver2/content/files/preFile.html>`__ data can be loaded from:
 
     - **Import** |rarr| **Data** |rarr| **Natural-source EM** |rarr| **MT / ZTEM: GIF format** |rarr| **E3DMT Obeserved/Locations Data (ver 2)**
     - **Import** |rarr| **Data** |rarr| **Natural-source EM** |rarr| **MT / ZTEM: GIF format** |rarr| **E3DMT Predicted Data (ver 2)**
 
 Some things to note about loading E3DMT version 2 observed/locations data:
 
-    - The user selects the `Observations <https://e3dmt.readthedocs.io/en/latest/content/files/obsFile.html#version-2-2017>`__ / `survey index file <https://e3dmt.readthedocs.io/en/latest/content/files/indexFile.html>`__ from the first pop-up window, the `receivers file <https://e3dmt.readthedocs.io/en/latest/content/files/receiverFile.html>`__ from the second pop-up window, and the `frequencies file <https://e3dmt.readthedocs.io/en/latest/content/files/freqFile.html>`__ form the third pup-up window.
+    - The user selects the `Observations <https://e3dmt.readthedocs.io/en/manual_ver2/content/files/obsFile.html>`__ / `survey index file <https://e3dmt.readthedocs.io/en/manual_ver2/content/files/indexFile.html>`__ from the first pop-up window, the `receivers file <https://e3dmt.readthedocs.io/en/manual_ver2/content/files/receiverFile.html>`__ from the second pop-up window, and the `frequencies file <https://e3dmt.readthedocs.io/en/manual_ver2/content/files/freqFile.html>`__ form the third pup-up window.
     - Although it is good practice, the locations for each frequency do not need to match. Frequency-location pairs without data are given a value of NaN.
     - The IDs for the receivers do not need to be in any particular order but they do need to be unique.
     - If the respective IDs for Hx and Hy receivers are all the same (e.g. a base station for ZTEM data), the resulting ZTEM data object will still have a datatype of *MTH*.
@@ -460,26 +460,30 @@ MT data: EDI format
 To load MT data that are in one or more EDI files (GIFtools will prompt and allow for multiple files), the menu structure is:
 
     - Make impedance data object: **Import** |rarr| **Data** |rarr| **Natural-source EM** |rarr| **MT EDI file(s)** |rarr| **Impedance**
-    - Make apparent resistivity data object: **Import** |rarr| **Data** |rarr| **Natural-source EM** |rarr| **MT EDI file(s)** |rarr| **Apparent resitivity and phase:**
+    - Make apparent resistivity data object: **Import** |rarr| **Data** |rarr| **Natural-source EM** |rarr| **MT EDI file(s)** |rarr| **Apparent resistivity and phase:**
 
 Once selected, the user must do the following:
 
     1) Use *Browse* to find the EDI file(s) which they would like to important data from
     2) Select *Load* to temporarily load all the data
     3) Select the properties (data columns) which they would like in their final data object (IMPdata or APPdata)
-    4) Select *OK*
+    4) Choose whether or not the data must be transferred from Northing-Easting-Down to Easting-Northing-Up (GIF)
+    5) Select *OK*
 
 
 .. figure:: ../../../images/importEDI.png
     :align: center
     :width: 400
 
-Some things to note about loading MT data from EDI files:
+.. important::
 
-    - We assume the EDI file data are defined by `The Society of Exploration Geophysicists MT / EMAP Data Interchange Standard <https://seg.org/Portals/0/SEG/News%20and%20Resources/Technical%20Standards/seg_mt_emap_1987.pdf>`__ . That is, the data uses the :math:`+i\omega t` :ref:`time-dependency <sign_mt_conv>`.
+    - We assume the EDI file data are defined by `The Society of Exploration Geophysicists MT / EMAP Data Interchange Standard <https://seg.org/Portals/0/SEG/News%20and%20Resources/Technical%20Standards/seg_mt_emap_1987.pdf>`__ . That is, the EDI data uses a :math:`+i\omega t` :ref:`time-dependency <sign_mt_conv>`. Also, the data are Northing-Easting-Down.
     - GIFtools will convert the (LONG, LAT) to WGS84 UTM when importing.
-    - GIFtools assumes that impedance tensor data have column names *ZXXR, ZXXI, ZXYR, ZXYI, ZYXR, ZYXI, ZYYR* and *ZYYI*. It also assumes the impedance data are in units mV/km/nT and will converted these data to V/A as required by GIF inversion programs.
-    - GIFtools converts impedance data from a :math:`+i\omega t` (EDI standard) convention to a :math:`-i\omega t` (GIF standard) convention. However, this change is currently **not** applied to phase data columns if they exist.
+    - GIFtools converts impedance data from a :math:`+i\omega t` (EDI standard) convention to a :math:`-i\omega t` (GIF standard) convention automatically.
+    - GIFtools assumes that impedance tensor data have column names *ZXXR, ZXXI, ZXYR, ZXYI, ZYXR, ZYXI, ZYYR* and *ZYYI* and the apparent resistivities have column names *RHOXX, PHSXX, RHOXY, RHOXY, RHOYX, RHOYX, RHOYY* and *RHOYY*.
+    - GIFtools assumes the impedance data are in units mV/km/nT and will converted these data to V/A as required by GIF inversion programs.
+    - If impedance data are being imported, GIFtools will import all other data columns but will *NOT* modify them in any way. Thus if ZTEM or other data exist in the EDI files, it is up to the user to apply the appropriate corrections upon loading.
+    
 
 .. _importNSEMData_ascii:
 
@@ -487,7 +491,7 @@ ZTEM data: ASCII format
 ^^^^^^^^^^^^^^^^^^^^^^^
 To load ZTEM data that are in a CSV or XYZ ASCII format, the menu structure is:
 
-- XYZ format: **Import** |rarr| **Data** |rarr| **Natural-source EM** |rarr| **ZTEM general ASCII** |rarr| **Geosoft XYZ**
+- XYZ format: **Import** |rarr| **Data** |rarr| **Natural-source EM** |rarr| **ZTEM general ASCII** |rarr| **XYZ**
 - CSV format: **Import** |rarr| **Data** |rarr| **Natural-source EM** |rarr| **ZTEM general ASCII** |rarr| **CSV file**
 
 .. figure:: ../../../images/importZTEMascii.png

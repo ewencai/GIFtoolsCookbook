@@ -7,7 +7,7 @@ Here, we discuss the importance of assigning appropriate uncertainties, the impo
 
 .. math::
 	\phi_d (\mathbf{m}) = \sum_{i=1}^N \phi_{d,i}^2 = \sum_{i=1}^N \Bigg ( \frac{\mathbf{F[m]}_i - d_i}{\varepsilon_i} \Bigg )^2
-	:name: eq1
+	:label: eq1
 
 where
 
