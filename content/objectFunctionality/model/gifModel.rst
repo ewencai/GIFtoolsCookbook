@@ -92,5 +92,13 @@ The following fields are then filled in:
 	- **Tolerance:** The extent at which physical property values may differ from *old value* and be replace by *new value*
 
 
+.. _objectFunctionalityModCreateActive:
+
+Create Active Model
+-------------------
+
+This functionality will examine the cell values in a *GIFmodel* and create and *ACTIVEmodel* object. The *ACTIVEmodel* keeps track of which cells like below the surface topography. This functionality is accessed through:
+
+**GIFmodel** |rarr| **Create** |rarr| **Active model**
 
 

@@ -58,7 +58,12 @@ copyright = u'2015-2017, UBC-GIF'
 author = u'UBC-GIF'
 
 # Ignored links
-linkcheck_ignore = ['https://gif.eos.ubc.ca/GIFtools/downloads']
+linkcheck_ignore = [
+  'https://gif.eos.ubc.ca/GIFtools/downloads',
+  'https://e3dmt.readthedocs.io/en/latest/content/files/obsFile.html#version-2-2017',
+  'https://e3dmt.readthedocs.io/en/latest/content/files/preFile.html#version-2-2017',
+  'https://dcip2d.readthedocs.io/en/latest/content/backgroundtheory.html#equation-intMOF',
+  'http://dcip2d.readthedocs.io/en/latest/content/backgroundtheory.html#equation-intMOF']
 linkcheck_retries = 3
 linkcheck_timeout = 500
 
