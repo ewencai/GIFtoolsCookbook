@@ -301,7 +301,15 @@ As we can see, to switch from one convention to another we must:
 
 **Data Convention**
 
-MT data uses a sign convention based on a Northing-Easting-Down coordinate system (right-handed). The labeling of the impedance tensor elements is such that X = Northing, Y = Easting, thus:
+MT data represent the entries of the impedance tensor (:math:`\mathbf{Z}`) where:
+
+.. math::
+    \begin{bmatrix} Z_{xx} & Z_{xy} \\ Z_{yx} & Z_{yy} \end{bmatrix} =
+    \begin{bmatrix} E_{x}^{(1)} & E_{x}^{(2)} \\ E_{y}^{(1)} & E_{y}^{(2)} \end{bmatrix}
+    \begin{bmatrix} H_{x}^{(1)} & H_{x}^{(2)} \\ H_{y}^{(1)} & H_{y}^{(2)} \end{bmatrix}^{-1}
+
+
+MT data uses a sign convention based on a Northing-Easting-Down coordinate system (right-handed); where X = Northing and Y = Easting. Thus (1) denotes fields resulting from plane waves with electric fields polarized along the x (Northing) direction, and (2) denotes fields resulting from planes with with electric fields polarized along the y (Easting) direction. For a 3D Earth, :math:`Z_{xy} = E_{x1}/H_{x2}`. The labeling of the impedance tensor elements is given by:
 
 	- :math:`Z_{xx}` is Z-Northing-Northing
 	- :math:`Z_{xy}` is Z-Northing-Easting
@@ -453,7 +461,7 @@ The EM1DTM code represents components of the dB/dt response as the induced volta
 Impedance tensor (MT) data units
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-MT data represent the entries of the impedence tensor (:math:`\mathbf{Z}`) where:
+MT data represent the entries of the impedance tensor (:math:`\mathbf{Z}`) where:
 
 .. math::
     \begin{bmatrix} Z_{xx} & Z_{xy} \\ Z_{yx} & Z_{yy} \end{bmatrix} =
@@ -461,8 +469,10 @@ MT data represent the entries of the impedence tensor (:math:`\mathbf{Z}`) where
     \begin{bmatrix} H_{x}^{(1)} & H_{x}^{(2)} \\ H_{y}^{(1)} & H_{y}^{(2)} \end{bmatrix}^{-1}
 
 
-where 1 denotes fields resulting from plane waves with an electric field polarized along the x direction, and 2 denotes fields resulting from planes with with an electric field polarized along the y direction. For a layered Earth, :math:`Z_{xy} = E_{x1}/H_{x2}`. Where the electric field units V/m and the magnetic field has units A/m, the units for elements of the impedence tensor is V/A.
-    
+where 1 denotes fields resulting from plane waves with an electric field polarized along the x direction, and 2 denotes fields resulting from planes with with an electric field polarized along the y direction. For a 3D Earth, :math:`Z_{xy} = E_{x1}/H_{x2}`. Where the electric field units V/m and the magnetic field has units A/m, the units for elements of the impedence tensor is V/A.
+
+
+.. important:: MT data generally use a labeling convention wherein X = Northing, Y = Easting and Z = Down.
 
 
 .. _sign_ztem_units:
