@@ -4,7 +4,7 @@
 3D Inversion
 ============
 
-.. figure:: ./../../../images/AtoZ_Mag/AtoZ_Mag_Landing.png
+.. figure:: ./../../../images/AtoZ_DCIP/AtoZ_DCIP_Started2D.png
     :align: right
     :figwidth: 50%
 
@@ -13,9 +13,9 @@ Purpose
 
 In this section, we will invert the :ref:`simulated data <AtoZdcip_Forward>` in 3D with three strategies:
 
-- :ref:`Unconstrained inversion <AtoZDCIP_3D_Unconstrained>`
-- :ref:`Sensitivity weighted inversion <AtoZDCIP_3D_SensWeights>`
-- :ref:`Inversion with 2D starting model <AtoZDCIP_3D_2DStart>`
+- :ref:`Case 1: Unconstrained inversion <AtoZDCIP_3D_Unconstrained>`
+- :ref:`Case 2: Sensitivity weighted inversion <AtoZDCIP_3D_SensWeights>`
+- :ref:`Case 3: Inversion with 2D starting model <AtoZDCIP_3D_2DStart>`
 
 
 .. note:: Link to `DCIP3D documentation <http://mvi.readthedocs.io/en/latest/>`_
@@ -46,8 +46,8 @@ Step by step
 
 .. _AtoZDCIP_3D_Unconstrained:
 
-Unconstrained Inversion
-^^^^^^^^^^^^^^^^^^^^^^^
+Case 1: Unconstrained Inversion
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 As a first step, we invert the :ref:`simulated data <AtoZdcip_Forward>` with a purely unconstrained approach.
 
@@ -66,8 +66,8 @@ As a first step, we invert the :ref:`simulated data <AtoZdcip_Forward>` with a p
 
 .. _AtoZDCIP_3D_SensWeights:
 
-Sensitivity weighted inversion
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Case 2: Sensitivity weighted inversion
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The result obtained with the unconstrained approach appears to be dominated by
 the source-receiver position, with most of the conductivity anomalies
@@ -85,13 +85,25 @@ will incorporate sensitivity-based weights.
     :figwidth: 75%
 
 
+.. note:: This solution is an improvement over the purely unconstrained as
+            lower conductivity anomalies are recovered at the electrodes, while the
+            conductive kimberlites are better recovered
 
 .. _AtoZDCIP_3D_2DStart:
 
-Inversion with 2D starting model
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Case 3: Inversion with 2D starting model
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+In the third case, we will incorporate the stiched 2D model in the 3D
+inversion through a starting a reference model.
+
+- :ref:`Copy the inversion object from Case 2 <invCopyOptions>`
+- :ref:`Set the reference and starting model`
+- :ref:`Write All <invWriteAll>` and :ref:`Run <invRun>`
 
 .. figure:: ./../../../images/AtoZ_DCIP/AtoZ_DCIP_Started2D.png
     :align: center
     :figwidth: 75%
+
+.. note:: We have once again improved the solution, and the iteration process
+            is a lot quicker since we are starting with a model closer to the final solution.
