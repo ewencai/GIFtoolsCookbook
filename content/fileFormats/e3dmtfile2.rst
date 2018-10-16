@@ -1,14 +1,15 @@
-.. _e3dmtfile:
+.. _e3dmtfile2:
 
-MT / ZTEM data: E3DMT version 1
+MT / ZTEM data: E3DMT version 2
 ===============================
 
-Formatting and examples for E3DMT version 1 data files can be found here:
+Formatting and examples for E3DMT version 2 data files can be found here:
 
-    - `Observations file <https://e3dmt.readthedocs.io/en/manual_ver1/content/files/obsFile.html>`__
-    - `Predicted data file <https://e3dmt.readthedocs.io/en/manual_ver1/content/files/preFile.html>`__
-    - `Survey and locations file <https://e3dmt.readthedocs.io/en/manual_ver1/content/files/surveyFile.html>`__
-    - `Supporting theory <https://e3dmt.readthedocs.io/en/manual_ver1/content/theory.html#natural-sources-mt-and-ztem>`__
+    - `Observations file <https://e3dmt.readthedocs.io/en/manual_ver2/content/files/obsFile.html>`__
+    - `Predicted data file <https://e3dmt.readthedocs.io/en/manual_ver2/content/files/preFile.html>`__
+    - `Survey index file <https://e3dmt.readthedocs.io/en/manual_ver2/content/files/indexFile.html>`__
+    - `Receiver file <https://e3dmt.readthedocs.io/en/manual_ver2/content/files/receiverFile.html>`__
+    - `Supporting theory <https://e3dmt.readthedocs.io/en/manual_ver2/content/theory.html#natural-sources-mt-and-ztem>`__
 
 
 

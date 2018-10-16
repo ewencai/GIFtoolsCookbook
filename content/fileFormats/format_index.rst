@@ -23,6 +23,7 @@ Data
     temfile
     emTransmittersfile
     e3dmtfile
+    e3dmtfile2
     mtz3dfile
 
 Topography
