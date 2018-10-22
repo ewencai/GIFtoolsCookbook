@@ -282,13 +282,13 @@ MT data
 
 The NSEM GIF codes are formulated to use a :math:`-i\omega t` convention for the time-dependence. However, this may not match the convention used by data loaded into GIFtools from other sources. MT data loaded from EDI files generally uses the `MT/EMAP data interchange standard <https://seg.org/Portals/0/SEG/News%20and%20Resources/Technical%20Standards/seg_mt_emap_1987.pdf>`__ , which is :math:`+i\omega t`. If the convention used for the data does not match that of the code, it is unlikely that the inversion will be able to fit the data and return meaningful results.
 
-We can determine the convention used by the data by examining the data. If data are represented using the :math:`\boldsymbol{+i \omega t}` convention and are in a right-handed coordinate system, then we expect:
+We can determine the convention used by the data by examining the data. If data are represented using the :math:`\boldsymbol{+i \omega t}` convention and are in a **right-handed coordinate system**, then we expect:
 
     - at background locations: :math:`Z_{xy} \sim \dfrac{i \omega \mu}{k} \;\;\; \textrm{and} \;\;\; Z_{yx} \sim \frac{- i \omega \mu}{k} \;\;\; \textrm{where} \;\;\; k = \sqrt{i\omega \mu \sigma}` 
     - :math:`Re[Z_{xy}] > 0`, :math:`\; Im[Z_{xy}] > 0` and :math:`\phi_{xy} \in [0^o, \; 90^o]` (:math:`\sim 45^o` for a half-space)
     - :math:`Re[Z_{yx}] < 0`, :math:`\; Im[Z_{yx}] < 0` and :math:`\phi_{yx} \in [-90^o, \; -180^o]` (:math:`\sim -135^o` for a half-space)
 
-If data are represented using the :math:`\boldsymbol{-i \omega t}` convention (GIFtools) and are in a right-handed coordinate system (GIFtools), then for these data we expect:
+If data are represented using the :math:`\boldsymbol{-i \omega t}` convention (GIFtools) and are in a **right-handed coordinate system** (GIFtools), then for these data we expect:
 
     - at background locations: :math:`Z_{xy} \sim \dfrac{-i \omega \mu}{k} \;\;\; \textrm{and} \;\;\; Z_{yx} \sim \frac{ i \omega \mu}{k} \;\;\; \textrm{where} \;\;\; k = \sqrt{-i\omega \mu \sigma}`
     - :math:`Re[Z_{xy}] > 0`, :math:`\; Im[Z_{xy}] < 0` and :math:`\phi_{xy} \in [0^o, \; -90^o]` (:math:`\sim -45^o` for a half-space)
@@ -298,6 +298,7 @@ As we can see, to switch from one convention to another we must:
 
     - Multiply the imaginary components of all impedance tensor elements by -1
     - Multiply the phase values for all elements of the impedance tensor by -1
+
 
 **Data Convention**
 

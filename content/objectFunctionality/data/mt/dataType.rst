@@ -75,3 +75,39 @@ The E3DMT version 2 code requires an `observations <https://e3dmt.readthedocs.io
 
 
 
+Export as EDI
+^^^^^^^^^^^^^
+
+GIFtools can export impedance tensor or apparent resistivity data as EDI formatted files. This functionality is accessed through
+
+**[data type] data** |rarr| **Export** |rarr| **Export as EDI files**
+
+
+The user then chooses a directory for the EDI files and fills out the following fields:
+
+
+    .. figure:: ../../../../images/object/data/nsem/exportEDI.png
+        :align: center
+        :width: 400
+
+
+    - **Hemisphere:** Whether the survey is in the Northern or Southern hemisphere
+
+    - **UTM Zone:** Set the UTM zone
+
+    - **Root Name:** Root name for EDI files. Default is "STN"
+
+    - **Export Coordinates:** GIFtools uses a convention for impedance tensor elements and apparent resistivities such that X = Northing, Y = Easting and Z = Down. The user is encouraged to keep this convention as it is standard for MT. However, the user may chance the convention for the data if desired.
+
+
+.. important::
+
+    - GIFtools converts impedance data from a :math:`-i\omega t` (GIF standard) convention to a :math:`+i\omega t` (EMAP standard) convention automatically upon output.
+    - GIFtools converted impedance tensor data from V/A (GIF) to units mV/km/nT (EMAP standard).
+    - GIFtools will the data point locations from WGS84 UTM to (LONG, LAT).
+
+
+
+
+
+
