@@ -20,7 +20,7 @@ to invert TEM data while taking into account both vertical and horizontal
 variability of the Earth. The final model recovered by this algorithm is fully
 3-dimensional.
 
-.. figure:: ../../../images/AtoZ_fem1d/AtoZ_em1dfm_landing_LC.png
+.. figure:: ../../../images/AtoZ_fem1d/AtoZ_EM1DFM_landing_LC.png
     :align: center
     :figwidth: 75%
 
