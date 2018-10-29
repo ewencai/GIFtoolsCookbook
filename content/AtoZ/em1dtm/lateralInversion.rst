@@ -124,11 +124,11 @@ Discussion
 **NEW DISCUSSION SECTION NEEDED**
 
 
-.. figure:: ./../../../images/AtoZ_TEM1d/Inv_LC_model.png
-    :align: right
-    :figwidth: 45%
+.. .. figure:: ./../../../images/AtoZ_TEM1d/Inv_LC_model.png
+..     :align: right
+..     :figwidth: 45%
 
-    Recovered 1D models with topography and lateral constraints
+..     Recovered 1D models with topography and lateral constraints
 
 The lateral constraints strategy comes with many advantages:
 
@@ -142,11 +142,11 @@ the algorithm through the usual :ref:`convergence curve<convergence_curve>` wind
 Ideally we would like to test the hypothesis of a conductive overburden in 3D, as well as to impose bounds on the conductivity values.
 which we covered in the :ref:`next section<AtoZem1dtm_lateral>`.
 
-.. figure:: ./../../../images/AtoZ_TEM1d/Inv_LC_convergence.png
-    :align: center
-    :figwidth: 55%
+.. .. figure:: ./../../../images/AtoZ_TEM1d/Inv_LC_convergence.png
+..     :align: center
+..     :figwidth: 55%
 
-    Convergence curves
+..     Convergence curves
 
 .. note:: After the fifth iteration, the global misfit begins to increase due
           to the 3D smoothing of the recovered conductivity model. The user should consider re-running the inversion with
@@ -241,17 +241,17 @@ conductivity structures.
 
 **GENERATE TEM EQUIVALENT**
 
-.. figure:: ./../../../images/AtoZ_TEM1d/Inv_LC_constrained.png
-    :align: left
-    :figwidth: 45%
+.. .. figure:: ./../../../images/AtoZ_TEM1d/Inv_LC_constrained.png
+..     :align: left
+..     :figwidth: 45%
 
-    Recovered 1D models with geological constraints
+..     Recovered 1D models with geological constraints
 
-.. figure:: ./../../../images/AtoZ_TEM1d/True_model.png
-    :align: right
-    :figwidth: 45%
+.. .. figure:: ./../../../images/AtoZ_TEM1d/True_model.png
+..     :align: right
+..     :figwidth: 45%
 
-    Sections through the true 3D conductivity model
+..     Sections through the true 3D conductivity model
 
 
 
