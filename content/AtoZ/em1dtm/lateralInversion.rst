@@ -20,7 +20,7 @@ to invert TEM data while taking into account both vertical and horizontal
 variability of the Earth. The final model recovered by this algorithm is fully
 3-dimensional.
 
-.. figure:: ../../../images/AtoZ_FEM1d/AtoZ_em1dfm_landing_LC.png
+.. figure:: ../../../images/AtoZ_fem1d/AtoZ_EM1DFM_landing_LC.png
     :align: center
     :figwidth: 75%
 
@@ -73,7 +73,7 @@ Setup for the Exercise
 Laterally Constrained 3D TEM Inversion
 --------------------------------------
 
-.. figure:: ./../../../images/AtoZ_FEM1d/LC_FEM1D.png
+.. figure:: ./../../../images/AtoZ_fem1d/LC_FEM1D.png
     :align: right
     :scale: 75%
 
@@ -124,11 +124,11 @@ Discussion
 **NEW DISCUSSION SECTION NEEDED**
 
 
-.. figure:: ./../../../images/AtoZ_TEM1d/Inv_LC_model.png
-    :align: right
-    :figwidth: 45%
+.. .. figure:: ./../../../images/AtoZ_TEM1d/Inv_LC_model.png
+..     :align: right
+..     :figwidth: 45%
 
-    Recovered 1D models with topography and lateral constraints
+..     Recovered 1D models with topography and lateral constraints
 
 The lateral constraints strategy comes with many advantages:
 
@@ -142,11 +142,11 @@ the algorithm through the usual :ref:`convergence curve<convergence_curve>` wind
 Ideally we would like to test the hypothesis of a conductive overburden in 3D, as well as to impose bounds on the conductivity values.
 which we covered in the :ref:`next section<AtoZem1dtm_lateral>`.
 
-.. figure:: ./../../../images/AtoZ_TEM1d/Inv_LC_convergence.png
-    :align: center
-    :figwidth: 55%
+.. .. figure:: ./../../../images/AtoZ_TEM1d/Inv_LC_convergence.png
+..     :align: center
+..     :figwidth: 55%
 
-    Convergence curves
+..     Convergence curves
 
 .. note:: After the fifth iteration, the global misfit begins to increase due
           to the 3D smoothing of the recovered conductivity model. The user should consider re-running the inversion with
@@ -188,7 +188,7 @@ To accomplish this task, we use the model builder module.
 
 This model can be used as a reference model and constrain the final recover conductivity model.
 
-.. figure:: ./../../../images/AtoZ_FEM1d/RefModTill.png
+.. figure:: ./../../../images/AtoZ_fem1d/RefModTill.png
     :align: center
     :width: 600
 
@@ -241,17 +241,17 @@ conductivity structures.
 
 **GENERATE TEM EQUIVALENT**
 
-.. figure:: ./../../../images/AtoZ_TEM1d/Inv_LC_constrained.png
-    :align: left
-    :figwidth: 45%
+.. .. figure:: ./../../../images/AtoZ_TEM1d/Inv_LC_constrained.png
+..     :align: left
+..     :figwidth: 45%
 
-    Recovered 1D models with geological constraints
+..     Recovered 1D models with geological constraints
 
-.. figure:: ./../../../images/AtoZ_TEM1d/True_model.png
-    :align: right
-    :figwidth: 45%
+.. .. figure:: ./../../../images/AtoZ_TEM1d/True_model.png
+..     :align: right
+..     :figwidth: 45%
 
-    Sections through the true 3D conductivity model
+..     Sections through the true 3D conductivity model
 
 
 
