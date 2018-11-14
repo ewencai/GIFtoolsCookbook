@@ -90,7 +90,7 @@ Since the raw data were formatted according to the Geosoft XYZ format, the trans
         - Set vertical offset as altitude column (**ralt**) from data object
 
     - :ref:`Set data normalization to Volts<objectEMsetDataNorm_TEM>`. This determines the data units written to the observations file and interpreted by the EM1DTM code.
-    - :ref:`Set time normalization to seconds<objectEMsetTimeNorm_TEM>`
+    - :ref:`Set time normalization to seconds<objectEMsetTimeNorm>`
     - :ref:`Import and set waveform<objectEMwaveform_import>` using the file **VTEM.wave**
 
 
