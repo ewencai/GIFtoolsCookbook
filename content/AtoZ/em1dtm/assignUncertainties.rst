@@ -35,7 +35,7 @@ Setup for the Exercise
 
 
 .. tip:: - Steps (without links) are also included with the download
-         - Requires at least `GIFtools version 2.2 <https://gif.eos.ubc.ca/GIFtools/downloads2>`_ (login required)
+         - Requires at least `GIFtools version 2.26 <https://gif.eos.ubc.ca/giftools/giftools_consortium2>`_ (login required)
 
 
 .. _AtoZem1dtm_import:
@@ -43,12 +43,12 @@ Setup for the Exercise
 Import files
 ------------
 
-In addition to raw geophysical data, you may have access to topographical information. If this information is available, it can be imported into GIFtools.
+We will begin by importing all the necessary information:
 
     - :ref:`Import raw TEM data <importTemData>` from the file **TKCdata_VTEM.xyz** (Geosoft XYZ format as a TEMsounding).
 
         - Under *channel information*, import the time channels from the file **VTEMtimes.dat**
-        - When specifying headers, choose load file and use **headers.txt**
+        - When specifying headers, choose load file and use **VTEMheader.txt**
 
     - :ref:`Import topography data <importTopo>` from the file **TKCtopo.dat** (3D GIF format)
     - :ref:`Import 1D mesh<importMesh>` from the file **layer.msh** (layers file)
@@ -102,9 +102,6 @@ Since the raw data were formatted according to the Geosoft XYZ format, the trans
 
 .. raw:: html
     :file: ./AtoZ_Data_Decay.html
-
-
-
 
 
 
