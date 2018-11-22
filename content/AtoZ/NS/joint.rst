@@ -2,12 +2,11 @@
 
 .. include:: <isonum.txt>
 
-.. raw:: html
-    :file: ../../../underconstruction.html
-
-
 ZTEM and Joint Inversion
 ========================
+
+Here, we test to see if the recovered model from the previous exercise (:ref:`Inverting MT data <AtoZNS_inversion>`) can be used to 
+
 
 Here, we explore GIFtools functionality that lets the user jointly invert multiple natural source datasets using E3DMT version 1.
 
@@ -22,13 +21,14 @@ Setup for the Exercise
 
     - Open your preexisting GIFtools project
     - :ref:`Set the working directory <projSetWorkDir>` (if you would like to change it)
+    - :ref:`Import the observed data in E3DMT version 1 format: assets\\MT_ZTEM_data.obs <importNSEMData_e3dmt1>` (ZTEM and MT data)
 
 **If you have NOT completed the previous tutorial and would like to start here, complete the following steps:**
 
     - `Download the demo <https://github.com/ubcgif/GIFtoolsCookbook/raw/master/assets/AtoZ_FEM1D_4Download.zip>`_
     - Open GIFtools
     - :ref:`Set the working directory <projSetWorkDir>`
-    - :ref:`Import the observed MT and ZTEM data in E3DMT version 1 format <importNSEMData_e3dmt1>` (Impedance tensor data in V/A)
+    - :ref:`Import the observed data in E3DMT version 1 format: assets\\MT_ZTEM_data.obs <importNSEMData_e3dmt1>` (ZTEM and MT data)
     - :ref:`Load OcTree mesh <importMeshOctree>`
     - :ref:`Load active cells model <importActiveModel>`
     - :ref:`Load interface weights <importFaceWeights>` (cell weights are given a default value of 1)
@@ -38,22 +38,40 @@ Setup for the Exercise
     :align: center
     :width: 700
 
-    Real (left) and imaginary (right) components of impedance tensor element :math:`Z_{xy}` at 5000 Hz in V/A. Data shows that :math:`Z_{xy}` lies in the lower-righthand quadrant of the complex plane. This is consistent with the desired format in GIFtools.
+    Real (left) and imaginary (right) components of impedance tensor element :math:`Z_{xy}` at 2500 Hz in V/A. Data shows that :math:`Z_{xy}` lies in the lower-righthand quadrant of the complex plane. This is consistent with the desired format in GIFtools.
 
 .. figure:: ../../../images/AtoZ_E3DMT/data_ztem.png
     :align: center
     :width: 700
 
-    Real (left) and imaginary (right) components of tipper :math:`T_{x}` at 5000 Hz. Data shows a much larger anomaly in conjunction with the DO-27 pipe.
+    Real (left) and imaginary (right) components of tipper :math:`T_{x}` at 500 Hz. Data shows a much larger anomaly in conjunction with the DO-27 pipe.
 
 
-.. important:: Data were generated using E3DMT version 1 and an interpolation of the best conductivity model for TKC. To keep things simple, the synthetic model was given a constant topography of 425 m. Uncertainties of 0.1 :math:`\pm` 10% were added to all impedance tensor measurements. And uncertainties of 0.001 :math:`\pm` 10% were added to all tipper measurements. Tipper data were collected at a flight height of 50 m.
+.. important:: Data were generated using E3DMT version 1 and an interpolation of the best conductivity model for TKC. To keep things simple, the synthetic model was given a constant topography of 425 m. Uncertainties of 0.1 were added to all diagonal impedance tensor elements and 5% uncertainties were added to all off-diagonal elements. And uncertainties of 0.0005 were added to all tipper measurements. Tipper data were collected at a flight height of 80 m.
 
 
 ZTEM Inversion
 --------------
 
-Let us now invert the ZTEM data using E3DMT version 1. 
+Adding a base station
+^^^^^^^^^^^^^^^^^^^^^
+
+ZTEM data are usually computed using horizontal magnetic field measurements made at a base station on the Earth's surface. As a result, airborne measurements are measurements of the Earth's vertical field. To assign a base station location to the data and set it for the inversion, do the following:
+
+    - :ref:`Set base station <>`
+
+        - Easting: 556400 m
+        - Northing: 7132900 m
+        - Elevation: 425 m
+
+    - :ref:`Set ZTEM data type <>` to type *MTT*
+
+
+
+
+
+Inverting the Data
+^^^^^^^^^^^^^^^^^^
 
     - :ref:`Create E3DMT ver 1 inversion object <createMTZTEMInv>`
     - :ref:`Use edit options <invEditOptions_e3dmt_ver1>` to set the inversion parameters

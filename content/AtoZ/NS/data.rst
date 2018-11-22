@@ -55,14 +55,14 @@ By examining the impedances, apparent resistivities and phases, we can determine
     :align: center
     :width: 700
 
-    Real (left) and imaginary (right) components of impedance tensor element :math:`Z_{xy}` at 5000 Hz in V/A. Data shows that :math:`Z_{xy}` lies in the lower-righthand quadrant of the complext plane. This is consistent with the desired format in GIFtools.
+    Real (left) and imaginary (right) components of impedance tensor element :math:`Z_{xy}` at 2500 Hz in V/A. Data shows that :math:`Z_{xy}` lies in the lower-righthand quadrant of the complext plane. This is consistent with the desired format in GIFtools.
 
 
 .. figure:: ../../../images/AtoZ_E3DMT/data_appres.png
     :align: center
     :width: 700
 
-    Apparent resistivities for :math:`Z_{xy}` at frequencies 1000 Hz (left), 5000 Hz (middle) and 25000 Hz (right). Apparent resistivity data shows the DO-27 and DO-18 anomalies as conductors.
+    Apparent resistivities for :math:`Z_{xy}` at frequencies 2500 Hz (left) and 10000 Hz (right). Apparent resistivity data shows the DO-27 and DO-18 anomalies as conductors.
 
 
 Creating an OcTree mesh
@@ -74,10 +74,10 @@ Creating an OcTree mesh
 
 		- Background resistivity: 10,000 :math:`\Omega m`
 		- Topography: set as 425 m and select *Approximate topography* button
-		- East width = 50 m, North width = 50 m, Thickness = 25 m
-		- RX cells 1 = 6, RX cells 2 = 4 and RX cells 3 = 2
-		- DOI 1 = 500, DOI 2 = 700, DOI 3 = 900
-		- East padding = 6000 m, North padding = 6000 m, Down padding = 6000 m, Air padding = 8600 m
+		- East width = 50 m, North width = 50 m, Thickness = 50 m
+		- RX cells 1 = 8, RX cells 2 = 4 and RX cells 3 = 2
+		- DOI 1 = 500, DOI 2 = 1000, DOI 3 = 2000
+		- East padding = 5000 m, North padding = 5000 m, Down padding = 5000 m, Air padding = 7600 m
 
 	- :ref:`Run the utility <utilRun>`
 	- :ref:`Load results <utilLoadResults>`
@@ -88,7 +88,7 @@ Creating an OcTree mesh
     :align: center
     :width: 400
 
-    OcTree mesh. 89,462 total cells.
+    OcTree mesh. 75,168 total cells.
 
 
 .. important:: For this example, mesh parameters were set such that we had flat topography which did not intersect any padding cells. In practice, we must ensure the topography is sufficiently discretized. Otherwise, source terms computed in the code are not accurate. This will lead to artifacts in the inversion even if the padding distance is sufficient. A good way check is to look at the active cells model.
@@ -101,7 +101,7 @@ Adding Uncertainties
 
 Assigning appropriate uncertainties to the data is necessary for running stable and successful inversions with GIFtools. For this exercise, data were generated synthetically, no noise was added and we apply simple uncertainties.
 
-	- Use :ref:`assign simple uncertainties <objectAssignUncert>` to generate uncertainties for the data. For all impedance tensor elements, apply a floor of 0.1 V/A + 10%.
+	- Use :ref:`assign simple uncertainties <objectAssignUncert>` to generate uncertainties for the data. For diagonal impedance tensor elements, only a floor uncertainty of 0.1 V/A was used. For off-diagonal impedance tensor elements, only a 5% uncertainty was used.
 	- Ensure that :ref:`IO headers are set <objectSetioHeaders>` for all uncertainties.
 
 .. important:: To demonstrate the E3DMT codes, we have chosen to apply simple uncertainties. In practice, we must ensure that we do not overfit certain frequencies and locations at the expense of others. Furthermore, we must not overfit the diagonal impedance tensor elements as the most important information is contained in the off-diagonal elements.
