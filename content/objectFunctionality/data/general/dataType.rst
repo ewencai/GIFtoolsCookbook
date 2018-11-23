@@ -59,16 +59,22 @@ To create a 3D (tensor) mesh from a given data set, click on desired data object
 
 
 **NOTE:** For EM data, GIFtools will prompt the use for a background resitivity in order to perform "back-of-the-envelope" calculations for skin depth to determine a suggested core region.
- 
+
 
 .. _objectDataExportData:
 
-Export a data object
+Export GIF data file
 --------------------
 
-GIFtools will allow the user to export any data object (in GIF format) at any time. The :ref:`i/o headers <objectSetioHeaders>` will need to be set prior to exportation. 
+GIFtools will allow the user to export any data object to its corresponding
+:ref:`GIF format <format_index>`. The :ref:`i/o headers <objectSetioHeaders>`
+will need to be set prior to exportation.
 
-Select data object then menu with the class of the object (e.g., **TEMdata**) |rarr| **Export for [inv]** where ``inv`` is the name of the inversion style (will be GIF formatted)
+Select data object then menu with the class of the object
+
+**Object** |rarr| **Export** |rarr| **Data (``Code`` Format)**
+
+where ``Code`` is the name of the inversion style (will be GIF formatted)
 
 Below is an example using MAGdata and exporting for MAG3D:
 
@@ -85,6 +91,47 @@ Most data type can be export by the above method. However, certain data types re
     - :ref:`Export E3DMT version 1 observations/locations <objectDataTypeMT_export1>`
     - :ref:`Export E3DMT version 2 observations/locations <objectDataTypeMT_export2>`
 
+
+
+.. _objectDataExportXYZ:
+
+Export XYZ file
+---------------
+
+Data objects with their attributes can be exported to a column seperated data
+format:
+
+**Object** |rarr| **Export** |rarr| **XYZ Format**
+
+A second menu will be prompt for the selection of properties to be exported.
+
+.. figure:: ../../../../images/dataExportXYZ.png
+    :align: center
+    :width: 400
+
+
+.. _objectDataExportSTATS:
+
+Export Property Statistics
+--------------------------
+
+It is often useful to get an overview of the data properties based on simple
+statistics. This information can be useful for data QC or to define :ref:`uncertainties
+<recipe_data_createUncertFile>`.
+
+**Object** |rarr| **Export** |rarr| **Statistics**
+
+
+A second menu will be prompt for the selection of properties to be exported as
+above. The output file holds 8 columns:
+
+``Property`` | ``Minimum`` | ``25thPRCT`` | ``Median`` | ``Mean`` | ``75thPRCT`` | ``Maximum`` | ``stdDev``
+
+In the case of ``EMdata`` object, statistics are calculated independently for each time or frequency.
+
+.. figure:: ../../../../images/dataExportSTATS.png
+    :align: center
+    :width: 400
 
 
 

@@ -30,7 +30,7 @@ To set the i/o header, select the object and then the menu **Data manipulation**
 Downsample Data
 ---------------
 
-Data may be downsample in two ways: traditional removal and a mesh-based removal. With any method that deletes data locations, a *new* data object will be created after downsampling. See below for details.
+Data may be downsample in three ways: Simple down-sampling, mesh-based and by distance. With any method that deletes data locations, a *new* data object will be created after downsampling. See below for details.
 
 Traditional downsampling
 ^^^^^^^^^^^^^^^^^^^^^^^^
@@ -62,6 +62,16 @@ The second method of downsample requires a mesh (either :ref:`3D<importMesh3D>` 
     :align: center
     :width: 400
 
+Downsample by distance
+^^^^^^^^^^^^^^^^^^^^^^
+
+The third method downsamples the data based on the distance between points
+
+**Data manipulation** |rarr| **Downsampling** |rarr| **Distance**
+
+.. figure:: ../../../../images/downsample.png
+    :align: center
+    :width: 400
 
 
 .. _objectMeshBasedDataRemoval:
