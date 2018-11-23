@@ -67,11 +67,15 @@ Set Survey Information
     :align: right
     :scale: 50%
 
-Since the raw data were formatted according to the Geosoft XYZ format, the transmitter and receiver information for the airborne survey must be set manually. Additionally, only an altitude column was provided in the raw data. Therefore, we must use the topography and altitude information to determine the elevation of each data point.
+Since the raw data were formatted in CSV format, the transmitter and receiver
+information for the airborne survey must be set manually. Additionally, only
+an altitude column was provided in the raw data. Therefore, we must use the
+topography and altitude information to determine the elevation of each data
+point.
 
     - :ref:`Create elevation from surface topography<objectElevFromSurface>`
 
-        - Click **at surface** and use the altitude data column from the TEMsounding object
+        - From the ``TKCdata_VTEM`` data object use the ``ralt`` data column to shift the location vertically.
         - :ref:`Set i/o header<objectSetioHeaders>` for Z to the elevation column you just created
 
     - :ref:`Add transmitters<objectEMaddTx>` to set the locations of the transmitters **relative to the current xyz data locations**. For the coincident loop system used for the survey we set the following parameters:
@@ -110,10 +114,16 @@ Since the raw data were formatted according to the Geosoft XYZ format, the trans
 Assign Uncertainties
 --------------------
 
-Before inverting the data, we must assign uncertainties. The role of uncertainties in the inversion process is described in the :ref:`inversion fundamentals section<Fundamentals_Uncertainties>`. Because the observed response spans multiple orders of magnitudes of all time channels, and the errors on the data may vary as such, distinct floor and percent uncertainties will be computed for each time channel.
+Before inverting the data, we must assign uncertainties. The role of
+uncertainties in the inversion process is described in the :ref:`inversion
+fundamentals section<Fundamentals_Uncertainties>`. Because the observed
+response spans multiple orders of magnitudes of all time channels, and the
+errors on the data may vary as such, distinct floor and percent uncertainties
+will be computed for each time channel.
 
-    - Use :ref:`assign simple uncertainties<objectAssignUncert>` to create data columns containing the data uncertainties. Use 1e-17 T/s + 10\%.
-    - Set :ref:`i/o headers<objectSetioHeaders>` for all fields. Files used in the inversion cannot be written until this is performed.
+    - Create :ref:`time-dependent uncertainty file<recipe_data_createUncertFile>`
+    - Assign uncertainties from file
+    - Use the Uncertainty GUI to view
 
 .. note::
     The uncertainties for this exercise are based on the noise added to synthetic 3D TEM data. If the applied uncertainties are correct:

@@ -10,7 +10,7 @@ Data Processing
     :maxdepth: 1
 
     NSEM: From raw EDI files to GIF formatted data <data/edi2e3dmt>
-
+    Create Time/Frequency dependent uncertainties from Statistics <data/uncertFromFile>
 
 
 Forward Modeling Recipes
