@@ -276,23 +276,21 @@ Assigning uncertainties is vital to inversion and therefore is also required as 
     :width: 400
 
 
-Assign Simple Uncertainties
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-To apply a constant floor value and identical percent when computing uncertainties for all data, select:
-
-**Data manipulation** |rarr| **Assign uncertainties** |rarr| **Simple**
-
-
 Frequency and Time-Dependent Uncertainties
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The user may want to specify a particular floor and percent for the uncertainties at every distinct frequency/time. In this case, the user may select:
+GUI
+~~~
 
-    - **Data manipulation** |rarr| **Assign uncertainties** |rarr| **Time dependent**
-    - **Data manipulation** |rarr| **Assign uncertainties** |rarr| **Frequency dependent**
+The user may want to specify or visualize a particular floor and percent for
+the uncertainties at every distinct frequency/time. In this case, the user may
+select:
 
-Uncertainties are assigned by carrying out the following steps:
+    - **Data manipulation** |rarr| **Assign uncertainties** |rarr| **GUI**
+
+If the data and uncertainties :ref:`I/O header has been
+set<objectSetioHeaders>`, error bars will be auto-populated. Uncertainties
+are assigned or modified by carrying out the following steps:
 
 - FOR ALL data columns you want to compute and assign uncertainties for:
 
@@ -310,6 +308,32 @@ When uncertainties for all data columns have been assigned, select *OK* to finis
 .. figure:: ../../../../images/object/data/uncertainties_spec.png
     :align: center
     :width: 600
+
+
+Column File [% | floor]
+~~~~~~~~~~~~~~~~~~~~~~~
+
+Users can load percentages and floors uncertainties at every distinct
+frequency/times from a column file.  The user will be prompt with a list of
+properties to use. Multiple channels (i.e. Real and Imaginary data) can be set
+with the same file.
+
+.. figure:: ../../../../images/object/data/uncertainties_spec.png
+    :align: center
+    :width: 600
+
+.. important:: The number of rows in the selected file must equal the number
+                of frequencies/times present in the :ref:`data object <objectGeneralDataIndex>`.
+
+
+
+Assign Simple Uncertainties
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+To apply a constant floor value and identical percent when computing uncertainties for all data, select:
+
+**Data manipulation** |rarr| **Assign uncertainties** |rarr| **Simple**
+
 
 
 .. _objectCombineData:
