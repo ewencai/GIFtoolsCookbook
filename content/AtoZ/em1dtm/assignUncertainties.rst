@@ -17,7 +17,7 @@ survey parameters are automatically read into GIFtools. For :ref:`Geosoft
 XYZ<XYZfile>` and :ref:`CSV<CSVfile>` files however, the survey information
 must be specified by the user. In this exercise, we:
 
-    - Define the data columns being imported from a Geosoft XYZ data file
+    - Define the data columns being imported from a column data file
     - Set transmitter, receiver and elevation information
     - Assign uncertainties to the data
 
@@ -28,14 +28,11 @@ must be specified by the user. In this exercise, we:
 Setup for the Exercise
 ----------------------
 
-    - Download the demo
+    - `Download the demo <https://github.com/ubcgif/GIFtoolsCookbook/raw/master/assets/AtoZ_TEM1D_4Download.zip>`_
     - Open GIFtools
     - :ref:`Set the working directory <projSetWorkDir>`
 
-
-
-.. tip:: - Steps (without links) are also included with the download
-         - Requires at least `GIFtools version 2.26 <https://gif.eos.ubc.ca/giftools/giftools_consortium2>`_ (login required)
+.. attention:: - Requires at least `GIFtools version 2.26 <https://gif.eos.ubc.ca/giftools/giftools_consortium2>`_ (login required)
 
 
 .. _AtoZem1dtm_import:
@@ -45,19 +42,17 @@ Import files
 
 We will begin by importing all the necessary information:
 
-    - :ref:`Import raw TEM data <importTemData>` from the file **TKCdata_VTEM.xyz** (Geosoft XYZ format as a TEMsounding).
+    - :ref:`Import raw TEM data <importTemData>` from the file ``TKCdata_VTEM.xyz``.
 
-        - Under *channel information*, import the time channels from the file **VTEMtimes.dat**
-        - When specifying headers, choose load file and use **VTEMheader.txt**
+        - Under *channel information*, import the time channels from the file ``VTEMtimes.dat``
+        - When specifying headers, choose load file and use ``VTEMheader.txt``
 
-    - :ref:`Import topography data <importTopo>` from the file **TKCtopo.dat** (3D GIF format)
-    - :ref:`Import 1D mesh<importMesh>` from the file **layer.msh** (layers file)
-    - :ref:`Import surface layer<importSurface>` from the file **TillLayer.topo** (3D GIF format)
+    - :ref:`Import topography data <importTopo>` from the file ``TKCtopo.dat`` (3D GIF format)
+    - :ref:`Import 1D mesh<importMesh>` from the file ``layer.msh`` (layers file)
 
 .. tip:: - Use **Edit** |rarr| **Rename** to change what objects in GIFtools are called
          - For any data object, :ref:`edit the data headers <objectDataHeaders>`.
          - Raw data were generated synthetically using the best-available conductivity model for TKC and the TDoctree code.
-         - The standard deviation of Gaussian noise added was determined from the uncertainties used to invert real TEM data collected over TKC.
 
 
 Set Survey Information
@@ -83,7 +78,7 @@ point.
         - Loop transmitter with radius of 10 m
         - Along-line offset = 0 m
         - Cross-line offset = 0 m
-        - Set vertical offset as altitude column (**ralt**) from TEMsounding object
+        - Set vertical offset as altitude column (``ralt``) from TEMsounding object
 
 
     - :ref:`Add receivers<objectEMaddRx>` to set the locations of the receivers **relative to the transmitter locations**. Use the following parameters:
@@ -91,7 +86,7 @@ point.
         - Dipole moment = 1 Am :math:`\! ^2`
         - Along-line offset = 0 m
         - Cross-line offset = 0 m
-        - Set vertical offset as altitude column (**ralt**) from data object
+        - Set vertical offset as altitude column (``ralt``) from data object
 
     - :ref:`Set data normalization to Volts<objectEMsetDataNorm_TEM>`. This determines the data units written to the observations file and interpreted by the EM1DTM code.
     - :ref:`Set time normalization to seconds<objectEMsetTimeNorm>`
@@ -121,14 +116,19 @@ response spans multiple orders of magnitudes of all time channels, and the
 errors on the data may vary as such, distinct floor and percent uncertainties
 will be computed for each time channel.
 
-    - Create :ref:`time-dependent uncertainty file<recipe_data_createUncertFile>`
-    - Assign uncertainties from file
-    - Use the Uncertainty GUI to view
+    - :ref:`Create a Time-dependent uncertainty file<recipe_data_createUncertFile>`
+        - Use the 75th percentile value from the data statistics to assign your floor values.
+        - Alternatively, use the provided file ``Uncertainties.data``
+    - :ref:`Assign uncertainties from file <objectAssignUncertFile>`
+    - You can review the uncertainty with the :ref:`GUI <objectAssignUncertGUI>` to verify your work.
 
-.. note::
-    The uncertainties for this exercise are based on the noise added to synthetic 3D TEM data. If the applied uncertainties are correct:
-        - The recovered model will not fit the data too heavily in certain regions at the expense of others
-        - The recovered model will not fit the data too heavily at certain times at the expense of others
+.. figure:: ./../../../images/AtoZ_tem1d/AssignedUncertainties.png
+    :align: right
+    :figwidth: 100%
+
+
+.. note::   The uncertainties for this exercise are based on the response
+            over the gackground model so that the recovered model will not fit the dat too heavily in certain regions at the expense of others
 
 
 .. figure:: ./../../../images/AtoZ_tem1d/TEMdata_00009.png

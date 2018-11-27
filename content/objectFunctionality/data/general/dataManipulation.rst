@@ -279,6 +279,9 @@ Assigning uncertainties is vital to inversion and therefore is also required as 
 Frequency and Time-Dependent Uncertainties
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+
+.. _objectAssignUncertGUI:
+
 GUI
 ~~~
 
@@ -304,11 +307,12 @@ are assigned or modified by carrying out the following steps:
 
 When uncertainties for all data columns have been assigned, select *OK* to finish
 
-
 .. figure:: ../../../../images/object/data/uncertainties_spec.png
     :align: center
     :width: 600
 
+
+.. _objectAssignUncertFile:
 
 Column File [% | floor]
 ~~~~~~~~~~~~~~~~~~~~~~~

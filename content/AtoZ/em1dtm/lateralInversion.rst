@@ -2,28 +2,38 @@
 
 .. include:: <isonum.txt>
 
-.. raw:: html
-    :file: ../../../underconstruction.html
+.. .. raw:: html
+..     :file: ../../../underconstruction.html
 
 
 Laterally Constrained 3D Inversion
 ==================================
 
 Here, time-domain data are inverted using the laterally constrained 3D
-inversion approach. Just like in the previous exercise, every 1D model is
-associated with a distinct sounding location (see `em1dtm package overview
-<http://em1dtm.readthedocs.io/en/latest/content/overview.html>`__). However
-lateral constraints are added such that the set of recovered 1D models are
-smooth horizontally and can ultimately be constrained and interpreted in 3D.
-The laterally constrained 3D inversion algorithm is a computationally fast way
-to invert TEM data while taking into account both vertical and horizontal
-variability of the Earth. The final model recovered by this algorithm is fully
-3-dimensional.
+inversion code developed by the open-source community in Python. Just like the
+:ref:`AtoZ Frequency EM1D<AtoZem1dfm_lateral>` example, individual 1D
+inversions are constrained laterally such that the set of recovered 1D models
+are smooth horizontally and can ultimately be constrained and interpreted in
+3D. The collaborative work invested in `SimPEG
+<https://github.com/simpeg/simpegEM1D>`_ and `empymod <https://empymod.github.io>`_ has improved the
+lateral 1D inversion in many ways:
+
+- Avoids the slow read/write of the legacy `EM1DTM file format <https://em1dtm.readthedocs.io/en/latest/content/files/supporting.html#observation-file>`_
+- Parallelized forward modeling
+- Efficient digital filtering scheme (`empymod <https://empymod.github.io>`_)
+
+
+.. figure:: ../../../images/AtoZ_tem1d/logo-empymod-plain.png
+    :align: right
+    :figwidth: 30%
+
+.. figure:: ../../../images/AtoZ_tem1d/simpeg.png
+    :align: left
+    :figwidth: 40%
 
 .. figure:: ../../../images/AtoZ_fem1d/AtoZ_EM1DFM_landing_LC.png
     :align: center
     :figwidth: 75%
-
 
 As part of this exercise, the user will:
 
@@ -36,14 +46,9 @@ As part of this exercise, the user will:
 Setup for the Exercise
 ----------------------
 
-**If you have completed the tutorial** :ref:`"Static and Adaptive 1D Inversion"<AtoZem1dtm_static>`:
-
-    - Open your pre-existing GIFtools project
-    - :ref:`Set the working directory <projSetWorkDir>` (if you would like to change it)
-
 **If you have NOT completed the previous tutorial and would like to start here, complete the following steps:**
 
-    - Download the demo
+    - `Download the demo <https://github.com/ubcgif/GIFtoolsCookbook/raw/master/assets/AtoZ_TEM1D_4Download.zip>`_
     - Open GIFtools
     - :ref:`Set the working directory <projSetWorkDir>`
     - :ref:`Import EM1DTM formatted data <importTemData>` from the file **TKCdata_VTEM_1Dformat.xyz**
@@ -53,13 +58,7 @@ Setup for the Exercise
         - Set elevation at 40 m above topography
         - :ref:`Set i/o header<objectSetioHeaders>` for Z to the elevation column you just created.
     - :ref:`Import and set waveform<objectEMwaveform_import>`
-
-
-.. note::
-    The uncertainties for this exercise are based on the noise added to synthetic 3D TEM data. If the applied uncertainties are correct:
-        - The recovered model will not fit the data too heavily in certain regions at the expense of others
-        - The recovered model will not fit the data too heavily at certain times at the expense of others
-
+    - Assign :ref:`uncertainties from file <objectAssignUncertFile>` ``Uncertainties.dat``
 
 .. raw:: html
     :file: ./AtoZ_Data_Obs.html
@@ -82,53 +81,39 @@ approach.
 
 Setup the inversion
 ^^^^^^^^^^^^^^^^^^^
-
-**If you have completed the tutorial** :ref:`"Static and Adaptive 1D Inversion"<AtoZem1dtm_static>`:
-
-    - Click on a pre-existing em1dtm inversion object and :ref:`copy options<invCopyOptions>`
+    - :ref:`Create an em1dtm inversion object <createTEMInv>` and set the output directory
     - Click on the newly created em1dtm inversion object to set the output directory
     - Set any necessary em1dtm inversion parameters under :ref:`edit options<invEditOptions>`:
         - Make sure the mesh, observed data and topography are properly set!
         - Mode: Laterally constrained 3D
-            - *Max distance* = 1000 m
-            - *Number of stations* = 10
-            - *Smoothing parameter* = 200
-            - Other parameters left as default values
-        - Use the *Fix Trade-off* mode
-            - *Initial beta* = 1000
-            - *Cooling factor* = 5
-            - Other parameters left as default values
+        - Use the *Discrepancy* mode
+        - Other parameters left as default values
+        - Under the ``Conductivity`` tab
+            - Set the initial conductivity ``VALUE`` to ``1e-3 S/m``
+            - Set the reference conductivity ``VALUE`` to ``1e-3 S/m``
     - Click *Apply*
 
-**If you have NOT completed the previous tutorial and are starting here:**
 
-    - :ref:`Create an em1dtm inversion object <createTEMInv>` and set the output directory
-    - Set the em1dtm inversion parameters under :ref:`edit options<invEditOptions>` using the parameters specified in the bullet list above
-    - Click *Apply*
-
-.. note:: If you chose not to write the files from the edit options menu, you may do so through :ref:`write inversion files <invWriteAll>`
+.. note:: You do NOT need to write all files, as the data and inversion parameters
+          will be passed on to Python as ``HDF5`` file. This will save
+          time by avoiding to read/write the legacy `EM1DTM file format <https://em1dtm.readthedocs.io/en/latest/content/files/supporting.html#observation-file>`_
 
 
 Run Inversion and Load Results
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+    .. figure:: ./../../../images/AtoZ_tem1d/SimpegEM1DRun.png
+        :align: right
+        :scale: 45%
+
     - :ref:`Run inversion <invRun>`
-    - Results are loaded automatically for this algorithm
+        - Inversion progress will be displayed in a command prompt
+        - Results will be loaded automatically at the end of the inversion
+
+    - :ref:`View the model <objectModelView>`
+
     - :reF:`View the misfit map <viewData>`
 
-.. _AtoZem1dtm_lateral_discussion:
-
-Discussion
-^^^^^^^^^^
-
-**NEW DISCUSSION SECTION NEEDED**
-
-
-.. .. figure:: ./../../../images/AtoZ_TEM1d/Inv_LC_model.png
-..     :align: right
-..     :figwidth: 45%
-
-..     Recovered 1D models with topography and lateral constraints
 
 The lateral constraints strategy comes with many advantages:
 
@@ -136,140 +121,106 @@ The lateral constraints strategy comes with many advantages:
     - Conductivity structures are interpolated in 3D, possibly highlighting trends in the model and easing the interpretation.
     - Possible to employ a :math:`\beta`-cooling strategy similar to the 3D inversion code.
 
-The use of a global measure of data fit allows us to assess the convergence of
-the algorithm through the usual :ref:`convergence curve<convergence_curve>` window.
-
-Ideally we would like to test the hypothesis of a conductive overburden in 3D, as well as to impose bounds on the conductivity values.
-which we covered in the :ref:`next section<AtoZem1dtm_lateral>`.
-
-.. .. figure:: ./../../../images/AtoZ_TEM1d/Inv_LC_convergence.png
-..     :align: center
-..     :figwidth: 55%
-
-..     Convergence curves
-
-.. note:: After the fifth iteration, the global misfit begins to increase due
-          to the 3D smoothing of the recovered conductivity model. The user should consider re-running the inversion with
-          different smoothing parameters in order to test the stability of the solution.
-
-
-.. _AtoZem1dtm_lateral_constr:
-
-Geological Constraints: Hypothesis Testing
-------------------------------------------
-
-It is well known that at TKC, there is a till overburden covering a portion of the survey area.
-As a final example we will impose 3D geological constraints on the laterally constrained 1D inversions.
-The geological constraints assume we have some a-priori information about the distribution and thickness of the overlying till.
-To apply geological constraints, we first need to create the reference conductivity model from a surface:
-
-Creating a Reference Model
-^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Here, we use surface topography and a surface object to define the upper and lower surfaces of the till layer, respectively.
-We then assign reasonable physical property values for the till and background.
-To accomplish this task, we use the model builder module.
-
-    - :ref:`Import the surface<importSurface>` file provided (TillLayer.topo)
-    - Select one of the 3D mesh objects created from a previous inversion and :ref:`create active model from topography<createActiveCellsModel>`. Use *from tops of cells*.
-    - Select the active cells model and :ref:`create a model builder module<createModelBuilder>`
-
-    - :ref:`Create model using surfaces<objectFunctionalityMBbuild_surf1>` with the following parameters to create an initial physical property model:
-        - *Top surface* as *topography*
-        - *Bottom surface* as *surface object*
-        - *Value* as *physical property value* (set as :math:`10^{-2}` S/m)
-        - *Destination model* as *New Model* and provide a name (RefMod)
-
-    - Setting physical property values for the active background cells in the newly created model can with the same functionality. Open the :ref:`Create model using surfaces<objectFunctionalityMBbuild_surf1>` window and use the following parameters
-        - *Top surface* as *surface object*
-        - *Bottom surface* as *Value* (:math:`10^8` m)
-        - *Value* as *physical property value* (set as :math:`10^{-3}` S/m)
-        - *Destination model* as the physical property model you just created
-
-This model can be used as a reference model and constrain the final recover conductivity model.
-
-.. figure:: ./../../../images/AtoZ_fem1d/RefModTill.png
+.. figure:: ./../../../images/AtoZ_tem1d/Result_FloorOnly.png
     :align: center
-    :width: 600
-
-    Till layer defined within the reference model.
+    :figwidth: 75%
 
 
-Setup the inversion
-^^^^^^^^^^^^^^^^^^^
 
-    - Click on the last em1dtm inversion object and :ref:`copy options<invCopyOptions>`
-    - Click on the newly created em1dtm inversion object and set the output directory
-    - Use :ref:`edit options<invEditOptions>` to verify and apply the current set of inversion parameters
-        - Make sure the mesh and observed data are properly set
-        - Set the topography from the drop-down menu
-        - Notice that the inversion parameters are identical to the previous inversion that was run
-    - Within :ref:`edit options<invEditOptions>` *Conductivity* tab, set:
-        - *Initial model* as best-fitting halfspace
-        - *Reference model* as the model created in the previous subsection and choose "SMOOTH_MOD_DIF"
+.. _AtoZem1dtm_lateral_discussion:
 
-    - Upper and lower bounds for the recovered model can be set if desired
-    - Apply and write all files
-
-Run Inversion and Load Results
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-    - :ref:`Run inversion <invRun>`
-    - Results are loaded automatically for this algorithm
-    - :reF:`View the misfit map <viewData>`
 
 Discussion
 ^^^^^^^^^^
 
-This final solution differs from the previous inversion in that:
-    - A sharp gradient is preserved along the base of the till layer
-    - The upper conductivities are more consistent :math:`\approx 10^4 \Omega \cdot m`
-    - The top of the kimberlite pipes is at the right depth
+The use of a global measure of data fit allows us to assess the convergence of
+the algorithm through the usual :ref:`convergence curve<convergence_curve>` window.
 
-The reader is invited to run multiple inversions with various smoothing
-parameters and data uncertainties to explore the range of solutions. It is important
-to keep in mind that the true model is 3D and cannot be characterized
-by the 1D assumption. We did however manage to recover a first order estimate
-for the horizontal positions of the kimberlite pipes and background
-conductivity structures.
+.. figure:: ./../../../images/AtoZ_tem1d/ConvergenceCurve.png
+    :align: center
+    :figwidth: 75%
 
-.. .. figure:: ./../../../images/AtoZ_TEM1d/Inv_LC_constrained_EW.png
-..     :align: left
-..     :figwidth: 45%
 
-..     EW section through the constrained 1D inversion
+Inspecting the model and the residual data map we note the following
+    - Convergence to the target misfit is not attained, leveling off above the target ()
+    - Large data residuals over the main anomalies
+    - Normalized residual within one standard deviation over the background.
 
-**GENERATE TEM EQUIVALENT**
+The poor data fit of the kimberlite pipes is likely due to the 1D
+approximation of a compact 3D structure. Note that the recovered model shows a
+large conductor at depth, which is not consistent with our conceptual
+understanding of the deposit.
 
-.. .. figure:: ./../../../images/AtoZ_TEM1d/Inv_LC_constrained.png
-..     :align: left
-..     :figwidth: 45%
 
-..     Recovered 1D models with geological constraints
-
-.. .. figure:: ./../../../images/AtoZ_TEM1d/True_model.png
-..     :align: right
-..     :figwidth: 45%
-
-..     Sections through the true 3D conductivity model
+.. raw:: html
+    :file: ./AtoZ_Data_Residual_Inv1.html
 
 
 
+Inversion #2
+^^^^^^^^^^^^
+
+We will attempt to improve the previous result:
+
+    - From the :ref:`Uncertainties GUI <objectAssignUncertGUI>` , add 5% error to the existing uncertainties.
+    - Click on the last EM1DTM inversion object and :ref:`copy options<invCopyOptions>`
+    - Use :ref:`edit options<invEditOptions>` to verify and apply the current set of inversion parameters
+        - Change the starting and reference model to ``Best-fitting Halfspace``
+        - Increase the ``beta iteration`` to 25
+    - Apply changes
+    - :ref:`Run inversion <invRun>`
+
+The inversion should now have converged more easily to the target.
+Following the l2-norm inversion, the inversion routine will attempt to run a sparse inversion.
+You should see 3 models in the ``ModelsCond`` folder:
+
+.. raw:: html
+    :file: ./AtoZ_Model_Inv2.html
+
+We have recovered a pipe-like body below the surface. Both the smooth l2-norm and
+sparse lp-norm give similar results in this case. Normalize residual data
+maps show a more uniform data fit:
+
+.. raw:: html
+    :file: ./AtoZ_Data_Residual_Inv2.html
 
 
+.. note:: Congratulation, you have inverted Time-Domain EM data in 1D with the open-source inversion routines `SimPEG
+          <https://github.com/simpeg/simpegEM1D>`_ + `empymod <https://empymod.github.io>`_! You are invited to try the Python algorithm on the :ref:`AtoZ FEM1D example <AtoZem1dfm_lateral>`
 
+.. figure:: ./../../../images/AtoZ_tem1d/NormRes_Inv1_0003.png
+    :align: right
+    :figwidth: 0%
 
+.. figure:: ./../../../images/AtoZ_tem1d/NormRes_Inv1_00009.png
+    :align: right
+    :figwidth: 0%
 
+.. figure:: ./../../../images/AtoZ_tem1d/NormRes_Inv1_00190.png
+    :align: right
+    :figwidth: 0%
 
+.. figure:: ./../../../images/AtoZ_tem1d/NormRes_Inv2_0003.png
+    :align: right
+    :figwidth: 0%
 
+.. figure:: ./../../../images/AtoZ_tem1d/NormRes_Inv2_00009.png
+    :align: right
+    :figwidth: 0%
 
+.. figure:: ./../../../images/AtoZ_tem1d/NormRes_Inv2_00190.png
+    :align: right
+    :figwidth: 0%
 
+.. figure:: ./../../../images/AtoZ_tem1d/Inv_Model_BFH.png
+    :align: right
+    :figwidth: 0%
 
+.. figure:: ./../../../images/AtoZ_tem1d/Inv_Model_l2.png
+    :align: right
+    :figwidth: 0%
 
-
-
-
-
-
-
+.. figure:: ./../../../images/AtoZ_tem1d/Inv_Model_lp.png
+    :align: right
+    :figwidth: 0%
 
