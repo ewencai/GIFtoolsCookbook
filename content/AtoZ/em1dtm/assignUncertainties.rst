@@ -42,11 +42,13 @@ Import files
 
 We will begin by importing all the necessary information:
 
-    - :ref:`Import raw TEM data <importTemData>` from the file ``TKCdata_VTEM.xyz``.
+    - :ref:`Import raw TEM data <importTemData>` from the file ``TKCdata_VTEM.xyz``. Import data as *Time-Domain EM* |rarr| *XYZ* |rarr| *TEM sounding* (:ref:`recipe <importVTEMdata>`)
 
-        - Under *channel information*, import the time channels from the file ``VTEMtimes.dat``
-        - When specifying headers, choose load file and use ``VTEMheader.txt``
+        - Under *channel information*, import the time channels from the file ``VTEMtimes.dat``. Only 1 data groups so this does not need to be specified.
+        - When specifying headers, choose load file and use ``VTEMheader.txt``. Don't forget to specify header name.
 
+    - Use the :ref:`constant calculator <objectConstantCalculator>` to multiple the voltage (dB/dt) column by -1 and create a new column (coincident loop data should be -ve for EM1DTM)
+    - :ref:`Set IO header <objectSetioHeaders>` for the data column as the newly created dB/dt column
     - :ref:`Import topography data <importTopo>` from the file ``TKCtopo.dat`` (3D GIF format)
     - :ref:`Import 1D mesh<importMesh>` from the file ``layer.msh`` (layers file)
 
@@ -90,7 +92,7 @@ point.
 
     - :ref:`Set data normalization to Volts<objectEMsetDataNorm_TEM>`. This determines the data units written to the observations file and interpreted by the EM1DTM code.
     - :ref:`Set time normalization to seconds<objectEMsetTimeNorm>`
-    - :ref:`Import and set waveform<objectEMwaveform_import>` using the file **VTEM.wave**
+    - :ref:`Import and set waveform<objectEMwaveform_import>` using the file **VTEM.wave** (3D format)
 
 
 .. important:: In keeping with a commonly used convention, we have chosen to plot -dBz/dt to show a positive decaying response; thus dBz/dt for a coincident loop system is negative and decaying in the universal coordinate system used by GIFtools. When loading TEM which are not already in GIF format, it is important that the sign of the vertical response is correct.
@@ -117,7 +119,7 @@ errors on the data may vary as such, distinct floor and percent uncertainties
 will be computed for each time channel.
 
     - :ref:`Create a Time-dependent uncertainty file<recipe_data_createUncertFile>`
-        - Use the 75th percentile value from the data statistics to assign your floor values.
+        - Use the 25th percentile value from the data statistics to assign your floor values.
         - Alternatively, use the provided file ``Uncertainties.data``
     - :ref:`Assign uncertainties from file <objectAssignUncertFile>`
     - You can review the uncertainty with the :ref:`GUI <objectAssignUncertGUI>` to verify your work.

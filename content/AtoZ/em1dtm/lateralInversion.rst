@@ -84,14 +84,18 @@ Setup the inversion
     - :ref:`Create an em1dtm inversion object <createTEMInv>` and set the output directory
     - Click on the newly created em1dtm inversion object to set the output directory
     - Set any necessary em1dtm inversion parameters under :ref:`edit options<invEditOptions>`:
-        - Make sure the mesh, observed data and topography are properly set!
-        - Mode: Laterally constrained 3D
-        - Use the *Discrepancy* mode
-        - Other parameters left as default values
-        - Under the ``Conductivity`` tab
-            - Set the initial conductivity ``VALUE`` to ``1e-3 S/m``
-            - Set the reference conductivity ``VALUE`` to ``1e-3 S/m``
-    - Click *Apply*
+
+        - **Global tab:**
+            - *Mode panel:* set to laterally constrained 3D
+            - Make sure the mesh, observed data and topography are properly set!
+            - *Trade-off mode panel:* Use 'discrepancy' mode
+            - Other parameters left as default values
+
+        - **Conductivity tab:**
+            - Set the initial conductivity as *Value* and set to 1e-3 S/m
+            - Set the reference conductivity as *Value* and set to 1e-3 S/m
+        
+        - Click *Apply* (NOT *Apply and write*)
 
 
 .. note:: You do NOT need to write all files, as the data and inversion parameters
@@ -106,7 +110,7 @@ Run Inversion and Load Results
         :align: right
         :scale: 45%
 
-    - :ref:`Run inversion <invRun>`
+    - :ref:`Run inversion <invRun>` (SimPEG)
         - Inversion progress will be displayed in a command prompt
         - Results will be loaded automatically at the end of the inversion
 
@@ -123,7 +127,7 @@ The lateral constraints strategy comes with many advantages:
 
 .. figure:: ./../../../images/AtoZ_tem1d/Result_FloorOnly.png
     :align: center
-    :figwidth: 75%
+    :width: 80%
 
 
 
@@ -138,7 +142,7 @@ the algorithm through the usual :ref:`convergence curve<convergence_curve>` wind
 
 .. figure:: ./../../../images/AtoZ_tem1d/ConvergenceCurve.png
     :align: center
-    :figwidth: 75%
+    :width: 85%
 
 
 Inspecting the model and the residual data map we note the following
@@ -162,11 +166,13 @@ Inversion #2
 
 We will attempt to improve the previous result:
 
-    - From the :ref:`Uncertainties GUI <objectAssignUncertGUI>` , add 5% error to the existing uncertainties.
+    - From the :ref:`Uncertainties GUI <objectAssignUncertGUI>` , add 5% error to the existing uncertainties. This will require you to assign the uncertainties for each time channel individually.
     - Click on the last EM1DTM inversion object and :ref:`copy options<invCopyOptions>`
-    - Use :ref:`edit options<invEditOptions>` to verify and apply the current set of inversion parameters
-        - Change the starting and reference model to ``Best-fitting Halfspace``
-        - Increase the ``beta iteration`` to 25
+    - Use :ref:`edit options<invEditOptions>` to verify the the original set of inversion parameters are set. Also:
+
+        - In the *Tradeoff Mode* panel, increase the *Max beta iterations* to 25
+        - Change the starting and reference models to *Best-fitting Halfspace*
+        
     - Apply changes
     - :ref:`Run inversion <invRun>`
 
