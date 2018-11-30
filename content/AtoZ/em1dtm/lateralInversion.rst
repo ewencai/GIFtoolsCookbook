@@ -51,7 +51,7 @@ Setup for the Exercise
     - `Download the demo <https://github.com/ubcgif/GIFtoolsCookbook/raw/master/assets/AtoZ_TEM1D_4Download.zip>`_
     - Open GIFtools
     - :ref:`Set the working directory <projSetWorkDir>`
-    - :ref:`Import EM1DTM formatted data <importTemData>` from the file **TKCdata_VTEM_1Dformat.xyz**
+    - :ref:`Import EM1DTM formatted data <importTemData>` from the file **Assets\TKCdata_VTEM_EM1DTM.dat**
     - :ref:`Import 1D mesh<importMesh>` (layers file)
     - :ref:`Import the topography data <importTopo>` (3D GIF format)
     - :ref:`Create elevation from surface topography<objectElevFromSurface>`
@@ -94,7 +94,7 @@ Setup the inversion
         - **Conductivity tab:**
             - Set the initial conductivity as *Value* and set to 1e-3 S/m
             - Set the reference conductivity as *Value* and set to 1e-3 S/m
-        
+
         - Click *Apply* (NOT *Apply and write*)
 
 
@@ -146,7 +146,7 @@ the algorithm through the usual :ref:`convergence curve<convergence_curve>` wind
 
 
 Inspecting the model and the residual data map we note the following
-    - Convergence to the target misfit is not attained, leveling off above the target ()
+    - Convergence to the target misfit is not attained, leveling off above the target (:math:`\phi_d = 5670`)
     - Large data residuals over the main anomalies
     - Normalized residual within one standard deviation over the background.
 
@@ -172,7 +172,7 @@ We will attempt to improve the previous result:
 
         - In the *Tradeoff Mode* panel, increase the *Max beta iterations* to 25
         - Change the starting and reference models to *Best-fitting Halfspace*
-        
+
     - Apply changes
     - :ref:`Run inversion <invRun>`
 
