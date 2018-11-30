@@ -72,7 +72,7 @@ Setup for the Exercise
 Laterally Constrained 3D TEM Inversion
 --------------------------------------
 
-.. figure:: ./../../../images/AtoZ_fem1d/LC_FEM1D.png
+.. figure:: ../../../images/AtoZ_fem1d/LC_FEM1D.png
     :align: right
     :scale: 75%
 
