@@ -47,7 +47,6 @@ We will begin by importing all the necessary information:
         - Under *channel information*, import the time channels from the file ``VTEMtimes.dat``. Only 1 data groups so this does not need to be specified.
         - When specifying headers, choose load file and use ``VTEMheader.txt``. Don't forget to specify header name.
 
-    - Use the :ref:`constant calculator <objectConstantCalculator>` to multiple the voltage (dB/dt) column by -1 and create a new column (coincident loop data should be -ve for EM1DTM)
     - :ref:`Set IO header <objectSetioHeaders>` for the data column as the newly created dB/dt column
     - :ref:`Import topography data <importTopo>` from the file ``TKCtopo.dat`` (3D GIF format)
     - :ref:`Import 1D mesh<importMesh>` from the file ``layer.msh`` (layers file)
@@ -119,7 +118,7 @@ errors on the data may vary as such, distinct floor and percent uncertainties
 will be computed for each time channel.
 
     - :ref:`Create a Time-dependent uncertainty file<recipe_data_createUncertFile>`
-        - Use the 75th percentile value from the data statistics to assign your floor values.
+        - Use the 25th percentile value from the data statistics to assign your floor values.
         - Alternatively, use the provided file ``Uncertainties.data``
     - :ref:`Assign uncertainties from file <objectAssignUncertFile>`
     - You can review the uncertainty with the :ref:`GUI <objectAssignUncertGUI>` to verify your work.
