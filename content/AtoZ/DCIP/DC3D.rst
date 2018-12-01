@@ -24,8 +24,8 @@ Downloads
 ^^^^^^^^^
 
 .. example::    - `Download the demo <https://github.com/ubcgif/GIFtoolsCookbook/raw/master/assets/AtoZ_DCIP_4Download.zip>`_
-                    - Requires at least `GIFtools version 2.26 (Oct 2017) <https://gif.eos.ubc.ca/giftools/giftools_consortium2#Installation>`_
-                    - Requires `DCIP v5 <https://gif.eos.ubc.ca/giftools>`_
+                    - Requires at least ``GIFtools 2.26`` (login required)
+                    - Requires `DCIP v5 <https://dcip3d.readthedocs.io/en/latest/>`_
 
 
 Step by step
