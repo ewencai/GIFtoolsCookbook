@@ -24,7 +24,7 @@ Downloads
 
 
 .. example::    - `Download the demo <https://github.com/ubcgif/GIFtoolsCookbook/raw/master/assets/AtoZ_mag_4Download.zip>`_ . **All files required for this example are located in the sub-folder "MagAmp".**
-                    - Requires at least `GIFtools version 2.1.3 (Oct 2017) <https://gif.eos.ubc.ca/GIFtools/downloads2#Installation>`_
+                    - Requires at least ``GIFtools version 2.1.3 (Oct 2017)`` (login required)
                     - Requires `MAG3D v6.0 <http://gif.eos.ubc.ca/GIFtools>`_
 
 
