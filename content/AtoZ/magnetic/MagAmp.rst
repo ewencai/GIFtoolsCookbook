@@ -13,7 +13,7 @@ Here, we demonstrate the basic steps for forward modeling and inverting magnetic
 We use GIFtools to create an amplitude data object.
 Next, amplitude data are predicted using a synthetic model.
 We then use inversion to recover the synthetic model.
-Original work on amplitude inversion comes from our colleagues at `CSM <https://cgem.mines.edu/gravity-and-magnetics-research-consortium/>`_ .
+Original work on amplitude inversion comes from our colleagues at `CSM <https://library.seg.org/doi/10.1190/1.3294766>`_ .
 
 .. note::
     - Link to `MAG3D documentation <http://mag3d.readthedocs.io/en/v6/index.html>`_
