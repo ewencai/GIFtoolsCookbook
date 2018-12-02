@@ -7,28 +7,29 @@
 A to Z Examples for EM1DTM
 ==========================
 
-.. figure:: ../../../images/AtoZ_fem1d/LC_fem1D.png
-    :align: right
-    :figwidth: 30%
-
-
 Here, we demonstrate the interpretation of TEM data through both independent
-1D inversions and with a laterally constrained pseudo-3D inversion approach.
-Although full 3D TEM inversion algorithms have been developed, computing
-resources and processing time are often limiting factors. Meanwhile 1D and
-laterally constrained pseudo-3D inversion approaches are computationally fast
-algorithms and capable of recovering bulk information about 3D conductivity
-and susceptibility structures. The tutorial for the EM1DFM inversion code is
-split into three parts:
+Laterally constrained pseudo-3D inversion approach. We will make use of the
+latest inversion routines developed by the open-source community: `SimPEG
+<https://github.com/simpeg/simpegEM1D>`_ + `empymod <https://empymod.github.io/>`_ . The tutorial for the EM1DTM inversion code is
+split into two parts:
+
 
     .. toctree::
        :maxdepth: 1
 
        Importing raw time-domain data <assignUncertainties>
-       Static and Adaptive 1D Inversion <staticInversion>
        Laterally Constrained 3D Inversion <lateralInversion>
+
+.. figure:: ../../../images/AtoZ_tem1d/logo-empymod-plain.png
+    :align: right
+    :figwidth: 30%
+
+.. figure:: ../../../images/AtoZ_tem1d/simpeg.png
+    :align: left
+    :figwidth: 40%
 
 .. figure:: ../../../images/AtoZ_fem1d/AtoZ_EM1DFM_landing_LC.png
     :align: center
     :figwidth: 75%
 
+.. important:: Before continuing, make sure you have `downloaded <https://www.eoas.ubc.ca/~dfournie/simpegEM1D_install.zip>`_ and installed the required Python libraries. Visit the :ref:`Python Installation <PythonInstaller>` page for more details.

@@ -172,47 +172,47 @@ Browser
 
 -  Calls user-selected default browser for tutorial links
 
+.. _PythonInstaller:
 
 Python Installation (Optional)
 ------------------------------
 
-Starting from version 2.25, GIFtools has the option to run some functionalities from the open-source community.
-In order to get access to these codes, users must install Python and few additional packages. This is done through the Anaconda
-project. Please follow these steps to get setup:
+Starting from version 2.25, GIFtools has the option to run some
+functionalities from the open-source community. In order to get access to
+these codes, users must install Python and few additional packages. This is
+done through the Anaconda project. Please follow these steps to get setup:
 
-- (Windows Users) Update/install  `Microsoft Visual Studio 2017 <https://support.microsoft.com/en-ca/help/2977003/the-latest-supported-visual-c-downloads>`_
-    - Some Python packages use C++ to speed up core functions (i.e. `SimPEG <simpeg.xyz>`_)
-
-- Download the `installation package <https://www.eoas.ubc.ca/~dfournie/simpeg_install.zip>`_
-- Launch the Miniconda installation
-    .. figure:: ../images/MinicondaInstaller.png
-        :align: center
-        :width: 400
-
-    - For new users, recommended to let Anaconda set the Environment Path
-        .. figure:: ../images/AnacondaPath.png
+- (Windows Users) Update/install  `Microsoft Visual Studio Community 2017 <https://visualstudio.microsoft.com/vs/community/>`_
+    - Make sure you install both ``Python development`` and ``Desktop develpmoent with C++`` packages
+        .. figure:: ../images/VC_Community.png
             :align: center
             :width: 400
 
-- Open a Command Terminal in the current directory (Shift+rightClick) and enter:
 
-    .. figure:: ../images/OpenCommand.png
-        :align: center
-        :width: 400
+- Download the `installation package <https://www.eoas.ubc.ca/~dfournie/simpegEM1D_install.zip>`_
+- ``Double-click`` on ``Setup.bat``. This will run 3 seperate installations
+    - ``Miniconda`` installation (press cancel IF already installed)
+        .. figure:: ../images/MinicondaInstaller.png
+            :align: center
+            :width: 400
 
+        - Let Anaconda set the Environment Path (check both boxes!!)
+            .. figure:: ../images/AnacondaPath.png
+                :align: center
+                :width: 400
+    - ``MinGW`` installation
+        - Install to ``C:\MinGW``
+            .. figure:: ../images/Install_MinGW.png
+                :align: center
+                :width: 400
+    - ``simpegEM1D`` environment
 
-
-Enter>    `conda env create -f environment.yml`
-
-    .. figure:: ../images/InstallEnvironment.png
-        :align: center
-        :width: 600
 
 Full installation time :math:`\approx 15` min
 
 Congratulation, you should now have access to the `Python ecosystem <http://www.developintelligence.com/blog/python-ecosystem-2017/>`_!
 More packages can be installed through command lines:
 
-Either with anaconda (recommanded)>  `conda install anotherPackage`
+Either with anaconda (recommanded)>  ``conda install PackageName``
 
-or alternatively through pip>   `pip install somePackageName`
+or alternatively through pip>   ``pip install PackageName``

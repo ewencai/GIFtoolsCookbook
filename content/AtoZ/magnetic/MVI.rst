@@ -21,7 +21,7 @@ Downloads
 ^^^^^^^^^
 
 .. example::    - `Download the demo <https://github.com/ubcgif/GIFtoolsCookbook/raw/master/assets/AtoZ_mag_4Download.zip>`_ **All files required for this example are located in the sub-folder "MVI"**.
-                    - Requires at least `GIFtools version 2.25 (July 2018) <https://gif.eos.ubc.ca/GIFtools/downloads2#Installation>`_
+                    - Requires at least ``GIFtools version 2.25 (July 2018)`` (login required)
                     - Requires `MVI v3.0 (13062018) <http://gif.eos.ubc.ca/GIFtools>`_
 
 

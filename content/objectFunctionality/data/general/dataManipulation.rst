@@ -30,7 +30,7 @@ To set the i/o header, select the object and then the menu **Data manipulation**
 Downsample Data
 ---------------
 
-Data may be downsample in two ways: traditional removal and a mesh-based removal. With any method that deletes data locations, a *new* data object will be created after downsampling. See below for details.
+Data may be downsample in three ways: Simple down-sampling, mesh-based and by distance. With any method that deletes data locations, a *new* data object will be created after downsampling. See below for details.
 
 Traditional downsampling
 ^^^^^^^^^^^^^^^^^^^^^^^^
@@ -62,6 +62,16 @@ The second method of downsample requires a mesh (either :ref:`3D<importMesh3D>` 
     :align: center
     :width: 400
 
+Downsample by distance
+^^^^^^^^^^^^^^^^^^^^^^
+
+The third method downsamples the data based on the distance between points
+
+**Data manipulation** |rarr| **Downsampling** |rarr| **Distance**
+
+.. figure:: ../../../../images/downsample.png
+    :align: center
+    :width: 400
 
 
 .. _objectMeshBasedDataRemoval:
@@ -266,23 +276,24 @@ Assigning uncertainties is vital to inversion and therefore is also required as 
     :width: 400
 
 
-Assign Simple Uncertainties
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-To apply a constant floor value and identical percent when computing uncertainties for all data, select:
-
-**Data manipulation** |rarr| **Assign uncertainties** |rarr| **Simple**
-
-
 Frequency and Time-Dependent Uncertainties
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The user may want to specify a particular floor and percent for the uncertainties at every distinct frequency/time. In this case, the user may select:
 
-    - **Data manipulation** |rarr| **Assign uncertainties** |rarr| **Time dependent**
-    - **Data manipulation** |rarr| **Assign uncertainties** |rarr| **Frequency dependent**
+.. _objectAssignUncertGUI:
 
-Uncertainties are assigned by carrying out the following steps:
+GUI
+~~~
+
+The user may want to specify or visualize a particular floor and percent for
+the uncertainties at every distinct frequency/time. In this case, the user may
+select:
+
+    - **Data manipulation** |rarr| **Assign uncertainties** |rarr| **GUI**
+
+If the data and uncertainties :ref:`I/O header has been
+set<objectSetioHeaders>`, error bars will be auto-populated. Uncertainties
+are assigned or modified by carrying out the following steps:
 
 - FOR ALL data columns you want to compute and assign uncertainties for:
 
@@ -296,10 +307,37 @@ Uncertainties are assigned by carrying out the following steps:
 
 When uncertainties for all data columns have been assigned, select *OK* to finish
 
+.. figure:: ../../../../images/object/data/uncertainties_spec.png
+    :align: center
+    :width: 600
+
+
+.. _objectAssignUncertFile:
+
+Column File [% | floor]
+~~~~~~~~~~~~~~~~~~~~~~~
+
+Users can load percentages and floors uncertainties at every distinct
+frequency/times from a column file.  The user will be prompt with a list of
+properties to use. Multiple channels (i.e. Real and Imaginary data) can be set
+with the same file.
 
 .. figure:: ../../../../images/object/data/uncertainties_spec.png
     :align: center
     :width: 600
+
+.. important:: The number of rows in the selected file must equal the number
+                of frequencies/times present in the :ref:`data object <objectGeneralDataIndex>`.
+
+
+
+Assign Simple Uncertainties
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+To apply a constant floor value and identical percent when computing uncertainties for all data, select:
+
+**Data manipulation** |rarr| **Assign uncertainties** |rarr| **Simple**
+
 
 
 .. _objectCombineData:
