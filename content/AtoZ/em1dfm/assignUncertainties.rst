@@ -72,7 +72,7 @@ Since the raw data were formatted according to the XYZ format, the transmitter a
     - :ref:`Add transmitters<objectEMaddTx>` to set the locations of the transmitters **relative to the current xyz data locations**. Use the following parameters:
 
         - Dipole moment = 1 Am :math:`\! ^2`
-        - Set Azimuth angle as "Relative to bearing" and set bearing to calculate
+        - Set Rotation angle as "Relative to bearing" and set bearing to calculate
         - Along-line offset = 0 m
         - Cross-line offset = 0 m
         - Set vertical offset as altitude column from data object
@@ -81,7 +81,7 @@ Since the raw data were formatted according to the XYZ format, the transmitter a
     - :ref:`Add receivers<objectEMaddRx>` to set the locations of the receivers **relative to the transmitter locations**. Use the following parameters:
 
         - Dipole moment = 1 Am :math:`\! ^2`
-        - Set Azimuth angle as "Relative to bearing" and use the bearing column that was calculated when adding transmitters
+        - Set Rotation angle as "Relative to bearing" and use the bearing column that was calculated when adding transmitters
         - Along-line offset = 15 m
         - Cross-line offset = 0 m
         - Set vertical offset as altitude column from data object
