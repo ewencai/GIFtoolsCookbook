@@ -32,7 +32,7 @@ Setup for the Exercise
     - Open GIFtools
     - :ref:`Set the working directory <projSetWorkDir>`
 
-.. attention:: - Requires at least `GIFtools version 2.26 <https://gif.eos.ubc.ca/giftools/giftools_consortium2>`_ (login required)
+.. attention:: - Requires at least ``GIFtools version 2.26`` (login required)
 
 
 .. _AtoZem1dtm_import:
