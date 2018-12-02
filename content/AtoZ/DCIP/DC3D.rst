@@ -24,8 +24,8 @@ Downloads
 ^^^^^^^^^
 
 .. example::    - `Download the demo <https://github.com/ubcgif/GIFtoolsCookbook/raw/master/assets/AtoZ_DCIP_4Download.zip>`_
-                    - Requires at least `GIFtools version 2.26 (Oct 2017) <https://gif.eos.ubc.ca/giftools/giftools_consortium2#Installation>`_
-                    - Requires `DCIP v5 <https://gif.eos.ubc.ca/giftools>`_
+                    - Requires at least ``GIFtools 2.26`` (login required)
+                    - Requires `DCIP v5 <https://dcip3d.readthedocs.io/en/latest/>`_
 
 
 Step by step
@@ -98,7 +98,7 @@ In the third case, we will incorporate the stiched 2D model in the 3D
 inversion through a starting a reference model.
 
 - :ref:`Copy the inversion object from Case 2 <invCopyOptions>`
-- :ref:`Set the reference and starting model`
+- :ref:`Set the reference and starting model <invDCIP3DInputOptions>`
 - :ref:`Write All <invWriteAll>` and :ref:`Run <invRun>`
 
 .. figure:: ./../../../images/AtoZ_DCIP/AtoZ_DCIP_Started2D.png

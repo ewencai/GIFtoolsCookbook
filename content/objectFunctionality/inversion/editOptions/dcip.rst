@@ -143,6 +143,7 @@ Functionality specific to the ``DCIPinversion`` object
 Create Files (make_wdat)
 ------------------------
 
+.. _invDCIP3DInputOptions:
 
 Set for Inversion
 -----------------

@@ -172,6 +172,7 @@ Browser
 
 -  Calls user-selected default browser for tutorial links
 
+.. _PythonInstaller:
 
 Python Installation (Optional)
 ------------------------------

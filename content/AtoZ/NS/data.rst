@@ -81,7 +81,7 @@ Creating an OcTree mesh
 
 	- :ref:`Run the utility <utilRun>`
 	- :ref:`Load results <utilLoadResults>`
-	- :ref:`Create active model from GIF model <objectFunctionalityModCreateActive>`. The GIF model should have the name *active_cells_topo*.
+	- :ref:`Create active model from GIF model <objectFunctionalityActiveModel>`. The GIF model should have the name *active_cells_topo*.
 
 
 .. figure:: ../../../images/AtoZ_E3DMT/octree_mesh.png
