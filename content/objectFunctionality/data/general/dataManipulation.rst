@@ -92,16 +92,10 @@ This function allows the user to remove data outside of a 3D mesh region that is
 
 
 
-.. _objectCalculate:
-
-Calculate
----------
-
-
 .. _objectPolyTrend:
 
 Calculate a polynomial trend
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+----------------------------
 
 Any data column may have a polynomial trend calculated. For access to this feature via *magnetics* or *gravity* data, click on the data item of interest and use the menu below. For all other data types, this feature can be accessed though the :ref:`data viewer <viewData>` (See Note 2).
 
@@ -124,41 +118,79 @@ Any data column may have a polynomial trend calculated. For access to this featu
 .. _objectConstantCalculator:
 
 Apply a simple math operation to data
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------
 
-Any data column can have a simple mathematical operation applied given a value. To access this calculator, click on the data item of interest and use the menu:
+This functionality is used to apply basic math operations to a column of data. To access this functionality, click on the data item of interest and use the menu:
 
 **Data manipulation** |rarr| **Calculate** |rarr| **Constant calculator**
 
+Actions can be performed through the following pop-up window:
+
 .. figure:: ../../../../images/dataCalculate.png
     :align: center
-    :width: 400
+    :width: 375
 
-**NOTE 1:** Spatial (X,Y) :ref:`i/o Headers <objectSetioHeaders>` are not shown within the calculator. To apply the constant calculator to the x- or y-coordinates, remove them from the i/o header.
+**Step 1:** Choose a 'Property' (data column) from the drop-down menu
 
-**NOTE 2:** The constant calculator can be accessed in the :ref:`data viewer <viewData>`. Data first need to be selected via the **View** |rarr| **Edit** |rarr| **Data selection** tab of the viwer control dialog. Then select its neighbouring tab: **View** |rarr| **Edit** |rarr| **Simple edit** and select the radio button under *Simple calculator.* The value in the section will be applied as selected. A new data object name is optional.
+**Step 2:** Enter a number into the field for 'Value'
+
+**Step 3:** For :math:`x` (selected column), :math:`c` (Value) and :math:`y` (new column), choose from the following set of mathematical operations.
+
+	- *Addition:* :math:`y = x + c`
+	- *Subtraction:* :math:`y = x - c`
+	- *Multiplication:* :math:`y = x \times c`
+	- *Division:* :math:`y = x / c`
+	- *Exponent:* :math:`y = x^c`
+	- *Min:* :math:`y = \textrm{min}(x,c)`. This operation is done element by element.
+	- *Max:* :math:`y = \textrm{max}(x,c)`. This operation is done element by element.
+
+**Step 4:** Determine if new column is created
+
+	- *Create is not selected:* The new column of data will replace the selected column of data
+	- *Create is selected:* A new column is created for the calculated data and a name must be provided
 
 
-.. figure:: ../../../../images/downsampleFromViewer.png
-    :align: center
-    :width: 400
 
+
+.. note:: Spatial (X,Y) :ref:`i/o Headers <objectSetioHeaders>` are not shown within the calculator. To apply the constant calculator to the x- or y-coordinates, remove them from the i/o header.
 
 
 .. _objectColumnCalculator:
 
 Apply a column-to-column math operation to data
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-----------------------------------------------
 
-Any data column can have a simple mathematical operation applied to it based on another data column (e.g., subtrace a trend). To access this calculator, click on the data item of interest and use the menu:
+This functionality allows the user to perform basic math operations using two data columns. To access this functionality, click on the data item of interest and use the menu:
 
 **Data manipulation** |rarr| **Calculate** |rarr| **Column calculator**
 
-.. figure:: ../../../../images/dataCalculate.png
-    :align: center
-    :width: 400
+Actions can be performed through the following pop-up window:
 
-**NOTE 1:** Spatial (X,Y) :ref:`i/o Headers <objectSetioHeaders>` are not shown within the calculator. To apply the constant calculator to the x- or y-coordinates, remove them from the i/o header.
+.. figure:: ../../../../images/columnCalculate.png
+    :align: center
+    :width: 500
+
+**Step 1:** From the drop down menus, choose data columns for 'Column 1' and 'Column 2'
+
+**Step 2:** For :math:`x_1` (Column 1), :math:`x_2` (Column 2) and :math:`y` (new column), choose from the following set of mathematical operations.
+
+	- *Addition:* :math:`y = x_1 + x_2`
+	- *Subtraction:* :math:`y = x_1 - x_2`
+	- *Multiplication:* :math:`y = x_1 \times x_2`
+	- *Division:* :math:`y = x_1 / x_2`
+	- *Exponent:* :math:`y = x_1^{x_2}`
+	- *Min:* :math:`y = \textrm{min}(x_1,x_2)`. This operation is done element by element.
+	- *Max:* :math:`y = \textrm{max}(x_1,x_2)`. This operation is done element by element.
+
+**Step 3:** Determine if new column is created
+
+	- *New column is not selected:* The new column of data will replace 'Column 1'
+	- *New column is selected:* A new column is created for the calculated data and a name must be provided
+
+**Step 4:** Apply operation to only certain times/frequencies. This is good if you want to replace values in a column but only for certain times/frequencies.
+
+
+.. note:: Spatial (X,Y) :ref:`i/o Headers <objectSetioHeaders>` are not shown within the calculator. To apply the constant calculator to the x- or y-coordinates, remove them from the i/o header.
 
 
 
