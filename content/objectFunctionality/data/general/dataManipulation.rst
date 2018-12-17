@@ -136,13 +136,13 @@ Actions can be performed through the following pop-up window:
 
 **Step 3:** For :math:`x` (selected column), :math:`c` (Value) and :math:`y` (new column), choose from the following set of mathematical operations.
 
-	- *Addition:* :math:`y = x + c`
-	- *Subtraction:* :math:`y = x - c`
-	- *Multiplication:* :math:`y = x \times c`
-	- *Division:* :math:`y = x / c`
-	- *Exponent:* :math:`y = x^c`
-	- *Min:* :math:`y = \textrm{min}(x,c)`. This operation is done element by element.
-	- *Max:* :math:`y = \textrm{max}(x,c)`. This operation is done element by element.
+	- *Addition:* adds 'Value' to the selected column; e.g. :math:`y = x + c`
+	- *Subtraction:* subtracts 'Value' from the selected column; e.g. :math:`y = x - c`
+	- *Multiplication:* multiplies the selected column by 'Value'; e.g. :math:`y = x \times c`
+	- *Division:* divides the selected column by 'Value'; e.g. :math:`y = x / c`
+	- *Exponent:* computes each entry in the selected column to the power of 'Value'; e.g. :math:`y = x^c`
+	- *Min:* returns the smaller of the two values when comparing 'Value' to each entry in the selected column; e.g. :math:`y = \textrm{min}(x,c)`
+	- *Max:* returns the larger of the two values when comparing 'Value' to each entry in the selected column; e.g. :math:`y = \textrm{max}(x,c)`
 
 **Step 4:** Determine if new column is created
 
@@ -174,13 +174,13 @@ Actions can be performed through the following pop-up window:
 
 **Step 2:** For :math:`x_1` (Column 1), :math:`x_2` (Column 2) and :math:`y` (new column), choose from the following set of mathematical operations.
 
-	- *Addition:* :math:`y = x_1 + x_2`
-	- *Subtraction:* :math:`y = x_1 - x_2`
-	- *Multiplication:* :math:`y = x_1 \times x_2`
-	- *Division:* :math:`y = x_1 / x_2`
-	- *Exponent:* :math:`y = x_1^{x_2}`
-	- *Min:* :math:`y = \textrm{min}(x_1,x_2)`. This operation is done element by element.
-	- *Max:* :math:`y = \textrm{max}(x_1,x_2)`. This operation is done element by element.
+	- *Addition:* adds column 2 to column 1; e.g. :math:`y = x_1 + x_2`
+	- *Subtraction:* subtracts column 2 from column 1; e.g. :math:`y = x_1 - x_2`
+	- *Multiplication:* multiplies column 1 and column 2; e.g. :math:`y = x_1 \times x_2`
+	- *Division:* divides column 1 by column 2; e.g. :math:`y = x_1 / x_2`
+	- *Exponent:* computes column 1 to the power of column 2; e.g. :math:`y = x_1^{x_2}`
+	- *Min:* returns the smaller of the two values when comparing column 1 to column 2; e.g. :math:`y = \textrm{min}(x_1,x_2)`
+	- *Max:* returns the larger of the two values when comparing column 1 to column 2; e.g. :math:`y = \textrm{max}(x_1,x_2)`
 
 **Step 3:** Determine if new column is created
 
