@@ -182,15 +182,30 @@ functionalities from the open-source community. In order to get access to
 these codes, users must install Python and few additional packages. This is
 done through the Anaconda project. Please follow these steps to get setup:
 
-- (Windows Users) Update/install  `Microsoft Visual Studio Community 2017 <https://visualstudio.microsoft.com/vs/community/>`_
-    - Make sure you install both ``Python development`` and ``Desktop develpmoent with C++`` packages
+- Download the `installation package <https://www.eoas.ubc.ca/~dfournie/simpegEM1D_install.zip>`_
+
+(Windows Users)
+^^^^^^^^^^^^^^^
+
+- Update/install  `Microsoft Visual Studio Community 2017 <https://visualstudio.microsoft.com/vs/community/>`_
+    - Make sure to select ``Desktop develpmoent with C++`` packages
         .. figure:: ../images/VC_Community.png
             :align: center
             :width: 400
 
+.. _MinGWInstaller:
 
-- Download the `installation package <https://www.eoas.ubc.ca/~dfournie/simpegEM1D_install.zip>`_
-- ``Double-click`` on ``Setup.bat``. This will run 3 seperate installations
+- Install ``TDM-GCC minGW Compiler``
+    - ``Double-click`` on ``tdm64-gcc-5.1.0-2.exe`` and install to ``C:\TDM-GCC-64`` (`source <http://sourceforge.net/projects/tdm-gcc/files/TDM-GCC%20Installer/tdm64-gcc-5.1.0-2.exe/download>`_)
+        .. figure:: ../images/Install_MinGW.png
+            :align: center
+            :width: 400
+
+        .. figure:: ../images/Install_MinGW_2.png
+            :align: center
+            :width: 400
+
+- ``Double-click`` on ``Setup.bat``. This will run 2 separate installations
     - ``Miniconda`` installation (press cancel IF already installed)
         .. figure:: ../images/MinicondaInstaller.png
             :align: center
@@ -200,12 +215,8 @@ done through the Anaconda project. Please follow these steps to get setup:
             .. figure:: ../images/AnacondaPath.png
                 :align: center
                 :width: 400
-    - ``MinGW`` installation
-        - Install to ``C:\MinGW``
-            .. figure:: ../images/Install_MinGW.png
-                :align: center
-                :width: 400
-    - ``simpegEM1D`` environment
+
+    - ``simpegEM1D`` and its dependencies
 
 
 Full installation time :math:`\approx 15` min
@@ -213,6 +224,20 @@ Full installation time :math:`\approx 15` min
 Congratulation, you should now have access to the `Python ecosystem <http://www.developintelligence.com/blog/python-ecosystem-2017/>`_!
 More packages can be installed through command lines:
 
-Either with anaconda (recommanded)>  ``conda install PackageName``
+Either with anaconda (recommended)>  ``conda install PackageName``
 
 or alternatively through pip>   ``pip install PackageName``
+
+Troubleshooting
+^^^^^^^^^^^^^^^
+
+- ``simpegEM1D`` fails with the following error log
+    .. figure:: ../images/Troubleshoot_FortranFail.png
+        :align: center
+        :width: 400
+
+    - Make sure that your Environment path contains ``C:\TDM-GCC-64\bin``.
+    - :ref:`Re-install MinGW <MinGWInstaller>` with the option ``All packages`` selected.
+    - In a new commend terminal run in sequence:
+        - ``activate simpegEM1D``
+        - ``pip install git+https://github.com/simpeg/simpegEM1D.git@master``
