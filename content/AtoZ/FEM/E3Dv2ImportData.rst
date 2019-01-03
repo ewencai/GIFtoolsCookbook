@@ -3,24 +3,19 @@
 .. include:: <isonum.txt>
 
 
-Specifying Parameters for FEM Sounding Inversion
-================================================
+Specifying Parameters for FEM data
+==================================
 
 .. figure:: ./../../../images/AtoZ_fem1d/xyz_to_FEM.png
     :align: right
     :scale: 50%
 
-Here, we detail the process of defining the survey parameters used in EM1DFM
-inversions. For `GIF formatted 1D FEM data
-<http://em1dfm.readthedocs.io/en/latest/content/files/supporting.html>`__, the
-survey parameters are automatically read into GIFtools. For :ref:`XYZ<XYZfile>` and :ref:`CSV<CSVfile>` files however, the survey information
-must be specified by the user. In this exercise, we:
+Here, we detail the process of defining the survey parameters used in E3D
+inversions.
 
     - Define the data columns being imported from a XYZ data file
     - Set transmitter, receiver and elevation information
     - Assign uncertainties to the data
-
-
 
 .. _AtoZe3d_setup:
 
@@ -32,9 +27,8 @@ Setup for the Exercise
     - :ref:`Set the working directory <projSetWorkDir>`
 
 
-
 .. tip:: - Steps (without links) are also included with the download
-         - Requires at least `GIFtools version 2.2 <https://gif.eos.ubc.ca/GIFtools/downloads2>`_ (login required)
+         - Requires at least `GIFtools version 2.27 <https://gif.eos.ubc.ca/GIFtools/downloads2>`_ (login required)
 
 
 .. _AtoZe3d_import:
@@ -46,8 +40,6 @@ In addition to raw geophysical data, you may have access to topographical inform
 
     - :ref:`Import raw FEM data <importFemData>` (XYZ format as an FEMsounding).
     - :ref:`Import topography data <importTopo>` (3D GIF format)
-    - :ref:`Import 1D mesh<importMesh>` (layers file)
-    - :ref:`Import surface layer<importSurface>` (3D GIF format)
 
 .. tip:: - Use **Edit** |rarr| **Rename** to change what objects in GIFtools are called
          - For any data object, :ref:`edit the data headers <objectDataHeaders>`.
@@ -55,14 +47,14 @@ In addition to raw geophysical data, you may have access to topographical inform
          - The standard deviation of Gaussian noise added was determined from the uncertainties used to invert real FEM data collected over TKC.
 
 
-Add Transmitter, Receiver and Elevation Information
----------------------------------------------------
+Add Transmitter and Elevation Information
+-----------------------------------------
 
 .. figure:: ./../../../images/AtoZ_fem1d/create_FEM_Tx_Rx.png
     :align: right
     :scale: 50%
 
-Since the raw data were formatted according to the XYZ format, the transmitter and receiver information for the airborne survey must be set manually. Additionally, only an altitude column was provided in the raw data. Therefore, we must use the topography and altitude information to determine the elevation of each data point.
+Since the raw data were formatted according to the XYZ format, the transmitter information for the airborne survey must be set manually. Additionally, only an altitude column was provided in the raw data. Therefore, we must use the topography and altitude information to determine the elevation of each data point.
 
     - :ref:`Create elevation from surface topography<objectElevFromSurface>`
 
@@ -78,15 +70,44 @@ Since the raw data were formatted according to the XYZ format, the transmitter a
         - Set vertical offset as altitude column from data object
 
 
-    - :ref:`Add receivers<objectEMaddRx>` to set the locations of the receivers **relative to the transmitter locations**. Use the following parameters:
+Convert ppm to Total field
+--------------------------
 
-        - Dipole moment = 1 Am :math:`\! ^2`
-        - Set Rotation angle as "Relative to bearing" and use the bearing column that was calculated when adding transmitters
-        - Along-line offset = 15 m
-        - Cross-line offset = 0 m
-        - Set vertical offset as altitude column from data object
+As for many Frequency-domain systems, the data has been provided in *parts-
+per-million* (ppm) of the primary field :math:`\mathbf{B}_{P}`. Before
+inverting the data, field measurements must be converted to total field values
+such that:
 
-    - :ref:`Set data normalization to ppm<objectEMsetDataNorm>`
+.. math::
+    \mathbf{B}_{T}^{R} &= \mathbf{B}_{ppm}^{R} * \mathbf{B}_{P}^{R} * 10^{-6} + \mathbf{B}_{P}^{R} \\
+    \mathbf{B}_{T}^{I} &= \mathbf{B}_{ppm}^{I} * \mathbf{B}_{P}^{R} * 10^{-6} \\
+
+where :math:`\mathbf{B}_{T}^{R}` and :math:`\mathbf{B}_{T}^{I}` denote the
+*Real* and *Imaginary* component of the total magnetic field. To proceed with
+the transformation we need a value for the primary field
+:math:`\mathbf{B}_{P}^{R}` (*Real*). Two options are in theory possible:
+
+    (a) Compute the theoretical :math:`\mathbf{B}_{P}` for the given transmitter-receiver separation and frequencies,
+    (b) Compute the free-space response numerically for a given mesh.
+
+We will proceed with the second option as the numerical errors are generally
+much larger than the secondary field response and can vary spatially.
+
+Step 1: Create a mesh
+^^^^^^^^^^^^^^^^^^^^^
+
+We first need to generate a mesh that will also be used for the inversion.
+
+
+
+Step 2: Forward modeling
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+Step 3: Data conversion
+^^^^^^^^^^^^^^^^^^^^^^^
+
+
 
 
 .. .. raw:: html
