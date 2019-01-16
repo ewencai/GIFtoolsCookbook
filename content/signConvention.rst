@@ -21,7 +21,7 @@ Coordinates for Data Locations
 Here, we define the coordinate systems for data points for each code. In general X is Easting, Y is Northing and Z is +ve up. The 1D codes are an exception; where -ve Z locations refer to positions above ground and the coordinate system is left-handed. Certain codes may use a different coordinate system internally. However, the majority of users will not need to worry about this. Certain codes may use unique :ref:`data conventions <sign_conv>`. The users **should** worry about this.
 
 
-.. tabularcolumns:: |L|C|C|C|C|C|L|
+
 
 +--------+-----------+-------------+-------+--------+-----+---------------------------------+
 |  Type  |  Name     |  Versions   |Easting|Northing|Z +ve| Details                         |
@@ -97,7 +97,7 @@ Here, we define the sign conventions for various data types and the :ref:`time-d
 .. important:: Make sure you scroll all the way to the right within the table to see all information pertaining to a particular code.
 
 
-.. tabularcolumns:: |L|C|C|C|
+
 
 +--------+-----------+-------------+-------------------------------------------------------------------------------------------------------------------------------------+
 |  Type  |  Name     |  Versions   |         Sign Convention                                                                                                             |
@@ -180,7 +180,7 @@ where the choice in sign of :math:`\pm i\omega t` defines the Fourier convention
     \nabla \times \mathbf{h} &= \mathbf{j} + \frac{\partial \mathbf{d}}{\partial t}
     \end{align}
 
-- **Using** :math:`\boldsymbol{+i \omega t}` **convention:** If the inverse Fourier transform is defined using :math:`+ i\omega t`, then 
+- **Using** :math:`\boldsymbol{+i \omega t}` **convention:** If the inverse Fourier transform is defined using :math:`+ i\omega t`, then
 
 .. math::
     \mathbb{F} \bigg [ \frac{d}{dt} f(t) \bigg ] = i\omega F (i \omega )
@@ -195,7 +195,7 @@ and Maxwell's equations in the frequency domain are:
 
 where :math:`e^{+i\omega t}` is suppressed.
 
-**Using** :math:`\boldsymbol{-i \omega t}` **convention:** If inverse Fourier transform is defined using :math:`- i\omega t`, then 
+**Using** :math:`\boldsymbol{-i \omega t}` **convention:** If inverse Fourier transform is defined using :math:`- i\omega t`, then
 
 .. math::
     \mathbb{F} \bigg [ \frac{d}{dt} f(t) \bigg ] = -i\omega F (i \omega )
@@ -284,7 +284,7 @@ The NSEM GIF codes are formulated to use a :math:`-i\omega t` convention for the
 
 We can determine the convention used by the data by examining the data. If data are represented using the :math:`\boldsymbol{+i \omega t}` convention and are in a right-handed coordinate system, then we expect:
 
-    - at background locations: :math:`Z_{xy} \sim \dfrac{i \omega \mu}{k} \;\;\; \textrm{and} \;\;\; Z_{yx} \sim \frac{- i \omega \mu}{k} \;\;\; \textrm{where} \;\;\; k = \sqrt{i\omega \mu \sigma}` 
+    - at background locations: :math:`Z_{xy} \sim \dfrac{i \omega \mu}{k} \;\;\; \textrm{and} \;\;\; Z_{yx} \sim \frac{- i \omega \mu}{k} \;\;\; \textrm{where} \;\;\; k = \sqrt{i\omega \mu \sigma}`
     - :math:`Re[Z_{xy}] > 0`, :math:`\; Im[Z_{xy}] > 0` and :math:`\phi_{xy} \in [0^o, \; 90^o]` (:math:`\sim 45^o` for a half-space)
     - :math:`Re[Z_{yx}] < 0`, :math:`\; Im[Z_{yx}] < 0` and :math:`\phi_{yx} \in [-90^o, \; -180^o]` (:math:`\sim -135^o` for a half-space)
 
@@ -347,7 +347,7 @@ For more on this, see the `E3DMT manual <https://e3dmt.readthedocs.io/en/manual_
 Units
 -----
 
-Here, we define the physical property and data units used by each code. 
+Here, we define the physical property and data units used by each code.
 
 **Physical Property Definitions:**
 
@@ -360,7 +360,7 @@ Here, we define the physical property and data units used by each code.
 
     - :math:`\mathbf{E}:` Electric field
     - :math:`\mathbf{J}:` Current density
-    - :math:`\mathbf{H}:` Magnetic field intensity (auxiliary field) 
+    - :math:`\mathbf{H}:` Magnetic field intensity (auxiliary field)
     - :math:`\mathbf{B}:` Magnetic flux density
     - :math:`\partial \mathbf{B}/\partial t:` Time-derivative of the magnetic flux density
     - :math:`Z_{ij}:` The ij-th element of the impedance tensor
@@ -375,13 +375,13 @@ Here, we define the physical property and data units used by each code.
     - :math:`V:` Volts
     - :math:`A:` Amperes
     - :math:`ppm:` parts per million
-    
+
 
 
 .. important:: Make sure you scroll all the way to the right within the table to see all information pertaining to a particular code.
 
 
-.. tabularcolumns:: |L|C|C|C|C|
+
 
 +--------+-----------+-------------+---------------------------------------+----------------------------------------------------------------------+
 |  Type  |  Name     |  Versions   |     Property Units                    | Data Units                                                           |
@@ -451,7 +451,7 @@ Here, we define the physical property and data units used by each code.
 DC data units
 ~~~~~~~~~~~~~
 
-DC data are represented by the measured voltage (:math:`\Delta V`) normalized by the transmitter current (:math:`I`). Thus the units for DC data are V/A. 
+DC data are represented by the measured voltage (:math:`\Delta V`) normalized by the transmitter current (:math:`I`). Thus the units for DC data are V/A.
 
 
 .. _sign_ip_units:

@@ -65,7 +65,6 @@ geological units which make up the deposit, their margins and their physical
 properties. The average density, susceptibility and electrical conductivity
 for geological units at TKC is shown in the table below.
 
-.. tabularcolumns:: |L|C|C|C|C|
 
 +-------------+--------------------+---------------------+-------------+-----------------------+-------------------+
 |**Unit**     |:math:`\rho` [g/cc] | :math:`\kappa` [SI] | Remanence   | :math:`\sigma` [mS/m] | :math:`\eta` [ms] |
