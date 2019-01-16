@@ -3,8 +3,8 @@
 .. include:: <isonum.txt>
 
 
-Specifying Parameters for FEM data
-==================================
+Specifying Parameters for FEMsounding
+=====================================
 
 .. figure:: ./../../../images/AtoZ_fem1d/xyz_to_FEM.png
     :align: right
@@ -69,6 +69,14 @@ Since the raw data were formatted according to the XYZ format, the transmitter i
         - Cross-line offset = 0 m
         - Set vertical offset as altitude column from data object
 
+    - :ref:`Add receivers<objectEMaddRx>` to set the locations of the receivers **relative to the transmitter locations**. Use the following parameters:
+
+        - Dipole moment = 1 Am :math:`\! ^2`
+        - Set Rotation angle as "Relative to bearing" and use the bearing column that was calculated when adding transmitters
+        - Along-line offset = 15 m
+        - Cross-line offset = 0 m
+        - Set vertical offset as altitude column from data object
+
 
 Convert ppm to Total field
 --------------------------
@@ -98,6 +106,9 @@ Step 1: Create a mesh
 
 We first need to generate a mesh that will also be used for the inversion.
 
+ - Create
+ - Assign the
+ - :ref:`Edit Options <utilEditOptions_E3Dver2Tiled>`
 
 
 Step 2: Forward modeling
